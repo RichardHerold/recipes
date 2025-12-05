@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadRecipes();
     setupSearch();
     setupCategoryFilter();
+    setupURLRouting();
 });
 
 // Load all recipe files
@@ -83,8 +84,85 @@ function displayRecipes() {
                 e.target.classList.contains('recipe-action-btn') ||
                 e.target.closest('.recipe-actions')) return;
             
+            const recipeName = this.getAttribute('data-recipe-name');
+            const isExpanded = this.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapsing - remove from URL
+                updateURL(null);
+            } else {
+                // Expanding - update URL with recipe slug
+                updateURL(recipeName);
+            }
+            
             this.classList.toggle('expanded');
         });
+    });
+    
+    // Check URL and expand matching recipe
+    checkURLAndExpandRecipe();
+}
+
+// Create a slug from recipe name for URL
+function createRecipeSlug(recipeName) {
+    return recipeName.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+// Update URL with recipe slug
+function updateURL(recipeName) {
+    const baseUrl = window.location.origin + window.location.pathname;
+    if (recipeName) {
+        const slug = createRecipeSlug(recipeName);
+        const newUrl = `${baseUrl}#${slug}`;
+        window.history.pushState({ recipe: recipeName }, '', newUrl);
+    } else {
+        window.history.pushState({}, '', baseUrl);
+    }
+}
+
+// Check URL and expand matching recipe
+function checkURLAndExpandRecipe() {
+    const hash = window.location.hash.substring(1); // Remove the #
+    if (!hash) {
+        // If no hash, collapse all recipes
+        document.querySelectorAll('.recipe-card.expanded').forEach(card => {
+            card.classList.remove('expanded');
+        });
+        return;
+    }
+    
+    // Find recipe with matching slug
+    const matchingRecipe = allRecipes.find(recipe => {
+        const slug = createRecipeSlug(recipe.name);
+        return slug === hash;
+    });
+    
+    if (matchingRecipe) {
+        // Collapse all other recipes first
+        document.querySelectorAll('.recipe-card.expanded').forEach(card => {
+            card.classList.remove('expanded');
+        });
+        
+        // Find the card and expand it
+        const recipeName = matchingRecipe.name;
+        const card = document.querySelector(`[data-recipe-name="${escapeHtml(recipeName)}"]`);
+        if (card) {
+            card.classList.add('expanded');
+            // Scroll to the card
+            setTimeout(() => {
+                card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
+}
+
+// Setup URL routing
+function setupURLRouting() {
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (e) => {
+        checkURLAndExpandRecipe();
     });
 }
 
@@ -99,7 +177,7 @@ function createRecipeCard(recipe) {
         </div>` : '';
     
     // Create a unique ID for this recipe card
-    const recipeId = `recipe-${recipe.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+    const recipeId = `recipe-${createRecipeSlug(recipe.name)}-${Date.now()}`;
     
     return `
         <div class="recipe-card" id="${recipeId}" data-recipe-name="${escapeHtml(recipe.name)}">
