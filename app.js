@@ -445,6 +445,28 @@ function printRecipe(recipeId) {
     }, 250);
 }
 
+// Copy text to clipboard using fallback method
+function copyToClipboardFallback(text) {
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-999999px';
+    textarea.style.top = '-999999px';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        return successful;
+    } catch (err) {
+        document.body.removeChild(textarea);
+        return false;
+    }
+}
+
 // Share recipe function
 async function shareRecipe(recipeId) {
     const card = document.getElementById(recipeId);
@@ -456,9 +478,10 @@ async function shareRecipe(recipeId) {
     const description = card.querySelector('.recipe-description')?.textContent || '';
     const prepTime = card.querySelector('.recipe-meta span')?.textContent.replace('Prep: ', '') || '';
     
-    // Get current URL and add recipe identifier
-    const currentUrl = window.location.href.split('#')[0];
-    const recipeUrl = `${currentUrl}#recipe-${encodeURIComponent(recipeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`;
+    // Get current URL and add recipe identifier using the same slug format as URL routing
+    const currentUrl = window.location.origin + window.location.pathname;
+    const recipeSlug = createRecipeSlug(recipeName);
+    const recipeUrl = `${currentUrl}#${recipeSlug}`;
     
     const shareData = {
         title: `${title} - Richard's Recipe Collection`,
@@ -470,28 +493,36 @@ async function shareRecipe(recipeId) {
         // Try Web Share API first (mobile and modern browsers)
         if (navigator.share) {
             await navigator.share(shareData);
-        } else {
-            // Fallback: Copy to clipboard
-            const shareText = `${shareData.title}\n\n${shareData.text} ${shareData.url}`;
-            await navigator.clipboard.writeText(shareText);
-            
-            // Show notification
-            showNotification('Recipe link copied to clipboard');
+            return;
         }
     } catch (error) {
-        // User cancelled or error occurred
-        if (error.name !== 'AbortError') {
-            console.error('Error sharing recipe:', error);
-            // Fallback to clipboard
-            try {
-                const shareText = `${shareData.title}\n\n${shareData.text} ${shareData.url}`;
-                await navigator.clipboard.writeText(shareText);
+        // User cancelled sharing
+        if (error.name === 'AbortError') {
+            return;
+        }
+        // If share fails, fall through to clipboard
+    }
+    
+    // Fallback: Copy to clipboard
+    const shareText = `${shareData.title}\n\n${shareData.text} ${shareData.url}`;
+    
+    try {
+        // Try modern clipboard API first
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(shareText);
+            showNotification('Recipe link copied to clipboard');
+        } else {
+            // Fallback to execCommand method
+            if (copyToClipboardFallback(shareText)) {
                 showNotification('Recipe link copied to clipboard');
-            } catch (clipboardError) {
-                console.error('Clipboard error:', clipboardError);
-                showNotification('Failed to copy link. Please try again.');
+            } else {
+                throw new Error('Clipboard API not available');
             }
         }
+    } catch (error) {
+        console.error('Error copying to clipboard:', error);
+        // Last resort: show the URL in an alert so user can manually copy
+        showNotification('Unable to copy. URL: ' + recipeUrl);
     }
 }
 
