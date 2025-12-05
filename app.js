@@ -114,7 +114,7 @@ function createRecipeCard(recipe) {
                     <button class="recipe-action-btn" onclick="shareRecipe('${recipeId}')" title="Share recipe">Share</button>
                 </div>
             </div>
-            <p class="recipe-description">${escapeHtml(recipe.description || '')}</p>
+            ${recipe.description ? `<p class="recipe-description">${escapeHtml(recipe.description)}</p>` : ''}
             <div class="recipe-meta">
                 <span>Prep: ${prepTime}</span>
                 <span>Cook: ${cookTime}</span>
