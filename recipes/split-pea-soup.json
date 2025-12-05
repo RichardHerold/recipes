@@ -1,0 +1,22 @@
+{
+  "name": "Split Pea Soup",
+  "category": "Soups",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "1 onion chopped",
+    "1 ham hock (split at butcher shop)",
+    "2-3 carrots sliced",
+    "2 bags of split peas"
+  ],
+  "instructions": [
+    "Fill a soup pot (tall pot like a spaghetti pot) with water leaving one inch at the top",
+    "Put onions and ham hock into water, bring to a boil and let cook 1-2 hours (until meat is tender and falling off the bone) - do not drain water.",
+    "Remove/discard bones and fat and cut meat up into smaller piece",
+    "-Put meat, carrots and peas into water (reserved water with onions) and cook until all peas have dissolved",
+    "Season with salt and pepper to taste"
+  ],
+  "dateAdded": "2025-12-05T17:19:45.565Z"
+}

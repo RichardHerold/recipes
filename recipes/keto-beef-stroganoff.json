@@ -1,0 +1,31 @@
+{
+  "name": "Keto Beef Stroganoff",
+  "category": "Meat",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "2 tbsp Olive oil",
+    "1/2 large Onion (sliced into thin quarter moons)",
+    "8 oz Cremini mushrooms (sliced)",
+    "1 lb Ground beef",
+    "1/2 tsp Sea salt",
+    "1/4 tsp Black pepper",
+    "2 cloves Garlic (minced)",
+    "1 cup Beef bone broth",
+    "2 tbsp Coconut aminos (optional)",
+    "1/2 cup Sour cream",
+    "2 oz Cream cheese"
+  ],
+  "instructions": [
+    "Heat the olive oil in a large saute pan over medium heat.",
+    "Add the onions and mushrooms. Saute for about 10 minutes, until onions and mushrooms are soft and browned, and extra liquid has evaporated.",
+    "Increase heat to medium-high. Push the mushrooms and onions to the sides, and add the ground beef to the center of the pan, and season with salt and pepper. Cook for 8-10 minutes, stirring occasionally and breaking the beef apart with a spatula, until beef is cooked through.",
+    "Once it starts to cook through a bit you can mix it with the mushrooms and onions.",
+    "Make a well in the center and add the minced garlic. Saute for about a minute, until fragrant, then stir in with the meat.",
+    "Add the bone broth and coconut aminos, if using. Bring to a boil, then simmer for 5 minutes, until most of the liquid is reduced but a little is left.",
+    "Stir in the sour cream and cream cheese, until smooth."
+  ],
+  "dateAdded": "2025-12-05T17:19:17.580Z"
+}

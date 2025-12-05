@@ -1,0 +1,28 @@
+{
+  "name": "Linguine con Vongole",
+  "category": "Pasta",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "1 pound spaghetti",
+    "Salt",
+    "1/4 cup extra-virgin olive oil",
+    "4 garlic cloves, minced",
+    "1/2 teaspoon crushed red pepper",
+    "2 dozen littleneck clams, scrubbed",
+    "1/4 cup white wine",
+    "1/4 cup finely chopped parsley",
+    "Freshly ground black pepper"
+  ],
+  "instructions": [
+    "In a large pot of boiling salted water, cook the spaghetti until just al dente, then drain the pasta well.",
+    "Meanwhile, in a large, deep skillet, heat the olive oil.",
+    "Add the minced garlic and crushed red pepper and cook over moderately high heat, stirring occasionally, until the garlic is lightly browned: about 1 1/2 minutes.",
+    "Add the clams and wine, cover, and simmer until the clams open and are just cooked through 5 to 8 minutes.",
+    "Add the spaghetti and the chopped parsley to the clams in the skillet and season with pepper. Toss over moderately high heat just until the spaghetti absorbs some of the juices, about 1 minute.",
+    "Transfer the spaghetti and clams to shallow bowls and serve right away."
+  ],
+  "dateAdded": "2025-12-05T17:19:37.884Z"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Fumata Bianca",
+  "category": "Beverages",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "1 ounce Carpano Bianco",
+    "1 ounce Suze",
+    "1/2 ounce Del Maguey Vida mezcal",
+    "club soda, to top",
+    "Garnish: grapefruit twist"
+  ],
+  "instructions": [
+    "Combine all the ingredients except the grapefruit twist in a collins glass.",
+    "Add ice and top with club soda.",
+    "Express a grapefruit twist over the drink and drop into the glass."
+  ],
+  "dateAdded": "2025-12-05T17:18:07.711Z"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Applejack Rabbit",
+  "category": "Beverages",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "2 ounces Laird's Bonded Apple Brandy",
+    "3/4 ounce fresh lemon juice",
+    "3/4 ounce fresh orange juice",
+    "1/2 ounce Deep Mountain Grade B Maple Syrup"
+  ],
+  "instructions": [
+    "Fill a cocktail shaker with ice.",
+    "Add remaining ingredients",
+    "Shake for 20 seconds until well chilled.",
+    "Strain into a chilled coupe."
+  ],
+  "dateAdded": "2025-12-05T17:18:12.547Z"
+}

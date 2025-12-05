@@ -1,0 +1,38 @@
+{
+  "name": "David´s Fabulous Waffles",
+  "category": "Breakfast",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "Waffle Batter",
+    "2 ½ cups all-purpose flour",
+    "1 rounded tablespoon sugar",
+    "1 teaspoon salt",
+    "2 teaspoons baking soda",
+    "¾ teaspoon baking powder",
+    "2 ½ cups buttermilk",
+    "3 medium size eggs or 2 jumbo eggs",
+    "¼ teaspoon vanilla extract",
+    "½ stick butter",
+    "Toppings",
+    "Fresh Strawberries",
+    "Fresh Blueberries",
+    "Maple Syrup",
+    "Whipped Cream (preferably homemade with vanilla and cognac or bourbon mixed in)"
+  ],
+  "instructions": [
+    "Mix dry ingredients thoroughly in a large bowl with electric egg beater.",
+    "Separate the eggs, putting the whites and yolks in separate bowls",
+    "Whip the egg whites until almost stiff",
+    "Add buttermilk, melted butter, vanilla, to the egg yolk bowl.",
+    "Mix thoroughly with beater on low.",
+    "Add egg yolk bowl ingredients to the dry ingredients and beating on slow until fairly smooth.",
+    "Add a bit more buttermilk if it doesn’t fall right off the beater.",
+    "Add the egg whites and beat slowly but not too thoroughly.",
+    "Let sit for 5 mins before using.",
+    "Serve with whipped cream, maple syrup, sliced strawberries and blueberries."
+  ],
+  "dateAdded": "2025-12-05T17:18:02.562Z"
+}

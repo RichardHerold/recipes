@@ -1,0 +1,35 @@
+{
+  "name": "Cornbread Recipe",
+  "category": "Baked Goods",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "For the Cornbread:",
+    "1½ cups (250g) coarse yellow cornmeal, preferably Anson Mills",
+    "1 teaspoon fine sea salt",
+    "1 teaspoon baking powder",
+    "1 teaspoon baking soda",
+    "1 large whole egg",
+    "2 tablespoons unsalted melted butter, plus more for later",
+    "1½ cups buttermilk",
+    "For the Butter:",
+    "4 ounces butter",
+    "½ cup sorghum syrup or Honey"
+  ],
+  "instructions": [
+    "For the cornbread:",
+    "Place the Cast Iron Pans in the oven",
+    "Preheat the oven at 500°F",
+    "Whisk all dry ingredients together",
+    "Whisk all wet ingredients together",
+    "Incorporate wet ingredients into the dry ones",
+    "Put a bit of butter in each mold",
+    "Ladle in the cornbread mix.",
+    "Cook at 500°F for about 8 minutes, until golden brown.",
+    "For the butter:",
+    "Whip together when both butter and syrup are at room temperature."
+  ],
+  "dateAdded": "2025-12-05T17:18:20.315Z"
+}

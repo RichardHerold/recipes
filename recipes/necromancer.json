@@ -1,0 +1,22 @@
+{
+  "name": "Necromancer",
+  "category": "Beverages",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "3/4 ounce absinthe (such as Tennyson)",
+    "3/4 ounce elderflower liqueur (such as Pür Likör Blossom)",
+    "3/4 ounce Lillet blanc",
+    "1 dash London dry gin",
+    "3/4 ounce lemon juice, freshly squeezed",
+    "Garnish: lemon twist",
+    "Steps",
+    "Add the absinthe, elderflower liqueur, Lillet blanc, dry gin and lemon juice to a shaker with ice and shake until well-chilled.",
+    "Strain into a coupe glass.",
+    "Garnish with a lemon twist."
+  ],
+  "instructions": [],
+  "dateAdded": "2025-12-05T17:18:10.885Z"
+}

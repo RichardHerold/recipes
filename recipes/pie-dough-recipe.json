@@ -1,0 +1,31 @@
+{
+  "name": "Pie Dough Recipe",
+  "category": "Baked Goods",
+  "description": "",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    "2 1/2 cups (12.5 ounces; 350 grams) all-purpose flour",
+    "2 tablespoons (25 grams) sugar",
+    "1 teaspoon (5 grams) kosher salt",
+    "2 1/2 sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats",
+    "6 tablespoons (3 ounces; 85 milliliters) cold water"
+  ],
+  "instructions": [
+    "Combine two thirds of flour with sugar and salt in the bowl of a food processor.",
+    "Pulse twice to incorporate.",
+    "Spread butter chunks evenly over surface.",
+    "Pulse until no dry flour remains and dough just begins to collect in clumps, about 25 short pulses.",
+    "Use a rubber spatula to spread the dough evenly around the bowl of the food processor.",
+    "Sprinkle with remaining flour and pulse until dough is just barely broken up, about 5 short pulses.",
+    "Transfer dough to a large bowl.",
+    "Sprinkle with water",
+    "Using a rubber spatula, fold and press dough until it comes together into a ball.",
+    "Divide ball in half.",
+    "Form each half into a 4-inch disk.",
+    "Wrap tightly in plastic",
+    "Refrigerate for at least 2 hours before rolling and baking."
+  ],
+  "dateAdded": "2025-12-05T17:18:36.577Z"
+}
