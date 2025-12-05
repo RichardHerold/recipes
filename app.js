@@ -88,11 +88,17 @@ function displayRecipes() {
             const isExpanded = this.classList.contains('expanded');
             
             if (isExpanded) {
-                // Collapsing - remove from URL
+                // Collapsing - remove from URL and reset meta tags
                 updateURL(null);
+                updateMetaTags(null);
             } else {
-                // Expanding - update URL with recipe slug
+                // Expanding - update URL with recipe slug and meta tags
                 updateURL(recipeName);
+                // Find the recipe data to update meta tags
+                const recipe = allRecipes.find(r => r.name === recipeName);
+                if (recipe) {
+                    updateMetaTags(recipe);
+                }
             }
             
             this.classList.toggle('expanded');
@@ -238,11 +244,16 @@ function checkURLAndExpandRecipe() {
         const card = document.querySelector(`[data-recipe-name="${escapeHtml(recipeName)}"]`);
         if (card) {
             card.classList.add('expanded');
+            // Update meta tags for social media previews
+            updateMetaTags(matchingRecipe);
             // Scroll to the card
             setTimeout(() => {
                 card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
         }
+    } else {
+        // No matching recipe, reset meta tags
+        updateMetaTags(null);
     }
 }
 
@@ -551,32 +562,67 @@ function copyToClipboardFallback(text) {
     }
 }
 
+// Update meta tags for social media previews
+function updateMetaTags(recipe) {
+    if (!recipe) {
+        // Reset to default
+        document.getElementById('og-title').setAttribute('content', 'Richard\'s Recipe Collection');
+        document.getElementById('og-description').setAttribute('content', 'A collection of delicious recipes');
+        document.getElementById('og-url').setAttribute('content', window.location.origin + window.location.pathname);
+        document.getElementById('og-image').setAttribute('content', '');
+        document.getElementById('twitter-title').setAttribute('content', 'Richard\'s Recipe Collection');
+        document.getElementById('twitter-description').setAttribute('content', 'A collection of delicious recipes');
+        document.getElementById('twitter-url').setAttribute('content', window.location.origin + window.location.pathname);
+        document.getElementById('twitter-image').setAttribute('content', '');
+        document.title = 'Richard\'s Recipe Collection';
+        return;
+    }
+    
+    const currentUrl = window.location.origin + window.location.pathname;
+    const recipeSlug = createRecipeSlug(recipe.name);
+    const recipeUrl = `${currentUrl}#${recipeSlug}`;
+    const fullTitle = `${recipe.name} - Richard's Recipe Collection`;
+    const description = recipe.description || `A delicious ${recipe.category || 'recipe'} from Richard's Recipe Collection`;
+    const imageUrl = recipe.image ? (recipe.image.startsWith('http') ? recipe.image : `${currentUrl}${recipe.image}`) : '';
+    
+    // Update Open Graph tags
+    document.getElementById('og-title').setAttribute('content', fullTitle);
+    document.getElementById('og-description').setAttribute('content', description);
+    document.getElementById('og-url').setAttribute('content', recipeUrl);
+    if (imageUrl) {
+        document.getElementById('og-image').setAttribute('content', imageUrl);
+    }
+    
+    // Update Twitter tags
+    document.getElementById('twitter-title').setAttribute('content', fullTitle);
+    document.getElementById('twitter-description').setAttribute('content', description);
+    document.getElementById('twitter-url').setAttribute('content', recipeUrl);
+    if (imageUrl) {
+        document.getElementById('twitter-image').setAttribute('content', imageUrl);
+    }
+    
+    // Update page title
+    document.title = fullTitle;
+}
+
 // Share recipe function
 async function shareRecipe(recipeId) {
     const card = document.getElementById(recipeId);
     if (!card) return;
     
     const recipeName = card.getAttribute('data-recipe-name');
-    const title = card.querySelector('.recipe-title').textContent;
-    const category = card.querySelector('.recipe-category')?.textContent || '';
-    const description = card.querySelector('.recipe-description')?.textContent || '';
-    const prepTime = card.querySelector('.recipe-meta span')?.textContent.replace('Prep: ', '') || '';
     
     // Get current URL and add recipe identifier using the same slug format as URL routing
     const currentUrl = window.location.origin + window.location.pathname;
     const recipeSlug = createRecipeSlug(recipeName);
     const recipeUrl = `${currentUrl}#${recipeSlug}`;
     
-    const shareData = {
-        title: `${title} - Richard's Recipe Collection`,
-        text: `${title}${category ? ` (${category})` : ''}${description ? `\n\n${description}` : ''}${prepTime ? `\n\nPrep Time: ${prepTime}` : ''}\n\nView full recipe:`,
-        url: recipeUrl
-    };
-    
     try {
         // Try Web Share API first (mobile and modern browsers)
         if (navigator.share) {
-            await navigator.share(shareData);
+            await navigator.share({
+                url: recipeUrl
+            });
             return;
         }
     } catch (error) {
@@ -587,17 +633,15 @@ async function shareRecipe(recipeId) {
         // If share fails, fall through to clipboard
     }
     
-    // Fallback: Copy to clipboard
-    const shareText = `${shareData.title}\n\n${shareData.text} ${shareData.url}`;
-    
+    // Fallback: Copy only URL to clipboard
     try {
         // Try modern clipboard API first
         if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(shareText);
+            await navigator.clipboard.writeText(recipeUrl);
             showNotification('Recipe link copied to clipboard');
         } else {
             // Fallback to execCommand method
-            if (copyToClipboardFallback(shareText)) {
+            if (copyToClipboardFallback(recipeUrl)) {
                 showNotification('Recipe link copied to clipboard');
             } else {
                 throw new Error('Clipboard API not available');
@@ -605,7 +649,7 @@ async function shareRecipe(recipeId) {
         }
     } catch (error) {
         console.error('Error copying to clipboard:', error);
-        // Last resort: show the URL in an alert so user can manually copy
+        // Last resort: show the URL in notification so user can manually copy
         showNotification('Unable to copy. URL: ' + recipeUrl);
     }
 }
