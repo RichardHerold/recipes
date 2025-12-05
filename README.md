@@ -10,6 +10,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 - 📸 **Recipe Photos** - Add images to make your recipes more appealing
 - 📱 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
 - 🎨 **Modern UI** - Clean, modern interface with smooth animations
+- 📲 **Progressive Web App (PWA)** - Installable app with offline support
 
 ## Getting Started
 
@@ -178,6 +179,62 @@ You can add photos to your recipes in two ways:
 - Keep file sizes reasonable (< 2MB) for faster loading
 - Images are displayed at the top of recipe cards
 
+## Progressive Web App (PWA)
+
+This recipe collection is a **Progressive Web App**, which means users can install it on their devices and use it offline!
+
+### PWA Features
+
+- 📥 **Installable** - Users can install the app on their home screen (desktop and mobile)
+- 🔌 **Offline Support** - All recipes are cached and available offline after the first visit
+- ⚡ **Fast Loading** - Assets are cached for instant subsequent loads
+- 📱 **App-like Experience** - Runs in standalone mode when installed (no browser UI)
+
+### Installing the App
+
+**On Desktop (Chrome/Edge):**
+- Look for the install icon (➕) in the address bar
+- Click it to install the app
+- The app will open in its own window
+
+**On Mobile:**
+- **iOS (Safari):** Tap the Share button → "Add to Home Screen"
+- **Android (Chrome):** Tap the menu (⋮) → "Install app" or "Add to Home Screen"
+- The app icon will appear on your home screen
+
+### Offline Usage
+
+After your first visit:
+1. The app automatically caches all recipes and assets
+2. You can use the app completely offline
+3. Recipes load instantly from cache
+4. When you're back online, the app updates automatically
+
+### PWA Setup
+
+The PWA is already configured! The following files handle PWA functionality:
+
+- `manifest.json` - App metadata and configuration
+- `service-worker.js` - Handles offline caching
+- `icon-192.png` & `icon-512.png` - App icons (see below)
+
+**Required Icons:**
+- Generate icons using `icon-generator.html` (open in browser and download)
+- Or create your own 192x192 and 512x512 PNG icons
+- Save as `icon-192.png` and `icon-512.png` in the root directory
+
+For detailed PWA setup instructions, see `PWA-SETUP.md`.
+
+### Browser Support
+
+PWAs work on:
+- ✅ Chrome/Edge (Android & Desktop)
+- ✅ Safari (iOS 11.3+, macOS)
+- ✅ Firefox (Android & Desktop)
+- ✅ Samsung Internet
+
+**Note:** Service workers require HTTPS (or localhost for development). GitHub Pages automatically provides HTTPS.
+
 ## File Structure
 
 ```
@@ -187,6 +244,11 @@ recipes/
 ├── styles.css              # Styling
 ├── app.js                  # Main JavaScript for displaying recipes
 ├── admin.js                # JavaScript for recipe form
+├── manifest.json           # PWA manifest file
+├── service-worker.js       # PWA service worker for offline support
+├── icon-192.png           # PWA icon (192x192)
+├── icon-512.png           # PWA icon (512x512)
+├── icon-generator.html    # Tool to generate PWA icons
 ├── recipes-index.json      # List of all recipe files
 ├── recipes/                # Recipe JSON files folder
 │   └── sample-recipe.json  # Example recipe
@@ -198,6 +260,8 @@ recipes/
 ## Local Development
 
 To test locally before pushing to GitHub:
+
+**Important:** Service workers require HTTP/HTTPS (not `file://`), so you must use a local server.
 
 1. **Using Python** (if installed):
    ```bash
@@ -214,6 +278,16 @@ To test locally before pushing to GitHub:
 3. **Using VS Code Live Server**:
    - Install the "Live Server" extension
    - Right-click on `index.html` and select "Open with Live Server"
+
+### Testing PWA Features Locally
+
+1. Open Chrome DevTools (F12)
+2. Go to **Application** tab
+3. Check **Service Workers** section to verify registration
+4. Test offline mode:
+   - Go to **Network** tab
+   - Enable "Offline" checkbox
+   - Refresh the page - it should still work!
 
 ## Tips
 
