@@ -128,16 +128,7 @@ function renderIngredients(ingredients) {
         }
     });
     
-    // Render regular ingredients first if any
-    if (hasRegularIngredients) {
-        html += '<ul class="ingredients-list">';
-        regularIngredients.forEach(ing => {
-            html += `<li>${escapeHtml(ing)}</li>`;
-        });
-        html += '</ul>';
-    }
-    
-    // Render subsections
+    // Render subsections first
     subsections.forEach(subsection => {
         html += `<div class="ingredient-subsection">
             <h4 class="ingredient-subsection-title">${escapeHtml(subsection.subsection)}</h4>
@@ -149,6 +140,15 @@ function renderIngredients(ingredients) {
         
         html += `</ul></div>`;
     });
+    
+    // Render regular ingredients after subsections if any
+    if (hasRegularIngredients) {
+        html += '<ul class="ingredients-list">';
+        regularIngredients.forEach(ing => {
+            html += `<li>${escapeHtml(ing)}</li>`;
+        });
+        html += '</ul>';
+    }
     
     return html;
 }
@@ -172,16 +172,7 @@ function renderInstructions(instructions) {
         }
     });
     
-    // Render regular instructions first if any
-    if (hasRegularInstructions) {
-        html += '<ol class="instructions-list">';
-        regularInstructions.forEach(inst => {
-            html += `<li>${escapeHtml(inst)}</li>`;
-        });
-        html += '</ol>';
-    }
-    
-    // Render subsections
+    // Render subsections first
     subsections.forEach(subsection => {
         html += `<div class="instruction-subsection">
             <h4 class="instruction-subsection-title">${escapeHtml(subsection.subsection)}</h4>
@@ -193,6 +184,15 @@ function renderInstructions(instructions) {
         
         html += `</ol></div>`;
     });
+    
+    // Render regular instructions after subsections if any
+    if (hasRegularInstructions) {
+        html += '<ol class="instructions-list">';
+        regularInstructions.forEach(inst => {
+            html += `<li>${escapeHtml(inst)}</li>`;
+        });
+        html += '</ol>';
+    }
     
     return html;
 }
