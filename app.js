@@ -114,39 +114,39 @@ function renderIngredients(ingredients) {
     if (!ingredients || ingredients.length === 0) return '';
     
     let html = '';
-    let hasRegularIngredients = false;
-    let regularIngredients = [];
-    let subsections = [];
+    let currentList = null;
     
-    // Separate regular ingredients from subsections
+    // Render items in the order they appear in the JSON
     ingredients.forEach(item => {
         if (typeof item === 'object' && item.subsection && item.items) {
-            subsections.push(item);
+            // Close any open list before starting a subsection
+            if (currentList) {
+                html += '</ul>';
+                currentList = null;
+            }
+            
+            // Render subsection
+            html += `<div class="ingredient-subsection">
+                <h4 class="ingredient-subsection-title">${escapeHtml(item.subsection)}</h4>
+                <ul class="ingredients-list">`;
+            
+            item.items.forEach(subItem => {
+                html += `<li>${escapeHtml(subItem)}</li>`;
+            });
+            
+            html += `</ul></div>`;
         } else {
-            regularIngredients.push(item);
-            hasRegularIngredients = true;
+            // Regular ingredient - start a list if needed
+            if (!currentList) {
+                html += '<ul class="ingredients-list">';
+                currentList = true;
+            }
+            html += `<li>${escapeHtml(item)}</li>`;
         }
     });
     
-    // Render subsections first
-    subsections.forEach(subsection => {
-        html += `<div class="ingredient-subsection">
-            <h4 class="ingredient-subsection-title">${escapeHtml(subsection.subsection)}</h4>
-            <ul class="ingredients-list">`;
-        
-        subsection.items.forEach(item => {
-            html += `<li>${escapeHtml(item)}</li>`;
-        });
-        
-        html += `</ul></div>`;
-    });
-    
-    // Render regular ingredients after subsections if any
-    if (hasRegularIngredients) {
-        html += '<ul class="ingredients-list">';
-        regularIngredients.forEach(ing => {
-            html += `<li>${escapeHtml(ing)}</li>`;
-        });
+    // Close any open list
+    if (currentList) {
         html += '</ul>';
     }
     
@@ -158,39 +158,39 @@ function renderInstructions(instructions) {
     if (!instructions || instructions.length === 0) return '';
     
     let html = '';
-    let hasRegularInstructions = false;
-    let regularInstructions = [];
-    let subsections = [];
+    let currentList = null;
     
-    // Separate regular instructions from subsections
+    // Render items in the order they appear in the JSON
     instructions.forEach(item => {
         if (typeof item === 'object' && item.subsection && item.items) {
-            subsections.push(item);
+            // Close any open list before starting a subsection
+            if (currentList) {
+                html += '</ol>';
+                currentList = null;
+            }
+            
+            // Render subsection
+            html += `<div class="instruction-subsection">
+                <h4 class="instruction-subsection-title">${escapeHtml(item.subsection)}</h4>
+                <ol class="instructions-list">`;
+            
+            item.items.forEach(subItem => {
+                html += `<li>${escapeHtml(subItem)}</li>`;
+            });
+            
+            html += `</ol></div>`;
         } else {
-            regularInstructions.push(item);
-            hasRegularInstructions = true;
+            // Regular instruction - start a list if needed
+            if (!currentList) {
+                html += '<ol class="instructions-list">';
+                currentList = true;
+            }
+            html += `<li>${escapeHtml(item)}</li>`;
         }
     });
     
-    // Render subsections first
-    subsections.forEach(subsection => {
-        html += `<div class="instruction-subsection">
-            <h4 class="instruction-subsection-title">${escapeHtml(subsection.subsection)}</h4>
-            <ol class="instructions-list">`;
-        
-        subsection.items.forEach(item => {
-            html += `<li>${escapeHtml(item)}</li>`;
-        });
-        
-        html += `</ol></div>`;
-    });
-    
-    // Render regular instructions after subsections if any
-    if (hasRegularInstructions) {
-        html += '<ol class="instructions-list">';
-        regularInstructions.forEach(inst => {
-            html += `<li>${escapeHtml(inst)}</li>`;
-        });
+    // Close any open list
+    if (currentList) {
         html += '</ol>';
     }
     
