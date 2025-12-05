@@ -1,6 +1,7 @@
 {
-  "recipes": [
-    "sample-recipe.json"
-  ]
+    "recipes": [
+        "waldorf-salad.json",
+        "roast-turkey.json",
+        "creamed-pearled-onions.json"
+    ]
 }
-
