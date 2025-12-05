@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard's Recipe Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Richard's Recipe Collection</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes">
+                <span class="search-icon">⌕</span>
+            </div>
+            
+            <div class="category-filter">
+                <label>Filter by Category:</label>
+                <div class="category-buttons" id="categoryButtons">
+                    <button class="category-btn active" data-category="all">All</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipes-grid" id="recipesGrid">
+            <div class="loading">Loading recipes...</div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <p>No recipes found matching your search.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Richard's Recipe Collection | Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification" style="display: none;">
+        <span class="notification-text">Recipe link copied to clipboard</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
