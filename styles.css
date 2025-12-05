@@ -416,6 +416,44 @@ main {
     font-style: italic;
 }
 
+.instruction-subsection {
+    margin-bottom: 1.5rem;
+}
+
+.instruction-subsection-title {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-style: normal;
+}
+
+.instruction-subsection:first-child .instruction-subsection-title {
+    margin-top: 0;
+}
+
+.ingredient-subsection {
+    margin-bottom: 1.5rem;
+}
+
+.ingredient-subsection-title {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-style: normal;
+}
+
+.ingredient-subsection:first-child .ingredient-subsection-title {
+    margin-top: 0;
+}
+
 .loading,
 .no-results {
     text-align: center;

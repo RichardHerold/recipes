@@ -103,6 +103,94 @@ function displayRecipes() {
     checkURLAndExpandRecipe();
 }
 
+// Render ingredients with support for subsections
+function renderIngredients(ingredients) {
+    if (!ingredients || ingredients.length === 0) return '';
+    
+    let html = '';
+    let hasRegularIngredients = false;
+    let regularIngredients = [];
+    let subsections = [];
+    
+    // Separate regular ingredients from subsections
+    ingredients.forEach(item => {
+        if (typeof item === 'object' && item.subsection && item.items) {
+            subsections.push(item);
+        } else {
+            regularIngredients.push(item);
+            hasRegularIngredients = true;
+        }
+    });
+    
+    // Render regular ingredients first if any
+    if (hasRegularIngredients) {
+        html += '<ul class="ingredients-list">';
+        regularIngredients.forEach(ing => {
+            html += `<li>${escapeHtml(ing)}</li>`;
+        });
+        html += '</ul>';
+    }
+    
+    // Render subsections
+    subsections.forEach(subsection => {
+        html += `<div class="ingredient-subsection">
+            <h4 class="ingredient-subsection-title">${escapeHtml(subsection.subsection)}</h4>
+            <ul class="ingredients-list">`;
+        
+        subsection.items.forEach(item => {
+            html += `<li>${escapeHtml(item)}</li>`;
+        });
+        
+        html += `</ul></div>`;
+    });
+    
+    return html;
+}
+
+// Render instructions with support for subsections
+function renderInstructions(instructions) {
+    if (!instructions || instructions.length === 0) return '';
+    
+    let html = '';
+    let hasRegularInstructions = false;
+    let regularInstructions = [];
+    let subsections = [];
+    
+    // Separate regular instructions from subsections
+    instructions.forEach(item => {
+        if (typeof item === 'object' && item.subsection && item.items) {
+            subsections.push(item);
+        } else {
+            regularInstructions.push(item);
+            hasRegularInstructions = true;
+        }
+    });
+    
+    // Render regular instructions first if any
+    if (hasRegularInstructions) {
+        html += '<ol class="instructions-list">';
+        regularInstructions.forEach(inst => {
+            html += `<li>${escapeHtml(inst)}</li>`;
+        });
+        html += '</ol>';
+    }
+    
+    // Render subsections
+    subsections.forEach(subsection => {
+        html += `<div class="instruction-subsection">
+            <h4 class="instruction-subsection-title">${escapeHtml(subsection.subsection)}</h4>
+            <ol class="instructions-list">`;
+        
+        subsection.items.forEach(item => {
+            html += `<li>${escapeHtml(item)}</li>`;
+        });
+        
+        html += `</ol></div>`;
+    });
+    
+    return html;
+}
+
 // Create a slug from recipe name for URL
 function createRecipeSlug(recipeName) {
     return recipeName.toLowerCase()
@@ -200,17 +288,13 @@ function createRecipeCard(recipe) {
                 ${recipe.ingredients ? `
                     <div class="ingredients-section">
                         <h3>Ingredients</h3>
-                        <ul class="ingredients-list">
-                            ${recipe.ingredients.map(ing => `<li>${escapeHtml(ing)}</li>`).join('')}
-                        </ul>
+                        ${renderIngredients(recipe.ingredients)}
                     </div>
                 ` : ''}
                 ${recipe.instructions ? `
                     <div class="instructions-section">
                         <h3>Instructions</h3>
-                        <ol class="instructions-list">
-                            ${recipe.instructions.map(inst => `<li>${escapeHtml(inst)}</li>`).join('')}
-                        </ol>
+                        ${renderInstructions(recipe.instructions)}
                     </div>
                 ` : ''}
             </div>

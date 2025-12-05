@@ -13,29 +13,42 @@
     "¼ pound butter, cubed, cold",
     "¾ cup buttermilk",
     "~2 Tablespoons honey, Warmed (optional)",
-    "Equipment",
-    "Food processor",
-    "Dough Cutter",
-    "Spatula",
-    "Rolling pin",
-    "3in round cutter",
-    "Large mixing bowl",
-    "Half size baking sheet",
-    "Parchment paper",
-    "Weigh 240g flour and put into food processor. Leave flour container out for dusting.",
-    "Measure 1 teaspoon salt and put into food processor.",
-    "Measure 1 teaspoon sugar and put into food processor.",
-    "Measure 1 Tablespoon baking powder and put into food processor.",
-    "Measure ¾ cup buttermilk in a liquid measuring cup. Leave in cup",
-    "Measure honey in ramekin"
+    {
+      "subsection": "Equipment",
+      "items": [
+        "Food processor",
+        "Dough Cutter",
+        "Spatula",
+        "Rolling pin",
+        "3in round cutter",
+        "Large mixing bowl",
+        "Half size baking sheet",
+        "Parchment paper"
+      ]
+    },
+    {
+      "subsection": "Mise en Place",
+      "items": [
+        "Weigh 240g flour and put into food processor. Leave flour container out for dusting.",
+        "Measure 1 teaspoon salt and put into food processor.",
+        "Measure 1 teaspoon sugar and put into food processor.",
+        "Measure 1 Tablespoon baking powder and put into food processor.",
+        "Measure ¾ cup buttermilk in a liquid measuring cup. Leave in cup",
+        "Measure honey in ramekin"
+      ]
+    }
   ],
   "instructions": [
-    "Mise en Place:",
-    "Butter",
-    "Using a dough cutter cut a stick of butter lengthwise into thirds.",
-    "Turn the butter 90degrees and cut again into thirds.",
-    "Starting on one side, cut the butter into ½ slices.",
-    "Put butter into ramekin and keep in refrigerator until ready to use.",
+    {
+      "subsection": "Mise en Place",
+      "items": [
+        "Butter",
+        "Using a dough cutter cut a stick of butter lengthwise into thirds.",
+        "Turn the butter 90degrees and cut again into thirds.",
+        "Starting on one side, cut the butter into ½ slices.",
+        "Put butter into ramekin and keep in refrigerator until ready to use."
+      ]
+    },
     "Preheat the oven to 350°. Convention if possible.",
     "Pulse dry ingredients in food processor 2-3 times.",
     "Pulse the flour in a food processor with the cold butter until the butter is the size of small pebbles approx 6-8 times.",

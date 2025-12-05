@@ -91,6 +91,73 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 
 **Categories:** Appetizer, Main Course, Dessert, Side Dish, Breakfast, Lunch, Dinner, Snack, Beverage, Other
 
+### Using Subsections in Recipes
+
+You can organize ingredients and instructions into subsections with custom titles. This is useful for grouping related items (e.g., "Mise en Place", "Equipment", "For the Sauce", etc.).
+
+#### Subsections in Ingredients
+
+You can mix regular ingredients with subsections:
+
+```json
+{
+  "ingredients": [
+    "2 cups all-purpose flour",
+    "1 cup sugar",
+    {
+      "subsection": "Equipment",
+      "items": [
+        "Mixing bowl",
+        "Whisk",
+        "Baking pan"
+      ]
+    },
+    {
+      "subsection": "Optional Toppings",
+      "items": [
+        "Chocolate chips",
+        "Chopped nuts"
+      ]
+    }
+  ]
+}
+```
+
+#### Subsections in Instructions
+
+You can mix regular instructions with subsections:
+
+```json
+{
+  "instructions": [
+    {
+      "subsection": "Mise en Place",
+      "items": [
+        "Preheat oven to 350°F",
+        "Prepare all ingredients",
+        "Line baking sheet with parchment"
+      ]
+    },
+    "Mix dry ingredients in a large bowl",
+    "Add wet ingredients and stir until combined",
+    {
+      "subsection": "Baking",
+      "items": [
+        "Bake for 12 minutes",
+        "Rotate pan halfway through",
+        "Cool on wire rack"
+      ]
+    }
+  ]
+}
+```
+
+**Notes:**
+- Subsections are optional - you can use all regular items, all subsections, or mix them
+- Each subsection has its own numbered (instructions) or bulleted (ingredients) list
+- Subsection titles are displayed in uppercase with custom styling
+- This feature is backward compatible - existing recipes without subsections will continue to work
+
 ### Adding Images to Recipes
 
 You can add photos to your recipes in two ways:
