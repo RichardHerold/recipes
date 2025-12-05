@@ -107,7 +107,6 @@ function createRecipeCard(recipe) {
             <div class="recipe-header">
                 <div>
                     <h2 class="recipe-title">${escapeHtml(recipe.name)}</h2>
-                    <span class="recipe-category">${escapeHtml(recipe.category || 'Uncategorized')}</span>
                 </div>
                 <div class="recipe-actions">
                     <button class="recipe-action-btn" onclick="printRecipe('${recipeId}')" title="Print recipe">Print</button>
@@ -118,7 +117,6 @@ function createRecipeCard(recipe) {
             <div class="recipe-meta">
                 <span>Prep: ${prepTime}</span>
                 <span>Cook: ${cookTime}</span>
-                <span>${date}</span>
             </div>
             <div class="recipe-details">
                 ${recipe.ingredients ? `
@@ -138,6 +136,7 @@ function createRecipeCard(recipe) {
                     </div>
                 ` : ''}
             </div>
+            <span class="recipe-category">${escapeHtml(recipe.category || 'Uncategorized')}</span>
         </div>
     `;
 }
