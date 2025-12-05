@@ -18,3 +18,4 @@ When adding a recipe image in the admin form, use the relative path:
 Or use an external URL if you prefer:
 - `https://example.com/image.jpg`
 
+

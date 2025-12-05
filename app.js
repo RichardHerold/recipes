@@ -28,8 +28,8 @@ async function loadRecipes() {
         const recipes = await Promise.all(recipePromises);
         allRecipes = recipes.filter(recipe => recipe !== null);
         
-        // Sort by date (newest first)
-        allRecipes.sort((a, b) => new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0));
+        // Sort alphabetically by name
+        allRecipes.sort((a, b) => a.name.localeCompare(b.name));
         
         filteredRecipes = [...allRecipes];
         displayRecipes();
