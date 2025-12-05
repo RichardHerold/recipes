@@ -6,55 +6,66 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "For the Beef and Marinade:",
-    "12 ounces (340g) skirt steak, sliced into 1/4-inch pieces against the grain (watch the video for the technique)",
-    "1 teaspoon (5ml) light soy sauce or shoyu",
-    "1 teaspoon (5ml) sesame oil",
-    "2 teaspoons (10ml) Shaoxing wine",
-    "1/4 teaspoon (1g) MSG",
-    "1 teaspoon (3) cornstarch",
-    "A little more than a 1/4 teaspoon  (1.5g) baking soda",
-    "1/2 teaspoon kosher salt (or 1/4 teaspoon table salt) (about 5g)",
-    "For the Sauce:",
-    "1 tablespoon (15ml) dark soy sauce",
-    "1 tablespoon (15ml) light soy sauce",
-    "2 tablespoons (30ml) oyster sauce",
-    "1 tablespoon (20g) sugar",
-    "For the Cornstarch Slurry:",
-    "2 teaspoons (6g) cornstarch",
-    "1 tablespoon (15ml) water",
-    "For the Broccoli or Broccolini:",
-    "12 ounces (340g) broccoli or broccolini, florets separated and stems sliced on a sharp bias into 1-inch pieces (peel stems if they are tough",
-    "For the Stir-Fry",
-    "2 tablespoons (30ml) peanut, rice bran, or soybean oil",
-    "3 teaspoons (8g) minced fresh garlic (3-4 medium cloves)",
-    "2 teaspoons (5g) minced fresh ginger (about ½-inch segment, minced)",
-    "1 tablespoon (15ml) Shaoxing wine"
+    {
+      "subsection": "Marinade Sauce",
+      "items": [
+        "12 ounces (340g) skirt steak, sliced into 1/4-inch pieces against the grain (watch the video for the technique)",
+        "1 teaspoon (5ml) light soy sauce or shoyu",
+        "1 teaspoon (5ml) sesame oil",
+        "2 teaspoons (10ml) Shaoxing wine",
+        "1/4 teaspoon (1g) MSG",
+        "1 teaspoon (3) cornstarch",
+        "A little more than a 1/4 teaspoon  (1.5g) baking soda",
+        "1/2 teaspoon kosher salt (or 1/4 teaspoon table salt) (about 5g)",
+        "1 tablespoon (15ml) dark soy sauce",
+        "1 tablespoon (15ml) light soy sauce",
+        "2 tablespoons (30ml) oyster sauce",
+        "1 tablespoon (20g) sugar",
+        "2 teaspoons (6g) cornstarch",
+        "1 tablespoon (15ml) water"
+      ]
+    },
+    {
+      "subsection": "Stir Fry",
+      "items": [
+        "12 ounces (340g) broccoli or broccolini, florets separated and stems sliced on a sharp bias into 1-inch pieces (peel stems if they are tough)",
+        "2 tablespoons (30ml) peanut, rice bran, or soybean oil",
+        "3 teaspoons (8g) minced fresh garlic (3-4 medium cloves)",
+        "2 teaspoons (5g) minced fresh ginger (about ½-inch segment, minced)",
+        "1 tablespoon (15ml) Shaoxing wine"
+      ]
+    }
   ],
   "instructions": [
-    "For the Beef and Marinade",
-    "Combine beef with marinade ingredients in a medium bowl.",
-    "Very roughly massage the marinade into the meat for at least 30 seconds.",
-    "Set aside for 15 minutes or refrigerate up to overnight.",
-    "For the Sauce",
-    "Combine soy sauce, wine, vinegar, oyster sauce, and chicken stock or water in a small bowl and stir together until homogenous. Set aside.",
-    "Combine cornstarch and water in a separate small bowl and stir with a fork until cornstarch is dissolved.",
-    "For the Broccolini",
-    "Heat a couple cups of salted water in a wok over high heat until boiling.",
-    "Add broccoli, cover, and cook until tender-crisp, about 1 minute.",
-    "Drain and transfer to a plate to air-dry.",
-    "For the Stir-Fry",
-    "Heat wok over high heat until lightly smoking.",
-    "Add 2 tablespoon (30ml) oil and swirl to coat.",
-    "Add beef, spread into a single layer and let it cook until lightly seared, about 30 seconds.",
-    "Stir-fry until beef is mostly cooked through and only a few pink spots remain.",
-    "Immediately add garlic and ginger and stir-fry until fragrant, 30 to 45 seconds longer.",
-    "Add 1 tablespoon Shaoxing wine by pouring it around the side of the wok.",
-    "Stir sauce mixture and pour it in around the sides of the wok and toss to combine.",
-    "Add broccoli and toss to combine.",
-    "Stir the cornstarch slurry and add a splash. Cook, tossing, until sauce thickens and the chicken is cooked through, about 30 seconds longer.",
-    "Adjust sauce consistency with more cornstarch slurry if it is too thin, or a splash of water if it is too thick.",
-    "Transfer to a serving platter and serve immediately with steamed white rice."
+    {
+      "subsection": "Marinade Sauce",
+      "items": [
+        "Combine beef with marinade ingredients in a medium bowl.",
+        "Very roughly massage the marinade into the meat for at least 30 seconds.",
+        "Set aside for 15 minutes or refrigerate up to overnight.",
+        "Combine soy sauce, wine, vinegar, oyster sauce, and chicken stock or water in a small bowl and stir together until homogenous. Set aside.",
+        "Combine cornstarch and water in a separate small bowl and stir with a fork until cornstarch is dissolved."
+      ]
+    },
+    {
+      "subsection": "Stir Fry",
+      "items": [
+        "Heat a couple cups of salted water in a wok over high heat until boiling.",
+        "Add broccoli, cover, and cook until tender-crisp, about 1 minute.",
+        "Drain and transfer to a plate to air-dry.",
+        "Heat wok over high heat until lightly smoking.",
+        "Add 2 tablespoon (30ml) oil and swirl to coat.",
+        "Add beef, spread into a single layer and let it cook until lightly seared, about 30 seconds.",
+        "Stir-fry until beef is mostly cooked through and only a few pink spots remain.",
+        "Immediately add garlic and ginger and stir-fry until fragrant, 30 to 45 seconds longer.",
+        "Add 1 tablespoon Shaoxing wine by pouring it around the side of the wok.",
+        "Stir sauce mixture and pour it in around the sides of the wok and toss to combine.",
+        "Add broccoli and toss to combine.",
+        "Stir the cornstarch slurry and add a splash. Cook, tossing, until sauce thickens and the chicken is cooked through, about 30 seconds longer.",
+        "Adjust sauce consistency with more cornstarch slurry if it is too thin, or a splash of water if it is too thick.",
+        "Transfer to a serving platter and serve immediately with steamed white rice."
+      ]
+    }
   ],
   "dateAdded": "2025-12-05T17:19:24.926Z"
 }
