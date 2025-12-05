@@ -678,3 +678,54 @@ function showNotification(message) {
     }, 3000);
 }
 
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered successfully:', registration.scope);
+                
+                // Check for updates periodically
+                setInterval(() => {
+                    registration.update();
+                }, 60000); // Check every minute
+            })
+            .catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+        
+        // Listen for service worker updates
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            console.log('Service Worker updated, reloading page...');
+            // Optionally reload the page when a new service worker is activated
+            // window.location.reload();
+        });
+    });
+}
+
+// Handle install prompt for PWA
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    // Stash the event so it can be triggered later
+    deferredPrompt = e;
+    // Optionally, show a custom install button
+    // showInstallButton();
+});
+
+// Function to show install prompt (can be called from a button)
+function showInstallPrompt() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+            } else {
+                console.log('User dismissed the install prompt');
+            }
+            deferredPrompt = null;
+        });
+    }
+}
+
