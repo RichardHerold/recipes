@@ -83,3 +83,6 @@ PWAs work on:
 - GitHub Pages automatically provides HTTPS
 - The app will work offline after the first successful visit
 
+
+
+
