@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "¼ large white onion, for cleaning the grill",
-    "Beef fat (cut from the meat, if fatty), tallow or vegetable oil, for greasing the grill",
-    "2 pounds chuck roll, sliced into 1/2-inch steaks",
-    "2 pounds top sirloin, sliced into 1/2-inch steaks",
-    "4 teaspoons kosher or sea salt (about 1 teaspoon per pound of meat), or to taste, plus more for salting tortillas",
-    "12 corn tortillas",
-    "Frijoles de Fiesta (Fiesta Refried Beans) (see recipe)",
-    "12 ounces asadero, quesadilla, Monterey Jack or Oaxaca cheese, grated (about 3 cups)",
-    "Salsa Tatemada Norteña (Fire-Roasted Salsa) (see recipe)",
-    "Guacamole (see recipe)"
+    {
+      "item": "¼ large white onion, for cleaning the grill",
+      "category": "Produce"
+    },
+    {
+      "item": "Beef fat (cut from the meat, if fatty), tallow or vegetable oil, for greasing the grill",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 pounds chuck roll, sliced into 1/2-inch steaks",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 pounds top sirloin, sliced into 1/2-inch steaks",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "4 teaspoons kosher or sea salt (about 1 teaspoon per pound of meat), or to taste, plus more for salting tortillas",
+      "category": "Bakery"
+    },
+    {
+      "item": "12 corn tortillas",
+      "category": "Bakery"
+    },
+    {
+      "item": "Frijoles de Fiesta (Fiesta Refried Beans) (see recipe)",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "12 ounces asadero, quesadilla, Monterey Jack or Oaxaca cheese, grated (about 3 cups)",
+      "category": "Produce"
+    },
+    {
+      "item": "Salsa Tatemada Norteña (Fire-Roasted Salsa) (see recipe)",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "Guacamole (see recipe)",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Start a charcoal or gas grill, and get it very hot. For gas, set to high heat. For charcoal, grill is ready when coals are red but entirely covered with gray ash, and you can hold your hand about 5 to 6 inches above the coals for only about 4 to 5 seconds before it becomes too hot.",

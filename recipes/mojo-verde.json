@@ -6,14 +6,38 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 large bunch cilantro, leaves and tender stems only",
-    "4 large cloves garlic, peeled",
-    "2 limes, juiced",
-    "½ teaspoon cumin",
-    "1 jalapeno, stemmed",
-    "1 tablespoon white wine vinegar",
-    "½ cup olive oil",
-    "Kosher salt, to taste"
+    {
+      "item": "1 large bunch cilantro, leaves and tender stems only",
+      "category": "Produce"
+    },
+    {
+      "item": "4 large cloves garlic, peeled",
+      "category": "Produce"
+    },
+    {
+      "item": "2 limes, juiced",
+      "category": "Produce"
+    },
+    {
+      "item": "½ teaspoon cumin",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 jalapeno, stemmed",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon white wine vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "½ cup olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt, to taste",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "In the bowl of a food processor or blender, combine the cilantro, garlic, lime juice, cumin, jalapeno, white wine vinegar, and olive oil.",

@@ -6,21 +6,66 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Waffle Batter",
-    "2 ½ cups all-purpose flour",
-    "1 rounded tablespoon sugar",
-    "1 teaspoon salt",
-    "2 teaspoons baking soda",
-    "¾ teaspoon baking powder",
-    "2 ½ cups buttermilk",
-    "3 medium size eggs or 2 jumbo eggs",
-    "¼ teaspoon vanilla extract",
-    "½ stick butter",
-    "Toppings",
-    "Fresh Strawberries",
-    "Fresh Blueberries",
-    "Maple Syrup",
-    "Whipped Cream (preferably homemade with vanilla and cognac or bourbon mixed in)"
+    {
+      "item": "Waffle Batter",
+      "category": "Other"
+    },
+    {
+      "item": "2 ½ cups all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 rounded tablespoon sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¾ teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 ½ cups buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3 medium size eggs or 2 jumbo eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¼ teaspoon vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ stick butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Toppings",
+      "category": "Other"
+    },
+    {
+      "item": "Fresh Strawberries",
+      "category": "Produce"
+    },
+    {
+      "item": "Fresh Blueberries",
+      "category": "Produce"
+    },
+    {
+      "item": "Maple Syrup",
+      "category": "Other"
+    },
+    {
+      "item": "Whipped Cream (preferably homemade with vanilla and cognac or bourbon mixed in)",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "Mix dry ingredients thoroughly in a large bowl with electric egg beater.",

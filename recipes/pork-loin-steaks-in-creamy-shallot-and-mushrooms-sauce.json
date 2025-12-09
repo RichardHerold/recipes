@@ -6,17 +6,50 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "4 pork loin steaks",
-    "1 tbsp olive oil",
-    "2 shallots chopped",
-    "2-3 large field mushrooms or portobello mushrooms chopped",
-    "2 rosemary sprigs chopped",
-    "a splash of cognac or brandy optional",
-    "1 tbsp flour if you using cream instead of creme fraiche",
-    "80ml/1/4 cup stock pork or chicken",
-    "1 tbsp whole-grain mustard",
-    "200 g / ⅔ cup creme fraiche or heavy cream",
-    "salt and pepper to taste"
+    {
+      "item": "4 pork loin steaks",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 tbsp olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "2 shallots chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "2-3 large field mushrooms or portobello mushrooms chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "2 rosemary sprigs chopped",
+      "category": "Other"
+    },
+    {
+      "item": "a splash of cognac or brandy optional",
+      "category": "Beverages"
+    },
+    {
+      "item": "1 tbsp flour if you using cream instead of creme fraiche",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "80ml/1/4 cup stock pork or chicken",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 tbsp whole-grain mustard",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "200 g / ⅔ cup creme fraiche or heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "salt and pepper to taste",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Rub your pork loin steaks with some sea salt.",

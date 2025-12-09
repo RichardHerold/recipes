@@ -552,6 +552,23 @@ footer p {
     flex: 1;
 }
 
+.ingredient-input .ingredient-field {
+    flex: 3;
+}
+
+.ingredient-input .ingredient-category-field {
+    flex: 2;
+    min-width: 160px;
+}
+
+.field-help {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
 .btn {
     padding: 0.75rem 1.5rem;
     border: 1px solid var(--border-color);
@@ -749,6 +766,15 @@ footer p {
         left: 1rem;
         max-width: none;
         bottom: 1rem;
+    }
+    
+    .ingredient-input {
+        flex-direction: column;
+    }
+    
+    .ingredient-input .ingredient-field,
+    .ingredient-input .ingredient-category-field {
+        width: 100%;
     }
 }
 

@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "All-purpose flour, for dusting",
-    "2/3 recipe Walnut Dough (see Note)",
-    "Extra-virgin olive oil",
-    "3 ounces pancetta, chopped",
-    "3 cups thinly sliced yellow onion (about 1 large)",
-    "Heat the oven to 400°F.",
-    "Kosher salt and freshly ground black pepper",
-    "1 egg yolk",
-    "1/2 cup heavy cream or crème fraîche",
-    "2 ounces Gruyère cheese, shredded (1/2 cup)"
+    {
+      "item": "All-purpose flour, for dusting",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2/3 recipe Walnut Dough (see Note)",
+      "category": "Bakery"
+    },
+    {
+      "item": "Extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "3 ounces pancetta, chopped",
+      "category": "Other"
+    },
+    {
+      "item": "3 cups thinly sliced yellow onion (about 1 large)",
+      "category": "Produce"
+    },
+    {
+      "item": "Heat the oven to 400°F.",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1 egg yolk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/2 cup heavy cream or crème fraîche",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 ounces Gruyère cheese, shredded (1/2 cup)",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "Tart Shell",

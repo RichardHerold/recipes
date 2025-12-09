@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1/4 cup reduced-fat sour cream or plain yogurt",
-    "2 tablespoons fresh lime juice",
-    "Coarse salt and fresh ground pepper",
-    "1/4 small red cabbage, thinly shredded (about 2 1/2 cups)",
-    "4 scallions, thinly sliced (about 1/2 cu)",
-    "1 jalapeno chile, halved lengthwise, one half minced",
-    "2 tablespoons olive oil",
-    "1 pound tilapia fillets (or other firm white fish), cut into 16 equal strips",
-    "8 flour tortillas (6-inch)",
-    "1/2 cup fresh cilantro leaves"
+    {
+      "item": "1/4 cup reduced-fat sour cream or plain yogurt",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 tablespoons fresh lime juice",
+      "category": "Produce"
+    },
+    {
+      "item": "Coarse salt and fresh ground pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1/4 small red cabbage, thinly shredded (about 2 1/2 cups)",
+      "category": "Produce"
+    },
+    {
+      "item": "4 scallions, thinly sliced (about 1/2 cu)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 jalapeno chile, halved lengthwise, one half minced",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 pound tilapia fillets (or other firm white fish), cut into 16 equal strips",
+      "category": "Seafood"
+    },
+    {
+      "item": "8 flour tortillas (6-inch)",
+      "category": "Bakery"
+    },
+    {
+      "item": "1/2 cup fresh cilantro leaves",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "1. In a large bowl, combine the sour cream and lime juice; season with salt and pepper. Transfer half the mixture to another container; set aside for serving. Toss the cabbage, scallions, and minced jalapeno with the remaining sour-cream mixture. Season again with salt and pepper.",

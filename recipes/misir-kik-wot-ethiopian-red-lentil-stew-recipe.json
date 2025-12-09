@@ -6,13 +6,34 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1½ cups red lentils",
-    "1 large finely chopped onion",
-    "2 cloves minced garlic",
-    "2 tbsp berbere",
-    "2 tbsp niter kibbeh (Ethiopian clarified butter)",
-    "2 cups water",
-    "1 tsp sweet paprika"
+    {
+      "item": "1½ cups red lentils",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "1 large finely chopped onion",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cloves minced garlic",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tbsp berbere",
+      "category": "Other"
+    },
+    {
+      "item": "2 tbsp niter kibbeh (Ethiopian clarified butter)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 cups water",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "1 tsp sweet paprika",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Begin by cooking the lentils and water in a mid-sized pot for approx. 30 minutes.",

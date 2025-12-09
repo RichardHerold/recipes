@@ -6,25 +6,82 @@
   "cookTime": "45 minutes (plus the time to cook the rice)",
   "image": "",
   "ingredients": [
-    "3 ¼ cups cooked Japanese-style short-grain rice, preferably chilled",
-    "6-8 ounces bacon, preferably thick-cut, chopped",
-    "1 medium yellow onion",
-    "2 cups well-drained napa cabbage kimchi",
-    "1 tablespoon soy sauce",
-    "1 cup frozen peas, thawed",
-    "2 teaspoons toasted sesame oil",
-    "4 scallions",
-    "Kosher salt and ground black pepper",
-    "4 large eggs",
-    "Furikake seasoning (optional)",
-    "Kitchen Equipment",
-    "12” non-stick skillet",
-    "Non-metal spatula",
-    "Small Bowl and strainer",
-    "Range",
-    "Kitchen knife",
-    "Liquid measuring cups",
-    "Dry measuring cups"
+    {
+      "item": "3 ¼ cups cooked Japanese-style short-grain rice, preferably chilled",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "6-8 ounces bacon, preferably thick-cut, chopped",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 medium yellow onion",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cups well-drained napa cabbage kimchi",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 cup frozen peas, thawed",
+      "category": "Produce"
+    },
+    {
+      "item": "2 teaspoons toasted sesame oil",
+      "category": "Other"
+    },
+    {
+      "item": "4 scallions",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt and ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "4 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Furikake seasoning (optional)",
+      "category": "Other"
+    },
+    {
+      "item": "Kitchen Equipment",
+      "category": "Other"
+    },
+    {
+      "item": "12” non-stick skillet",
+      "category": "Other"
+    },
+    {
+      "item": "Non-metal spatula",
+      "category": "Other"
+    },
+    {
+      "item": "Small Bowl and strainer",
+      "category": "Other"
+    },
+    {
+      "item": "Range",
+      "category": "Other"
+    },
+    {
+      "item": "Kitchen knife",
+      "category": "Other"
+    },
+    {
+      "item": "Liquid measuring cups",
+      "category": "Other"
+    },
+    {
+      "item": "Dry measuring cups",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Mise en Place:",

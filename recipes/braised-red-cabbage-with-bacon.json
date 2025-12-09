@@ -6,16 +6,46 @@
   "cookTime": "1 hr 15 mins",
   "image": "",
   "ingredients": [
-    "1 medium head red cabbage",
-    "6 thick slices applewood-smoked bacon or other smoked bacon",
-    "1 medium yellow onion, thinly sliced",
-    "2 tablespoons packed dark brown sugar",
-    "2 tablespoons Dijon mustard",
-    "⅓ cup cider vinegar",
-    "1 cup low-sodium beef broth",
-    "Measure 2 Tablespoons packed dark brown sugar and 2 Tablespoons Dijon mustard and put in a ramekin.",
-    "Measure ⅓ cup cider vinegar and put in a pourable ramekin or beaker.",
-    "Measure 1 cup of beef broth in a liquid measuring cup."
+    {
+      "item": "1 medium head red cabbage",
+      "category": "Produce"
+    },
+    {
+      "item": "6 thick slices applewood-smoked bacon or other smoked bacon",
+      "category": "Produce"
+    },
+    {
+      "item": "1 medium yellow onion, thinly sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons packed dark brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons Dijon mustard",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "⅓ cup cider vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 cup low-sodium beef broth",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Measure 2 Tablespoons packed dark brown sugar and 2 Tablespoons Dijon mustard and put in a ramekin.",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Measure ⅓ cup cider vinegar and put in a pourable ramekin or beaker.",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "Measure 1 cup of beef broth in a liquid measuring cup.",
+      "category": "Meat & Poultry"
+    }
   ],
   "instructions": [
     "Mise en Place:",

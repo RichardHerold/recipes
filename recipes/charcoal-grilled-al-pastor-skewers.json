@@ -6,25 +6,82 @@
   "cookTime": "TOTAL TIME:",
   "image": "",
   "ingredients": [
-    "For the Pork:",
-    "2 ancho chilies (40g), stemmed and seeded",
-    "2 pasilla or guajillo chilies (15g), stemmed and seeded",
-    "1/2 cup (120ml) homemade chicken stock or low-sodium store-bought broth",
-    "2 teaspoons (10ml) vegetable oil",
-    "1 teaspoon (2g) dried Mexican oregano",
-    "1 teaspoon (3g) ground cumin",
-    "1 tablespoon (12g) achiote powder or paste",
-    "1 chipotle chili in adobo (15g), plus 2 teaspoons (10ml) adobo sauce",
-    "1/4 cup (60ml) distilled white vinegar",
-    "2 1/2 teaspoons (10g) kosher salt",
-    "2 teaspoons (10g) sugar",
-    "3 medium garlic cloves (15g)",
-    "2 pounds (900g) pork butt, in one piece",
-    "For the Skewers and Serving:",
-    "1 small pineapple (around 2 pounds; 900g), peeled, cored, and cut into 1- by 1/4-inch pieces",
-    "Lime wedges, for serving",
-    "Finely chopped fresh cilantro leaves and tender stems (optional)",
-    "Salsa verde, for serving (optional)"
+    {
+      "item": "For the Pork:",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 ancho chilies (40g), stemmed and seeded",
+      "category": "Produce"
+    },
+    {
+      "item": "2 pasilla or guajillo chilies (15g), stemmed and seeded",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 cup (120ml) homemade chicken stock or low-sodium store-bought broth",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 teaspoons (10ml) vegetable oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon (2g) dried Mexican oregano",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon (3g) ground cumin",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon (12g) achiote powder or paste",
+      "category": "Other"
+    },
+    {
+      "item": "1 chipotle chili in adobo (15g), plus 2 teaspoons (10ml) adobo sauce",
+      "category": "Produce"
+    },
+    {
+      "item": "1/4 cup (60ml) distilled white vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 1/2 teaspoons (10g) kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons (10g) sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 medium garlic cloves (15g)",
+      "category": "Produce"
+    },
+    {
+      "item": "2 pounds (900g) pork butt, in one piece",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "For the Skewers and Serving:",
+      "category": "Household & Misc"
+    },
+    {
+      "item": "1 small pineapple (around 2 pounds; 900g), peeled, cored, and cut into 1- by 1/4-inch pieces",
+      "category": "Produce"
+    },
+    {
+      "item": "Lime wedges, for serving",
+      "category": "Produce"
+    },
+    {
+      "item": "Finely chopped fresh cilantro leaves and tender stems (optional)",
+      "category": "Produce"
+    },
+    {
+      "item": "Salsa verde, for serving (optional)",
+      "category": "Condiments & Sauces"
+    }
   ],
   "instructions": [
     "Mise en Place:",

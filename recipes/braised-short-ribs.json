@@ -6,18 +6,54 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "2 quarts veal and/or beef stock",
-    "8 pounds beef short ribs (with bone)",
-    "Salt and black pepper, to taste",
-    "3 cups flour Canola oil, as needed",
-    "1 large carrot, finely diced",
-    "1 large Spanish onion, finely diced",
-    "2 stalks celery, finely diced",
-    "1 ½ cups red wine, any variety except sweet",
-    "2 cups balsamic vinegar",
-    "1 cup brown sugar",
-    "2 tablespoons finely chopped fresh rosemary leaves, plus additional sprigs for garnish",
-    "1 whole hot chile pepper (fresh or dried)"
+    {
+      "item": "2 quarts veal and/or beef stock",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "8 pounds beef short ribs (with bone)",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Salt and black pepper, to taste",
+      "category": "Produce"
+    },
+    {
+      "item": "3 cups flour Canola oil, as needed",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 large carrot, finely diced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large Spanish onion, finely diced",
+      "category": "Produce"
+    },
+    {
+      "item": "2 stalks celery, finely diced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 ½ cups red wine, any variety except sweet",
+      "category": "Beverages"
+    },
+    {
+      "item": "2 cups balsamic vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 cup brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons finely chopped fresh rosemary leaves, plus additional sprigs for garnish",
+      "category": "Other"
+    },
+    {
+      "item": "1 whole hot chile pepper (fresh or dried)",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

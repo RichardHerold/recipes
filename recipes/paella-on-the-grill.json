@@ -6,24 +6,78 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 ½ pounds boneless, skinless chicken thighs",
-    "Salt and pepper",
-    "12 ounces jumbo shrimp (16 to 20 per pound)",
-    "6 tablespoons Extra-Virgin Olive Oil",
-    "6 garlic cloves, minced",
-    "1 ¾ teaspoons hot smoked paprika",
-    "3 tablespoons Tomato Paste",
-    "4 cups Chicken Broth",
-    "1 (8-ounce) bottle clam juice",
-    "⅔ cup Dry Sherry",
-    "Pinch saffron threads(optional)",
-    "1 onion, chopped fine",
-    "½ cup Jarred Roasted Red Peppers, chopped fine",
-    "3 cups Arborio Rice",
-    "2 pound littleneck clams, scrubbed",
-    "1 pound Spanish-style chorizo sausage",
-    "1 cup Frozen Peas, thawed",
-    "Lemon wedges"
+    {
+      "item": "1 ½ pounds boneless, skinless chicken thighs",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Salt and pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "12 ounces jumbo shrimp (16 to 20 per pound)",
+      "category": "Seafood"
+    },
+    {
+      "item": "6 tablespoons Extra-Virgin Olive Oil",
+      "category": "Other"
+    },
+    {
+      "item": "6 garlic cloves, minced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 ¾ teaspoons hot smoked paprika",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 tablespoons Tomato Paste",
+      "category": "Produce"
+    },
+    {
+      "item": "4 cups Chicken Broth",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 (8-ounce) bottle clam juice",
+      "category": "Seafood"
+    },
+    {
+      "item": "⅔ cup Dry Sherry",
+      "category": "Other"
+    },
+    {
+      "item": "Pinch saffron threads(optional)",
+      "category": "Other"
+    },
+    {
+      "item": "1 onion, chopped fine",
+      "category": "Produce"
+    },
+    {
+      "item": "½ cup Jarred Roasted Red Peppers, chopped fine",
+      "category": "Produce"
+    },
+    {
+      "item": "3 cups Arborio Rice",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "2 pound littleneck clams, scrubbed",
+      "category": "Seafood"
+    },
+    {
+      "item": "1 pound Spanish-style chorizo sausage",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 cup Frozen Peas, thawed",
+      "category": "Produce"
+    },
+    {
+      "item": "Lemon wedges",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

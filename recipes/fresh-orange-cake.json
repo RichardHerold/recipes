@@ -6,18 +6,54 @@
   "cookTime": "55 to 57 minutes",
   "image": "",
   "ingredients": [
-    "Cake",
-    "1(18 ¼ ounce) package yellow cake mix with pudding",
-    "(Or Yellow Cake Mix plus Instant Pudding Mix)",
-    "1 cup fresh orange juice",
-    "½ cup vegetable oil",
-    "¼ cup sugar",
-    "1 teaspoon vanilla extract",
-    "4 large eggs",
-    "Glaze",
-    "1 cup confectioners' sugar, sifted",
-    "3 tablespoons fresh orange juice",
-    "1 teaspoon fresh grated orange zest"
+    {
+      "item": "Cake",
+      "category": "Other"
+    },
+    {
+      "item": "1(18 ¼ ounce) package yellow cake mix with pudding",
+      "category": "Other"
+    },
+    {
+      "item": "(Or Yellow Cake Mix plus Instant Pudding Mix)",
+      "category": "Other"
+    },
+    {
+      "item": "1 cup fresh orange juice",
+      "category": "Produce"
+    },
+    {
+      "item": "½ cup vegetable oil",
+      "category": "Other"
+    },
+    {
+      "item": "¼ cup sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "4 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Glaze",
+      "category": "Other"
+    },
+    {
+      "item": "1 cup confectioners' sugar, sifted",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 tablespoons fresh orange juice",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon fresh grated orange zest",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Preheat the oven to 350. Lightly mist a 12 cup bundt pan with vegetable oil spray, then dust with flour. Shake out excess flour.",

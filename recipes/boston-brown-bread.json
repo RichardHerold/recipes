@@ -6,18 +6,54 @@
   "cookTime": "2 Hours 50 minutes",
   "image": "",
   "ingredients": [
-    "Nonstick cooking spray",
-    "140 grams rye flour",
-    "140 grams stone-ground whole wheat flour",
-    "142 grams fine-ground cornmeal",
-    "198 grams lightly packed dark brown sugar",
-    "½ teaspoon (3 grams) baking powder",
-    "2 teaspoons (11 grams) baking soda",
-    "½ teaspoon (3 grams) kosher salt",
-    "1 tablespoon (16 grams) doenjang (Korean soybean paste)",
-    "2 cups buttermilk",
-    "½ cup egg whites (from 4 to 5 large eggs)",
-    "¾ cup blackstrap molasses"
+    {
+      "item": "Nonstick cooking spray",
+      "category": "Other"
+    },
+    {
+      "item": "140 grams rye flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "140 grams stone-ground whole wheat flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "142 grams fine-ground cornmeal",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "198 grams lightly packed dark brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon (3 grams) baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons (11 grams) baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon (3 grams) kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon (16 grams) doenjang (Korean soybean paste)",
+      "category": "Other"
+    },
+    {
+      "item": "2 cups buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ cup egg whites (from 4 to 5 large eggs)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¾ cup blackstrap molasses",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Mise en Place:",

@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "2 tablespoons unsalted butter",
-    "2 large leeks, white and pale green parts only, rinsed",
-    "1 quart homemade or store-bought low-sodium chicken stock",
-    "2 medium russet potatoes (about 3/4 pound)",
-    "1 bay leaf",
-    "Kosher salt and freshly ground black pepper",
-    "1 cup buttermilk",
-    "1/2 cup heavy cream",
-    "1/2 teaspoon freshly ground nutmeg",
-    "Sliced chives or scallions, for serving"
+    {
+      "item": "2 tablespoons unsalted butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 large leeks, white and pale green parts only, rinsed",
+      "category": "Produce"
+    },
+    {
+      "item": "1 quart homemade or store-bought low-sodium chicken stock",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 medium russet potatoes (about 3/4 pound)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 bay leaf",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/2 cup heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/2 teaspoon freshly ground nutmeg",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Sliced chives or scallions, for serving",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

@@ -6,18 +6,54 @@
   "cookTime": "40 minutes",
   "image": "",
   "ingredients": [
-    "Spicy Tomato Sauce",
-    "2 tablespoons extra-virgin olive oil",
-    "4 teaspoons finely chopped garlic",
-    "1 (28-ounce) can diced tomatoes, including the liquid",
-    "1 teaspoon Aleppo pepper",
-    "1 ½ teaspoons hawayej or teaspoon curry powder",
-    "1 ½ teaspoon freshly squeezed lemon juice",
-    "Kosher salt and freshly ground black pepper",
-    "Corn Grits",
-    "Shakshuka",
-    "6 eggs",
-    "Kosher salt"
+    {
+      "item": "Spicy Tomato Sauce",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "4 teaspoons finely chopped garlic",
+      "category": "Produce"
+    },
+    {
+      "item": "1 (28-ounce) can diced tomatoes, including the liquid",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon Aleppo pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1 ½ teaspoons hawayej or teaspoon curry powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 ½ teaspoon freshly squeezed lemon juice",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "Corn Grits",
+      "category": "Other"
+    },
+    {
+      "item": "Shakshuka",
+      "category": "Other"
+    },
+    {
+      "item": "6 eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Mise en Place:",

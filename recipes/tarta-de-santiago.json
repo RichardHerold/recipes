@@ -6,12 +6,30 @@
   "cookTime": "Total Time40 mins",
   "image": "",
   "ingredients": [
-    "4 eggs",
-    "1 cup sugar 200g (caster sugar is better, if possible)",
-    "2 cups almond flour 200g",
-    "1 lemon zest ie from 1 lemon",
-    "½ tsp cinnamon",
-    "2 tbsp confectioners sugar approx, to dust (icing sugar)"
+    {
+      "item": "4 eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 cup sugar 200g (caster sugar is better, if possible)",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 cups almond flour 200g",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 lemon zest ie from 1 lemon",
+      "category": "Produce"
+    },
+    {
+      "item": "½ tsp cinnamon",
+      "category": "Other"
+    },
+    {
+      "item": "2 tbsp confectioners sugar approx, to dust (icing sugar)",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Preheat oven to 350F/180C.",

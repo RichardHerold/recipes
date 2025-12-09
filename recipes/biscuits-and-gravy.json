@@ -6,12 +6,30 @@
   "cookTime": "Total Time:",
   "image": "",
   "ingredients": [
-    "1 pound breakfast sausage, hot or mild",
-    "40g (⅓ cup) all-purpose flour",
-    "3 to 4 cups whole milk, more to taste",
-    "1/2 teaspoon seasoned salt",
-    "2 teaspoons freshly ground black pepper, more to taste",
-    "Biscuits, warmed, for serving"
+    {
+      "item": "1 pound breakfast sausage, hot or mild",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "40g (⅓ cup) all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 to 4 cups whole milk, more to taste",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/2 teaspoon seasoned salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons freshly ground black pepper, more to taste",
+      "category": "Produce"
+    },
+    {
+      "item": "Biscuits, warmed, for serving",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Mise en Place:",

@@ -6,23 +6,74 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Dumplings",
-    "6-8 large napa cabbage leaves",
-    "1-2 Tablespoons kosher salt",
-    "½ bunch garlic chives",
-    "2 teaspoons sesame oil",
-    "3 Tablespoons soy sauce",
-    "1 pound ground pork",
-    "1 Tablespoon chopped fresh ginger",
-    "1 package round dumpling wrappers",
-    "2-3 Tablespoons canola oil",
-    "¾ cup water",
-    "Dumpling Sauce",
-    "1/2 cup soy sauce",
-    "1 Tbsp. black Chiangking vinegar",
-    "2 tsp. sriracha chili sauce",
-    "2 tsp. sesame oil",
-    "1 Tbsp. chopped ginger"
+    {
+      "item": "Dumplings",
+      "category": "Other"
+    },
+    {
+      "item": "6-8 large napa cabbage leaves",
+      "category": "Produce"
+    },
+    {
+      "item": "1-2 Tablespoons kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ bunch garlic chives",
+      "category": "Produce"
+    },
+    {
+      "item": "2 teaspoons sesame oil",
+      "category": "Other"
+    },
+    {
+      "item": "3 Tablespoons soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 pound ground pork",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 Tablespoon chopped fresh ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1 package round dumpling wrappers",
+      "category": "Bakery"
+    },
+    {
+      "item": "2-3 Tablespoons canola oil",
+      "category": "Other"
+    },
+    {
+      "item": "¾ cup water",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "Dumpling Sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1/2 cup soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 Tbsp. black Chiangking vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 tsp. sriracha chili sauce",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tsp. sesame oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 Tbsp. chopped ginger",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

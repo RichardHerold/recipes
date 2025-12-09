@@ -6,20 +6,62 @@
   "cookTime": "Total Time 30 minutes",
   "image": "",
   "ingredients": [
-    "1 large red onion, about 2 cups, sliced thin",
-    "1/4 cup niter kebbeh or ghee spiced butter",
-    "2 pounds venison, lamb or beef, cut into bite-sized pieces",
-    "2 tablespoons berbere",
-    "1 teaspoon ground fenugreek",
-    "1/2 teaspoon cardamom (optional)",
-    "1/2 teaspoon ground ginger",
-    "1/4 teaspoon cumin",
-    "1/4 teaspoon ground clove",
-    "1 teaspoon black pepper",
-    "3 to 4 garlic cloves, sliced thinly",
-    "2 cups whole peeled tomatoes, broken into bits",
-    "1 to 5 green chiles, such as jalapenos or serranos",
-    "1/2 cup red wine"
+    {
+      "item": "1 large red onion, about 2 cups, sliced thin",
+      "category": "Produce"
+    },
+    {
+      "item": "1/4 cup niter kebbeh or ghee spiced butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 pounds venison, lamb or beef, cut into bite-sized pieces",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 tablespoons berbere",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon ground fenugreek",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 teaspoon cardamom (optional)",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 teaspoon ground ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1/4 teaspoon cumin",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/4 teaspoon ground clove",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "3 to 4 garlic cloves, sliced thinly",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cups whole peeled tomatoes, broken into bits",
+      "category": "Produce"
+    },
+    {
+      "item": "1 to 5 green chiles, such as jalapenos or serranos",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 cup red wine",
+      "category": "Beverages"
+    }
   ],
   "instructions": [
     "Get the saute pan or wok very hot. Stir-fry the onions without the butter for a few minutes, until they char just a little on the outside. Add the spiced butter and the venison. Stir-fry hot and fast until the outside of the meat is brown but the inside of the meat is still very rare. You need to do this on as hot a burner as you have. Do it in two batches unless you have a very large wok or pan.",

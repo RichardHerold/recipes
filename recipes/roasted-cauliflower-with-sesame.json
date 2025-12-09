@@ -6,23 +6,74 @@
   "cookTime": "45 minutes",
   "image": "",
   "ingredients": [
-    "1 head of cauliflower, broken by hand into bite-sized florets",
-    "¼ cup olive oil",
-    "2 teaspoons kosher salt",
-    "1 teaspoon ground coriander",
-    "1 teaspoon dried oregano",
-    "freshly ground black pepper, to taste (I like to add a healthy amount of coarsely ground black pepper, personally)",
-    "2 tablespoons tahini",
-    "1 tablespoon white miso",
-    "2 teaspoons red wine vinegar",
-    "1½ tablespoons water",
-    "3 tablespoons toasted white sesame seeds",
-    "chili oil/paste, for serving (optional but recommended)",
-    "Measure out and grind the coriander and pepper together. Reserve in ramekin",
-    "Measure out the Salt and Oregano. Add to the coriander and pepper ramekin.",
-    "Measure ¼ cup olive oil and put into a pourable small ramekin or beaker.",
-    "Measure 2 Teaspoons red wine vinegar and 1½ Tablespoons of water and combine into a pourable small ramekin or beaker.",
-    "Measure 2 Tablespoon Tahini and 1 Tablespoon White Miso and combine in a small bowl."
+    {
+      "item": "1 head of cauliflower, broken by hand into bite-sized florets",
+      "category": "Produce"
+    },
+    {
+      "item": "¼ cup olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "2 teaspoons kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon ground coriander",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon dried oregano",
+      "category": "Other"
+    },
+    {
+      "item": "freshly ground black pepper, to taste (I like to add a healthy amount of coarsely ground black pepper, personally)",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons tahini",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 tablespoon white miso",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 teaspoons red wine vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1½ tablespoons water",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "3 tablespoons toasted white sesame seeds",
+      "category": "Other"
+    },
+    {
+      "item": "chili oil/paste, for serving (optional but recommended)",
+      "category": "Produce"
+    },
+    {
+      "item": "Measure out and grind the coriander and pepper together. Reserve in ramekin",
+      "category": "Produce"
+    },
+    {
+      "item": "Measure out the Salt and Oregano. Add to the coriander and pepper ramekin.",
+      "category": "Produce"
+    },
+    {
+      "item": "Measure ¼ cup olive oil and put into a pourable small ramekin or beaker.",
+      "category": "Household & Misc"
+    },
+    {
+      "item": "Measure 2 Teaspoons red wine vinegar and 1½ Tablespoons of water and combine into a pourable small ramekin or beaker.",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "Measure 2 Tablespoon Tahini and 1 Tablespoon White Miso and combine in a small bowl.",
+      "category": "Condiments & Sauces"
+    }
   ],
   "instructions": [
     "Mise en Place:",

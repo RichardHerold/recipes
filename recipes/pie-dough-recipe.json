@@ -6,11 +6,26 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "2 1/2 cups (12.5 ounces; 350 grams) all-purpose flour",
-    "2 tablespoons (25 grams) sugar",
-    "1 teaspoon (5 grams) kosher salt",
-    "2 1/2 sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats",
-    "6 tablespoons (3 ounces; 85 milliliters) cold water"
+    {
+      "item": "2 1/2 cups (12.5 ounces; 350 grams) all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons (25 grams) sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon (5 grams) kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 1/2 sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "6 tablespoons (3 ounces; 85 milliliters) cold water",
+      "category": "Pantry & Dry Goods"
+    }
   ],
   "instructions": [
     "Combine two thirds of flour with sugar and salt in the bowl of a food processor.",

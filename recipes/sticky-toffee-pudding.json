@@ -6,20 +6,62 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 cup dark rum, warmed",
-    "2 cups pitted dates",
-    "1 vanilla bean, split and seeds removed for use; reserve pod for sauce",
-    "1 teaspoon baking soda",
-    "1 teaspoon baking powder",
-    "1-1/2 cups all-purpose flour 7.5oz",
-    "Pinch of salt",
-    "1 stick butter, softened",
-    "6 tablespoons white sugar",
-    "2 eggs",
-    "1 cup heavy cream",
-    "1 cup dark brown sugar",
-    "1/4 cup butter",
-    "1 pint vanilla ice cream (optional, but not really)"
+    {
+      "item": "1 cup dark rum, warmed",
+      "category": "Beverages"
+    },
+    {
+      "item": "2 cups pitted dates",
+      "category": "Other"
+    },
+    {
+      "item": "1 vanilla bean, split and seeds removed for use; reserve pod for sauce",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1-1/2 cups all-purpose flour 7.5oz",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Pinch of salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 stick butter, softened",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "6 tablespoons white sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 cup heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 cup dark brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/4 cup butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 pint vanilla ice cream (optional, but not really)",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "Cooking Time:",

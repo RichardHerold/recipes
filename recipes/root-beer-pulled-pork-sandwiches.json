@@ -6,10 +6,22 @@
   "cookTime": "Prep",
   "image": "",
   "ingredients": [
-    "1 boneless pork shoulder butt roast (3 to 4 pounds)",
-    "1 can (12 ounces) root beer or cola",
-    "1 bottle (18 ounces) barbecue sauce",
-    "12 kaiser rolls, split"
+    {
+      "item": "1 boneless pork shoulder butt roast (3 to 4 pounds)",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 can (12 ounces) root beer or cola",
+      "category": "Beverages"
+    },
+    {
+      "item": "1 bottle (18 ounces) barbecue sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "12 kaiser rolls, split",
+      "category": "Bakery"
+    }
   ],
   "instructions": [
     "Place roast in a 4- or 5-qt. slow cooker. Add root beer",

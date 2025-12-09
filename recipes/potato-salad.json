@@ -6,11 +6,26 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 5 lbs bag of Yukon Gold Potato",
-    "12 eggs",
-    "6-7 stalks of celery",
-    "1 medium sweet onion",
-    "1 package of radishes."
+    {
+      "item": "1 5 lbs bag of Yukon Gold Potato",
+      "category": "Produce"
+    },
+    {
+      "item": "12 eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "6-7 stalks of celery",
+      "category": "Produce"
+    },
+    {
+      "item": "1 medium sweet onion",
+      "category": "Produce"
+    },
+    {
+      "item": "1 package of radishes.",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "boil potatoes until you can stick a fork in them and are soft but not mushy (about 40-45 min)",

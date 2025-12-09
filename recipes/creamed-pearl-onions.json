@@ -6,58 +6,214 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Glazed Onions",
-    "2 lbs frozen pearl onions",
-    "2 tbsp butter",
-    "2 tbsp olive oil",
-    "1 tbsp sugar",
-    "¼ cup white wine or dry vermouth",
-    "1 cup chicken stock",
-    "2 sprigs thyme",
-    "Pinch of salt",
-    "Cream Base",
-    "1 cup heavy cream",
-    "½ tsp salt",
-    "Fresh black pepper",
-    "Optional: 1–2 tsp sherry or cognac",
-    "Finish",
-    "¼ cup grated Gruyère or Parmesan",
-    "Optional: crispy pancetta, fresh thyme leaves, butter",
-    "DAY BEFORE (MAKE AHEAD)",
-    "1. Glaze the Onions",
-    "Heat butter + olive oil in a wide skillet.",
-    "Add onions + sugar → sauté 5–7 minutes until lightly golden.",
-    "Add white wine → reduce by half.",
-    "Add chicken stock + thyme → simmer 10–12 minutes until mostly evaporated and onions are glazed.",
-    "Cool completely.",
-    "Remove thyme and refrigerate in a sealed container.",
-    "Make-ahead window: 24–36 hours.",
-    "2. Prepare the Cream Base",
-    "Add cream, salt, pepper, and optional sherry/cognac to a small saucepan.",
-    "Bring to a bare simmer and cook 5–7 minutes until slightly thickened.",
-    "Cool completely.",
-    "Refrigerate in a small sealed container.",
-    "THANKSGIVING DAY — FINAL ASSEMBLY",
-    "1. Combine",
-    "Add glazed onions to a skillet.",
-    "Pour in the cream base.",
-    "Heat over medium-low until gently simmering.",
-    "Simmer 3–5 minutes until the sauce is glossy and coats the onions.",
-    "2. Finish With Cheese",
-    "Stir in:",
-    "¼ cup Gruyère (best)",
-    "or ¼ cup Parmesan",
-    "Simmer 1 minute until melted and silky.",
-    "Optional: add a knob of butter for extra sheen.",
-    "3. Serve",
-    "Choose one:",
-    "Stovetop: serve immediately for best texture",
-    "Casserole: bake covered 15 minutes at 350°F",
-    "Hold: keep on low for up to 30 minutes",
-    "NOTES",
-    "The separate storage keeps the onions firm and prevents the cream from getting gluey.",
-    "You can easily double this for a larger crowd — just expand the skillet size.",
-    "Pancetta or fresh thyme sprinkled on top makes it restaurant-level."
+    {
+      "item": "Glazed Onions",
+      "category": "Produce"
+    },
+    {
+      "item": "2 lbs frozen pearl onions",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tbsp butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 tbsp olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 tbsp sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup white wine or dry vermouth",
+      "category": "Beverages"
+    },
+    {
+      "item": "1 cup chicken stock",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 sprigs thyme",
+      "category": "Other"
+    },
+    {
+      "item": "Pinch of salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Cream Base",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 cup heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ tsp salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Fresh black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "Optional: 1–2 tsp sherry or cognac",
+      "category": "Beverages"
+    },
+    {
+      "item": "Finish",
+      "category": "Other"
+    },
+    {
+      "item": "¼ cup grated Gruyère or Parmesan",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Optional: crispy pancetta, fresh thyme leaves, butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "DAY BEFORE (MAKE AHEAD)",
+      "category": "Other"
+    },
+    {
+      "item": "1. Glaze the Onions",
+      "category": "Produce"
+    },
+    {
+      "item": "Heat butter + olive oil in a wide skillet.",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Add onions + sugar → sauté 5–7 minutes until lightly golden.",
+      "category": "Produce"
+    },
+    {
+      "item": "Add white wine → reduce by half.",
+      "category": "Beverages"
+    },
+    {
+      "item": "Add chicken stock + thyme → simmer 10–12 minutes until mostly evaporated and onions are glazed.",
+      "category": "Produce"
+    },
+    {
+      "item": "Cool completely.",
+      "category": "Other"
+    },
+    {
+      "item": "Remove thyme and refrigerate in a sealed container.",
+      "category": "Other"
+    },
+    {
+      "item": "Make-ahead window: 24–36 hours.",
+      "category": "Other"
+    },
+    {
+      "item": "2. Prepare the Cream Base",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Add cream, salt, pepper, and optional sherry/cognac to a small saucepan.",
+      "category": "Produce"
+    },
+    {
+      "item": "Bring to a bare simmer and cook 5–7 minutes until slightly thickened.",
+      "category": "Other"
+    },
+    {
+      "item": "Cool completely.",
+      "category": "Other"
+    },
+    {
+      "item": "Refrigerate in a small sealed container.",
+      "category": "Other"
+    },
+    {
+      "item": "THANKSGIVING DAY — FINAL ASSEMBLY",
+      "category": "Other"
+    },
+    {
+      "item": "1. Combine",
+      "category": "Other"
+    },
+    {
+      "item": "Add glazed onions to a skillet.",
+      "category": "Produce"
+    },
+    {
+      "item": "Pour in the cream base.",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Heat over medium-low until gently simmering.",
+      "category": "Other"
+    },
+    {
+      "item": "Simmer 3–5 minutes until the sauce is glossy and coats the onions.",
+      "category": "Produce"
+    },
+    {
+      "item": "2. Finish With Cheese",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Stir in:",
+      "category": "Other"
+    },
+    {
+      "item": "¼ cup Gruyère (best)",
+      "category": "Other"
+    },
+    {
+      "item": "or ¼ cup Parmesan",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Simmer 1 minute until melted and silky.",
+      "category": "Other"
+    },
+    {
+      "item": "Optional: add a knob of butter for extra sheen.",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3. Serve",
+      "category": "Other"
+    },
+    {
+      "item": "Choose one:",
+      "category": "Other"
+    },
+    {
+      "item": "Stovetop: serve immediately for best texture",
+      "category": "Other"
+    },
+    {
+      "item": "Casserole: bake covered 15 minutes at 350°F",
+      "category": "Other"
+    },
+    {
+      "item": "Hold: keep on low for up to 30 minutes",
+      "category": "Other"
+    },
+    {
+      "item": "NOTES",
+      "category": "Other"
+    },
+    {
+      "item": "The separate storage keeps the onions firm and prevents the cream from getting gluey.",
+      "category": "Produce"
+    },
+    {
+      "item": "You can easily double this for a larger crowd — just expand the skillet size.",
+      "category": "Other"
+    },
+    {
+      "item": "Pancetta or fresh thyme sprinkled on top makes it restaurant-level.",
+      "category": "Other"
+    }
   ],
   "instructions": [],
   "dateAdded": "2025-12-05T17:17:11.662Z"

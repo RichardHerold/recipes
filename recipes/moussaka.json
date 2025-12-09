@@ -6,31 +6,106 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "4 pounds eggplant (about 3-4 medium)",
-    "3 tablespoons olive oil (not exact)",
-    "salt and ground black pepper",
-    "2 pounds ground lamb",
-    "1 medium onion, minced",
-    "2 tablespoons tomato paste",
-    "4 medium garlic cloves, minced (about 4 teaspoons)",
-    "1 teaspoon dried oregano",
-    "1 teaspoon sugar",
-    "3/4 teaspoon ground cinnamon",
-    "1 28-ounce can tomato puree",
-    "1/2 cup dry red wine",
-    "3 tablespoons unsalted butter",
-    "1/4 cup all-purpose flour",
-    "2 cups whole milk",
-    "2 ounces Parmesan cheese, grated (about 1 cup)",
-    "pinch ground nutmeg",
-    "(optional) ¼ cup chopped mint and 1 cup parsley",
-    "Kitchen Tools Required",
-    "Medium Saucepan (Preferably a saucier) with lid",
-    "Dutch Oven (cast iron or enamaled",
-    "Large Bowl (5Qt+)",
-    "Large Colander",
-    "13x9x2 Baking pan (or 2 8x8x2 pans)",
-    "Whisk (preferably french)"
+    {
+      "item": "4 pounds eggplant (about 3-4 medium)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3 tablespoons olive oil (not exact)",
+      "category": "Other"
+    },
+    {
+      "item": "salt and ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 pounds ground lamb",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 medium onion, minced",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons tomato paste",
+      "category": "Produce"
+    },
+    {
+      "item": "4 medium garlic cloves, minced (about 4 teaspoons)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon dried oregano",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3/4 teaspoon ground cinnamon",
+      "category": "Other"
+    },
+    {
+      "item": "1 28-ounce can tomato puree",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 cup dry red wine",
+      "category": "Beverages"
+    },
+    {
+      "item": "3 tablespoons unsalted butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/4 cup all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 cups whole milk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 ounces Parmesan cheese, grated (about 1 cup)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "pinch ground nutmeg",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "(optional) ¼ cup chopped mint and 1 cup parsley",
+      "category": "Produce"
+    },
+    {
+      "item": "Kitchen Tools Required",
+      "category": "Other"
+    },
+    {
+      "item": "Medium Saucepan (Preferably a saucier) with lid",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "Dutch Oven (cast iron or enamaled",
+      "category": "Other"
+    },
+    {
+      "item": "Large Bowl (5Qt+)",
+      "category": "Other"
+    },
+    {
+      "item": "Large Colander",
+      "category": "Other"
+    },
+    {
+      "item": "13x9x2 Baking pan (or 2 8x8x2 pans)",
+      "category": "Other"
+    },
+    {
+      "item": "Whisk (preferably french)",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Mise en Place:",

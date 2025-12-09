@@ -6,16 +6,46 @@
   "cookTime": "Total time",
   "image": "",
   "ingredients": [
-    "1 cup split peas",
-    "1 cup onion (minced)",
-    "1 tbsp ginger (minced)",
-    "1 tbsp garlic (minced)",
-    "1 tsp Alicha Kimem (Afrenje)",
-    "1 tsp Netch Azmud (Caraway Seed)",
-    "1 tsp of Turmeric",
-    "½ cup oil",
-    "3 cups water",
-    "Salt (to taste)"
+    {
+      "item": "1 cup split peas",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup onion (minced)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tbsp ginger (minced)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tbsp garlic (minced)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tsp Alicha Kimem (Afrenje)",
+      "category": "Other"
+    },
+    {
+      "item": "1 tsp Netch Azmud (Caraway Seed)",
+      "category": "Other"
+    },
+    {
+      "item": "1 tsp of Turmeric",
+      "category": "Other"
+    },
+    {
+      "item": "½ cup oil",
+      "category": "Other"
+    },
+    {
+      "item": "3 cups water",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "Salt (to taste)",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Thoroughly wash the split peas using hot water until they’re clean enough that the water they are placed is clear.",

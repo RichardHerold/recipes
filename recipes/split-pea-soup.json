@@ -6,10 +6,22 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 onion chopped",
-    "1 ham hock (split at butcher shop)",
-    "2-3 carrots sliced",
-    "2 bags of split peas"
+    {
+      "item": "1 onion chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "1 ham hock (split at butcher shop)",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2-3 carrots sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "2 bags of split peas",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Fill a soup pot (tall pot like a spaghetti pot) with water leaving one inch at the top",

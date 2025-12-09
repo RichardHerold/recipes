@@ -6,20 +6,62 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 ½ cups all-purpose flour",
-    "2 tablespoons cornmeal",
-    "1 teaspoon baking powder",
-    "½ teaspoon baking soda",
-    "1 tablespoon powdered ginger",
-    "1 teaspoon ground cinnamon",
-    "¼ teaspoon powdered cloves",
-    "½ teaspoon salt",
-    "1 ½ cups milk",
-    "3 tablespoons butter, melted",
-    "3 tablespoons molasses",
-    "2 eggs",
-    "½ teaspoon vanilla extract",
-    "Fresh berries, for garnish"
+    {
+      "item": "1 ½ cups all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons cornmeal",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon powdered ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon ground cinnamon",
+      "category": "Other"
+    },
+    {
+      "item": "¼ teaspoon powdered cloves",
+      "category": "Other"
+    },
+    {
+      "item": "½ teaspoon salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 ½ cups milk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3 tablespoons butter, melted",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3 tablespoons molasses",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ teaspoon vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Fresh berries, for garnish",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

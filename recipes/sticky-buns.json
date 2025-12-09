@@ -6,11 +6,26 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 roll of frozen bread dough (defrosted)",
-    "Cinnamon sugar",
-    "Patties of butter",
-    "Brown sugar (pinch about a inch worth out of the bag of brown sugar)",
-    "Pecans (whole)"
+    {
+      "item": "1 roll of frozen bread dough (defrosted)",
+      "category": "Bakery"
+    },
+    {
+      "item": "Cinnamon sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Patties of butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Brown sugar (pinch about a inch worth out of the bag of brown sugar)",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Pecans (whole)",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "grease square glass dish with butter",

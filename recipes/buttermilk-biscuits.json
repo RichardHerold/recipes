@@ -6,26 +6,71 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "240g all-purpose flour (2 cups)",
-    "1 teaspoon sugar",
-    "1 tablespoon baking powder",
-    "1 teaspoon salt plus extra for seasoning",
-    "¼ pound butter, cubed, cold",
-    "¾ cup buttermilk",
-    "~2 Tablespoons honey, Warmed (optional)",
+    {
+      "item": "240g all-purpose flour (2 cups)",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon salt plus extra for seasoning",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ pound butter, cubed, cold",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¾ cup buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "~2 Tablespoons honey, Warmed (optional)",
+      "category": "Other"
+    },
     {
       "subsection": "Equipment",
       "items": [
-        "Food processor",
-        "Dough Cutter",
-        "Spatula",
-        "Rolling pin",
-        "3in round cutter",
-        "Large mixing bowl",
-        "Half size baking sheet",
-        "Parchment paper"
+        {
+          "item": "Food processor",
+          "category": "Other"
+        },
+        {
+          "item": "Dough Cutter",
+          "category": "Bakery"
+        },
+        {
+          "item": "Spatula",
+          "category": "Other"
+        },
+        {
+          "item": "Rolling pin",
+          "category": "Bakery"
+        },
+        {
+          "item": "3in round cutter",
+          "category": "Other"
+        },
+        {
+          "item": "Large mixing bowl",
+          "category": "Other"
+        },
+        {
+          "item": "Half size baking sheet",
+          "category": "Other"
+        },
+        {
+          "item": "Parchment paper",
+          "category": "Household & Misc"
+        }
       ]
-    },
+    }
   ],
   "instructions": [
     {

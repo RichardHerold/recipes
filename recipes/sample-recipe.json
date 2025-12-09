@@ -6,15 +6,42 @@
   "cookTime": "12 minutes",
   "image": "images/chocolate-chip-cookies.jpg",
   "ingredients": [
-    "2 1/4 cups all-purpose flour",
-    "1 teaspoon baking soda",
-    "1 teaspoon salt",
-    "1 cup butter, softened",
-    "3/4 cup granulated sugar",
-    "3/4 cup packed brown sugar",
-    "2 large eggs",
-    "2 teaspoons vanilla extract",
-    "2 cups chocolate chips"
+    {
+      "item": "2 1/4 cups all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 cup butter, softened",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3/4 cup granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3/4 cup packed brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 teaspoons vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 cups chocolate chips",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Preheat oven to 375°F (190°C).",
@@ -29,4 +56,3 @@
   ],
   "dateAdded": "2024-01-15T10:00:00.000Z"
 }
-
