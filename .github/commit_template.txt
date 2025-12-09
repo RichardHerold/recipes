@@ -1,0 +1,13 @@
+LIN-XXX type: short imperative summary
+
+Summary:
+- What did you change?
+
+Implementation details:
+- Key files or patterns used.
+
+Testing:
+- Tests added or updated
+- Manual checks
+
+(Replace LIN-XXX with your Linear issue ID and "type" with feat/fix/refactor/chore/docs/test.)
