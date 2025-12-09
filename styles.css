@@ -297,8 +297,8 @@ main {
     border-radius: 0;
     font-size: 0.75rem;
     font-weight: 400;
+    font-style: italic;
     margin-top: 1rem;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
     align-self: flex-start;
 }
