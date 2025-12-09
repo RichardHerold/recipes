@@ -110,46 +110,70 @@ function displayRecipes() {
 }
 
 // Render ingredients with support for subsections
+function isIngredientSubsection(entry) {
+    return entry && typeof entry === 'object' && entry.subsection && Array.isArray(entry.items);
+}
+
+function extractIngredientText(entry) {
+    if (!entry) return '';
+    if (typeof entry === 'string') return entry;
+    if (typeof entry === 'object' && typeof entry.item === 'string') {
+        return entry.item;
+    }
+    return '';
+}
+
+function renderIngredientItems(items) {
+    if (!Array.isArray(items) || items.length === 0) return '';
+    return items.map(subItem => {
+        if (isIngredientSubsection(subItem)) {
+            return renderIngredientItems(subItem.items);
+        }
+        const text = extractIngredientText(subItem);
+        return text ? `<li>${escapeHtml(text)}</li>` : '';
+    }).join('');
+}
+
 function renderIngredients(ingredients) {
     if (!ingredients || ingredients.length === 0) return '';
     
     let html = '';
-    let currentList = null;
+    let listOpen = false;
+    
+    const closeList = () => {
+        if (listOpen) {
+            html += '</ul>';
+            listOpen = false;
+        }
+    };
     
     // Render items in the order they appear in the JSON
     ingredients.forEach(item => {
-        if (typeof item === 'object' && item.subsection && item.items) {
-            // Close any open list before starting a subsection
-            if (currentList) {
-                html += '</ul>';
-                currentList = null;
-            }
+        if (isIngredientSubsection(item)) {
+            const subsectionItems = renderIngredientItems(item.items);
+            if (!subsectionItems) return;
+            closeList();
             
-            // Render subsection
             html += `<div class="ingredient-subsection">
                 <h4 class="ingredient-subsection-title">${escapeHtml(item.subsection)}</h4>
-                <ul class="ingredients-list">`;
-            
-            item.items.forEach(subItem => {
-                html += `<li>${escapeHtml(subItem)}</li>`;
-            });
-            
-            html += `</ul></div>`;
+                <ul class="ingredients-list">
+                    ${subsectionItems}
+                </ul>
+            </div>`;
         } else {
+            const text = extractIngredientText(item);
+            if (!text) return;
+            
             // Regular ingredient - start a list if needed
-            if (!currentList) {
+            if (!listOpen) {
                 html += '<ul class="ingredients-list">';
-                currentList = true;
+                listOpen = true;
             }
-            html += `<li>${escapeHtml(item)}</li>`;
+            html += `<li>${escapeHtml(text)}</li>`;
         }
     });
     
-    // Close any open list
-    if (currentList) {
-        html += '</ul>';
-    }
-    
+    closeList();
     return html;
 }
 
@@ -368,6 +392,49 @@ function updateCategoryButtons() {
 }
 
 // Filter recipes based on search and category
+function flattenIngredientsForSearch(ingredients) {
+    if (!Array.isArray(ingredients)) return [];
+    
+    const values = [];
+    const pushText = (entry) => {
+        if (isIngredientSubsection(entry)) {
+            entry.items.forEach(pushText);
+            return;
+        }
+        const text = extractIngredientText(entry);
+        if (text) {
+            values.push(text.toLowerCase());
+        }
+    };
+    
+    ingredients.forEach(item => {
+        if (isIngredientSubsection(item)) {
+            item.items.forEach(pushText);
+        } else {
+            pushText(item);
+        }
+    });
+    
+    return values;
+}
+
+function flattenInstructionsForSearch(instructions) {
+    if (!Array.isArray(instructions)) return [];
+    
+    const values = [];
+    const pushText = (entry) => {
+        if (!entry) return;
+        if (typeof entry === 'string') {
+            values.push(entry.toLowerCase());
+        } else if (typeof entry === 'object' && Array.isArray(entry.items)) {
+            entry.items.forEach(pushText);
+        }
+    };
+    
+    instructions.forEach(pushText);
+    return values;
+}
+
 function filterRecipes() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
     const activeCategory = document.querySelector('.category-btn.active').getAttribute('data-category');
@@ -376,12 +443,19 @@ function filterRecipes() {
         // Category filter
         const categoryMatch = activeCategory === 'all' || recipe.category === activeCategory;
         
+        if (!searchTerm) {
+            return categoryMatch;
+        }
+        
+        const ingredientText = flattenIngredientsForSearch(recipe.ingredients);
+        const instructionText = flattenInstructionsForSearch(recipe.instructions);
+        
         // Search filter
-        const searchMatch = !searchTerm || 
+        const searchMatch = 
             recipe.name.toLowerCase().includes(searchTerm) ||
             (recipe.description && recipe.description.toLowerCase().includes(searchTerm)) ||
-            (recipe.ingredients && recipe.ingredients.some(ing => ing.toLowerCase().includes(searchTerm))) ||
-            (recipe.instructions && recipe.instructions.some(inst => inst.toLowerCase().includes(searchTerm)));
+            ingredientText.some(ing => ing.includes(searchTerm)) ||
+            instructionText.some(inst => inst.includes(searchTerm));
         
         return categoryMatch && searchMatch;
     });

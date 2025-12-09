@@ -6,44 +6,158 @@
   "cookTime": "2 hours 20 minutes",
   "image": "",
   "ingredients": [
-    "Meatloaf",
-    "2 tablespoons butter",
-    "1 onion",
-    "6 ounces white mushrooms",
-    "1 tablespoon tomato paste",
-    "Almost 3/4 cup chicken broth (3 tablespoons plus 1/2 cup)",
-    "1 Tablespoon garlic paste (or 2 garlic cloves)",
-    "2 large eggs",
-    "2 tablespoons soy sauce",
-    "1 tablespoon unflavored gelatin",
-    "1/2 slice hearty white sandwich",
-    "2 teaspoons Dijon mustard",
-    "3/4 teaspoon pepper",
-    "1/2 teaspoon dried thyme",
-    "1 pound ground pork",
-    "1 pound 85% lean ground beef",
-    "1/3 cup fresh parsley (optional)",
-    "Glaze",
-    "1/2 cup ketchup",
-    "1/4 cup cider vinegar",
-    "3 tablespoons packed brown sugar",
-    "1 teaspoon Tabasco sauce",
-    "1/2 teaspoon ground coriander",
-    "Kitchen Equipment",
-    "Heavy duty aluminum foil",
-    "Half-sheet rimmed baking pan",
-    "Half-sheet cooling rack",
-    "Food processor",
-    "Rubber spatula",
-    "Meat thermometer",
-    "12” skillet",
-    "Small saucepan",
-    "Medium bowl",
-    "Large bowl",
-    "Oven",
-    "Kitchen knife",
-    "Liquid measuring cups",
-    "Dry measuring cups"
+    {
+      "item": "Meatloaf",
+      "category": "Other"
+    },
+    {
+      "item": "2 tablespoons butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 onion",
+      "category": "Produce"
+    },
+    {
+      "item": "6 ounces white mushrooms",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon tomato paste",
+      "category": "Produce"
+    },
+    {
+      "item": "Almost 3/4 cup chicken broth (3 tablespoons plus 1/2 cup)",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 Tablespoon garlic paste (or 2 garlic cloves)",
+      "category": "Produce"
+    },
+    {
+      "item": "2 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 tablespoons soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1 tablespoon unflavored gelatin",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 slice hearty white sandwich",
+      "category": "Other"
+    },
+    {
+      "item": "2 teaspoons Dijon mustard",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "3/4 teaspoon pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 teaspoon dried thyme",
+      "category": "Other"
+    },
+    {
+      "item": "1 pound ground pork",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 pound 85% lean ground beef",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1/3 cup fresh parsley (optional)",
+      "category": "Produce"
+    },
+    {
+      "item": "Glaze",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 cup ketchup",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1/4 cup cider vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "3 tablespoons packed brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon Tabasco sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "1/2 teaspoon ground coriander",
+      "category": "Other"
+    },
+    {
+      "item": "Kitchen Equipment",
+      "category": "Other"
+    },
+    {
+      "item": "Heavy duty aluminum foil",
+      "category": "Household & Misc"
+    },
+    {
+      "item": "Half-sheet rimmed baking pan",
+      "category": "Other"
+    },
+    {
+      "item": "Half-sheet cooling rack",
+      "category": "Other"
+    },
+    {
+      "item": "Food processor",
+      "category": "Other"
+    },
+    {
+      "item": "Rubber spatula",
+      "category": "Other"
+    },
+    {
+      "item": "Meat thermometer",
+      "category": "Other"
+    },
+    {
+      "item": "12” skillet",
+      "category": "Other"
+    },
+    {
+      "item": "Small saucepan",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "Medium bowl",
+      "category": "Other"
+    },
+    {
+      "item": "Large bowl",
+      "category": "Other"
+    },
+    {
+      "item": "Oven",
+      "category": "Other"
+    },
+    {
+      "item": "Kitchen knife",
+      "category": "Other"
+    },
+    {
+      "item": "Liquid measuring cups",
+      "category": "Other"
+    },
+    {
+      "item": "Dry measuring cups",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Mise en Place:",

@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "4 tbsp. unsalted butter",
-    "1tsp Ethiopian Spice",
-    "¼ cup extra-virgin olive oil",
-    "1 large yellow onion",
-    "3 cloves garlic, minced",
-    "1 1\" piece ginger",
-    "1½ lbs. collard greens, stemmed and cut crosswise into ¼\"-wide strips",
-    "Kosher salt and freshly ground black pepper, to taste",
-    "White wine vinegar, to taste",
-    "2 Thai chiles, stemmed, seeded, and minced (optional)"
+    {
+      "item": "4 tbsp. unsalted butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1tsp Ethiopian Spice",
+      "category": "Other"
+    },
+    {
+      "item": "¼ cup extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 large yellow onion",
+      "category": "Produce"
+    },
+    {
+      "item": "3 cloves garlic, minced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 1\" piece ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1½ lbs. collard greens, stemmed and cut crosswise into ¼\"-wide strips",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper, to taste",
+      "category": "Produce"
+    },
+    {
+      "item": "White wine vinegar, to taste",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 Thai chiles, stemmed, seeded, and minced (optional)",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Mise en Place:",

@@ -6,13 +6,34 @@
   "cookTime": "missing",
   "image": "",
   "ingredients": [
-    "½ cup shiro (white) miso",
-    "8 tablespoons (1 stick) unsalted butter, at room temperature, plus more if needed",
-    "½ pound thin to medium asparagus",
-    "Kosher salt",
-    "2 teaspoons sherry vinegar",
-    "4 Slow-Poached Eggs or regular poached eggs",
-    "Freshly ground black pepper"
+    {
+      "item": "½ cup shiro (white) miso",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "8 tablespoons (1 stick) unsalted butter, at room temperature, plus more if needed",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ pound thin to medium asparagus",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons sherry vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "4 Slow-Poached Eggs or regular poached eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Freshly ground black pepper",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

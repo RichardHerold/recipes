@@ -6,16 +6,46 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "2 large Russet potatoes (about 1 pound), scrubbed and cut lengthwise into quarters",
-    "1 large onion (8 ounces), peeled and cut into quarters",
-    "2 large eggs",
-    "½ cup all-purpose flour",
-    "2 teaspoons coarse kosher salt (or 1 teaspoon fine sea salt), plus more for sprinkling",
-    "1 teaspoon baking powder",
-    "½ teaspoon freshly ground black pepper",
-    "Safflower or other oil, for frying",
-    "Add to Your Grocery List",
-    "Ingredient Substitution Guide"
+    {
+      "item": "2 large Russet potatoes (about 1 pound), scrubbed and cut lengthwise into quarters",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large onion (8 ounces), peeled and cut into quarters",
+      "category": "Produce"
+    },
+    {
+      "item": "2 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ cup all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons coarse kosher salt (or 1 teaspoon fine sea salt), plus more for sprinkling",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "Safflower or other oil, for frying",
+      "category": "Other"
+    },
+    {
+      "item": "Add to Your Grocery List",
+      "category": "Other"
+    },
+    {
+      "item": "Ingredient Substitution Guide",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Using a food processor with a coarse grating disc, grate the potatoes and onion. Transfer the mixture to a clean dishtowel and squeeze and wring out as much of the liquid as possible.",

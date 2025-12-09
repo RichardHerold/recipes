@@ -6,17 +6,50 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "2 tbsp Olive oil",
-    "1/2 large Onion (sliced into thin quarter moons)",
-    "8 oz Cremini mushrooms (sliced)",
-    "1 lb Ground beef",
-    "1/2 tsp Sea salt",
-    "1/4 tsp Black pepper",
-    "2 cloves Garlic (minced)",
-    "1 cup Beef bone broth",
-    "2 tbsp Coconut aminos (optional)",
-    "1/2 cup Sour cream",
-    "2 oz Cream cheese"
+    {
+      "item": "2 tbsp Olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 large Onion (sliced into thin quarter moons)",
+      "category": "Produce"
+    },
+    {
+      "item": "8 oz Cremini mushrooms (sliced)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 lb Ground beef",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1/2 tsp Sea salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/4 tsp Black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cloves Garlic (minced)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup Beef bone broth",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 tbsp Coconut aminos (optional)",
+      "category": "Other"
+    },
+    {
+      "item": "1/2 cup Sour cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 oz Cream cheese",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "Heat the olive oil in a large saute pan over medium heat.",

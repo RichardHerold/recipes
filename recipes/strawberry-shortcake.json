@@ -6,22 +6,70 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Shortcakes",
-    "2 hard-boiled egg yolks, cooled",
-    "160g (1⅓ cups) all-purpose flour",
-    "20g (3 tablespoons) fine-grind cornmeal",
-    "1 tablespoon baking powder",
-    "¼ teaspoon kosher salt",
-    "40g (3 tablespoons) granulated sugar",
-    "6 tablespoons chilled unsalted butter, cut into pieces",
-    "⅔ cup plus 2 tablespoons heavy cream",
-    "Sanding or granulated sugar (for sprinkling)",
-    "Assembly",
-    "1½ pounds strawberries (about 1 quart), hulled, halved, quartered if large",
-    "¼ cup granulated sugar",
-    "1 teaspoon finely grated lemon zest",
-    "Kosher salt",
-    "2 teaspoons fresh lemon juice, divided"
+    {
+      "item": "Shortcakes",
+      "category": "Other"
+    },
+    {
+      "item": "2 hard-boiled egg yolks, cooled",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "160g (1⅓ cups) all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "20g (3 tablespoons) fine-grind cornmeal",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ teaspoon kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "40g (3 tablespoons) granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "6 tablespoons chilled unsalted butter, cut into pieces",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "⅔ cup plus 2 tablespoons heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Sanding or granulated sugar (for sprinkling)",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Assembly",
+      "category": "Other"
+    },
+    {
+      "item": "1½ pounds strawberries (about 1 quart), hulled, halved, quartered if large",
+      "category": "Produce"
+    },
+    {
+      "item": "¼ cup granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon finely grated lemon zest",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons fresh lemon juice, divided",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

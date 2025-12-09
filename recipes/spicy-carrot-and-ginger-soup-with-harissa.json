@@ -6,21 +6,66 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 to 2 tablespoons harissa paste",
-    "8 tablespoons extra-virgin olive oil",
-    "1 medium leek,",
-    "1 small onion",
-    "2 cloves garlic",
-    "1 (2-inch) knob of ginger",
-    "1 teaspoon ground cumin seed",
-    "½ teaspoon ground coriander",
-    "1 to 2 tablespoons harissa paste",
-    "2 ½ pounds carrots (get a 5lb bag, weigh after peeled)",
-    "1 ½ quarts chicken broth or Carrot Juice (approx 5lbs of carrots)",
-    "Kosher salt",
-    "¼ to ½ cup pine nuts",
-    "2 tablespoons chopped fresh parsley leaves",
-    "1 lemon"
+    {
+      "item": "1 to 2 tablespoons harissa paste",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "8 tablespoons extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 medium leek,",
+      "category": "Produce"
+    },
+    {
+      "item": "1 small onion",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cloves garlic",
+      "category": "Produce"
+    },
+    {
+      "item": "1 (2-inch) knob of ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon ground cumin seed",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon ground coriander",
+      "category": "Other"
+    },
+    {
+      "item": "1 to 2 tablespoons harissa paste",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 ½ pounds carrots (get a 5lb bag, weigh after peeled)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 ½ quarts chicken broth or Carrot Juice (approx 5lbs of carrots)",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ to ½ cup pine nuts",
+      "category": "Other"
+    },
+    {
+      "item": "2 tablespoons chopped fresh parsley leaves",
+      "category": "Produce"
+    },
+    {
+      "item": "1 lemon",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

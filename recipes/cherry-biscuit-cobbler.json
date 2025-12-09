@@ -6,28 +6,94 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Biscuits",
-    "¼ cup granulated sugar",
-    "1 Tbsp. baking powder",
-    "2 tsp. finely grated lemon zest",
-    "1 tsp. kosher salt",
-    "2 cups all-purpose flour, plus more for surface",
-    "½ cup (1 stick) chilled unsalted butter, cut into pieces",
-    "1⅓ cups chilled heavy cream",
-    "Filling and Assembly",
-    "2 lb. fresh (or frozen) sweet cherries, pitted",
-    "½ cup granulated sugar",
-    "¼ cup fresh lemon juice",
-    "3 Tbsp. cornstarch",
-    "½ tsp. ground cinnamon",
-    "1 tsp. vanilla extract",
-    "¼ tsp. almond extract",
-    "¼ tsp. kosher salt",
-    "3 Tbsp. unsalted butter, melted, slightly cooled",
-    "2 Tbsp. raw sugar",
-    "Vanilla ice cream or softly whipped cream (for serving)",
-    "Special Equipment",
-    "A 1½\"-diameter cookie cutter"
+    {
+      "item": "Biscuits",
+      "category": "Other"
+    },
+    {
+      "item": "¼ cup granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 Tbsp. baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tsp. finely grated lemon zest",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tsp. kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 cups all-purpose flour, plus more for surface",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ cup (1 stick) chilled unsalted butter, cut into pieces",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1⅓ cups chilled heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Filling and Assembly",
+      "category": "Other"
+    },
+    {
+      "item": "2 lb. fresh (or frozen) sweet cherries, pitted",
+      "category": "Frozen Foods"
+    },
+    {
+      "item": "½ cup granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup fresh lemon juice",
+      "category": "Produce"
+    },
+    {
+      "item": "3 Tbsp. cornstarch",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ tsp. ground cinnamon",
+      "category": "Other"
+    },
+    {
+      "item": "1 tsp. vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ tsp. almond extract",
+      "category": "Other"
+    },
+    {
+      "item": "¼ tsp. kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 Tbsp. unsalted butter, melted, slightly cooled",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 Tbsp. raw sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Vanilla ice cream or softly whipped cream (for serving)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Special Equipment",
+      "category": "Other"
+    },
+    {
+      "item": "A 1½\"-diameter cookie cutter",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Biscuits",

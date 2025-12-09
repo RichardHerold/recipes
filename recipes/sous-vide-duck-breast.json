@@ -6,7 +6,10 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "4 boneless duck breasts, 5-6 ounces each\r2 cups vegetable oil\r6 shallots, finely sliced (about 1 cup)\rKosher salt and freshly cracked black pepper\rToasted and ground Sichuan peppercorns"
+    {
+      "item": "4 boneless duck breasts, 5-6 ounces each\r2 cups vegetable oil\r6 shallots, finely sliced (about 1 cup)\rKosher salt and freshly cracked black pepper\rToasted and ground Sichuan peppercorns",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Place duck on paper towel-lined plate and refrigerate, uncovered, overnight.",

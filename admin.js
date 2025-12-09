@@ -18,7 +18,7 @@ function setupForm() {
     document.getElementById('downloadBtn').addEventListener('click', downloadFile);
 }
 
-function addIngredient() {
+function addIngredient(existing = { item: '', category: '' }) {
     const ingredientsList = document.getElementById('ingredientsList');
     const index = ingredients.length;
     
@@ -28,26 +28,44 @@ function addIngredient() {
         <input type="text" 
                class="ingredient-field" 
                placeholder="e.g., 2 cups flour"
-               data-index="${index}">
+               data-index="${index}"
+               value="${existing.item || ''}">
+        <input type="text"
+               class="ingredient-category-field"
+               placeholder="Category (optional)"
+               list="ingredientCategoryList"
+               data-index="${index}"
+               value="${existing.category || ''}">
         <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
     `;
     
     ingredientsList.appendChild(ingredientDiv);
     
-    const input = ingredientDiv.querySelector('.ingredient-field');
-    input.addEventListener('input', (e) => {
-        const idx = parseInt(e.target.getAttribute('data-index'));
-        ingredients[idx] = e.target.value;
-    });
+    const itemInput = ingredientDiv.querySelector('.ingredient-field');
+    const categoryInput = ingredientDiv.querySelector('.ingredient-category-field');
+    
+    const handleInput = (inputEl, field) => {
+        inputEl.addEventListener('input', (e) => {
+            const idx = parseInt(e.target.getAttribute('data-index'));
+            ingredients[idx] = ingredients[idx] || { item: '', category: '' };
+            ingredients[idx][field] = e.target.value;
+        });
+    };
+    
+    handleInput(itemInput, 'item');
+    handleInput(categoryInput, 'category');
     
     ingredientDiv.querySelector('.remove-btn').addEventListener('click', () => {
-        const idx = parseInt(input.getAttribute('data-index'));
+        const idx = parseInt(itemInput.getAttribute('data-index'));
         ingredients.splice(idx, 1);
         ingredientDiv.remove();
         updateIngredientIndices();
     });
     
-    ingredients.push('');
+    ingredients.push({
+        item: existing.item || '',
+        category: existing.category || ''
+    });
 }
 
 function addInstruction() {
@@ -82,11 +100,24 @@ function addInstruction() {
 }
 
 function updateIngredientIndices() {
-    const inputs = document.querySelectorAll('.ingredient-field');
+    const wrappers = document.querySelectorAll('.ingredient-input');
     ingredients = [];
-    inputs.forEach((input, idx) => {
-        input.setAttribute('data-index', idx);
-        ingredients[idx] = input.value;
+    wrappers.forEach((wrapper, idx) => {
+        const itemInput = wrapper.querySelector('.ingredient-field');
+        const categoryInput = wrapper.querySelector('.ingredient-category-field');
+        
+        if (itemInput) {
+            itemInput.setAttribute('data-index', idx);
+        }
+        
+        if (categoryInput) {
+            categoryInput.setAttribute('data-index', idx);
+        }
+        
+        ingredients[idx] = {
+            item: itemInput ? itemInput.value : '',
+            category: categoryInput ? categoryInput.value : ''
+        };
     });
 }
 
@@ -110,7 +141,23 @@ function handleSubmit(e) {
     const image = document.getElementById('recipeImage').value.trim();
     
     // Filter out empty ingredients and instructions
-    const filteredIngredients = ingredients.filter(ing => ing.trim() !== '');
+    const filteredIngredients = ingredients
+        .map(ing => {
+            if (!ing) return null;
+            if (typeof ing === 'string') {
+                const text = ing.trim();
+                return text ? { item: text } : null;
+            }
+            const item = (ing.item || '').trim();
+            const category = (ing.category || '').trim();
+            if (!item) return null;
+            const normalized = { item };
+            if (category) {
+                normalized.category = category;
+            }
+            return normalized;
+        })
+        .filter(ing => ing && ing.item);
     const filteredInstructions = instructions.filter(inst => inst.trim() !== '');
     
     // Validation

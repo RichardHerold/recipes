@@ -6,19 +6,58 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 large onion, finely diced",
-    "3 shallots, chopped",
-    "4 to 6 tablespoons unsalted butter or bacon fat",
-    "2 pounds beef chuck, in 1-inch cubes",
-    "2 tablespoons all-purpose flour",
-    "Kosher salt and black pepper",
-    "½ cup Cognac",
-    "2 cups beef stock",
-    "½ cup Dijon mustard",
-    "4 tablespoons whole-grain Dijon mustard",
-    "4 large carrots, peeled and cut into half-moon slices",
-    "8 ounces mushrooms, stemmed, cleaned and quartered",
-    "¼ cup red wine"
+    {
+      "item": "1 large onion, finely diced",
+      "category": "Produce"
+    },
+    {
+      "item": "3 shallots, chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "4 to 6 tablespoons unsalted butter or bacon fat",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 pounds beef chuck, in 1-inch cubes",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 tablespoons all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Kosher salt and black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "½ cup Cognac",
+      "category": "Beverages"
+    },
+    {
+      "item": "2 cups beef stock",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "½ cup Dijon mustard",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "4 tablespoons whole-grain Dijon mustard",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "4 large carrots, peeled and cut into half-moon slices",
+      "category": "Produce"
+    },
+    {
+      "item": "8 ounces mushrooms, stemmed, cleaned and quartered",
+      "category": "Produce"
+    },
+    {
+      "item": "¼ cup red wine",
+      "category": "Beverages"
+    }
   ],
   "instructions": [
     "Mise en Place:",

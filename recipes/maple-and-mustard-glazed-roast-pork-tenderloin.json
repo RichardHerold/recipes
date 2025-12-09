@@ -6,15 +6,42 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "⅓ cup maple syrup",
-    "2 tablespoons whole-grain mustard",
-    "¼ cup brandy (Or Applejack)",
-    "2 pork tenderloins, about 1½ pounds each",
-    "Kosher salt and freshly ground black pepper",
-    "¼ cup cornstarch",
-    "2 tablespoons vegetable oil",
-    "1 teaspoon balsamic vinegar",
-    "2 tablespoons unsalted butter"
+    {
+      "item": "⅓ cup maple syrup",
+      "category": "Other"
+    },
+    {
+      "item": "2 tablespoons whole-grain mustard",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "¼ cup brandy (Or Applejack)",
+      "category": "Produce"
+    },
+    {
+      "item": "2 pork tenderloins, about 1½ pounds each",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "¼ cup cornstarch",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons vegetable oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon balsamic vinegar",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 tablespoons unsalted butter",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "1.  Adjust an oven rack to the middle position and preheat the oven to 400°F. Combine ⅓ cup maple syrup and 2 tablespoons whole-grain mustard with the brandy.",

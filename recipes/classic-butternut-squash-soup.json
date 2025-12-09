@@ -6,21 +6,66 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 (2 1/2 pound/1kg) butternut squash, peeled, seeded, and cut into 1-inch cubes",
-    "1 large (8-ounce; 215g) carrot, peeled and cut into 1-inch chunks",
-    "2 tablespoons (30ml) extra-virgin olive oil",
-    "7 tablespoons (100g) unsalted butter, divided (see note above)",
-    "1 large (8-ounce; 215g) yellow onion, thinly sliced",
-    "4 medium cloves garlic, thinly sliced",
-    "4 cups (1l) homemade or store-bought low-sodium chicken or vegetable stock, plus more as needed",
-    "2 sprigs fresh thyme",
-    "1 bay leaf",
-    "Kosher salt and freshly ground black pepper",
-    "3/4 cup (180ml) heavy whipping cream",
-    "1/4 cup (60ml) sour cream",
-    "Pinch ground cinnamon",
-    "Pinch nutmeg",
-    "20 fresh sage leaves (optional, see note above)"
+    {
+      "item": "1 (2 1/2 pound/1kg) butternut squash, peeled, seeded, and cut into 1-inch cubes",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large (8-ounce; 215g) carrot, peeled and cut into 1-inch chunks",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons (30ml) extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "7 tablespoons (100g) unsalted butter, divided (see note above)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 large (8-ounce; 215g) yellow onion, thinly sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "4 medium cloves garlic, thinly sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "4 cups (1l) homemade or store-bought low-sodium chicken or vegetable stock, plus more as needed",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "2 sprigs fresh thyme",
+      "category": "Other"
+    },
+    {
+      "item": "1 bay leaf",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "3/4 cup (180ml) heavy whipping cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/4 cup (60ml) sour cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Pinch ground cinnamon",
+      "category": "Other"
+    },
+    {
+      "item": "Pinch nutmeg",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "20 fresh sage leaves (optional, see note above)",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Active time:30 minutes",

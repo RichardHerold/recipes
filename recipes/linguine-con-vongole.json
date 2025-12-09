@@ -6,15 +6,42 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 pound spaghetti",
-    "Salt",
-    "1/4 cup extra-virgin olive oil",
-    "4 garlic cloves, minced",
-    "1/2 teaspoon crushed red pepper",
-    "2 dozen littleneck clams, scrubbed",
-    "1/4 cup white wine",
-    "1/4 cup finely chopped parsley",
-    "Freshly ground black pepper"
+    {
+      "item": "1 pound spaghetti",
+      "category": "Other"
+    },
+    {
+      "item": "Salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/4 cup extra-virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "4 garlic cloves, minced",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 teaspoon crushed red pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 dozen littleneck clams, scrubbed",
+      "category": "Seafood"
+    },
+    {
+      "item": "1/4 cup white wine",
+      "category": "Beverages"
+    },
+    {
+      "item": "1/4 cup finely chopped parsley",
+      "category": "Produce"
+    },
+    {
+      "item": "Freshly ground black pepper",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "In a large pot of boiling salted water, cook the spaghetti until just al dente, then drain the pasta well.",

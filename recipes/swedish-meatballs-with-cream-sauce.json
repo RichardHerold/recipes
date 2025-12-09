@@ -6,34 +6,118 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "For the Meatballs",
-    "1 pound freshly ground pork shoulder",
-    "Kosher salt",
-    "¼ cup buttermilk or heavy cream",
-    "¼ ounce (1 packet) unflavored gelatin",
-    "2 slices high-quality white sandwich bread, crusts removed",
-    "1 teaspoon soy sauce ½ teaspoon Marmite",
-    "2 anchovy fillets, mashed to a paste with the back of a fork",
-    "3 medium cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
-    "1 teaspoon red pepper flakes",
-    "1 large egg",
-    "1 tablespoon sugar",
-    "½ teaspoon ground fennel",
-    "Freshly ground black pepper",
-    "2 cups vegetable oil",
-    "For the Sauce",
-    "3 tablespoons unsalted butter",
-    "8 ounces buttom mushrooms, cleaned and sliced",
-    "1 small onion, finely diced (about 1 cup)",
-    "Reserved garlic from above",
-    "1 tablespoon all-purpose flour",
-    "1½ cups homemade or low-sodium canned chicken stock",
-    "1 teaspoon soy sauce",
-    "½ cup heavy cream",
-    "2 teaspoons sugar",
-    "Kosher salt and freshly ground black pepper",
-    "1 teaspoon fresh lemon juice",
-    "1 teaspoon fresh thyme leaves"
+    {
+      "item": "For the Meatballs",
+      "category": "Other"
+    },
+    {
+      "item": "1 pound freshly ground pork shoulder",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup buttermilk or heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¼ ounce (1 packet) unflavored gelatin",
+      "category": "Other"
+    },
+    {
+      "item": "2 slices high-quality white sandwich bread, crusts removed",
+      "category": "Bakery"
+    },
+    {
+      "item": "1 teaspoon soy sauce ½ teaspoon Marmite",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 anchovy fillets, mashed to a paste with the back of a fork",
+      "category": "Seafood"
+    },
+    {
+      "item": "3 medium cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon red pepper flakes",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large egg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 tablespoon sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon ground fennel",
+      "category": "Produce"
+    },
+    {
+      "item": "Freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cups vegetable oil",
+      "category": "Other"
+    },
+    {
+      "item": "For the Sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "3 tablespoons unsalted butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "8 ounces buttom mushrooms, cleaned and sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 small onion, finely diced (about 1 cup)",
+      "category": "Produce"
+    },
+    {
+      "item": "Reserved garlic from above",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1½ cups homemade or low-sodium canned chicken stock",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 teaspoon soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "½ cup heavy cream",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 teaspoons sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon fresh lemon juice",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon fresh thyme leaves",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "To make the meatballs",

@@ -6,18 +6,54 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Shortbread Crust",
-    "1 cup (230g; 2 sticks) unsalted butter, melted",
-    "1/2 cup (100g) granulated sugar",
-    "2 teaspoons pure vanilla extract",
-    "1/2 teaspoon salt",
-    "2 cups + 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
-    "Lemon Filling",
-    "2 cups (400g) granulated sugar",
-    "6 Tablespoons (48g) all-purpose flour",
-    "6 large eggs",
-    "1 cup (240ml) lemon juice (about 4 lemons)",
-    "optional: confectioners’ sugar for dusting"
+    {
+      "item": "Shortbread Crust",
+      "category": "Bakery"
+    },
+    {
+      "item": "1 cup (230g; 2 sticks) unsalted butter, melted",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1/2 cup (100g) granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons pure vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/2 teaspoon salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 cups + 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Lemon Filling",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cups (400g) granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "6 Tablespoons (48g) all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "6 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 cup (240ml) lemon juice (about 4 lemons)",
+      "category": "Produce"
+    },
+    {
+      "item": "optional: confectioners’ sugar for dusting",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Preheat the oven to 325°F (163°C).",

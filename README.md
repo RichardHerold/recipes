@@ -7,6 +7,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 - 🔍 **Search Recipes** - Search by name, ingredients, or instructions
 - 🏷️ **Category Filtering** - Filter recipes by category (Appetizer, Main Course, Dessert, etc.)
 - ➕ **Easy Recipe Addition** - Use the admin interface to add new recipes
+- 🛒 **Grocery-Friendly Metadata** - Tag each ingredient with the grocery aisle it belongs to (hidden from the UI but useful for shopping lists)
 - 📸 **Recipe Photos** - Add images to make your recipes more appealing
 - 📱 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
 - 🎨 **Modern UI** - Clean, modern interface with smooth animations
@@ -41,7 +42,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
      - Description (optional)
      - Recipe Image URL (optional) - See "Adding Images" section below
      - Prep time and cook time (optional)
-     - Ingredients (add multiple, at least one required)
+     - Ingredients (add multiple, at least one required) with an optional grocery section for each ingredient
      - Instructions (add multiple, at least one required)
    - Click **Generate Recipe File**
    - Copy the JSON content or download the file
@@ -79,8 +80,13 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
   "cookTime": "30 minutes",
   "image": "images/recipe-image.jpg",
   "ingredients": [
-    "Ingredient 1",
-    "Ingredient 2"
+    {
+      "item": "Ingredient 1",
+      "category": "Produce"
+    },
+    {
+      "item": "Ingredient 2"
+    }
   ],
   "instructions": [
     "Step 1",
@@ -91,6 +97,23 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 ```
 
 **Categories:** Appetizer, Main Course, Dessert, Side Dish, Breakfast, Lunch, Dinner, Snack, Beverage, Other
+
+### Ingredient Categories by Grocery Section
+
+Every ingredient entry can now include a `category` field describing the aisle or section where the item is typically found in a grocery store. This metadata never renders in the UI, but it enables organized shopping lists and future exports.
+
+- **Format:** `{ "item": "2 cups flour", "category": "Baking & Spices" }`
+- **Optional:** Leave `category` off if you don't want to classify an ingredient.
+- **Fallback:** When a category cannot be determined automatically, label it as `"Other"`.
+- **Recommended sections:** Produce, Meat & Poultry, Seafood, Dairy & Eggs, Bakery, Pantry & Dry Goods, Baking & Spices, Canned & Jarred, Frozen Foods, Condiments & Sauces, International & Specialty, Beverages, Deli & Prepared Foods, Household & Misc, Other.
+
+To retroactively classify existing recipes, run:
+
+```bash
+node scripts/categorizeIngredients.js
+```
+
+The script inspects every recipe in `recipes/` and adds categories when possible (defaulting to `"Other"` when it cannot confidently decide).
 
 ### Using Subsections in Recipes
 
@@ -103,21 +126,42 @@ You can mix regular ingredients with subsections:
 ```json
 {
   "ingredients": [
-    "2 cups all-purpose flour",
-    "1 cup sugar",
+    {
+      "item": "2 cups all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 cup sugar",
+      "category": "Baking & Spices"
+    },
     {
       "subsection": "Equipment",
       "items": [
-        "Mixing bowl",
-        "Whisk",
-        "Baking pan"
+        {
+          "item": "Mixing bowl",
+          "category": "Household & Misc"
+        },
+        {
+          "item": "Whisk",
+          "category": "Household & Misc"
+        },
+        {
+          "item": "Baking pan",
+          "category": "Household & Misc"
+        }
       ]
     },
     {
       "subsection": "Optional Toppings",
       "items": [
-        "Chocolate chips",
-        "Chopped nuts"
+        {
+          "item": "Chocolate chips",
+          "category": "Other"
+        },
+        {
+          "item": "Chopped nuts",
+          "category": "Produce"
+        }
       ]
     }
   ]
@@ -294,6 +338,7 @@ To test locally before pushing to GitHub:
 - Use descriptive filenames for recipes (e.g., `chocolate-chip-cookies.json` instead of `recipe1.json`)
 - Keep recipe names unique to avoid confusion
 - Update `recipes-index.json` whenever you add or remove recipes
+- Run `node scripts/categorizeIngredients.js` after adding lots of new recipes to normalize ingredient categories
 - The site automatically sorts recipes by date (newest first)
 
 ## License

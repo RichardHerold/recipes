@@ -6,15 +6,42 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Four 6-ounce fillets of flounder, sole, or any other",
-    "1/4-inch-thick fish",
-    "Salt and freshly ground black pepper",
-    "2 tablespoons extra virgin olive oil",
-    "4 tablespoons butter or more oil",
-    "All-purpose cornmeal for dredging",
-    "1/4 cup freshly squeezed lemon juice",
-    "Chopped fresh parsley leaves for garnish",
-    "Lemon wedges for serving"
+    {
+      "item": "Four 6-ounce fillets of flounder, sole, or any other",
+      "category": "Seafood"
+    },
+    {
+      "item": "1/4-inch-thick fish",
+      "category": "Seafood"
+    },
+    {
+      "item": "Salt and freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 tablespoons extra virgin olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "4 tablespoons butter or more oil",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "All-purpose cornmeal for dredging",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1/4 cup freshly squeezed lemon juice",
+      "category": "Produce"
+    },
+    {
+      "item": "Chopped fresh parsley leaves for garnish",
+      "category": "Produce"
+    },
+    {
+      "item": "Lemon wedges for serving",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Warm 4 dinner plates in a 200°F oven.",

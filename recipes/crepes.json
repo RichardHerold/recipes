@@ -6,12 +6,30 @@
   "cookTime": "1 hour 25 Minutes",
   "image": "",
   "ingredients": [
-    "2 large eggs",
-    "1 ¼ cup (280mL) milk",
-    "140g (1 cup) flour",
-    "1 tablespoon melted butter",
-    "Pinch Kosher Salt",
-    "1-2 ½  Tablespoons (8g) sugar (for sweet crepes)"
+    {
+      "item": "2 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 ¼ cup (280mL) milk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "140g (1 cup) flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 tablespoon melted butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Pinch Kosher Salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1-2 ½  Tablespoons (8g) sugar (for sweet crepes)",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Crepe Batter",

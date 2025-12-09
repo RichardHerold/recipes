@@ -6,11 +6,26 @@
   "cookTime": "Total Time 8 minutes",
   "image": "",
   "ingredients": [
-    "1 stick organic salted butter (you can use cultured vegan butter instead)",
-    "14 leaves fresh sage or to taste",
-    "freshly cracked black pepper to taste",
-    "1/2 lemon optional",
-    "3/4 lb butternut squash ravioli or potato gnocchi"
+    {
+      "item": "1 stick organic salted butter (you can use cultured vegan butter instead)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "14 leaves fresh sage or to taste",
+      "category": "Other"
+    },
+    {
+      "item": "freshly cracked black pepper to taste",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 lemon optional",
+      "category": "Produce"
+    },
+    {
+      "item": "3/4 lb butternut squash ravioli or potato gnocchi",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Cut the butter into large pieces and add it to a light colored pan over medium low flame.",

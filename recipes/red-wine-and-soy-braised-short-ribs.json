@@ -6,19 +6,58 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "4 lb. 2\"-thick boneless beef short ribs or 5 lb. 2\"-thick cross cut bone-in short ribs (flanken style), cut into 2x2\" pieces",
-    "Kosher salt",
-    "2 Tbsp. plus 1 tsp. grapeseed or extra-virgin olive oil",
-    "1 large onion, chopped",
-    "8 garlic cloves, crushed",
-    "1 2\" piece ginger, peeled, sliced ⅛\" thick",
-    "2 cups dry red wine",
-    "½ cup mirin (sweet Japanese rice wine)",
-    "⅓ cup soy sauce",
-    "¼ cup (packed) light brown sugar",
-    "¼ mu radish or daikon (about 8 oz.), peeled, cut into 1\" pieces",
-    "1 large egg, beaten to blend",
-    "Shilgochu or gochugaru (coarse Korean hot pepper flakes), sliced scallions, and cooked rice (for serving) was a a great day"
+    {
+      "item": "4 lb. 2\"-thick boneless beef short ribs or 5 lb. 2\"-thick cross cut bone-in short ribs (flanken style), cut into 2x2\" pieces",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 Tbsp. plus 1 tsp. grapeseed or extra-virgin olive oil",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large onion, chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "8 garlic cloves, crushed",
+      "category": "Produce"
+    },
+    {
+      "item": "1 2\" piece ginger, peeled, sliced ⅛\" thick",
+      "category": "Produce"
+    },
+    {
+      "item": "2 cups dry red wine",
+      "category": "Beverages"
+    },
+    {
+      "item": "½ cup mirin (sweet Japanese rice wine)",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "⅓ cup soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "¼ cup (packed) light brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ mu radish or daikon (about 8 oz.), peeled, cut into 1\" pieces",
+      "category": "Produce"
+    },
+    {
+      "item": "1 large egg, beaten to blend",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Shilgochu or gochugaru (coarse Korean hot pepper flakes), sliced scallions, and cooked rice (for serving) was a a great day",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

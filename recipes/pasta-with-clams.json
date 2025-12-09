@@ -6,13 +6,34 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "7 fresh littleneck clams",
-    "2 tablespoons olive oil, divided",
-    "2 cloves garlic, chopped",
-    "½ cup clam juice",
-    "2 tablespoons dry white wine",
-    "4 ounces uncooked spaghetti",
-    "Chopped fresh parsley, to taste"
+    {
+      "item": "7 fresh littleneck clams",
+      "category": "Seafood"
+    },
+    {
+      "item": "2 tablespoons olive oil, divided",
+      "category": "Other"
+    },
+    {
+      "item": "2 cloves garlic, chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "½ cup clam juice",
+      "category": "Seafood"
+    },
+    {
+      "item": "2 tablespoons dry white wine",
+      "category": "Beverages"
+    },
+    {
+      "item": "4 ounces uncooked spaghetti",
+      "category": "Other"
+    },
+    {
+      "item": "Chopped fresh parsley, to taste",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

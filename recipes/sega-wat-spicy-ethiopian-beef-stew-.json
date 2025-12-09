@@ -6,16 +6,46 @@
   "cookTime": "TOTAL TIME1 hour 45 minutes",
   "image": "",
   "ingredients": [
-    "2 pounds boneless beef chuck, cut into 1/2 inch cubes",
-    "6 tablespoons niter kibbeh , divided",
-    "3 cups chunky pureed onions (pulse in food processor to form a chunky paste)",
-    "1 1/2 tablespoons minced garlic",
-    "1 1/2 tablespoons minced fresh ginger",
-    "1/4 cup berbere spice blend",
-    "Homemade Berbere Recipe ,HIGHLY recommended!",
-    "1 1/2 teaspoons salt",
-    "1 cup strong beef broth",
-    "4 hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)"
+    {
+      "item": "2 pounds boneless beef chuck, cut into 1/2 inch cubes",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "6 tablespoons niter kibbeh , divided",
+      "category": "Other"
+    },
+    {
+      "item": "3 cups chunky pureed onions (pulse in food processor to form a chunky paste)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 1/2 tablespoons minced garlic",
+      "category": "Produce"
+    },
+    {
+      "item": "1 1/2 tablespoons minced fresh ginger",
+      "category": "Produce"
+    },
+    {
+      "item": "1/4 cup berbere spice blend",
+      "category": "Other"
+    },
+    {
+      "item": "Homemade Berbere Recipe ,HIGHLY recommended!",
+      "category": "Other"
+    },
+    {
+      "item": "1 1/2 teaspoons salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 cup strong beef broth",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "4 hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)",
+      "category": "Meat & Poultry"
+    }
   ],
   "instructions": [
     "Heat 3 tablespoons of niter kibbeh or butter in a heavy pot or Dutch oven. Add the onions and cook, covered, over low heat for 20 minutes, stirring occasionally.",

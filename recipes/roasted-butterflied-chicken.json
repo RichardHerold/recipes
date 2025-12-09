@@ -6,9 +6,18 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "1 whole chicken, 3½ to 4 pounds, butterflied according to the instructions here",
-    "1 tablespoon vegetable, canola, or olive oil",
-    "Kosher salt and freshly ground black pepper"
+    {
+      "item": "1 whole chicken, 3½ to 4 pounds, butterflied according to the instructions here",
+      "category": "Meat & Poultry"
+    },
+    {
+      "item": "1 tablespoon vegetable, canola, or olive oil",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "1.  Adjust an oven rack to the upper-middle position and preheat the oven to 425°F (400 convection).",

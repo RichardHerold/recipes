@@ -6,17 +6,50 @@
   "cookTime": "Missing",
   "image": "",
   "ingredients": [
-    "2 tablespoons vegetable oil",
-    "3 cups corn kernels or 4 ears of corn",
-    "Kosher salt",
-    "2 tablespoons mayonnaise",
-    "2 ounces feta cheese, finely crumbled",
-    "½  scallion greens",
-    "½  cup fresh cilantro",
-    "1 jalapeño pepper",
-    "2 medium cloves garlic",
-    "1 tablespoon fresh juice from 1 lime",
-    "Chili powder or hot chili flakes, to taste"
+    {
+      "item": "2 tablespoons vegetable oil",
+      "category": "Other"
+    },
+    {
+      "item": "3 cups corn kernels or 4 ears of corn",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons mayonnaise",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 ounces feta cheese, finely crumbled",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½  scallion greens",
+      "category": "Produce"
+    },
+    {
+      "item": "½  cup fresh cilantro",
+      "category": "Produce"
+    },
+    {
+      "item": "1 jalapeño pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 medium cloves garlic",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon fresh juice from 1 lime",
+      "category": "Produce"
+    },
+    {
+      "item": "Chili powder or hot chili flakes, to taste",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "Mise en Place:",

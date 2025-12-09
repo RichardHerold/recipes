@@ -9,30 +9,87 @@
     {
       "subsection": "Marinade Sauce",
       "items": [
-        "12 ounces (340g) skirt steak, sliced into 1/4-inch pieces against the grain (watch the video for the technique)",
-        "1 teaspoon (5ml) light soy sauce or shoyu",
-        "1 teaspoon (5ml) sesame oil",
-        "2 teaspoons (10ml) Shaoxing wine",
-        "1/4 teaspoon (1g) MSG",
-        "1 teaspoon (3) cornstarch",
-        "A little more than a 1/4 teaspoon  (1.5g) baking soda",
-        "1/2 teaspoon kosher salt (or 1/4 teaspoon table salt) (about 5g)",
-        "1 tablespoon (15ml) dark soy sauce",
-        "1 tablespoon (15ml) light soy sauce",
-        "2 tablespoons (30ml) oyster sauce",
-        "1 tablespoon (20g) sugar",
-        "2 teaspoons (6g) cornstarch",
-        "1 tablespoon (15ml) water"
+        {
+          "item": "12 ounces (340g) skirt steak, sliced into 1/4-inch pieces against the grain (watch the video for the technique)",
+          "category": "Meat & Poultry"
+        },
+        {
+          "item": "1 teaspoon (5ml) light soy sauce or shoyu",
+          "category": "Condiments & Sauces"
+        },
+        {
+          "item": "1 teaspoon (5ml) sesame oil",
+          "category": "Other"
+        },
+        {
+          "item": "2 teaspoons (10ml) Shaoxing wine",
+          "category": "International & Specialty"
+        },
+        {
+          "item": "1/4 teaspoon (1g) MSG",
+          "category": "Other"
+        },
+        {
+          "item": "1 teaspoon (3) cornstarch",
+          "category": "Baking & Spices"
+        },
+        {
+          "item": "A little more than a 1/4 teaspoon  (1.5g) baking soda",
+          "category": "Baking & Spices"
+        },
+        {
+          "item": "1/2 teaspoon kosher salt (or 1/4 teaspoon table salt) (about 5g)",
+          "category": "Baking & Spices"
+        },
+        {
+          "item": "1 tablespoon (15ml) dark soy sauce",
+          "category": "Condiments & Sauces"
+        },
+        {
+          "item": "1 tablespoon (15ml) light soy sauce",
+          "category": "Condiments & Sauces"
+        },
+        {
+          "item": "2 tablespoons (30ml) oyster sauce",
+          "category": "Seafood"
+        },
+        {
+          "item": "1 tablespoon (20g) sugar",
+          "category": "Baking & Spices"
+        },
+        {
+          "item": "2 teaspoons (6g) cornstarch",
+          "category": "Baking & Spices"
+        },
+        {
+          "item": "1 tablespoon (15ml) water",
+          "category": "Pantry & Dry Goods"
+        }
       ]
     },
     {
       "subsection": "Stir Fry",
       "items": [
-        "12 ounces (340g) broccoli or broccolini, florets separated and stems sliced on a sharp bias into 1-inch pieces (peel stems if they are tough)",
-        "2 tablespoons (30ml) peanut, rice bran, or soybean oil",
-        "3 teaspoons (8g) minced fresh garlic (3-4 medium cloves)",
-        "2 teaspoons (5g) minced fresh ginger (about ½-inch segment, minced)",
-        "1 tablespoon (15ml) Shaoxing wine"
+        {
+          "item": "12 ounces (340g) broccoli or broccolini, florets separated and stems sliced on a sharp bias into 1-inch pieces (peel stems if they are tough)",
+          "category": "Produce"
+        },
+        {
+          "item": "2 tablespoons (30ml) peanut, rice bran, or soybean oil",
+          "category": "Produce"
+        },
+        {
+          "item": "3 teaspoons (8g) minced fresh garlic (3-4 medium cloves)",
+          "category": "Produce"
+        },
+        {
+          "item": "2 teaspoons (5g) minced fresh ginger (about ½-inch segment, minced)",
+          "category": "Produce"
+        },
+        {
+          "item": "1 tablespoon (15ml) Shaoxing wine",
+          "category": "International & Specialty"
+        }
       ]
     }
   ],

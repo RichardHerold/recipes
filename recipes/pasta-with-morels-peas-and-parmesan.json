@@ -6,12 +6,30 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Salt and ground black pepper",
-    "½ cup fresh shelled peas",
-    "4 tablespoons butter",
-    "¼ pound morels, about 8 medium",
-    "8 ounces pasta",
-    "1 cup finely grated Parmesan"
+    {
+      "item": "Salt and ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "½ cup fresh shelled peas",
+      "category": "Produce"
+    },
+    {
+      "item": "4 tablespoons butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¼ pound morels, about 8 medium",
+      "category": "Other"
+    },
+    {
+      "item": "8 ounces pasta",
+      "category": "Pantry & Dry Goods"
+    },
+    {
+      "item": "1 cup finely grated Parmesan",
+      "category": "Dairy & Eggs"
+    }
   ],
   "instructions": [
     "Bring to a boil 2 pots of water, one small and one large, and salt both.",

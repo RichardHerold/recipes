@@ -6,18 +6,54 @@
   "cookTime": "20 minutes",
   "image": "",
   "ingredients": [
-    "2 teaspoons (about 1g) dried wakame seaweed",
-    "1 teaspoon (about 0.5g) dried hijiki seaweed",
-    "¾ to 1 Pound raw sashimi-grade tuna",
-    "3 ounces (85g) sweet onion, such as Maui or Vidalia",
-    "1 scallion",
-    "1 teaspoon (about 3g) white or black sesame seeds, or a mix",
-    "4 teaspoons (20ml) soy sauce",
-    "2 teaspoons (10ml) toasted sesame oil",
-    "1 teaspoon (5ml) honey",
-    "Crushed red pepper, to taste (optional)",
-    "Kosher salt",
-    "1 cup sushi rice (if eating as a meal)"
+    {
+      "item": "2 teaspoons (about 1g) dried wakame seaweed",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon (about 0.5g) dried hijiki seaweed",
+      "category": "Other"
+    },
+    {
+      "item": "¾ to 1 Pound raw sashimi-grade tuna",
+      "category": "Seafood"
+    },
+    {
+      "item": "3 ounces (85g) sweet onion, such as Maui or Vidalia",
+      "category": "Produce"
+    },
+    {
+      "item": "1 scallion",
+      "category": "Produce"
+    },
+    {
+      "item": "1 teaspoon (about 3g) white or black sesame seeds, or a mix",
+      "category": "Other"
+    },
+    {
+      "item": "4 teaspoons (20ml) soy sauce",
+      "category": "Condiments & Sauces"
+    },
+    {
+      "item": "2 teaspoons (10ml) toasted sesame oil",
+      "category": "Other"
+    },
+    {
+      "item": "1 teaspoon (5ml) honey",
+      "category": "Other"
+    },
+    {
+      "item": "Crushed red pepper, to taste (optional)",
+      "category": "Produce"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 cup sushi rice (if eating as a meal)",
+      "category": "Pantry & Dry Goods"
+    }
   ],
   "instructions": [
     "Mise en Place:",

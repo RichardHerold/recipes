@@ -6,17 +6,50 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "For the Cornbread:",
-    "1½ cups (250g) coarse yellow cornmeal, preferably Anson Mills",
-    "1 teaspoon fine sea salt",
-    "1 teaspoon baking powder",
-    "1 teaspoon baking soda",
-    "1 large whole egg",
-    "2 tablespoons unsalted melted butter, plus more for later",
-    "1½ cups buttermilk",
-    "For the Butter:",
-    "4 ounces butter",
-    "½ cup sorghum syrup or Honey"
+    {
+      "item": "For the Cornbread:",
+      "category": "Bakery"
+    },
+    {
+      "item": "1½ cups (250g) coarse yellow cornmeal, preferably Anson Mills",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon fine sea salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 teaspoon baking soda",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1 large whole egg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 tablespoons unsalted melted butter, plus more for later",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1½ cups buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "For the Butter:",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "4 ounces butter",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "½ cup sorghum syrup or Honey",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "For the cornbread:",

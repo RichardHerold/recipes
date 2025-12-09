@@ -6,8 +6,14 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "8 ears corn",
-    "Kosher salt"
+    {
+      "item": "8 ears corn",
+      "category": "Other"
+    },
+    {
+      "item": "Kosher salt",
+      "category": "Baking & Spices"
+    }
   ],
   "instructions": [
     "Heat the grill to medium.",

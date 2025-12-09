@@ -6,15 +6,42 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "6 Tbsp mayonnaise (or plain yogurt)",
-    "1 Tbsp lemon juice",
-    "1/2 teaspoon salt",
-    "Pinch of freshly ground black pepper",
-    "2 sweet apples, cored and chopped",
-    "1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins)",
-    "1 cup celery, thinly sliced",
-    "1 cup chopped, slightly toasted walnuts",
-    "Lettuce"
+    {
+      "item": "6 Tbsp mayonnaise (or plain yogurt)",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "1 Tbsp lemon juice",
+      "category": "Produce"
+    },
+    {
+      "item": "1/2 teaspoon salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "Pinch of freshly ground black pepper",
+      "category": "Produce"
+    },
+    {
+      "item": "2 sweet apples, cored and chopped",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins)",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup celery, thinly sliced",
+      "category": "Produce"
+    },
+    {
+      "item": "1 cup chopped, slightly toasted walnuts",
+      "category": "Other"
+    },
+    {
+      "item": "Lettuce",
+      "category": "Produce"
+    }
   ],
   "instructions": [
     "In a medium sized bowl, whisk together the mayonnaise, lemon juice, salt and pepper.",

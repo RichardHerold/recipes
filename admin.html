@@ -23,6 +23,24 @@
                 Recipe file generated successfully! Copy the JSON below and save it as a file in the recipes folder.
             </div>
 
+            <datalist id="ingredientCategoryList">
+                <option value="Produce"></option>
+                <option value="Meat & Poultry"></option>
+                <option value="Seafood"></option>
+                <option value="Dairy & Eggs"></option>
+                <option value="Bakery"></option>
+                <option value="Pantry & Dry Goods"></option>
+                <option value="Baking & Spices"></option>
+                <option value="Canned & Jarred"></option>
+                <option value="Frozen Foods"></option>
+                <option value="Condiments & Sauces"></option>
+                <option value="International & Specialty"></option>
+                <option value="Beverages"></option>
+                <option value="Deli & Prepared Foods"></option>
+                <option value="Household & Misc"></option>
+                <option value="Other"></option>
+            </datalist>
+
             <form id="recipeForm">
                 <div class="form-group">
                     <label for="recipeName">Recipe Name *</label>
@@ -72,6 +90,7 @@
 
                 <div class="form-group">
                     <label>Ingredients *</label>
+                    <small class="field-help">Specify the ingredient and optionally a grocery aisle category. Leaving the category blank keeps the ingredient uncategorized.</small>
                     <div id="ingredientsList"></div>
                     <button type="button" class="btn btn-secondary btn-small" id="addIngredient">+ Add Ingredient</button>
                 </div>

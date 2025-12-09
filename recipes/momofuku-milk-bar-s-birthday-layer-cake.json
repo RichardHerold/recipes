@@ -6,43 +6,154 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [
-    "Cake:",
-    "Nonstick vegetable oil spray",
-    "2 cups cake flour",
-    "1½ teaspoons baking powder",
-    "¾ teaspoon kosher salt",
-    "¼ cup plus 2 tablespoons rainbow sprinkles, divided",
-    "½ cup buttermilk",
-    "⅓ cup grapeseed oil",
-    "2 teaspoons clear imitation vanilla extract, preferably McCormick brand",
-    "1¼ cups granulated sugar",
-    "⅓ cup vegetable shortening",
-    "4 tablespoons (½ stick) unsalted butter, room temperature",
-    "3 tablespoons light brown sugar",
-    "3 large eggs",
-    "Crumbs:",
-    "¾ cup cake or all-purpose flour",
-    "½ cup granulated sugar",
-    "2 tablespoons light brown sugar",
-    "2 tablespoons rainbow sprinkles",
-    "½ teaspoon baking powder",
-    "½ teaspoon kosher salt",
-    "¼ cup grapeseed oil",
-    "1 tablespoon clear imitation vanilla extract",
-    "For the frosting and assembly:",
-    "½ cup (1 stick) unsalted butter, room temperature",
-    "¼ cup vegetable shortening",
-    "2 ounces cream cheese, room temperature",
-    "2 tablespoons light corn syrup",
-    "1 tablespoon plus 1 teaspoon clear imitation vanilla extract, divided",
-    "1¼ cups powdered sugar",
-    "½ teaspoon kosher salt",
-    "¼ teaspoon baking powder",
-    "⅛ teaspoon citric acid (or ½ teaspoon fresh lemon juice)",
-    "¼ cup milk",
-    "Special equipment:",
-    "6\" cake ring or springform mold",
-    "2 strips acetate (flexible plastic paper), each 3\" wide and 20\" long"
+    {
+      "item": "Cake:",
+      "category": "Other"
+    },
+    {
+      "item": "Nonstick vegetable oil spray",
+      "category": "Other"
+    },
+    {
+      "item": "2 cups cake flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1½ teaspoons baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¾ teaspoon kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup plus 2 tablespoons rainbow sprinkles, divided",
+      "category": "Other"
+    },
+    {
+      "item": "½ cup buttermilk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "⅓ cup grapeseed oil",
+      "category": "Produce"
+    },
+    {
+      "item": "2 teaspoons clear imitation vanilla extract, preferably McCormick brand",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1¼ cups granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "⅓ cup vegetable shortening",
+      "category": "Other"
+    },
+    {
+      "item": "4 tablespoons (½ stick) unsalted butter, room temperature",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "3 tablespoons light brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "3 large eggs",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Crumbs:",
+      "category": "Beverages"
+    },
+    {
+      "item": "¾ cup cake or all-purpose flour",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ cup granulated sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons light brown sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "2 tablespoons rainbow sprinkles",
+      "category": "Other"
+    },
+    {
+      "item": "½ teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup grapeseed oil",
+      "category": "Produce"
+    },
+    {
+      "item": "1 tablespoon clear imitation vanilla extract",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "For the frosting and assembly:",
+      "category": "Other"
+    },
+    {
+      "item": "½ cup (1 stick) unsalted butter, room temperature",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "¼ cup vegetable shortening",
+      "category": "Other"
+    },
+    {
+      "item": "2 ounces cream cheese, room temperature",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "2 tablespoons light corn syrup",
+      "category": "Other"
+    },
+    {
+      "item": "1 tablespoon plus 1 teaspoon clear imitation vanilla extract, divided",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "1¼ cups powdered sugar",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "½ teaspoon kosher salt",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "¼ teaspoon baking powder",
+      "category": "Baking & Spices"
+    },
+    {
+      "item": "⅛ teaspoon citric acid (or ½ teaspoon fresh lemon juice)",
+      "category": "Produce"
+    },
+    {
+      "item": "¼ cup milk",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "item": "Special equipment:",
+      "category": "Other"
+    },
+    {
+      "item": "6\" cake ring or springform mold",
+      "category": "Other"
+    },
+    {
+      "item": "2 strips acetate (flexible plastic paper), each 3\" wide and 20\" long",
+      "category": "Other"
+    }
   ],
   "instructions": [
     "Cake:",
