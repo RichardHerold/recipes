@@ -11,6 +11,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 - 📱 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
 - 🎨 **Modern UI** - Clean, modern interface with smooth animations
 - 📲 **Progressive Web App (PWA)** - Installable app with offline support
+- 🛒 **Google Keep Export** - Turn any recipe into a categorized shopping list
 
 ## Getting Started
 
@@ -178,6 +179,38 @@ You can add photos to your recipes in two ways:
 - Supported formats: JPG, PNG, WebP, GIF
 - Keep file sizes reasonable (< 2MB) for faster loading
 - Images are displayed at the top of recipe cards
+
+## Export Recipes to Google Keep
+
+You can export the ingredients for any recipe directly to Google Keep as a shopping list. Each item is tagged with its grocery aisle (Produce, Dairy & Eggs, Meat & Seafood, etc.) so everything stays organized and can be checked off in Keep.
+
+### One-time setup
+
+1. **Enable the Google Keep API**
+   - Open [Google Cloud Console](https://console.cloud.google.com/)
+   - Create (or select) a project and enable the **Google Keep API**
+2. **Create OAuth credentials**
+   - Go to **APIs & Services → Credentials**
+   - Create an **OAuth 2.0 Client ID** (Web Application)
+   - Add your site origin (e.g., `https://yourusername.github.io`) to the Authorized JavaScript origins list
+3. **Add the client ID to the app**
+   - In `index.html`, find the snippet:
+     ```html
+     <script>
+       window.GOOGLE_KEEP_CLIENT_ID = '';
+     </script>
+     ```
+   - Replace the empty string with your client ID
+4. **Deploy the updated page** so users can authenticate against Google
+
+### Using the export button
+
+1. Open any recipe and expand the card
+2. Click **Connect Google Keep** in the page header (one-time per session) and complete the Google consent flow
+3. Click **Export to Keep** on the recipe card
+4. A new shopping list note appears in Google Keep with all items checkable and grouped by aisle
+
+> **Note:** Google Keep tokens are short-lived and are never stored on a server—everything happens in the browser. If the export fails, make sure your client ID is correct and that the Google Keep API is enabled for your project.
 
 ## Progressive Web App (PWA)
 

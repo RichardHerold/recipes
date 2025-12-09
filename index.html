@@ -40,8 +40,16 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-bar">
             <h1>Richard's Recipe Collection</h1>
+            <div class="google-keep-controls">
+                <button id="googleKeepConnect" class="google-keep-btn" type="button">
+                    Connect Google Keep
+                </button>
+                <span id="googleKeepStatus" class="google-keep-status">
+                    Connect your Google account to export shopping lists
+                </span>
+            </div>
         </div>
     </header>
 
@@ -79,6 +87,16 @@
         <span class="notification-text">Recipe link copied to clipboard</span>
     </div>
 
+    <script>
+        /**
+         * Replace the empty string below with your OAuth 2.0 Web client ID
+         * (from the Google Cloud Console) to enable Google Keep exports.
+         * Example:
+         * window.GOOGLE_KEEP_CLIENT_ID = '1234567890-abc123.apps.googleusercontent.com';
+         */
+        window.GOOGLE_KEEP_CLIENT_ID = window.GOOGLE_KEEP_CLIENT_ID || '';
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -2,12 +2,66 @@
 let allRecipes = [];
 let filteredRecipes = [];
 
+const GOOGLE_KEEP_SCOPES = 'https://www.googleapis.com/auth/keep';
+const GOOGLE_KEEP_API_BASE = 'https://keep.googleapis.com/v1';
+const GOOGLE_LIBRARY_TIMEOUT = 5000;
+const GOOGLE_LIBRARY_POLL_INTERVAL = 150;
+
+const AISLE_DEFINITIONS = [
+    { 
+        category: 'Produce', 
+        keywords: ['apple', 'avocado', 'banana', 'basil', 'broccoli', 'cabbage', 'carrot', 'celery', 'cilantro', 'cucumber', 'garlic', 'ginger', 'herb', 'jalapeño', 'jalapeno', 'kale', 'lemon', 'lettuce', 'lime', 'mushroom', 'onion', 'orange', 'parsley', 'pepper', 'potato', 'shallot', 'spinach', 'tomato']
+    },
+    { 
+        category: 'Dairy & Eggs', 
+        keywords: ['butter', 'cream', 'cheese', 'egg', 'milk', 'parmesan', 'ricotta', 'sour cream', 'yogurt', 'mozzarella', 'half-and-half']
+    },
+    { 
+        category: 'Meat & Seafood', 
+        keywords: ['bacon', 'beef', 'chicken', 'chorizo', 'duck', 'fish', 'ground', 'ham', 'lamb', 'pork', 'prosciutto', 'salmon', 'sausage', 'shrimp', 'steak', 'turkey']
+    },
+    { 
+        category: 'Bakery', 
+        keywords: ['baguette', 'bread', 'bun', 'ciabatta', 'dough', 'pita', 'roll', 'tortilla']
+    },
+    { 
+        category: 'Pantry', 
+        keywords: ['flour', 'sugar', 'salt', 'pepper', 'oil', 'vinegar', 'spice', 'powder', 'sauce', 'broth', 'stock', 'pasta', 'rice', 'bean', 'lentil', 'cornstarch', 'honey', 'molasses', 'oats', 'quinoa', 'soy', 'tomato paste', 'tomato sauce']
+    },
+    { 
+        category: 'Frozen', 
+        keywords: ['frozen', 'ice cream', 'sorbet', 'frozen peas']
+    },
+    { 
+        category: 'Beverages', 
+        keywords: ['beer', 'coffee', 'juice', 'tea', 'wine', 'vine']
+    },
+    { 
+        category: 'Spices & Seasonings', 
+        keywords: ['cumin', 'coriander', 'paprika', 'oregano', 'thyme', 'rosemary', 'sage', 'turmeric', 'curry', 'spice blend', 'seasoning']
+    },
+    { 
+        category: 'Household', 
+        keywords: ['foil', 'paper', 'toothpick', 'skewer']
+    }
+];
+
+const AISLE_FALLBACK = 'Other';
+const AISLE_ORDER = [...AISLE_DEFINITIONS.map(def => def.category), AISLE_FALLBACK];
+
+const googleKeepState = {
+    tokenClient: null,
+    accessToken: null,
+    expiresAt: 0
+};
+
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     loadRecipes();
     setupSearch();
     setupCategoryFilter();
     setupURLRouting();
+    setupGoogleKeepControls();
 });
 
 // Load all recipe files
@@ -288,6 +342,7 @@ function createRecipeCard(recipe) {
                 <div class="recipe-actions">
                     <button class="recipe-action-btn" onclick="printRecipe('${recipeId}')" title="Print recipe">Print</button>
                     <button class="recipe-action-btn" onclick="shareRecipe('${recipeId}')" title="Share recipe">Share</button>
+                    <button class="recipe-action-btn keep-export-btn" onclick="exportRecipeToGoogleKeep('${recipeId}')" title="Export ingredients to Google Keep">Export to Keep</button>
                 </div>
             </div>
             ${recipe.description ? `<p class="recipe-description">${escapeHtml(recipe.description)}</p>` : ''}
@@ -651,6 +706,374 @@ async function shareRecipe(recipeId) {
         console.error('Error copying to clipboard:', error);
         // Last resort: show the URL in notification so user can manually copy
         showNotification('Unable to copy. URL: ' + recipeUrl);
+    }
+}
+
+// Google Keep integration
+function setupGoogleKeepControls() {
+    const connectBtn = document.getElementById('googleKeepConnect');
+    const statusEl = document.getElementById('googleKeepStatus');
+    
+    if (!connectBtn || !statusEl) return;
+    
+    connectBtn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const isConnected = googleKeepState.accessToken && Date.now() < googleKeepState.expiresAt;
+        
+        if (isConnected) {
+            await disconnectGoogleKeep();
+        } else {
+            await connectGoogleKeep();
+        }
+    });
+    
+    updateGoogleKeepUi();
+}
+
+function getGoogleKeepClientId() {
+    return window.GOOGLE_KEEP_CLIENT_ID || '';
+}
+
+function updateGoogleKeepUi() {
+    const connectBtn = document.getElementById('googleKeepConnect');
+    const statusEl = document.getElementById('googleKeepStatus');
+    
+    if (!connectBtn || !statusEl) return;
+    
+    const clientConfigured = Boolean(getGoogleKeepClientId());
+    const isConnected = Boolean(googleKeepState.accessToken && Date.now() < googleKeepState.expiresAt);
+    
+    if (!clientConfigured) {
+        connectBtn.textContent = 'Connect Google Keep';
+        connectBtn.disabled = true;
+        connectBtn.classList.remove('is-connected');
+        statusEl.textContent = 'Add a Google OAuth Client ID to enable exports';
+        return;
+    }
+    
+    connectBtn.disabled = false;
+    connectBtn.textContent = isConnected ? 'Disconnect Google Keep' : 'Connect Google Keep';
+    connectBtn.classList.toggle('is-connected', isConnected);
+    statusEl.textContent = isConnected ? 'Ready to export shopping lists' : 'Not connected';
+}
+
+function setGoogleKeepLoadingState(isLoading) {
+    const connectBtn = document.getElementById('googleKeepConnect');
+    if (!connectBtn) return;
+    
+    if (isLoading) {
+        if (!connectBtn.dataset.originalText) {
+            connectBtn.dataset.originalText = connectBtn.textContent;
+        }
+        connectBtn.textContent = 'Authorizing...';
+        connectBtn.disabled = true;
+        connectBtn.classList.add('is-loading');
+    } else {
+        connectBtn.classList.remove('is-loading');
+        if (connectBtn.dataset.originalText) {
+            connectBtn.textContent = connectBtn.dataset.originalText;
+            delete connectBtn.dataset.originalText;
+        }
+        updateGoogleKeepUi();
+    }
+}
+
+async function connectGoogleKeep() {
+    if (!getGoogleKeepClientId()) {
+        showNotification('Set a Google client ID before connecting');
+        return;
+    }
+    
+    setGoogleKeepLoadingState(true);
+    
+    try {
+        const token = await requestGoogleKeepAccessToken({ prompt: 'consent' });
+        if (token) {
+            showNotification('Google Keep connected');
+        }
+    } catch (error) {
+        console.error('Google Keep connect error:', error);
+        showNotification('Unable to connect to Google Keep');
+    } finally {
+        setGoogleKeepLoadingState(false);
+    }
+}
+
+async function disconnectGoogleKeep() {
+    setGoogleKeepLoadingState(true);
+    
+    try {
+        if (googleKeepState.accessToken && window.google && window.google.accounts && window.google.accounts.oauth2 && window.google.accounts.oauth2.revoke) {
+            await new Promise((resolve) => {
+                window.google.accounts.oauth2.revoke(googleKeepState.accessToken, () => resolve());
+            });
+        }
+    } catch (error) {
+        console.warn('Google Keep revoke error:', error);
+    } finally {
+        googleKeepState.accessToken = null;
+        googleKeepState.expiresAt = 0;
+        setGoogleKeepLoadingState(false);
+        updateGoogleKeepUi();
+        showNotification('Google Keep disconnected');
+    }
+}
+
+async function ensureGoogleKeepClient() {
+    if (googleKeepState.tokenClient) {
+        return true;
+    }
+    
+    const clientId = getGoogleKeepClientId();
+    if (!clientId) {
+        return false;
+    }
+    
+    await waitForGoogleLibrary();
+    
+    if (!(window.google && window.google.accounts && window.google.accounts.oauth2 && window.google.accounts.oauth2.initTokenClient)) {
+        return false;
+    }
+    
+    googleKeepState.tokenClient = window.google.accounts.oauth2.initTokenClient({
+        client_id: clientId,
+        scope: GOOGLE_KEEP_SCOPES,
+        callback: () => {}
+    });
+    
+    return true;
+}
+
+function waitForGoogleLibrary() {
+    if (window.google && window.google.accounts && window.google.accounts.oauth2) {
+        return Promise.resolve();
+    }
+    
+    return new Promise((resolve, reject) => {
+        const startTime = Date.now();
+        const interval = setInterval(() => {
+            if (window.google && window.google.accounts && window.google.accounts.oauth2) {
+                clearInterval(interval);
+                resolve();
+            } else if (Date.now() - startTime > GOOGLE_LIBRARY_TIMEOUT) {
+                clearInterval(interval);
+                reject(new Error('Google identity services script not available'));
+            }
+        }, GOOGLE_LIBRARY_POLL_INTERVAL);
+    });
+}
+
+function requestGoogleKeepAccessToken(options = {}) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const clientReady = await ensureGoogleKeepClient();
+            if (!clientReady || !googleKeepState.tokenClient) {
+                reject(new Error('Google OAuth client is not ready'));
+                return;
+            }
+            
+            googleKeepState.tokenClient.callback = (tokenResponse) => {
+                if (tokenResponse.error) {
+                    reject(new Error(tokenResponse.error));
+                    return;
+                }
+                
+                googleKeepState.accessToken = tokenResponse.access_token;
+                const expiresIn = Number(tokenResponse.expires_in) || 0;
+                googleKeepState.expiresAt = Date.now() + Math.max((expiresIn - 30) * 1000, 0);
+                updateGoogleKeepUi();
+                resolve(tokenResponse.access_token);
+            };
+            
+            if (googleKeepState.tokenClient.error_callback) {
+                delete googleKeepState.tokenClient.error_callback;
+            }
+            
+            googleKeepState.tokenClient.requestAccessToken(options);
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+async function ensureGoogleKeepAccessToken() {
+    if (googleKeepState.accessToken && Date.now() < googleKeepState.expiresAt) {
+        return googleKeepState.accessToken;
+    }
+    
+    try {
+        return await requestGoogleKeepAccessToken({ prompt: '' });
+    } catch (error) {
+        console.error('Google Keep token error:', error);
+        return null;
+    }
+}
+
+async function exportRecipeToGoogleKeep(recipeId) {
+    const card = document.getElementById(recipeId);
+    if (!card) return;
+    
+    const exportButton = card.querySelector('.keep-export-btn');
+    const recipeName = card.getAttribute('data-recipe-name');
+    const recipe = allRecipes.find(r => r.name === recipeName);
+    
+    if (!recipe) {
+        showNotification('Recipe data unavailable');
+        return;
+    }
+    
+    const payload = buildGoogleKeepPayload(recipe);
+    
+    if (!payload) {
+        showNotification('This recipe has no ingredients to export');
+        return;
+    }
+    
+    setButtonBusy(exportButton, true, 'Exporting...');
+    
+    try {
+        const token = await ensureGoogleKeepAccessToken();
+        if (!token) {
+            showNotification('Connect Google Keep before exporting');
+            return;
+        }
+        
+        const response = await fetch(`${GOOGLE_KEEP_API_BASE}/notes`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) {
+            let errorMessage = 'Google Keep request failed';
+            try {
+                const errorBody = await response.json();
+                errorMessage = errorBody?.error?.message || errorMessage;
+            } catch (parseError) {
+                // Ignore JSON parse failures
+            }
+            
+            if (response.status === 401 || response.status === 403) {
+                googleKeepState.accessToken = null;
+                googleKeepState.expiresAt = 0;
+                updateGoogleKeepUi();
+            }
+            
+            throw new Error(errorMessage);
+        }
+        
+        showNotification('Shopping list added to Google Keep');
+    } catch (error) {
+        console.error('Google Keep export error:', error);
+        showNotification('Unable to export to Google Keep');
+    } finally {
+        setButtonBusy(exportButton, false);
+    }
+}
+
+function buildGoogleKeepPayload(recipe) {
+    const normalizedIngredients = normalizeIngredientItems(recipe.ingredients || []);
+    
+    if (normalizedIngredients.length === 0) {
+        return null;
+    }
+    
+    const grouped = groupIngredientsByAisle(normalizedIngredients);
+    const orderedCategories = [
+        ...AISLE_ORDER.filter(category => grouped[category] && grouped[category].length > 0),
+        ...Object.keys(grouped).filter(category => !AISLE_ORDER.includes(category))
+    ];
+    
+    const listItems = [];
+    orderedCategories.forEach(category => {
+        const items = grouped[category] || [];
+        items.forEach(item => {
+            listItems.push({
+                text: `[${category}] ${item}`,
+                checked: false
+            });
+        });
+    });
+    
+    return {
+        title: `${recipe.name} Shopping List`,
+        content: {
+            list: {
+                items: listItems
+            }
+        }
+    };
+}
+
+function normalizeIngredientItems(rawItems = []) {
+    const normalized = [];
+    
+    rawItems.forEach(item => {
+        if (!item) {
+            return;
+        }
+        
+        if (typeof item === 'string') {
+            normalized.push(item.trim());
+        } else if (typeof item === 'object') {
+            if (Array.isArray(item.items)) {
+                item.items.forEach(subItem => {
+                    if (typeof subItem === 'string') {
+                        normalized.push(subItem.trim());
+                    }
+                });
+            } else if (typeof item.ingredient === 'string') {
+                normalized.push(item.ingredient.trim());
+            }
+        }
+    });
+    
+    return normalized.filter(item => item.length > 0);
+}
+
+function groupIngredientsByAisle(items) {
+    return items.reduce((acc, item) => {
+        const category = detectAisleForIngredient(item);
+        if (!acc[category]) {
+            acc[category] = [];
+        }
+        acc[category].push(item);
+        return acc;
+    }, {});
+}
+
+function detectAisleForIngredient(ingredient) {
+    const lowerCaseIngredient = ingredient.toLowerCase();
+    
+    for (const definition of AISLE_DEFINITIONS) {
+        if (definition.keywords.some(keyword => lowerCaseIngredient.includes(keyword))) {
+            return definition.category;
+        }
+    }
+    
+    return AISLE_FALLBACK;
+}
+
+function setButtonBusy(button, isLoading, loadingLabel = 'Working...') {
+    if (!button) return;
+    
+    if (isLoading) {
+        if (!button.dataset.originalText) {
+            button.dataset.originalText = button.textContent;
+        }
+        button.textContent = loadingLabel;
+        button.disabled = true;
+        button.classList.add('is-loading');
+    } else {
+        if (button.dataset.originalText) {
+            button.textContent = button.dataset.originalText;
+            delete button.dataset.originalText;
+        }
+        button.disabled = false;
+        button.classList.remove('is-loading');
     }
 }
 
