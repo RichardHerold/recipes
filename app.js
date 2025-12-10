@@ -944,6 +944,7 @@ function setupExportControls() {
                 // Enter selection mode - collapse all recipes
                 isSelectionMode = true;
                 exportSelectedButton.textContent = 'Create Shopping List';
+                exportSelectedButton.setAttribute('data-selection-mode', 'true');
                 // Collapse all expanded recipe cards
                 document.querySelectorAll('.recipe-card.expanded').forEach(card => {
                     card.classList.remove('expanded');
@@ -969,6 +970,7 @@ function setupExportControls() {
             const exportSelectedButton = document.getElementById('exportSelectedButton');
             if (exportSelectedButton) {
                 exportSelectedButton.textContent = 'Make Shopping List';
+                exportSelectedButton.removeAttribute('data-selection-mode');
             }
         });
     }
@@ -1013,9 +1015,11 @@ function updateSelectionUI() {
     if (exportSelectedButton) {
         if (isSelectionMode) {
             exportSelectedButton.textContent = 'Create Shopping List';
+            exportSelectedButton.setAttribute('data-selection-mode', 'true');
             exportSelectedButton.disabled = selectedCount === 0 || isExportInProgress;
         } else {
             exportSelectedButton.textContent = 'Make Shopping List';
+            exportSelectedButton.removeAttribute('data-selection-mode');
             exportSelectedButton.disabled = isExportInProgress;
         }
     }

@@ -219,6 +219,18 @@ main {
     background-color: var(--primary-color);
 }
 
+#exportSelectedButton:not(:disabled)[data-selection-mode="true"] {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+#exportSelectedButton:not(:disabled)[data-selection-mode="true"]:hover {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
 #clearSelectionButton:hover:not(:disabled) {
     border-color: var(--primary-color);
     color: var(--primary-color);
