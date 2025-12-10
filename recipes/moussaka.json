@@ -1,6 +1,5 @@
 {
   "name": "Moussaka",
-  "category": "Casseroles",
   "description": "A classic Greek casserole with layers of roasted eggplant, spiced lamb, and creamy béchamel sauce.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,103 +7,103 @@
   "ingredients": [
     {
       "item": "4 pounds eggplant (about 3-4 medium)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 tablespoons olive oil (not exact)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "salt and ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 pounds ground lamb",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 medium onion, minced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons tomato paste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 medium garlic cloves, minced (about 4 teaspoons)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon dried oregano",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3/4 teaspoon ground cinnamon",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 28-ounce can tomato puree",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 cup dry red wine",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "3 tablespoons unsalted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/4 cup all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 cups whole milk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 ounces Parmesan cheese, grated (about 1 cup)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "pinch ground nutmeg",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "(optional) ¼ cup chopped mint and 1 cup parsley",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kitchen Tools Required",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Medium Saucepan (Preferably a saucier) with lid",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "Dutch Oven (cast iron or enamaled",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Large Bowl (5Qt+)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Large Colander",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "13x9x2 Baking pan (or 2 8x8x2 pans)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Whisk (preferably french)",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -138,5 +137,8 @@
     "Bake the casserole, uncovered, until the top is lightly golden, 25 to 35 minutes.",
     "Let stand for 10 minutes before serving."
   ],
-  "dateAdded": "2025-12-05T17:17:19.630Z"
+  "dateAdded": "2025-12-05T17:17:19.630Z",
+  "tags": [
+    "casseroles"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Sega Wat (Spicy Ethiopian Beef Stew)",
-  "category": "Untested",
   "description": "A spicy Ethiopian beef stew cooked with berbere spices, niter kibbeh, and served with hard-boiled eggs.",
   "prepTime": "PREP TIME15 minutes",
   "cookTime": "TOTAL TIME1 hour 45 minutes",
@@ -8,43 +7,43 @@
   "ingredients": [
     {
       "item": "2 pounds boneless beef chuck, cut into 1/2 inch cubes",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "6 tablespoons niter kibbeh , divided",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 cups chunky pureed onions (pulse in food processor to form a chunky paste)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 1/2 tablespoons minced garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 1/2 tablespoons minced fresh ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/4 cup berbere spice blend",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Homemade Berbere Recipe ,HIGHLY recommended!",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 1/2 teaspoons salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 cup strong beef broth",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "4 hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     }
   ],
   "instructions": [
@@ -56,5 +55,8 @@
     "Half or quarter the eggs and arrange on the plates with the stew.  Serve hot with Ethiopian injera, bread or rice.",
     "*This stew is even better the next day after the flavors have had more time to meld."
   ],
-  "dateAdded": "2025-12-05T17:17:29.801Z"
+  "dateAdded": "2025-12-05T17:17:29.801Z",
+  "tags": [
+    "untested"
+  ]
 }

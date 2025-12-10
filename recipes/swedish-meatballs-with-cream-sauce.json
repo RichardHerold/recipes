@@ -1,6 +1,5 @@
 {
   "name": "Swedish Meatballs with Cream Sauce",
-  "category": "Untested",
   "description": "Tender pork meatballs pan-fried until golden, then simmered in a creamy mushroom and onion sauce.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,115 +7,115 @@
   "ingredients": [
     {
       "item": "For the Meatballs",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 pound freshly ground pork shoulder",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ cup buttermilk or heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¼ ounce (1 packet) unflavored gelatin",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 slices high-quality white sandwich bread, crusts removed",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "1 teaspoon soy sauce ½ teaspoon Marmite",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 anchovy fillets, mashed to a paste with the back of a fork",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "3 medium cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon red pepper flakes",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large egg",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 tablespoon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon ground fennel",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cups vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "For the Sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "3 tablespoons unsalted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "8 ounces buttom mushrooms, cleaned and sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 small onion, finely diced (about 1 cup)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Reserved garlic from above",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1½ cups homemade or low-sodium canned chicken stock",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 teaspoon soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "½ cup heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 teaspoons sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon fresh lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon fresh thyme leaves",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -147,5 +146,8 @@
     "Add the remaining meatballs to the sauce and cook, stirring and turning them occasionally, until they are cooked through and the sauce has thickened to the consistency of heavy cream, about 5 minutes.",
     "Season with salt and pepper to taste, stir in the lemon juice and thyme, and serve."
   ],
-  "dateAdded": "2025-12-05T17:17:21.883Z"
+  "dateAdded": "2025-12-05T17:17:21.883Z",
+  "tags": [
+    "untested"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Split Pea Soup",
-  "category": "Soups",
   "description": "A hearty, comforting soup made with split peas and ham hock, cooked until the peas dissolve into a creamy texture.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,19 +7,19 @@
   "ingredients": [
     {
       "item": "1 onion chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 ham hock (split at butcher shop)",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2-3 carrots sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 bags of split peas",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -30,5 +29,8 @@
     "-Put meat, carrots and peas into water (reserved water with onions) and cook until all peas have dissolved",
     "Season with salt and pepper to taste"
   ],
-  "dateAdded": "2025-12-05T17:19:45.565Z"
+  "dateAdded": "2025-12-05T17:19:45.565Z",
+  "tags": [
+    "soups"
+  ]
 }

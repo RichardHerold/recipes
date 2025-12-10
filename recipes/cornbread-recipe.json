@@ -1,6 +1,5 @@
 {
   "name": "Cornbread Recipe",
-  "category": "Baked Goods",
   "description": "Traditional Southern cornbread baked in a hot cast-iron skillet, served with sorghum butter.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,47 +7,47 @@
   "ingredients": [
     {
       "item": "For the Cornbread:",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "1½ cups (250g) coarse yellow cornmeal, preferably Anson Mills",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon fine sea salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 large whole egg",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 tablespoons unsalted melted butter, plus more for later",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1½ cups buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "For the Butter:",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "4 ounces butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "½ cup sorghum syrup or Honey",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -64,5 +63,8 @@
     "For the butter:",
     "Whip together when both butter and syrup are at room temperature."
   ],
-  "dateAdded": "2025-12-05T17:18:20.315Z"
+  "dateAdded": "2025-12-05T17:18:20.315Z",
+  "tags": [
+    "baked goods"
+  ]
 }

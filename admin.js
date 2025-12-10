@@ -18,7 +18,7 @@ function setupForm() {
     document.getElementById('downloadBtn').addEventListener('click', downloadFile);
 }
 
-function addIngredient(existing = { item: '', category: '' }) {
+function addIngredient(existing = { item: '', aisle: '' }) {
     const ingredientsList = document.getElementById('ingredientsList');
     const index = ingredients.length;
     
@@ -31,29 +31,29 @@ function addIngredient(existing = { item: '', category: '' }) {
                data-index="${index}"
                value="${existing.item || ''}">
         <input type="text"
-               class="ingredient-category-field"
-               placeholder="Category (optional)"
-               list="ingredientCategoryList"
+               class="ingredient-aisle-field"
+               placeholder="Aisle (optional)"
+               list="ingredientAisleList"
                data-index="${index}"
-               value="${existing.category || ''}">
+               value="${existing.aisle || ''}">
         <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
     `;
     
     ingredientsList.appendChild(ingredientDiv);
     
     const itemInput = ingredientDiv.querySelector('.ingredient-field');
-    const categoryInput = ingredientDiv.querySelector('.ingredient-category-field');
+    const aisleInput = ingredientDiv.querySelector('.ingredient-aisle-field');
     
     const handleInput = (inputEl, field) => {
         inputEl.addEventListener('input', (e) => {
             const idx = parseInt(e.target.getAttribute('data-index'));
-            ingredients[idx] = ingredients[idx] || { item: '', category: '' };
+            ingredients[idx] = ingredients[idx] || { item: '', aisle: '' };
             ingredients[idx][field] = e.target.value;
         });
     };
     
     handleInput(itemInput, 'item');
-    handleInput(categoryInput, 'category');
+    handleInput(aisleInput, 'aisle');
     
     ingredientDiv.querySelector('.remove-btn').addEventListener('click', () => {
         const idx = parseInt(itemInput.getAttribute('data-index'));
@@ -64,7 +64,7 @@ function addIngredient(existing = { item: '', category: '' }) {
     
     ingredients.push({
         item: existing.item || '',
-        category: existing.category || ''
+        aisle: existing.aisle || ''
     });
 }
 
@@ -104,19 +104,19 @@ function updateIngredientIndices() {
     ingredients = [];
     wrappers.forEach((wrapper, idx) => {
         const itemInput = wrapper.querySelector('.ingredient-field');
-        const categoryInput = wrapper.querySelector('.ingredient-category-field');
+        const aisleInput = wrapper.querySelector('.ingredient-aisle-field');
         
         if (itemInput) {
             itemInput.setAttribute('data-index', idx);
         }
         
-        if (categoryInput) {
-            categoryInput.setAttribute('data-index', idx);
+        if (aisleInput) {
+            aisleInput.setAttribute('data-index', idx);
         }
         
         ingredients[idx] = {
             item: itemInput ? itemInput.value : '',
-            category: categoryInput ? categoryInput.value : ''
+            aisle: aisleInput ? aisleInput.value : ''
         };
     });
 }
@@ -134,11 +134,14 @@ function handleSubmit(e) {
     e.preventDefault();
     
     const name = document.getElementById('recipeName').value.trim();
-    const category = document.getElementById('recipeCategory').value.trim();
     const description = document.getElementById('recipeDescription').value.trim();
     const prepTime = document.getElementById('prepTime').value.trim();
     const cookTime = document.getElementById('cookTime').value.trim();
     const image = document.getElementById('recipeImage').value.trim();
+    const tagsInput = document.getElementById('recipeTags').value.trim();
+    const tags = tagsInput
+        ? tagsInput.split(',').map(tag => tag.trim().toLowerCase()).filter(Boolean)
+        : [];
     
     // Filter out empty ingredients and instructions
     const filteredIngredients = ingredients
@@ -149,11 +152,11 @@ function handleSubmit(e) {
                 return text ? { item: text } : null;
             }
             const item = (ing.item || '').trim();
-            const category = (ing.category || '').trim();
+            const aisle = (ing.aisle || '').trim();
             if (!item) return null;
             const normalized = { item };
-            if (category) {
-                normalized.category = category;
+            if (aisle) {
+                normalized.aisle = aisle;
             }
             return normalized;
         })
@@ -161,8 +164,8 @@ function handleSubmit(e) {
     const filteredInstructions = instructions.filter(inst => inst.trim() !== '');
     
     // Validation
-    if (!name || !category) {
-        alert('Please fill in recipe name and category.');
+    if (!name) {
+        alert('Please fill in recipe name.');
         return;
     }
     
@@ -179,7 +182,7 @@ function handleSubmit(e) {
     // Create recipe object
     const recipe = {
         name: name,
-        category: category,
+        tags: tags,
         description: description || undefined,
         prepTime: prepTime || undefined,
         cookTime: cookTime || undefined,

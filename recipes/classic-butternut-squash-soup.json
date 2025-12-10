@@ -1,6 +1,5 @@
 {
   "name": "Classic Butternut Squash Soup",
-  "category": "Soups",
   "description": "A creamy, velvety soup made with roasted butternut squash, carrots, and aromatic spices, topped with fried sage.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,63 +7,63 @@
   "ingredients": [
     {
       "item": "1 (2 1/2 pound/1kg) butternut squash, peeled, seeded, and cut into 1-inch cubes",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large (8-ounce; 215g) carrot, peeled and cut into 1-inch chunks",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons (30ml) extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "7 tablespoons (100g) unsalted butter, divided (see note above)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 large (8-ounce; 215g) yellow onion, thinly sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 medium cloves garlic, thinly sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 cups (1l) homemade or store-bought low-sodium chicken or vegetable stock, plus more as needed",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 sprigs fresh thyme",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 bay leaf",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3/4 cup (180ml) heavy whipping cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/4 cup (60ml) sour cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Pinch ground cinnamon",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Pinch nutmeg",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "20 fresh sage leaves (optional, see note above)",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -107,5 +106,8 @@
     "top of frizzled sage, if using.",
     "Serve right away."
   ],
-  "dateAdded": "2025-12-05T17:19:43.744Z"
+  "dateAdded": "2025-12-05T17:19:43.744Z",
+  "tags": [
+    "soups"
+  ]
 }

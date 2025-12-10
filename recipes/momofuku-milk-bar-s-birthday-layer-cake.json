@@ -1,6 +1,5 @@
 {
   "name": "Momofuku Milk Bar’s Birthday Layer Cake",
-  "category": "Baked Goods",
   "description": "A whimsical layer cake with vanilla cake, birthday crumbs, and a signature stark white frosting from Momofuku Milk Bar.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,151 +7,151 @@
   "ingredients": [
     {
       "item": "Cake:",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Nonstick vegetable oil spray",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 cups cake flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1½ teaspoons baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¾ teaspoon kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ cup plus 2 tablespoons rainbow sprinkles, divided",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "½ cup buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "⅓ cup grapeseed oil",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 teaspoons clear imitation vanilla extract, preferably McCormick brand",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1¼ cups granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "⅓ cup vegetable shortening",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 tablespoons (½ stick) unsalted butter, room temperature",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 tablespoons light brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Crumbs:",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "¾ cup cake or all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ cup granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons light brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons rainbow sprinkles",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "½ teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ cup grapeseed oil",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon clear imitation vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "For the frosting and assembly:",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "½ cup (1 stick) unsalted butter, room temperature",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¼ cup vegetable shortening",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 ounces cream cheese, room temperature",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 tablespoons light corn syrup",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 tablespoon plus 1 teaspoon clear imitation vanilla extract, divided",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1¼ cups powdered sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "⅛ teaspoon citric acid (or ½ teaspoon fresh lemon juice)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "¼ cup milk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Special equipment:",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "6\" cake ring or springform mold",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 strips acetate (flexible plastic paper), each 3\" wide and 20\" long",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -184,5 +183,8 @@
     "Do ahead: Cake will keep up to 2 weeks in freezer or 5 days in refrigerator.",
     "Recipe by Christina Tosi Momofuku Milk Bar New York New York"
   ],
-  "dateAdded": "2025-12-05T17:18:34.205Z"
+  "dateAdded": "2025-12-05T17:18:34.205Z",
+  "tags": [
+    "baked goods"
+  ]
 }

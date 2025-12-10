@@ -1,6 +1,5 @@
 {
   "name": "Pan-Cooked Dover Sole",
-  "category": "Seafood",
   "description": "Delicate fish fillets pan-fried until golden and finished with a lemon-butter sauce and fresh parsley.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,39 +7,39 @@
   "ingredients": [
     {
       "item": "Four 6-ounce fillets of flounder, sole, or any other",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "1/4-inch-thick fish",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "Salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons extra virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 tablespoons butter or more oil",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "All-purpose cornmeal for dredging",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1/4 cup freshly squeezed lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Chopped fresh parsley leaves for garnish",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Lemon wedges for serving",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -59,5 +58,8 @@
     "Pour the sauce over the fillets.",
     "Garnish with parsley and serve immediately with the lemon wedges."
   ],
-  "dateAdded": "2025-12-05T17:18:47.715Z"
+  "dateAdded": "2025-12-05T17:18:47.715Z",
+  "tags": [
+    "seafood"
+  ]
 }

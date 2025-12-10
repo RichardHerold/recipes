@@ -1,6 +1,5 @@
 {
   "name": "Pork Loin Steaks in Creamy Shallot and Mushrooms Sauce",
-  "category": "Meat",
   "description": "Tender pork loin steaks served in a rich cream sauce with sautéed shallots, mushrooms, and rosemary.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,47 +7,47 @@
   "ingredients": [
     {
       "item": "4 pork loin steaks",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 tbsp olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 shallots chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2-3 large field mushrooms or portobello mushrooms chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 rosemary sprigs chopped",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "a splash of cognac or brandy optional",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "1 tbsp flour if you using cream instead of creme fraiche",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "80ml/1/4 cup stock pork or chicken",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 tbsp whole-grain mustard",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "200 g / ⅔ cup creme fraiche or heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "salt and pepper to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -63,5 +62,8 @@
     "Return pork loin steaks to the pan, bring to a boil and let it simmer for 2 minutes longer",
     "take the pan off the heat and taste. Add salt and pepper if needed. Enjoy with rice or potatoes."
   ],
-  "dateAdded": "2025-12-05T17:19:21.137Z"
+  "dateAdded": "2025-12-05T17:19:21.137Z",
+  "tags": [
+    "meat"
+  ]
 }

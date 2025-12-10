@@ -1,6 +1,5 @@
 {
   "name": "Carne Asada Lorenza",
-  "category": "Grilling",
   "description": "Grilled Mexican-style beef served on crispy cheese-topped tortillas with beans, salsa, and guacamole.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,43 +7,43 @@
   "ingredients": [
     {
       "item": "¼ large white onion, for cleaning the grill",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Beef fat (cut from the meat, if fatty), tallow or vegetable oil, for greasing the grill",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 pounds chuck roll, sliced into 1/2-inch steaks",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 pounds top sirloin, sliced into 1/2-inch steaks",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "4 teaspoons kosher or sea salt (about 1 teaspoon per pound of meat), or to taste, plus more for salting tortillas",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "12 corn tortillas",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "Frijoles de Fiesta (Fiesta Refried Beans) (see recipe)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "12 ounces asadero, quesadilla, Monterey Jack or Oaxaca cheese, grated (about 3 cups)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Salsa Tatemada Norteña (Fire-Roasted Salsa) (see recipe)",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "Guacamole (see recipe)",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -57,5 +56,8 @@
     "Remove the crisp tortillas from the grill, slather each one with a couple tablespoons of refried beans on one side and cover the beans with 1/4 cup shredded cheese.",
     "Place them back on the grill, cheese-side up, and cook until cheese has completely melted and corn tortillas have browned darker and crisped further, about 3 to 4 minutes. Remove from the grill, place on a platter, top with a generous amount of diced meat and bring to the table. Let your guests top with salsa and guacamole to their liking."
   ],
-  "dateAdded": "2025-12-05T17:17:05.769Z"
+  "dateAdded": "2025-12-05T17:17:05.769Z",
+  "tags": [
+    "grilling"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Pasta with Morels, Peas and Parmesan",
-  "category": "Pasta",
   "description": "An elegant spring pasta dish featuring wild morel mushrooms, fresh peas, and Parmesan cheese.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,27 +7,27 @@
   "ingredients": [
     {
       "item": "Salt and ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup fresh shelled peas",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 tablespoons butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¼ pound morels, about 8 medium",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "8 ounces pasta",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1 cup finely grated Parmesan",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -47,5 +46,8 @@
     "Toss the pasta with the morels and peas in the pasta pot; adding a little water if necessary to make the mixture saucy.",
     "Toss with the Parmesan and lots of black pepper and serve immediately."
   ],
-  "dateAdded": "2025-12-05T17:19:40.058Z"
+  "dateAdded": "2025-12-05T17:19:40.058Z",
+  "tags": [
+    "pasta"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Roast Turkey",
-  "category": "Thanksgiving",
   "description": "Bon Appétit style roast turkey with a dry rub and sherry vinegar glaze.",
   "prepTime": "45 minutes",
   "cookTime": "2.5 hours",
@@ -8,59 +7,59 @@
   "ingredients": [
     {
       "item": "1 12–14-lb. turkey, neck and giblets removed",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 Tbsp. whole black peppercorns",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 Tbsp. whole pink or black peppercorns",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup Diamond Crystal or ¼ cup plus 1½ tsp. Morton kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 Tbsp. garlic powder",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 Tbsp. onion powder",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 Tbsp. smoked paprika",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 Tbsp. plus ⅓ cup (packed) light brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Small handful of hardy herbs (such as sage, rosemary, bay leaves, and/or thyme)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 garlic cloves, crushed",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 strips orange zest",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "⅓ cup low-sodium soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "⅓ cup sherry vinegar or red wine vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "6 Tbsp. neutral oil (such as vegetable, peanut, or canola)",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -73,5 +72,8 @@
     "Roast turkey until skin is mostly golden brown, 20–25 minutes.",
     "Reduce oven temperature to 300° and continue to roast turkey for 50–70 minutes, brushing with glaze every 20 minutes."
   ],
-  "dateAdded": "2025-12-05T12:00:00.000Z"
+  "dateAdded": "2025-12-05T12:00:00.000Z",
+  "tags": [
+    "thanksgiving"
+  ]
 }

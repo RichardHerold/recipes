@@ -1,6 +1,5 @@
 {
   "name": "Maple and Mustard Glazed Roast Pork Tenderloin",
-  "category": "Meat",
   "description": "Tender pork tenderloin roasted with a sweet and tangy maple-mustard glaze made with brandy.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,39 +7,39 @@
   "ingredients": [
     {
       "item": "⅓ cup maple syrup",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 tablespoons whole-grain mustard",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "¼ cup brandy (Or Applejack)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 pork tenderloins, about 1½ pounds each",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "¼ cup cornstarch",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon balsamic vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 tablespoons unsalted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -52,5 +51,8 @@
     "FOR SMALLER ROASTS:",
     "By the time you put it in the oven it will be almost at the right internat temperature. try cooking for only 2 minutes"
   ],
-  "dateAdded": "2025-12-05T17:19:32.274Z"
+  "dateAdded": "2025-12-05T17:19:32.274Z",
+  "tags": [
+    "meat"
+  ]
 }

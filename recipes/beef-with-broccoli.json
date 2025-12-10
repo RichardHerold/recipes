@@ -1,6 +1,5 @@
 {
   "name": "Beef with Broccoli",
-  "category": "Meat",
   "description": "A classic Chinese-American stir-fry dish featuring tender beef and crisp broccoli in a savory sauce.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -11,59 +10,59 @@
       "items": [
         {
           "item": "12 ounces (340g) skirt steak, sliced into 1/4-inch pieces against the grain (watch the video for the technique)",
-          "category": "Meat & Poultry"
+          "aisle": "Meat & Poultry"
         },
         {
           "item": "1 teaspoon (5ml) light soy sauce or shoyu",
-          "category": "Condiments & Sauces"
+          "aisle": "Condiments & Sauces"
         },
         {
           "item": "1 teaspoon (5ml) sesame oil",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "2 teaspoons (10ml) Shaoxing wine",
-          "category": "International & Specialty"
+          "aisle": "International & Specialty"
         },
         {
           "item": "1/4 teaspoon (1g) MSG",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "1 teaspoon (3) cornstarch",
-          "category": "Baking & Spices"
+          "aisle": "Baking & Spices"
         },
         {
           "item": "A little more than a 1/4 teaspoon  (1.5g) baking soda",
-          "category": "Baking & Spices"
+          "aisle": "Baking & Spices"
         },
         {
           "item": "1/2 teaspoon kosher salt (or 1/4 teaspoon table salt) (about 5g)",
-          "category": "Baking & Spices"
+          "aisle": "Baking & Spices"
         },
         {
           "item": "1 tablespoon (15ml) dark soy sauce",
-          "category": "Condiments & Sauces"
+          "aisle": "Condiments & Sauces"
         },
         {
           "item": "1 tablespoon (15ml) light soy sauce",
-          "category": "Condiments & Sauces"
+          "aisle": "Condiments & Sauces"
         },
         {
           "item": "2 tablespoons (30ml) oyster sauce",
-          "category": "Seafood"
+          "aisle": "Seafood"
         },
         {
           "item": "1 tablespoon (20g) sugar",
-          "category": "Baking & Spices"
+          "aisle": "Baking & Spices"
         },
         {
           "item": "2 teaspoons (6g) cornstarch",
-          "category": "Baking & Spices"
+          "aisle": "Baking & Spices"
         },
         {
           "item": "1 tablespoon (15ml) water",
-          "category": "Pantry & Dry Goods"
+          "aisle": "Pantry & Dry Goods"
         }
       ]
     },
@@ -72,23 +71,23 @@
       "items": [
         {
           "item": "12 ounces (340g) broccoli or broccolini, florets separated and stems sliced on a sharp bias into 1-inch pieces (peel stems if they are tough)",
-          "category": "Produce"
+          "aisle": "Produce"
         },
         {
           "item": "2 tablespoons (30ml) peanut, rice bran, or soybean oil",
-          "category": "Produce"
+          "aisle": "Produce"
         },
         {
           "item": "3 teaspoons (8g) minced fresh garlic (3-4 medium cloves)",
-          "category": "Produce"
+          "aisle": "Produce"
         },
         {
           "item": "2 teaspoons (5g) minced fresh ginger (about ½-inch segment, minced)",
-          "category": "Produce"
+          "aisle": "Produce"
         },
         {
           "item": "1 tablespoon (15ml) Shaoxing wine",
-          "category": "International & Specialty"
+          "aisle": "International & Specialty"
         }
       ]
     }
@@ -124,5 +123,8 @@
       ]
     }
   ],
-  "dateAdded": "2025-12-05T17:19:24.926Z"
+  "dateAdded": "2025-12-05T17:19:24.926Z",
+  "tags": [
+    "meat"
+  ]
 }

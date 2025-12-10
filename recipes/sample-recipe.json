@@ -1,6 +1,5 @@
 {
   "name": "Chocolate Chip Cookies",
-  "category": "Dessert",
   "description": "Classic homemade chocolate chip cookies that are crispy on the edges and chewy in the middle.",
   "prepTime": "15 minutes",
   "cookTime": "12 minutes",
@@ -8,39 +7,39 @@
   "ingredients": [
     {
       "item": "2 1/4 cups all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 cup butter, softened",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3/4 cup granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3/4 cup packed brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 teaspoons vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 cups chocolate chips",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -54,5 +53,8 @@
     "Bake for 9 to 11 minutes or until golden brown.",
     "Cool on baking sheet for 2 minutes before removing to wire rack."
   ],
-  "dateAdded": "2024-01-15T10:00:00.000Z"
+  "dateAdded": "2024-01-15T10:00:00.000Z",
+  "tags": [
+    "dessert"
+  ]
 }

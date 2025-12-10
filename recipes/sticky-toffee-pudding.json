@@ -1,6 +1,5 @@
 {
   "name": "Sticky Toffee Pudding",
-  "category": "Baked Goods",
   "description": "A rich British dessert of date cake soaked in a warm toffee sauce, best served with vanilla ice cream.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,59 +7,59 @@
   "ingredients": [
     {
       "item": "1 cup dark rum, warmed",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "2 cups pitted dates",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 vanilla bean, split and seeds removed for use; reserve pod for sauce",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1-1/2 cups all-purpose flour 7.5oz",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Pinch of salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 stick butter, softened",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "6 tablespoons white sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 cup heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 cup dark brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1/4 cup butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 pint vanilla ice cream (optional, but not really)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -85,5 +84,8 @@
     "pour sauce over cakes while both are still warm",
     "serve with vanilla ice cream"
   ],
-  "dateAdded": "2025-12-05T17:18:29.951Z"
+  "dateAdded": "2025-12-05T17:18:29.951Z",
+  "tags": [
+    "baked goods"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Strawberry Shortcake",
-  "category": "Untested",
   "description": "Classic dessert with tender shortcakes, macerated strawberries, and whipped cream, made with hard-boiled egg yolks for richness.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,67 +7,67 @@
   "ingredients": [
     {
       "item": "Shortcakes",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 hard-boiled egg yolks, cooled",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "160g (1⅓ cups) all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "20g (3 tablespoons) fine-grind cornmeal",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ teaspoon kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "40g (3 tablespoons) granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "6 tablespoons chilled unsalted butter, cut into pieces",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "⅔ cup plus 2 tablespoons heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Sanding or granulated sugar (for sprinkling)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Assembly",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1½ pounds strawberries (about 1 quart), hulled, halved, quartered if large",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "¼ cup granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon finely grated lemon zest",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons fresh lemon juice, divided",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -102,5 +101,8 @@
     "Stir remaining 1 tsp. lemon juice into macerated strawberries.",
     "Split shortcakes and divide strawberry compote, macerated strawberries, and whipped cream among bottoms. Close with shortcake tops."
   ],
-  "dateAdded": "2025-12-05T17:17:43.333Z"
+  "dateAdded": "2025-12-05T17:17:43.333Z",
+  "tags": [
+    "untested"
+  ]
 }

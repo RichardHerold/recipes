@@ -1,6 +1,5 @@
 {
   "name": "Ethiopian Collard Greens (Ye'abesha Gomen)",
-  "category": "Vegetables",
   "description": "Traditional Ethiopian collard greens braised with Ethiopian spices, garlic, and ginger until tender.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,43 +7,43 @@
   "ingredients": [
     {
       "item": "4 tbsp. unsalted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1tsp Ethiopian Spice",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¼ cup extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 large yellow onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 cloves garlic, minced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 1\" piece ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1½ lbs. collard greens, stemmed and cut crosswise into ¼\"-wide strips",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt and freshly ground black pepper, to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "White wine vinegar, to taste",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 Thai chiles, stemmed, seeded, and minced (optional)",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -65,5 +64,8 @@
     "Reduce heat to low and cook, stirring occasionally, until collards are tender, 50–55 minutes.",
     "Stir in vinegar and serve collards hot."
   ],
-  "dateAdded": "2025-12-05T17:19:09.665Z"
+  "dateAdded": "2025-12-05T17:19:09.665Z",
+  "tags": [
+    "vegetables"
+  ]
 }

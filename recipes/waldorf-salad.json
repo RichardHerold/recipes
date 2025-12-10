@@ -1,6 +1,5 @@
 {
   "name": "Waldorf Salad",
-  "category": "Thanksgiving",
   "description": "A classic American salad with crisp apples, celery, grapes, and walnuts in a creamy mayonnaise dressing.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,44 +7,47 @@
   "ingredients": [
     {
       "item": "6 Tbsp mayonnaise (or plain yogurt)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 Tbsp lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 teaspoon salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Pinch of freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 sweet apples, cored and chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup celery, thinly sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup chopped, slightly toasted walnuts",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Lettuce",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
     "In a medium sized bowl, whisk together the mayonnaise, lemon juice, salt and pepper.",
     "Stir in the apple, celery, grapes,"
   ],
-  "dateAdded": "2025-12-05T17:17:15.489Z"
+  "dateAdded": "2025-12-05T17:17:15.489Z",
+  "tags": [
+    "thanksgiving"
+  ]
 }

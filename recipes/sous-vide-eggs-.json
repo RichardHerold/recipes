@@ -1,11 +1,13 @@
 {
   "name": "Sous Vide Eggs",
-  "category": "General",
   "description": "Eggs cooked using the sous vide method for precise temperature control and perfect texture.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [],
   "instructions": [],
-  "dateAdded": "2025-12-05T17:17:03.386Z"
+  "dateAdded": "2025-12-05T17:17:03.386Z",
+  "tags": [
+    "general"
+  ]
 }

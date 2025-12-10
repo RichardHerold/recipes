@@ -23,7 +23,7 @@
                 Recipe file generated successfully! Copy the JSON below and save it as a file in the recipes folder.
             </div>
 
-            <datalist id="ingredientCategoryList">
+            <datalist id="ingredientAisleList">
                 <option value="Produce"></option>
                 <option value="Meat & Poultry"></option>
                 <option value="Seafood"></option>
@@ -48,20 +48,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="recipeCategory">Category *</label>
-                    <select id="recipeCategory" required>
-                        <option value="">Select a category</option>
-                        <option value="Appetizer">Appetizer</option>
-                        <option value="Main Course">Main Course</option>
-                        <option value="Dessert">Dessert</option>
-                        <option value="Side Dish">Side Dish</option>
-                        <option value="Breakfast">Breakfast</option>
-                        <option value="Lunch">Lunch</option>
-                        <option value="Dinner">Dinner</option>
-                        <option value="Snack">Snack</option>
-                        <option value="Beverage">Beverage</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <label for="recipeTags">Tags</label>
+                    <input type="text" id="recipeTags" placeholder="e.g., soup, vegetarian, thanksgiving">
+                    <small class="field-help">Enter comma-separated tags. They will be stored in lowercase for consistent filtering.</small>
                 </div>
 
                 <div class="form-group">
@@ -90,7 +79,7 @@
 
                 <div class="form-group">
                     <label>Ingredients *</label>
-                    <small class="field-help">Specify the ingredient and optionally a grocery aisle category. Leaving the category blank keeps the ingredient uncategorized.</small>
+                    <small class="field-help">Specify the ingredient and optionally a grocery aisle. Leaving it blank keeps the ingredient ungrouped.</small>
                     <div id="ingredientsList"></div>
                     <button type="button" class="btn btn-secondary btn-small" id="addIngredient">+ Add Ingredient</button>
                 </div>

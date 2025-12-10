@@ -1,6 +1,5 @@
 {
   "name": "Roasted Cauliflower with Sesame",
-  "category": "Vegetables",
   "description": "Roasted cauliflower florets tossed with a tahini-miso dressing and toasted sesame seeds.",
   "prepTime": "15 minutes",
   "cookTime": "45 minutes",
@@ -8,71 +7,71 @@
   "ingredients": [
     {
       "item": "1 head of cauliflower, broken by hand into bite-sized florets",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "¼ cup olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 teaspoons kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon ground coriander",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon dried oregano",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "freshly ground black pepper, to taste (I like to add a healthy amount of coarsely ground black pepper, personally)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons tahini",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 tablespoon white miso",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 teaspoons red wine vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1½ tablespoons water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "3 tablespoons toasted white sesame seeds",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "chili oil/paste, for serving (optional but recommended)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Measure out and grind the coriander and pepper together. Reserve in ramekin",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Measure out the Salt and Oregano. Add to the coriander and pepper ramekin.",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Measure ¼ cup olive oil and put into a pourable small ramekin or beaker.",
-      "category": "Household & Misc"
+      "aisle": "Household & Misc"
     },
     {
       "item": "Measure 2 Teaspoons red wine vinegar and 1½ Tablespoons of water and combine into a pourable small ramekin or beaker.",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "Measure 2 Tablespoon Tahini and 1 Tablespoon White Miso and combine in a small bowl.",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     }
   ],
   "instructions": [
@@ -90,5 +89,8 @@
     "Toss the cauliflower with the sauce and sesame seeds.",
     "Serve immediately"
   ],
-  "dateAdded": "2025-12-05T17:19:13.393Z"
+  "dateAdded": "2025-12-05T17:19:13.393Z",
+  "tags": [
+    "vegetables"
+  ]
 }

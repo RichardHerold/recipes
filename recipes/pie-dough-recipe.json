@@ -1,6 +1,5 @@
 {
   "name": "Pie Dough Recipe",
-  "category": "Baked Goods",
   "description": "A flaky, all-butter pie dough recipe perfect for both sweet and savory pies.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,23 +7,23 @@
   "ingredients": [
     {
       "item": "2 1/2 cups (12.5 ounces; 350 grams) all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons (25 grams) sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon (5 grams) kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 1/2 sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "6 tablespoons (3 ounces; 85 milliliters) cold water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     }
   ],
   "instructions": [
@@ -42,5 +41,8 @@
     "Wrap tightly in plastic",
     "Refrigerate for at least 2 hours before rolling and baking."
   ],
-  "dateAdded": "2025-12-05T17:18:36.577Z"
+  "dateAdded": "2025-12-05T17:18:36.577Z",
+  "tags": [
+    "baked goods"
+  ]
 }

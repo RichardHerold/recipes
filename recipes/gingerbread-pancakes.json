@@ -1,6 +1,5 @@
 {
   "name": "Gingerbread Pancakes",
-  "category": "Untested",
   "description": "Spiced pancakes flavored with ginger, cinnamon, and molasses, perfect for a cozy breakfast.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,59 +7,59 @@
   "ingredients": [
     {
       "item": "1 ½ cups all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons cornmeal",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon powdered ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon ground cinnamon",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¼ teaspoon powdered cloves",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "½ teaspoon salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 ½ cups milk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 tablespoons butter, melted",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 tablespoons molasses",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "½ teaspoon vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Fresh berries, for garnish",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -73,5 +72,8 @@
     "Cook the pancakes until bubbles appear and pop. about 2 to 3 minutes.",
     "Flip and cook for 2 minutes more."
   ],
-  "dateAdded": "2025-12-05T17:17:50.768Z"
+  "dateAdded": "2025-12-05T17:17:50.768Z",
+  "tags": [
+    "untested"
+  ]
 }

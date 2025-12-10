@@ -1,6 +1,5 @@
 {
   "name": "Red Wine and Soy–Braised Short Ribs",
-  "category": "Untested",
   "description": "Tender beef short ribs braised in red wine, soy sauce, and mirin until fall-off-the-bone tender, served with radish and egg.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,55 +7,55 @@
   "ingredients": [
     {
       "item": "4 lb. 2\"-thick boneless beef short ribs or 5 lb. 2\"-thick cross cut bone-in short ribs (flanken style), cut into 2x2\" pieces",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 Tbsp. plus 1 tsp. grapeseed or extra-virgin olive oil",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large onion, chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "8 garlic cloves, crushed",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 2\" piece ginger, peeled, sliced ⅛\" thick",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cups dry red wine",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "½ cup mirin (sweet Japanese rice wine)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "⅓ cup soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "¼ cup (packed) light brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ mu radish or daikon (about 8 oz.), peeled, cut into 1\" pieces",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large egg, beaten to blend",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Shilgochu or gochugaru (coarse Korean hot pepper flakes), sliced scallions, and cooked rice (for serving) was a a great day",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -92,5 +91,8 @@
     "Top ribs with egg, shilgochu, and scallions. Serve with rice alongside.",
     "Do Ahead: Short ribs can be made 3 days ahead. Let cool; cover and chill."
   ],
-  "dateAdded": "2025-12-05T17:17:33.999Z"
+  "dateAdded": "2025-12-05T17:17:33.999Z",
+  "tags": [
+    "untested"
+  ]
 }

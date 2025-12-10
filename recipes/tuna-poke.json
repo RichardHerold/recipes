@@ -1,6 +1,5 @@
 {
   "name": "Tuna Poke",
-  "category": "Seafood",
   "description": "Fresh Hawaiian-style raw tuna salad with seaweed, sweet onion, and a soy-sesame dressing, served over sushi rice.",
   "prepTime": "15 minutes",
   "cookTime": "20 minutes",
@@ -8,51 +7,51 @@
   "ingredients": [
     {
       "item": "2 teaspoons (about 1g) dried wakame seaweed",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon (about 0.5g) dried hijiki seaweed",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¾ to 1 Pound raw sashimi-grade tuna",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "3 ounces (85g) sweet onion, such as Maui or Vidalia",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 scallion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon (about 3g) white or black sesame seeds, or a mix",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 teaspoons (20ml) soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 teaspoons (10ml) toasted sesame oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon (5ml) honey",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Crushed red pepper, to taste (optional)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 cup sushi rice (if eating as a meal)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     }
   ],
   "instructions": [
@@ -62,5 +61,8 @@
     "1. Place wakame and hijiki in separate small bowls. Cover with boiling water and let rest until rehydrated and tender, about 5 minutes. Drain and press with paper towels. Roughly chop wakame. Add wakame and hijiki to a large bowl.",
     "2. Add tuna, onion, scallion, sesame seeds, soy sauce, sesame oil, honey, and optional crushed red pepper to bowl. Season with a small pinch of kosher salt and gently fold to combine. Taste and adjust with more soy sauce, sesame oil, honey, or crushed red pepper as desired. Let sit 5 minutes at room temperature, then serve on its own or on top of steamed rice."
   ],
-  "dateAdded": "2025-12-05T17:18:49.177Z"
+  "dateAdded": "2025-12-05T17:18:49.177Z",
+  "tags": [
+    "seafood"
+  ]
 }

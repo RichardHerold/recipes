@@ -1,6 +1,5 @@
 {
   "name": "Blue Cheese Salad Dressing",
-  "category": "Sauces",
   "description": "A creamy, tangy salad dressing made with blue cheese, mayonnaise, sour cream, and buttermilk, best when refrigerated overnight.",
   "prepTime": "15 mins",
   "cookTime": "15 mins",
@@ -8,55 +7,55 @@
   "ingredients": [
     {
       "item": "1 cup mayonnaise",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 cup sour cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 cup buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 teaspoon white pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons grated onions",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 dashes Tabasco sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 tablespoon lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon Worcestershire sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1/2 teaspoon salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 dash cayenne pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon minced garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 teaspoons sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "6 ounces crumbled blue cheese",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -64,5 +63,8 @@
     "Add remaining ingredients mixing thoroughly.",
     "Must refrigerate for 24 hours before serving for best flavor."
   ],
-  "dateAdded": "2025-12-05T17:18:42.149Z"
+  "dateAdded": "2025-12-05T17:18:42.149Z",
+  "tags": [
+    "sauces"
+  ]
 }

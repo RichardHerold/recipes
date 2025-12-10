@@ -4,9 +4,9 @@ const fs = require('fs');
 const path = require('path');
 
 const RECIPES_DIR = path.join(__dirname, '..', 'recipes');
-const DEFAULT_CATEGORY = 'Other';
+const DEFAULT_AISLE = 'Other';
 
-const CATEGORY_RULES = [
+const AISLE_RULES = [
   {
     name: 'Produce',
     keywords: [
@@ -121,19 +121,19 @@ function isIngredientSubsection(entry) {
   return entry && typeof entry === 'object' && entry.subsection && Array.isArray(entry.items);
 }
 
-function detectCategory(text) {
+function detectAisle(text) {
   if (!text || typeof text !== 'string') {
-    return DEFAULT_CATEGORY;
+    return DEFAULT_AISLE;
   }
 
   const normalized = text.toLowerCase();
-  for (const rule of CATEGORY_RULES) {
+  for (const rule of AISLE_RULES) {
     if (rule.keywords.some(keyword => normalized.includes(keyword))) {
       return rule.name;
     }
   }
 
-  return DEFAULT_CATEGORY;
+  return DEFAULT_AISLE;
 }
 
 function normalizeIngredientEntry(entry) {
@@ -144,7 +144,7 @@ function normalizeIngredientEntry(entry) {
     if (!item) return null;
     return {
       item,
-      category: detectCategory(item)
+      aisle: detectAisle(item)
     };
   }
 
@@ -162,11 +162,13 @@ function normalizeIngredientEntry(entry) {
     if (!item) {
       return entry;
     }
-    const category = entry.category && entry.category.trim() ? entry.category.trim() : detectCategory(item);
+    const aisle = entry.aisle && entry.aisle.trim()
+      ? entry.aisle.trim()
+      : detectAisle(item);
     return {
       ...entry,
       item,
-      category
+      aisle
     };
   }
 

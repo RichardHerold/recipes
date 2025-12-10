@@ -1,6 +1,5 @@
 {
   "name": "Brown Butter Sage Sauce",
-  "category": "Pasta",
   "description": "A simple yet elegant pasta sauce made with nutty brown butter and crispy fried sage leaves.",
   "prepTime": "Prep Time 3 minutes",
   "cookTime": "Total Time 8 minutes",
@@ -8,23 +7,23 @@
   "ingredients": [
     {
       "item": "1 stick organic salted butter (you can use cultured vegan butter instead)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "14 leaves fresh sage or to taste",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "freshly cracked black pepper to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 lemon optional",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3/4 lb butternut squash ravioli or potato gnocchi",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -36,5 +35,8 @@
     "Add the cooked ravioli to the butter sage sauce and gently toss to coat. When cooking the pasta make sure to reserve a little bit of the pasta water. Add a little bit of the reserved pasta water If needed to loosen up the sauce.",
     "Serve with freshly cracked black pepper on top."
   ],
-  "dateAdded": "2025-12-05T17:19:35.995Z"
+  "dateAdded": "2025-12-05T17:19:35.995Z",
+  "tags": [
+    "pasta"
+  ]
 }

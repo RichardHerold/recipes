@@ -1,11 +1,13 @@
 {
   "name": "Recipe: Buttermilk & Bourbon's Honey-Glazed Biscuits",
-  "category": "Untested",
   "description": "Flaky buttermilk biscuits from Buttermilk & Bourbon restaurant, glazed with honey.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [],
   "instructions": [],
-  "dateAdded": "2025-12-05T17:17:47.114Z"
+  "dateAdded": "2025-12-05T17:17:47.114Z",
+  "tags": [
+    "untested"
+  ]
 }

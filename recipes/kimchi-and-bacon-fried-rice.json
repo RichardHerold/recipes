@@ -1,6 +1,5 @@
 {
   "name": "Kimchi and Bacon Fried Rice",
-  "category": "Rice Dishes",
   "description": "A flavorful Korean-inspired fried rice with crispy bacon, kimchi, and topped with a fried egg.",
   "prepTime": "15 minutes",
   "cookTime": "45 minutes (plus the time to cook the rice)",
@@ -8,79 +7,79 @@
   "ingredients": [
     {
       "item": "3 ¼ cups cooked Japanese-style short-grain rice, preferably chilled",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "6-8 ounces bacon, preferably thick-cut, chopped",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 medium yellow onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cups well-drained napa cabbage kimchi",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 cup frozen peas, thawed",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 teaspoons toasted sesame oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 scallions",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt and ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Furikake seasoning (optional)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kitchen Equipment",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "12” non-stick skillet",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Non-metal spatula",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Small Bowl and strainer",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Range",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kitchen knife",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Liquid measuring cups",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Dry measuring cups",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -115,5 +114,8 @@
     "Remove the pan from the heat.",
     "Serve the fried rice on individual plates. topped with a fried egg and sprinkled with furikake, if using."
   ],
-  "dateAdded": "2025-12-05T17:17:09.662Z"
+  "dateAdded": "2025-12-05T17:17:09.662Z",
+  "tags": [
+    "rice dishes"
+  ]
 }

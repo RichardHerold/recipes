@@ -1,6 +1,5 @@
 {
   "name": "Biscuits and Gravy",
-  "category": "Breakfast",
   "description": "A hearty Southern breakfast dish of flaky biscuits smothered in creamy sausage gravy.",
   "prepTime": "15 minutes",
   "cookTime": "Total Time:",
@@ -8,27 +7,27 @@
   "ingredients": [
     {
       "item": "1 pound breakfast sausage, hot or mild",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "40g (⅓ cup) all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 to 4 cups whole milk, more to taste",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 teaspoon seasoned salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons freshly ground black pepper, more to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Biscuits, warmed, for serving",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -49,5 +48,8 @@
     "Taste and adjust the seasoning.",
     "Spoon the sausage gravy over warm biscuits and serve immediately."
   ],
-  "dateAdded": "2025-12-05T17:17:58.990Z"
+  "dateAdded": "2025-12-05T17:17:58.990Z",
+  "tags": [
+    "breakfast"
+  ]
 }

@@ -1,6 +1,5 @@
 {
   "name": "Spicy Carrot and Ginger Soup with Harissa",
-  "category": "Soups",
   "description": "A vibrant carrot soup spiced with ginger and harissa, finished with a pine nut and parsley topping.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,63 +7,63 @@
   "ingredients": [
     {
       "item": "1 to 2 tablespoons harissa paste",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "8 tablespoons extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 medium leek,",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 small onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cloves garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 (2-inch) knob of ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon ground cumin seed",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon ground coriander",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 to 2 tablespoons harissa paste",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 ½ pounds carrots (get a 5lb bag, weigh after peeled)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 ½ quarts chicken broth or Carrot Juice (approx 5lbs of carrots)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ to ½ cup pine nuts",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 tablespoons chopped fresh parsley leaves",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 lemon",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -105,5 +104,8 @@
     "Stir in parsley, lemon zest, and a pinch of salt.",
     "Top Soup with Pine Nut Mixture"
   ],
-  "dateAdded": "2025-12-05T17:19:42.005Z"
+  "dateAdded": "2025-12-05T17:19:42.005Z",
+  "tags": [
+    "soups"
+  ]
 }

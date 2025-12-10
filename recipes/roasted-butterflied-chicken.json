@@ -1,6 +1,5 @@
 {
   "name": "Roasted Butterflied Chicken",
-  "category": "Poultry",
   "description": "A whole chicken butterflied and roasted until the skin is crispy and the meat is juicy and tender.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,15 +7,15 @@
   "ingredients": [
     {
       "item": "1 whole chicken, 3½ to 4 pounds, butterflied according to the instructions here",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 tablespoon vegetable, canola, or olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -25,5 +24,8 @@
     "3.  Set a wire rack on a rimmed baking sheet lined with aluminum foil. Position the chicken so that the breasts are in the center of the baking sheet and the legs are close to the edges. Roast until the thickest part of the breast close to the bone registers 145°F on an instant-read thermometer and the joint between thighs and body registers at least 160°F, 35 to 45 minutes.",
     "4.  Transfer the chicken to a cutting board, tent loosely with foil, and allow to rest for 10 minutes, then carve and serve."
   ],
-  "dateAdded": "2025-12-05T17:18:56.258Z"
+  "dateAdded": "2025-12-05T17:18:56.258Z",
+  "tags": [
+    "poultry"
+  ]
 }

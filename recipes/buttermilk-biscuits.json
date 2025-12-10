@@ -1,6 +1,5 @@
 {
   "name": "Buttermilk Biscuits",
-  "category": "Baked Goods",
   "description": "Flaky, tender buttermilk biscuits with a golden crust, perfect for breakfast or as a side.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,66 +7,66 @@
   "ingredients": [
     {
       "item": "240g all-purpose flour (2 cups)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon salt plus extra for seasoning",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ pound butter, cubed, cold",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¾ cup buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "~2 Tablespoons honey, Warmed (optional)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "subsection": "Equipment",
       "items": [
         {
           "item": "Food processor",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Dough Cutter",
-          "category": "Bakery"
+          "aisle": "Bakery"
         },
         {
           "item": "Spatula",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Rolling pin",
-          "category": "Bakery"
+          "aisle": "Bakery"
         },
         {
           "item": "3in round cutter",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Large mixing bowl",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Half size baking sheet",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Parchment paper",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         }
       ]
     }
@@ -98,5 +97,8 @@
     "Warm up honey in microwave for 20 seconds",
     "Brush biscuits with honey and season with salt"
   ],
-  "dateAdded": "2025-12-05T17:18:28.448Z"
+  "dateAdded": "2025-12-05T17:18:28.448Z",
+  "tags": [
+    "baked goods"
+  ]
 }

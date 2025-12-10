@@ -1,6 +1,5 @@
 {
   "name": "Borscht Борщ",
-  "category": "Untested",
   "description": "A traditional Eastern European beet soup with cabbage, vegetables, and served with sour cream.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,107 +7,107 @@
   "ingredients": [
     {
       "item": "2 large beets (apple size), or 4 small ones",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large carrot (or 2 small ones)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 small red onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 head of small green cabbage (use 1/3 if it's a big one)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 small red bliss potatoes",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 pint cherry tomatoes",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "10-12 cups water (start with less at first, and you can add more if the soup looks too dense once you combine all the ingredients)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "ketchup - 4 generous squirts (maybe more to taste)",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "12 cloves of garlic, peeled but kept whole",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 bay leaves",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "crushed black pepper (a few turns of pepper mill)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "salt (to taste, maybe 1/2 teaspoon?)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1/2 cup fresh parsley",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 bunch scallions, whole (ends just a bit trimmed)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "dry parsley - 8 shakes of spice bottle",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "dry dill - 8 shakes, same as dill",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "cayenne pepper - 1-2 shakes (1/2 teaspoon maybe?  go slow, very spicy!)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "For serving:",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "sour cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "cayenne",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "fresh dill (finely chopped)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Bread",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "Vidalia onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "fresh scallions",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "coarse salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -129,5 +128,8 @@
     "Cook another 10-15 minutes on medium-low heat.  (You could remove the whole scallions once soup is done, but I would just keep them in there to keep building flavor for leftovers - just do not serve them.)",
     "To serve - ladle soup into bowls, top with a tiny pinch of cayenne (optional - give your guests a heads up as this is not traditional at all), a dollop of sour cream and a generous pinch of fresh dill.  Serve with rye and/or pumpernickel bread, and wedges of Vidalia onion and whole scallions arranged around a little bowl of salt for dipping (onion and scallion.)"
   ],
-  "dateAdded": "2025-12-05T17:17:52.649Z"
+  "dateAdded": "2025-12-05T17:17:52.649Z",
+  "tags": [
+    "untested"
+  ]
 }

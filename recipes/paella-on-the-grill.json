@@ -1,6 +1,5 @@
 {
   "name": "Paella on the Grill",
-  "category": "Seafood",
   "description": "A Spanish rice dish cooked on the grill with chicken, shrimp, clams, chorizo, and saffron.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,75 +7,75 @@
   "ingredients": [
     {
       "item": "1 ½ pounds boneless, skinless chicken thighs",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Salt and pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "12 ounces jumbo shrimp (16 to 20 per pound)",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "6 tablespoons Extra-Virgin Olive Oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "6 garlic cloves, minced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 ¾ teaspoons hot smoked paprika",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 tablespoons Tomato Paste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 cups Chicken Broth",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 (8-ounce) bottle clam juice",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "⅔ cup Dry Sherry",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Pinch saffron threads(optional)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 onion, chopped fine",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup Jarred Roasted Red Peppers, chopped fine",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 cups Arborio Rice",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "2 pound littleneck clams, scrubbed",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "1 pound Spanish-style chorizo sausage",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 cup Frozen Peas, thawed",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Lemon wedges",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -151,5 +150,8 @@
     "Remove pan from grill, cover with aluminum foil, and let stand for 10 minutes.",
     "Serve with lemon wedges."
   ],
-  "dateAdded": "2025-12-05T17:18:45.605Z"
+  "dateAdded": "2025-12-05T17:18:45.605Z",
+  "tags": [
+    "seafood"
+  ]
 }

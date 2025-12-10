@@ -1,12 +1,14 @@
 // Recipe data storage
 let allRecipes = [];
 let filteredRecipes = [];
+let selectedTags = new Set();
+let tagCounts = new Map();
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     loadRecipes();
     setupSearch();
-    setupCategoryFilter();
+    setupTagFilter();
     setupURLRouting();
 });
 
@@ -33,8 +35,9 @@ async function loadRecipes() {
         allRecipes.sort((a, b) => a.name.localeCompare(b.name));
         
         filteredRecipes = [...allRecipes];
+        buildTagMetadata();
+        renderTagButtons();
         displayRecipes();
-        updateCategoryButtons();
     } catch (error) {
         console.error('Error loading recipes:', error);
         document.getElementById('recipesGrid').innerHTML = 
@@ -79,8 +82,8 @@ function displayRecipes() {
     // Add click handlers for expanding/collapsing
     grid.querySelectorAll('.recipe-card').forEach(card => {
         card.addEventListener('click', function(e) {
-            // Don't toggle if clicking on the category badge or action buttons
-            if (e.target.classList.contains('recipe-category') || 
+            // Don't toggle if clicking on a tag badge or action buttons
+            if (e.target.classList.contains('recipe-tag-pill') || 
                 e.target.classList.contains('recipe-action-btn') ||
                 e.target.closest('.recipe-actions')) return;
             
@@ -104,6 +107,17 @@ function displayRecipes() {
             this.classList.toggle('expanded');
         });
     });
+    
+    // Enable tag filtering from recipe cards
+    grid.querySelectorAll('.recipe-tag-pill').forEach(tagPill => {
+        tagPill.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const tag = tagPill.getAttribute('data-tag');
+            if (!tag) return;
+            toggleTagSelection(tag);
+        });
+    });
+    syncRecipeTagPills();
     
     // Check URL and expand matching recipe
     checkURLAndExpandRecipe();
@@ -294,6 +308,7 @@ function createRecipeCard(recipe) {
     const date = recipe.dateAdded ? new Date(recipe.dateAdded).toLocaleDateString() : 'Unknown';
     const prepTime = recipe.prepTime || 'N/A';
     const cookTime = recipe.cookTime || 'N/A';
+    const tagsHtml = renderRecipeTags(recipe);
     const imageHtml = recipe.image ? 
         `<div class="recipe-image-container">
             <img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.name)}" class="recipe-image" onerror="this.style.display='none'">
@@ -315,6 +330,7 @@ function createRecipeCard(recipe) {
                 </div>
             </div>
             ${recipe.description ? `<p class="recipe-description">${escapeHtml(recipe.description)}</p>` : ''}
+            ${tagsHtml}
             <div class="recipe-meta">
                 <span>Prep: ${prepTime}</span>
                 <span>Cook: ${cookTime}</span>
@@ -333,9 +349,23 @@ function createRecipeCard(recipe) {
                     </div>
                 ` : ''}
             </div>
-            <span class="recipe-category">${escapeHtml(recipe.category || 'Uncategorized')}</span>
         </div>
     `;
+}
+
+function renderRecipeTags(recipe) {
+    const tags = getTagList(recipe);
+    if (!tags.length) {
+        return '';
+    }
+    
+    const pills = tags.map(tag => `
+        <button type="button" class="recipe-tag-pill" data-tag="${escapeHtml(tag)}">
+            ${escapeHtml(tag)}
+        </button>
+    `).join('');
+    
+    return `<div class="recipe-tags">${pills}</div>`;
 }
 
 // Setup search functionality
@@ -351,44 +381,106 @@ function setupSearch() {
     });
 }
 
-// Setup category filter
-function setupCategoryFilter() {
-    const categoryButtons = document.getElementById('categoryButtons');
+// Tag filtering helpers
+function setupTagFilter() {
+    const tagButtons = document.getElementById('tagButtons');
+    const clearButton = document.getElementById('clearTagFilters');
     
-    categoryButtons.addEventListener('click', (e) => {
-        if (e.target.classList.contains('category-btn')) {
-            // Update active button
-            categoryButtons.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            e.target.classList.add('active');
-            
-            filterRecipes();
+    if (tagButtons) {
+        tagButtons.addEventListener('click', (e) => {
+            const target = e.target.closest('.tag-pill');
+            if (!target) return;
+            const tag = target.getAttribute('data-tag');
+            if (!tag) return;
+            if (tag === '__all') {
+                clearSelectedTags();
+                return;
+            }
+            toggleTagSelection(tag);
+        });
+    }
+    
+    if (clearButton) {
+        clearButton.addEventListener('click', () => {
+            clearSelectedTags();
+        });
+    }
+}
+
+function buildTagMetadata() {
+    tagCounts = new Map();
+    allRecipes.forEach(recipe => {
+        getTagList(recipe).forEach(tag => {
+            tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+        });
+    });
+}
+
+function renderTagButtons() {
+    const tagButtons = document.getElementById('tagButtons');
+    if (!tagButtons) return;
+    
+    const buttons = [];
+    const allActive = selectedTags.size === 0;
+    buttons.push(`
+        <button class="tag-pill ${allActive ? 'active' : ''}" data-tag="__all">
+            all <span class="tag-count">(${allRecipes.length})</span>
+        </button>
+    `);
+    
+    const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+    sortedTags.forEach(([tag, count]) => {
+        const isActive = selectedTags.has(tag);
+        buttons.push(`
+            <button class="tag-pill ${isActive ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+                ${escapeHtml(tag)} <span class="tag-count">(${count})</span>
+            </button>
+        `);
+    });
+    
+    tagButtons.innerHTML = buttons.join('');
+}
+
+function toggleTagSelection(tag) {
+    const normalized = (tag || '').toLowerCase();
+    if (!normalized) return;
+    
+    if (selectedTags.has(normalized)) {
+        selectedTags.delete(normalized);
+    } else {
+        selectedTags.add(normalized);
+    }
+    
+    renderTagButtons();
+    filterRecipes();
+}
+
+function clearSelectedTags() {
+    if (selectedTags.size === 0) return;
+    selectedTags.clear();
+    renderTagButtons();
+    filterRecipes();
+}
+
+function syncRecipeTagPills() {
+    document.querySelectorAll('.recipe-tag-pill').forEach(pill => {
+        const tag = pill.getAttribute('data-tag');
+        if (!tag) return;
+        if (selectedTags.has(tag)) {
+            pill.classList.add('active');
+        } else {
+            pill.classList.remove('active');
         }
     });
 }
 
-// Update category buttons based on available categories
-function updateCategoryButtons() {
-    const categories = new Set();
-    allRecipes.forEach(recipe => {
-        if (recipe.category) {
-            categories.add(recipe.category);
-        }
-    });
-    
-    const categoryButtons = document.getElementById('categoryButtons');
-    const existingButtons = categoryButtons.querySelectorAll('.category-btn:not([data-category="all"])');
-    existingButtons.forEach(btn => btn.remove());
-    
-    const sortedCategories = Array.from(categories).sort();
-    sortedCategories.forEach(category => {
-        const btn = document.createElement('button');
-        btn.className = 'category-btn';
-        btn.textContent = category;
-        btn.setAttribute('data-category', category);
-        categoryButtons.appendChild(btn);
-    });
+function getTagList(recipe) {
+    if (!recipe || !Array.isArray(recipe.tags)) {
+        return [];
+    }
+    return recipe.tags
+        .map(tag => typeof tag === 'string' ? tag.trim().toLowerCase() : '')
+        .filter(Boolean);
 }
 
 // Filter recipes based on search and category
@@ -436,28 +528,30 @@ function flattenInstructionsForSearch(instructions) {
 }
 
 function filterRecipes() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const activeCategory = document.querySelector('.category-btn.active').getAttribute('data-category');
+    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
     
     filteredRecipes = allRecipes.filter(recipe => {
-        // Category filter
-        const categoryMatch = activeCategory === 'all' || recipe.category === activeCategory;
+        const tags = getTagList(recipe);
+        const matchesTags = selectedTags.size === 0 || tags.some(tag => selectedTags.has(tag));
+        if (!matchesTags) {
+            return false;
+        }
         
         if (!searchTerm) {
-            return categoryMatch;
+            return true;
         }
         
         const ingredientText = flattenIngredientsForSearch(recipe.ingredients);
         const instructionText = flattenInstructionsForSearch(recipe.instructions);
         
-        // Search filter
         const searchMatch = 
             recipe.name.toLowerCase().includes(searchTerm) ||
             (recipe.description && recipe.description.toLowerCase().includes(searchTerm)) ||
             ingredientText.some(ing => ing.includes(searchTerm)) ||
-            instructionText.some(inst => inst.includes(searchTerm));
+            instructionText.some(inst => inst.includes(searchTerm)) ||
+            tags.some(tag => tag.includes(searchTerm));
         
-        return categoryMatch && searchMatch;
+        return searchMatch;
     });
     
     displayRecipes();
@@ -478,12 +572,19 @@ function printRecipe(recipeId) {
     // Get recipe data
     const recipeName = card.getAttribute('data-recipe-name');
     const title = card.querySelector('.recipe-title').textContent;
-    const category = card.querySelector('.recipe-category')?.textContent || '';
     const description = card.querySelector('.recipe-description')?.textContent || '';
     const meta = card.querySelector('.recipe-meta')?.innerHTML || '';
     const ingredients = card.querySelector('.ingredients-section')?.innerHTML || '';
     const instructions = card.querySelector('.instructions-section')?.innerHTML || '';
     const image = card.querySelector('.recipe-image')?.src || '';
+    const tags = Array.from(card.querySelectorAll('.recipe-tag-pill'))
+        .map(pill => pill.textContent.trim())
+        .filter(Boolean);
+    const tagsHtml = tags.length ? `
+        <div class="recipe-tags-print">
+            ${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join(' ')}
+        </div>
+    ` : '';
     
     // Create print window
     const printWindow = window.open('', '_blank');
@@ -515,11 +616,18 @@ function printRecipe(recipeId) {
                         font-weight: bold;
                         margin: 0 0 0.25rem 0;
                     }
-                    .recipe-category {
+                    .recipe-tags-print {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.35rem;
+                        margin-bottom: 0.75rem;
+                    }
+                    .recipe-tags-print span {
+                        border: 1px solid #000;
+                        padding: 0.15rem 0.5rem;
+                        border-radius: 12px;
                         font-size: 9pt;
-                        text-transform: uppercase;
-                        letter-spacing: 0.1em;
-                        color: #666;
+                        text-transform: lowercase;
                     }
                     .recipe-description {
                         font-style: italic;
@@ -592,7 +700,7 @@ function printRecipe(recipeId) {
         <body>
             <div class="recipe-header">
                 <h1 class="recipe-title">${escapeHtml(title)}</h1>
-                ${category ? `<div class="recipe-category">${escapeHtml(category)}</div>` : ''}
+                ${tagsHtml}
             </div>
             ${description ? `<p class="recipe-description">${escapeHtml(description)}</p>` : ''}
             ${meta ? `<div class="recipe-meta">${meta}</div>` : ''}
@@ -656,7 +764,11 @@ function updateMetaTags(recipe) {
     const recipeSlug = createRecipeSlug(recipe.name);
     const recipeUrl = `${currentUrl}#${recipeSlug}`;
     const fullTitle = `${recipe.name} - Richard's Recipe Collection`;
-    const description = recipe.description || `A delicious ${recipe.category || 'recipe'} from Richard's Recipe Collection`;
+    const tags = getTagList(recipe);
+    const tagSummary = tags.slice(0, 3).join(', ');
+    const description = recipe.description || (tagSummary 
+        ? `A ${tagSummary} recipe from Richard's Recipe Collection`
+        : `A delicious recipe from Richard's Recipe Collection`);
     const imageUrl = recipe.image ? (recipe.image.startsWith('http') ? recipe.image : `${currentUrl}${recipe.image}`) : '';
     
     // Update Open Graph tags

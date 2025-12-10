@@ -1,6 +1,5 @@
 {
   "name": "Braised Red Cabbage with Bacon",
-  "category": "Vegetables",
   "description": "Tender braised red cabbage cooked with bacon, onions, and a sweet-tangy vinegar sauce.",
   "prepTime": "15 minutes",
   "cookTime": "1 hr 15 mins",
@@ -8,43 +7,43 @@
   "ingredients": [
     {
       "item": "1 medium head red cabbage",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 thick slices applewood-smoked bacon or other smoked bacon",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 medium yellow onion, thinly sliced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons packed dark brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons Dijon mustard",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "⅓ cup cider vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 cup low-sodium beef broth",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Measure 2 Tablespoons packed dark brown sugar and 2 Tablespoons Dijon mustard and put in a ramekin.",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Measure ⅓ cup cider vinegar and put in a pourable ramekin or beaker.",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "Measure 1 cup of beef broth in a liquid measuring cup.",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     }
   ],
   "instructions": [
@@ -69,5 +68,8 @@
     "Bring to a simmer, then reduce the heat to medium low and cover the pan tightly.",
     "Simmer, stirring occasionally, until the cabbage is soft and soupy and the bacon is tender, about 45 minutes. If the cabbage begins to look dry, add more broth or water."
   ],
-  "dateAdded": "2025-12-05T17:19:00.942Z"
+  "dateAdded": "2025-12-05T17:19:00.942Z",
+  "tags": [
+    "vegetables"
+  ]
 }

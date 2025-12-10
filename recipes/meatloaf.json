@@ -1,6 +1,5 @@
 {
   "name": "Meatloaf",
-  "category": "Meat",
   "description": "A classic comfort food made with ground beef and pork, mushrooms, and topped with a tangy ketchup glaze.",
   "prepTime": "15 minutes",
   "cookTime": "2 hours 20 minutes",
@@ -8,155 +7,155 @@
   "ingredients": [
     {
       "item": "Meatloaf",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 tablespoons butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 ounces white mushrooms",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon tomato paste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Almost 3/4 cup chicken broth (3 tablespoons plus 1/2 cup)",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 Tablespoon garlic paste (or 2 garlic cloves)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 tablespoons soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 tablespoon unflavored gelatin",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1/2 slice hearty white sandwich",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 teaspoons Dijon mustard",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "3/4 teaspoon pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 teaspoon dried thyme",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 pound ground pork",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 pound 85% lean ground beef",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1/3 cup fresh parsley (optional)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Glaze",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1/2 cup ketchup",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1/4 cup cider vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "3 tablespoons packed brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon Tabasco sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1/2 teaspoon ground coriander",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kitchen Equipment",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Heavy duty aluminum foil",
-      "category": "Household & Misc"
+      "aisle": "Household & Misc"
     },
     {
       "item": "Half-sheet rimmed baking pan",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Half-sheet cooling rack",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Food processor",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Rubber spatula",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Meat thermometer",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "12” skillet",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Small saucepan",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "Medium bowl",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Large bowl",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Oven",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kitchen knife",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Liquid measuring cups",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Dry measuring cups",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -229,5 +228,8 @@
     "Broil for 2 more minutes, removing from broiler when the glaze begins to bubble and brown.",
     "Allow to cool for 10 minutes before slicing and serving."
   ],
-  "dateAdded": "2025-12-05T17:19:26.765Z"
+  "dateAdded": "2025-12-05T17:19:26.765Z",
+  "tags": [
+    "meat"
+  ]
 }

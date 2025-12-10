@@ -1,6 +1,5 @@
 {
   "name": "Pork and Chive Dumplings",
-  "category": "Sides",
   "description": "Homemade Chinese dumplings filled with ground pork, napa cabbage, and garlic chives, pan-fried until crispy.",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -8,71 +7,71 @@
   "ingredients": [
     {
       "item": "Dumplings",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "6-8 large napa cabbage leaves",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1-2 Tablespoons kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ bunch garlic chives",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 teaspoons sesame oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 Tablespoons soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 pound ground pork",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 Tablespoon chopped fresh ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 package round dumpling wrappers",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "2-3 Tablespoons canola oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¾ cup water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "Dumpling Sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1/2 cup soy sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 Tbsp. black Chiangking vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 tsp. sriracha chili sauce",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tsp. sesame oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 Tbsp. chopped ginger",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -119,5 +118,8 @@
     "Joanne Chang",
     "Chef Joanne Chang is the chef and owner of Myers + Chang and Flour Bakery. She shared this recipe with us when she was featured as our guest on Neighborhood Kitchens."
   ],
-  "dateAdded": "2025-12-05T17:18:52.455Z"
+  "dateAdded": "2025-12-05T17:18:52.455Z",
+  "tags": [
+    "sides"
+  ]
 }

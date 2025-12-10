@@ -1,11 +1,11 @@
 # My Recipe Collection 🍳
 
-A beautiful, searchable recipe website hosted on GitHub Pages. Store and display your personal recipes with easy search and category filtering.
+A beautiful, searchable recipe website hosted on GitHub Pages. Store and display your personal recipes with easy search and tag filtering.
 
 ## Features
 
 - 🔍 **Search Recipes** - Search by name, ingredients, or instructions
-- 🏷️ **Category Filtering** - Filter recipes by category (Appetizer, Main Course, Dessert, etc.)
+- 🏷️ **Tag Filtering** - Filter recipes by flexible tags (e.g., soup, vegetarian, weeknight)
 - ➕ **Easy Recipe Addition** - Use the admin interface to add new recipes
 - 🛒 **Grocery-Friendly Metadata** - Tag each ingredient with the grocery aisle it belongs to (hidden from the UI but useful for shopping lists)
 - 📸 **Recipe Photos** - Add images to make your recipes more appealing
@@ -37,12 +37,12 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 1. **Using the Admin Interface**
    - Visit `admin.html` on your site (or `admin.html` locally)
    - Fill in the recipe form:
-     - Recipe name (required)
-     - Category (required)
+    - Recipe name (required)
+    - Tags (comma-separated, optional but recommended)
      - Description (optional)
      - Recipe Image URL (optional) - See "Adding Images" section below
      - Prep time and cook time (optional)
-     - Ingredients (add multiple, at least one required) with an optional grocery section for each ingredient
+    - Ingredients (add multiple, at least one required) with an optional grocery aisle for each ingredient
      - Instructions (add multiple, at least one required)
    - Click **Generate Recipe File**
    - Copy the JSON content or download the file
@@ -74,7 +74,7 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 ```json
 {
   "name": "Recipe Name",
-  "category": "Category Name",
+  "tags": ["tag-one", "tag-two"],
   "description": "Optional description",
   "prepTime": "15 minutes",
   "cookTime": "30 minutes",
@@ -82,7 +82,7 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
   "ingredients": [
     {
       "item": "Ingredient 1",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Ingredient 2"
@@ -96,15 +96,15 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 }
 ```
 
-**Categories:** Appetizer, Main Course, Dessert, Side Dish, Breakfast, Lunch, Dinner, Snack, Beverage, Other
+**Tags:** Use lowercase descriptors such as soup, vegetarian, quick, thanksgiving, dessert, make-ahead, etc. Tags are flexible—add as many as you need to describe the recipe.
 
-### Ingredient Categories by Grocery Section
+### Ingredient Aisles by Grocery Section
 
-Every ingredient entry can now include a `category` field describing the aisle or section where the item is typically found in a grocery store. This metadata never renders in the UI, but it enables organized shopping lists and future exports.
+Every ingredient entry can include an `aisle` field describing the aisle or section where the item is typically found in a grocery store. This metadata never renders in the UI, but it enables organized shopping lists and future exports.
 
-- **Format:** `{ "item": "2 cups flour", "category": "Baking & Spices" }`
-- **Optional:** Leave `category` off if you don't want to classify an ingredient.
-- **Fallback:** When a category cannot be determined automatically, label it as `"Other"`.
+- **Format:** `{ "item": "2 cups flour", "aisle": "Baking & Spices" }`
+- **Optional:** Leave `aisle` off if you don't want to classify an ingredient.
+- **Fallback:** When an aisle cannot be determined automatically, label it as `"Other"`.
 - **Recommended sections:** Produce, Meat & Poultry, Seafood, Dairy & Eggs, Bakery, Pantry & Dry Goods, Baking & Spices, Canned & Jarred, Frozen Foods, Condiments & Sauces, International & Specialty, Beverages, Deli & Prepared Foods, Household & Misc, Other.
 
 To retroactively classify existing recipes, run:
@@ -128,26 +128,26 @@ You can mix regular ingredients with subsections:
   "ingredients": [
     {
       "item": "2 cups all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 cup sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "subsection": "Equipment",
       "items": [
         {
           "item": "Mixing bowl",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         },
         {
           "item": "Whisk",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         },
         {
           "item": "Baking pan",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         }
       ]
     },
@@ -156,11 +156,11 @@ You can mix regular ingredients with subsections:
       "items": [
         {
           "item": "Chocolate chips",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Chopped nuts",
-          "category": "Produce"
+          "aisle": "Produce"
         }
       ]
     }
