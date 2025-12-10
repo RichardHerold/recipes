@@ -8,6 +8,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 - 🏷️ **Category Filtering** - Filter recipes by category (Appetizer, Main Course, Dessert, etc.)
 - ➕ **Easy Recipe Addition** - Use the admin interface to add new recipes
 - 🛒 **Grocery-Friendly Metadata** - Tag each ingredient with the grocery aisle it belongs to (hidden from the UI but useful for shopping lists)
+- ✅ **Export to Google Tasks** - Authenticate with Google and send selected recipes plus an aisle-organized shopping list straight to Google Tasks
 - 📸 **Recipe Photos** - Add images to make your recipes more appealing
 - 📱 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
 - 🎨 **Modern UI** - Clean, modern interface with smooth animations
@@ -31,6 +32,33 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
    - Choose **main** branch and **/ (root)** folder
    - Click **Save**
    - Your site will be available at `https://yourusername.github.io/recipes/`
+
+## Exporting to Google Tasks
+
+1. **Create Google Cloud OAuth credentials**
+   - Visit the [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a project (or use an existing one) and enable the **Google Tasks API**
+   - Configure an **OAuth 2.0 Client ID** with type **Web application**
+   - Add your site's domains (e.g., `https://yourusername.github.io`) to the authorized JavaScript origins
+
+2. **Expose the Client ID to the app**
+   - Before `app.js` loads (for example near the end of `index.html`), set the global variable:
+     ```html
+     <script>
+       window.GOOGLE_TASKS_CLIENT_ID = 'YOUR_CLIENT_ID.apps.googleusercontent.com';
+     </script>
+     ```
+   - Keep this ID public-friendly (it is safe to ship in client-side apps)
+
+3. **Use the Export controls**
+   - Use the new **Select visible** checkbox controls above the recipe grid or pick recipes individually with the checkbox on each card
+   - Click **Export selected to Google Tasks** for multi-recipe exports (a combined shopping list grouped by aisle plus one task per recipe)
+   - Click **Export all recipes** to send every recipe currently loaded
+   - Use the **Export** button on any single recipe card to push that recipe alone (ingredients + instructions) as one Google Task
+   - Ingredients that share categories are grouped into these aisles: Produce, Meat, Dairy, Frozen, Bakery/Baking, Pantry/Dry Goods, Spices, Beverages, and Other. If categories are missing, the shopping list falls back to a simple ordered list.
+
+4. **Troubleshooting**
+   - Failed exports usually mean the OAuth consent was denied, the token expired, or the Client ID was not configured. The UI surfaces helpful notifications for each case.
 
 ### Adding Recipes
 
