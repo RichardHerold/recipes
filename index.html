@@ -58,6 +58,17 @@
                     <button class="category-btn active" data-category="all">All</button>
                 </div>
             </div>
+
+            <div class="export-controls" id="exportControls">
+                <div class="export-controls-row">
+                    <p id="selectedCount" class="selection-count">0 recipes selected</p>
+                    <small class="export-hint">Set <code>window.GOOGLE_TASKS_CLIENT_ID</code> before creating shopping list.</small>
+                </div>
+                <div class="export-buttons">
+                    <button id="clearSelectionButton" class="export-btn export-btn-secondary" type="button" disabled>Clear selection</button>
+                    <button id="exportSelectedButton" class="export-btn export-btn-secondary" type="button" disabled>Make Shopping List</button>
+                </div>
+            </div>
         </div>
 
         <div class="recipes-grid" id="recipesGrid">
@@ -78,7 +89,9 @@
     <div id="notification" class="notification" style="display: none;">
         <span class="notification-text">Recipe link copied to clipboard</span>
     </div>
-
+    <script>
+        window.GOOGLE_TASKS_CLIENT_ID = "151622138880-i8rkjc43b6agp08296b1sq4t8e1hl09l.apps.googleusercontent.com";
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

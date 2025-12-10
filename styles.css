@@ -135,6 +135,119 @@ main {
     margin-bottom: 1rem;
 }
 
+.export-controls {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg);
+}
+
+.export-controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.selection-count {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+}
+
+.export-hint {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.export-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.export-btn {
+    padding: 0.45rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.export-btn:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    background-color: #e5e5e5;
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+
+.export-btn-secondary:disabled {
+    background-color: #e5e5e5;
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+
+.export-btn-primary {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+.export-btn-primary:hover:not(:disabled) {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.export-btn-secondary {
+    border-color: var(--border-color);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.export-btn-secondary:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+#exportSelectedButton:not(:disabled)[data-selection-mode="true"] {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+#exportSelectedButton:not(:disabled)[data-selection-mode="true"]:hover {
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+#clearSelectionButton:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.export-btn-link {
+    border-color: transparent;
+    color: var(--text-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.export-btn-link:hover:not(:disabled) {
+    color: var(--primary-color);
+}
+
 .category-filter label {
     display: block;
     margin-bottom: 0.75rem;
@@ -200,6 +313,11 @@ main {
     box-shadow: var(--shadow);
 }
 
+.recipe-card.selected {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
 .recipe-card.expanded {
     grid-column: 1 / -1;
     max-height: 90vh;
@@ -239,6 +357,46 @@ main {
     align-items: start;
     margin-bottom: 0.5rem;
     gap: 1rem;
+}
+
+.recipe-header-main {
+    flex: 1;
+}
+
+.recipe-header-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+
+.recipe-export-inline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: 0.3rem 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}
+
+.recipe-card.expanded .recipe-export-inline {
+    display: block;
+}
+
+.recipe-export-inline:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.recipe-export-inline:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 .recipe-actions {
@@ -766,6 +924,26 @@ footer p {
         left: 1rem;
         max-width: none;
         bottom: 1rem;
+    }
+    
+    .export-controls {
+        padding: 0.75rem;
+    }
+    
+    .export-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .recipe-header {
+        flex-direction: column;
+    }
+    
+    .recipe-header-controls {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
     
     .ingredient-input {

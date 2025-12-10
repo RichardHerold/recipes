@@ -8,6 +8,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 - 🏷️ **Category Filtering** - Filter recipes by category (Appetizer, Main Course, Dessert, etc.)
 - ➕ **Easy Recipe Addition** - Use the admin interface to add new recipes
 - 🛒 **Grocery-Friendly Metadata** - Tag each ingredient with the grocery aisle it belongs to (hidden from the UI but useful for shopping lists)
+- ✅ **Export to Google Tasks** - Authenticate with Google and send selected recipes plus an aisle-organized shopping list straight to Google Tasks
 - 📸 **Recipe Photos** - Add images to make your recipes more appealing
 - 📱 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
 - 🎨 **Modern UI** - Clean, modern interface with smooth animations
@@ -18,6 +19,7 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
 ### Setup for GitHub Pages
 
 1. **Push this repository to GitHub**
+
    ```bash
    git add .
    git commit -m "Initial recipe website setup"
@@ -32,9 +34,176 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
    - Click **Save**
    - Your site will be available at `https://yourusername.github.io/recipes/`
 
+## Creating Shopping Lists with Google Tasks
+
+The recipe collection can create organized shopping lists in Google Tasks, combining ingredients from multiple recipes and grouping them by grocery aisle.
+
+### Setting Up Google Tasks API
+
+#### Step 1: Create a Google Cloud Project
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Click the project dropdown at the top
+3. Click **New Project**
+4. Enter a project name (e.g., "Recipe Shopping Lists")
+5. Click **Create**
+6. Wait for the project to be created, then select it from the dropdown
+
+#### Step 2: Enable Google Tasks API
+
+1. In the Google Cloud Console, go to **APIs & Services** → **Library**
+2. Search for "Google Tasks API"
+3. Click on **Google Tasks API**
+4. Click **Enable**
+5. Wait for the API to be enabled (this may take a minute)
+
+#### Step 3: Create OAuth 2.0 Credentials
+
+1. Go to **APIs & Services** → **Credentials**
+2. Click **+ CREATE CREDENTIALS** at the top
+3. Select **OAuth client ID**
+4. If prompted, configure the OAuth consent screen first:
+
+   - Choose **External** (unless you have a Google Workspace account)
+   - Fill in the required fields:
+     - App name: "Recipe Collection" (or your choice)
+     - User support email: Your email
+     - Developer contact: Your email
+   - Click **Save and Continue**
+   - On the Scopes page, click **Save and Continue**
+   - On the Test users page, add your email address, then click **Save and Continue**
+   - Review and click **Back to Dashboard**
+
+5. Back in Credentials, click **+ CREATE CREDENTIALS** → **OAuth client ID**
+6. Select **Web application** as the application type
+7. Give it a name (e.g., "Recipe Collection Web Client")
+8. Under **Authorized JavaScript origins**, click **+ ADD URI** and add:
+   - `https://yourusername.github.io` (replace with your GitHub Pages URL)
+   - `http://localhost:8000` (for local development)
+   - `http://localhost:8080` (if using a different local port)
+9. Under **Authorized redirect URIs**, you can leave this empty (not needed for this implementation)
+10. Click **Create**
+11. **Copy the Client ID** - it will look like: `123456789-abcdefghijklmnop.apps.googleusercontent.com`
+
+#### Step 4: Configure the Client ID in Your App
+
+1. Open `index.html` in your project
+2. Find the `<script src="app.js"></script>` tag near the end of the file
+3. Add the Client ID configuration **before** the app.js script tag:
+
+```html
+<script>
+  window.GOOGLE_TASKS_CLIENT_ID = "YOUR_CLIENT_ID.apps.googleusercontent.com";
+</script>
+<script src="app.js"></script>
+```
+
+Replace `YOUR_CLIENT_ID.apps.googleusercontent.com` with the actual Client ID you copied.
+
+**Important Notes:**
+
+- The Client ID is safe to expose publicly (it's designed for client-side use)
+- You can commit this to your repository - it's not a secret
+- Make sure to use your actual GitHub Pages domain in the authorized origins
+
+#### Step 5: Deploy and Test
+
+1. Commit and push your changes:
+
+   ```bash
+   git add index.html
+   git commit -m "Configure Google Tasks API"
+   git push origin main
+   ```
+
+2. Wait for GitHub Pages to update (usually takes 1-2 minutes)
+
+3. Visit your site and try creating a shopping list:
+   - Click **Make Shopping List**
+   - Click on recipes to select them (they'll be highlighted)
+   - Click **Create Shopping List** when ready
+   - You'll be prompted to sign in with Google and authorize access
+   - The shopping list will appear in your Google Tasks default list
+
+### Using the Shopping List Feature
+
+1. **Enter Selection Mode**
+
+   - Click the **Make Shopping List** button
+   - All recipes will be collapsed for easier selection
+   - The button text changes to **Create Shopping List**
+
+2. **Select Recipes**
+
+   - Click on recipe cards to select them (they'll be highlighted)
+   - Click again to deselect
+   - The selection count updates automatically
+
+3. **Create the Shopping List**
+
+   - Once you've selected recipes, the **Create Shopping List** button turns black
+   - Click it to create the shopping list
+   - You'll be prompted to sign in with Google if not already signed in
+   - The shopping list is created in your Google Tasks default list
+
+4. **Single Recipe Shopping List**
+   - Expand any recipe card
+   - Click the **Make Shopping List** button on the card
+   - This creates a task with just that recipe's ingredients and instructions
+
+### Shopping List Organization
+
+When multiple recipes are selected, ingredients are:
+
+- **Combined** - Duplicate ingredients are merged with quantities added together
+- **Categorized** - Grouped by grocery aisle:
+  - Produce
+  - Meat
+  - Dairy
+  - Frozen
+  - Bakery/Baking
+  - Pantry/Dry Goods
+  - Spices
+  - Beverages
+  - Other
+- **Formatted** - Quantities and units are properly formatted (e.g., "2 cups flour" + "1 cup flour" = "3 cups flour")
+
+### Troubleshooting
+
+**"Google Tasks client ID is not configured"**
+
+- Make sure you've added the `window.GOOGLE_TASKS_CLIENT_ID` script in `index.html`
+- Verify the Client ID is correct (no extra spaces or quotes)
+- Check that the script is placed before `app.js` loads
+
+**"Authorization was not granted"**
+
+- You may have clicked "Cancel" on the Google sign-in popup
+- Try again and make sure to click "Allow" when prompted
+
+**"Google Tasks request failed"**
+
+- Check that the Google Tasks API is enabled in your Google Cloud project
+- Verify your authorized JavaScript origins include your GitHub Pages URL
+- Make sure you're signed in to the correct Google account
+
+**Token expired errors**
+
+- The app automatically refreshes tokens, but if issues persist:
+  - Clear your browser cache
+  - Sign out and sign back in to Google
+  - Check that cookies are enabled in your browser
+
+**Shopping list not appearing in Google Tasks**
+
+- Check your Google Tasks default list (usually "My Tasks")
+- Make sure you authorized the app to access Google Tasks
+- Try creating a shopping list again
+
 ### Adding Recipes
 
 1. **Using the Admin Interface**
+
    - Visit `admin.html` on your site (or `admin.html` locally)
    - Fill in the recipe form:
      - Recipe name (required)
@@ -49,14 +218,12 @@ A beautiful, searchable recipe website hosted on GitHub Pages. Store and display
    - Save the file in the `recipes/` folder with a descriptive name (e.g., `chocolate-chip-cookies.json`)
 
 2. **Update recipes-index.json**
+
    - After adding a new recipe file, update `recipes-index.json`
    - Add the filename to the `recipes` array:
      ```json
      {
-       "recipes": [
-         "sample-recipe.json",
-         "your-new-recipe.json"
-       ]
+       "recipes": ["sample-recipe.json", "your-new-recipe.json"]
      }
      ```
 
@@ -88,10 +255,7 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
       "item": "Ingredient 2"
     }
   ],
-  "instructions": [
-    "Step 1",
-    "Step 2"
-  ],
+  "instructions": ["Step 1", "Step 2"],
   "dateAdded": "2024-01-15T10:00:00.000Z"
 }
 ```
@@ -198,6 +362,7 @@ You can mix regular instructions with subsections:
 ```
 
 **Notes:**
+
 - Subsections are optional - you can use all regular items, all subsections, or mix them
 - Each subsection has its own numbered (instructions) or bulleted (ingredients) list
 - Subsection titles are displayed in uppercase with custom styling
@@ -208,6 +373,7 @@ You can mix regular instructions with subsections:
 You can add photos to your recipes in two ways:
 
 1. **Local Images (Recommended)**
+
    - Save your recipe images in the `images/` folder
    - Use descriptive filenames (e.g., `chocolate-chip-cookies.jpg`)
    - In the admin form, enter the image path: `images/your-image-name.jpg`
@@ -218,6 +384,7 @@ You can add photos to your recipes in two ways:
    - Enter the full URL in the admin form (e.g., `https://example.com/image.jpg`)
 
 **Image Tips:**
+
 - Recommended image size: 800x600px or similar aspect ratio
 - Supported formats: JPG, PNG, WebP, GIF
 - Keep file sizes reasonable (< 2MB) for faster loading
@@ -237,11 +404,13 @@ This recipe collection is a **Progressive Web App**, which means users can insta
 ### Installing the App
 
 **On Desktop (Chrome/Edge):**
+
 - Look for the install icon (➕) in the address bar
 - Click it to install the app
 - The app will open in its own window
 
 **On Mobile:**
+
 - **iOS (Safari):** Tap the Share button → "Add to Home Screen"
 - **Android (Chrome):** Tap the menu (⋮) → "Install app" or "Add to Home Screen"
 - The app icon will appear on your home screen
@@ -249,6 +418,7 @@ This recipe collection is a **Progressive Web App**, which means users can insta
 ### Offline Usage
 
 After your first visit:
+
 1. The app automatically caches all recipes and assets
 2. You can use the app completely offline
 3. Recipes load instantly from cache
@@ -263,6 +433,7 @@ The PWA is already configured! The following files handle PWA functionality:
 - `icon-192.png` & `icon-512.png` - App icons (see below)
 
 **Required Icons:**
+
 - Generate icons using `icon-generator.html` (open in browser and download)
 - Or create your own 192x192 and 512x512 PNG icons
 - Save as `icon-192.png` and `icon-512.png` in the root directory
@@ -272,6 +443,7 @@ For detailed PWA setup instructions, see `PWA-SETUP.md`.
 ### Browser Support
 
 PWAs work on:
+
 - ✅ Chrome/Edge (Android & Desktop)
 - ✅ Safari (iOS 11.3+, macOS)
 - ✅ Firefox (Android & Desktop)
@@ -308,15 +480,19 @@ To test locally before pushing to GitHub:
 **Important:** Service workers require HTTP/HTTPS (not `file://`), so you must use a local server.
 
 1. **Using Python** (if installed):
+
    ```bash
    python -m http.server 8000
    ```
+
    Then visit `http://localhost:8000`
 
 2. **Using Node.js** (if installed):
+
    ```bash
    npx http-server
    ```
+
    Then visit the URL shown in the terminal
 
 3. **Using VS Code Live Server**:

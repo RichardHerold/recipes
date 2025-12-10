@@ -1,6 +1,141 @@
 // Recipe data storage
 let allRecipes = [];
 let filteredRecipes = [];
+const selectedRecipeNames = new Set();
+let isExportInProgress = false;
+let isSelectionMode = false;
+
+const GOOGLE_TASKS_SCOPE = 'https://www.googleapis.com/auth/tasks';
+let googleScriptPromise = null;
+let googleTokenClient = null;
+let googleAccessToken = null;
+let googleTokenExpiry = 0;
+
+const CATEGORY_GROUPS = [
+    { key: 'produce', label: 'Produce' },
+    { key: 'meat', label: 'Meat' },
+    { key: 'dairy', label: 'Dairy' },
+    { key: 'frozen', label: 'Frozen' },
+    { key: 'bakery', label: 'Bakery/Baking' },
+    { key: 'pantry', label: 'Pantry/Dry Goods' },
+    { key: 'spices', label: 'Spices' },
+    { key: 'beverages', label: 'Beverages' },
+    { key: 'other', label: 'Other' }
+];
+
+const CATEGORY_SYNONYMS = {
+    'produce': 'produce',
+    'vegetable': 'produce',
+    'vegetables': 'produce',
+    'fruit': 'produce',
+    'fruits': 'produce',
+    'meat': 'meat',
+    'protein': 'meat',
+    'poultry': 'meat',
+    'seafood': 'meat',
+    'dairy': 'dairy',
+    'dairy eggs': 'dairy',
+    'dairy and eggs': 'dairy',
+    'eggs': 'dairy',
+    'cheese': 'dairy',
+    'frozen': 'frozen',
+    'freezer': 'frozen',
+    'bakery': 'bakery',
+    'baking': 'bakery',
+    'baking spices': 'bakery',
+    'bakery baking': 'bakery',
+    'bakery/baking': 'bakery',
+    'pantry': 'pantry',
+    'dry goods': 'pantry',
+    'pantry dry goods': 'pantry',
+    'canned goods': 'pantry',
+    'spices': 'spices',
+    'seasonings': 'spices',
+    'seasoning': 'spices',
+    'herbs': 'spices',
+    'beverages': 'beverages',
+    'drinks': 'beverages',
+    'other': 'other',
+    'misc': 'other',
+    'uncategorized': 'other'
+};
+
+const CATEGORY_LABEL_BY_KEY = CATEGORY_GROUPS.reduce((acc, group) => {
+    acc[group.key] = group.label;
+    return acc;
+}, {});
+
+const UNIT_SYNONYMS = {
+    'cup': { base: 'cup', plural: 'cups' },
+    'cups': { base: 'cup', plural: 'cups' },
+    'tablespoon': { base: 'tablespoon', plural: 'tablespoons' },
+    'tablespoons': { base: 'tablespoon', plural: 'tablespoons' },
+    'tbsp': { base: 'tablespoon', plural: 'tablespoons' },
+    'teaspoon': { base: 'teaspoon', plural: 'teaspoons' },
+    'teaspoons': { base: 'teaspoon', plural: 'teaspoons' },
+    'tsp': { base: 'teaspoon', plural: 'teaspoons' },
+    'ounce': { base: 'ounce', plural: 'ounces' },
+    'ounces': { base: 'ounce', plural: 'ounces' },
+    'oz': { base: 'ounce', plural: 'ounces' },
+    'fluid ounce': { base: 'fluid ounce', plural: 'fluid ounces' },
+    'fluid ounces': { base: 'fluid ounce', plural: 'fluid ounces' },
+    'pound': { base: 'pound', plural: 'pounds' },
+    'pounds': { base: 'pound', plural: 'pounds' },
+    'lb': { base: 'pound', plural: 'pounds' },
+    'lbs': { base: 'pound', plural: 'pounds' },
+    'clove': { base: 'clove', plural: 'cloves' },
+    'cloves': { base: 'clove', plural: 'cloves' },
+    'slice': { base: 'slice', plural: 'slices' },
+    'slices': { base: 'slice', plural: 'slices' },
+    'can': { base: 'can', plural: 'cans' },
+    'cans': { base: 'can', plural: 'cans' },
+    'package': { base: 'package', plural: 'packages' },
+    'packages': { base: 'package', plural: 'packages' },
+    'stick': { base: 'stick', plural: 'sticks' },
+    'sticks': { base: 'stick', plural: 'sticks' },
+    'quart': { base: 'quart', plural: 'quarts' },
+    'quarts': { base: 'quart', plural: 'quarts' },
+    'pint': { base: 'pint', plural: 'pints' },
+    'pints': { base: 'pint', plural: 'pints' },
+    'gallon': { base: 'gallon', plural: 'gallons' },
+    'gallons': { base: 'gallon', plural: 'gallons' },
+    'ml': { base: 'ml', plural: 'ml' },
+    'l': { base: 'l', plural: 'l' },
+    'liter': { base: 'liter', plural: 'liters' },
+    'liters': { base: 'liter', plural: 'liters' },
+    'gram': { base: 'gram', plural: 'grams' },
+    'grams': { base: 'gram', plural: 'grams' },
+    'g': { base: 'gram', plural: 'grams' },
+    'kilogram': { base: 'kilogram', plural: 'kilograms' },
+    'kilograms': { base: 'kilogram', plural: 'kilograms' },
+    'kg': { base: 'kilogram', plural: 'kilograms' },
+    'bunch': { base: 'bunch', plural: 'bunches' },
+    'bunches': { base: 'bunch', plural: 'bunches' },
+    'head': { base: 'head', plural: 'heads' },
+    'heads': { base: 'head', plural: 'heads' },
+    'bag': { base: 'bag', plural: 'bags' },
+    'bags': { base: 'bag', plural: 'bags' }
+};
+
+const UNIT_DISPLAY_LOOKUP = {};
+Object.keys(UNIT_SYNONYMS).forEach(key => {
+    const meta = UNIT_SYNONYMS[key];
+    if (!UNIT_DISPLAY_LOOKUP[meta.base]) {
+        UNIT_DISPLAY_LOOKUP[meta.base] = meta;
+    }
+});
+
+const UNICODE_FRACTIONS = {
+    '¼': '1/4',
+    '½': '1/2',
+    '¾': '3/4',
+    '⅓': '1/3',
+    '⅔': '2/3',
+    '⅛': '1/8',
+    '⅜': '3/8',
+    '⅝': '5/8',
+    '⅞': '7/8'
+};
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSearch();
     setupCategoryFilter();
     setupURLRouting();
+    setupExportControls();
 });
 
 // Load all recipe files
@@ -35,6 +171,8 @@ async function loadRecipes() {
         filteredRecipes = [...allRecipes];
         displayRecipes();
         updateCategoryButtons();
+        removeStaleSelections();
+        updateSelectionUI();
     } catch (error) {
         console.error('Error loading recipes:', error);
         document.getElementById('recipesGrid').innerHTML = 
@@ -82,10 +220,28 @@ function displayRecipes() {
             // Don't toggle if clicking on the category badge or action buttons
             if (e.target.classList.contains('recipe-category') || 
                 e.target.classList.contains('recipe-action-btn') ||
-                e.target.closest('.recipe-actions')) return;
+                e.target.closest('.recipe-actions') ||
+                e.target.classList.contains('recipe-export-inline')) {
+                return;
+            }
             
             const recipeName = this.getAttribute('data-recipe-name');
             const isExpanded = this.classList.contains('expanded');
+            
+            // If in selection mode, toggle selection instead of expanding
+            if (isSelectionMode) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (selectedRecipeNames.has(recipeName)) {
+                    selectedRecipeNames.delete(recipeName);
+                    this.classList.remove('selected');
+                } else {
+                    selectedRecipeNames.add(recipeName);
+                    this.classList.add('selected');
+                }
+                updateSelectionUI();
+                return;
+            }
             
             if (isExpanded) {
                 // Collapsing - remove from URL and reset meta tags
@@ -104,6 +260,27 @@ function displayRecipes() {
             this.classList.toggle('expanded');
         });
     });
+
+    // Update selected state on recipe cards
+    grid.querySelectorAll('.recipe-card').forEach(card => {
+        const recipeName = card.getAttribute('data-recipe-name');
+        if (selectedRecipeNames.has(recipeName)) {
+            card.classList.add('selected');
+        } else {
+            card.classList.remove('selected');
+        }
+    });
+
+    // Single recipe export buttons (only visible when expanded)
+    grid.querySelectorAll('.recipe-export-inline').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const recipeName = button.getAttribute('data-recipe-name');
+            exportSingleRecipe(recipeName);
+        });
+    });
+
+    updateSelectionUI();
     
     // Check URL and expand matching recipe
     checkURLAndExpandRecipe();
@@ -301,17 +478,21 @@ function createRecipeCard(recipe) {
     
     // Create a unique ID for this recipe card
     const recipeId = `recipe-${createRecipeSlug(recipe.name)}-${Date.now()}`;
+    const isSelected = selectedRecipeNames.has(recipe.name);
     
     return `
         <div class="recipe-card" id="${recipeId}" data-recipe-name="${escapeHtml(recipe.name)}">
             ${imageHtml}
             <div class="recipe-header">
-                <div>
+                <div class="recipe-header-main">
                     <h2 class="recipe-title">${escapeHtml(recipe.name)}</h2>
                 </div>
-                <div class="recipe-actions">
-                    <button class="recipe-action-btn" onclick="printRecipe('${recipeId}')" title="Print recipe">Print</button>
-                    <button class="recipe-action-btn" onclick="shareRecipe('${recipeId}')" title="Share recipe">Share</button>
+                <div class="recipe-header-controls">
+                    <button class="recipe-action-btn recipe-export-inline" type="button" data-recipe-name="${escapeHtml(recipe.name)}" title="Make Shopping List">Make Shopping List</button>
+                    <div class="recipe-actions">
+                        <button class="recipe-action-btn" onclick="printRecipe('${recipeId}')" title="Print recipe">Print</button>
+                        <button class="recipe-action-btn" onclick="shareRecipe('${recipeId}')" title="Share recipe">Share</button>
+                    </div>
                 </div>
             </div>
             ${recipe.description ? `<p class="recipe-description">${escapeHtml(recipe.description)}</p>` : ''}
@@ -750,6 +931,683 @@ function showNotification(message) {
             notification.style.display = 'none';
         }, 300);
     }, 3000);
+}
+
+// Export controls and Google Tasks integration
+function setupExportControls() {
+    const exportSelectedButton = document.getElementById('exportSelectedButton');
+    const clearSelectionButton = document.getElementById('clearSelectionButton');
+    
+    if (exportSelectedButton) {
+        exportSelectedButton.addEventListener('click', () => {
+            if (!isSelectionMode) {
+                // Enter selection mode - collapse all recipes
+                isSelectionMode = true;
+                exportSelectedButton.textContent = 'Create Shopping List';
+                exportSelectedButton.setAttribute('data-selection-mode', 'true');
+                // Collapse all expanded recipe cards
+                document.querySelectorAll('.recipe-card.expanded').forEach(card => {
+                    card.classList.remove('expanded');
+                });
+                // Clear URL hash
+                updateURL(null);
+                updateMetaTags(null);
+                updateSelectionUI();
+            } else {
+                // Create shopping list
+                exportSelectedRecipes();
+            }
+        });
+    }
+    if (clearSelectionButton) {
+        clearSelectionButton.addEventListener('click', () => {
+            selectedRecipeNames.clear();
+            isSelectionMode = false;
+            document.querySelectorAll('.recipe-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            updateSelectionUI();
+            const exportSelectedButton = document.getElementById('exportSelectedButton');
+            if (exportSelectedButton) {
+                exportSelectedButton.textContent = 'Make Shopping List';
+                exportSelectedButton.removeAttribute('data-selection-mode');
+            }
+        });
+    }
+    
+    updateSelectionUI();
+}
+
+function removeStaleSelections() {
+    if (selectedRecipeNames.size === 0) return;
+    const validNames = new Set(allRecipes.map(recipe => recipe.name));
+    let mutated = false;
+    selectedRecipeNames.forEach(name => {
+        if (!validNames.has(name)) {
+            selectedRecipeNames.delete(name);
+            mutated = true;
+        }
+    });
+    if (mutated) {
+        // Update selected state on recipe cards
+        document.querySelectorAll('.recipe-card').forEach(card => {
+            const recipeName = card.getAttribute('data-recipe-name');
+            if (selectedRecipeNames.has(recipeName)) {
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+    }
+}
+
+function updateSelectionUI() {
+    const selectedCountEl = document.getElementById('selectedCount');
+    const exportSelectedButton = document.getElementById('exportSelectedButton');
+    const clearSelectionButton = document.getElementById('clearSelectionButton');
+    const selectedCount = selectedRecipeNames.size;
+    
+    if (selectedCountEl) {
+        const label = selectedCount === 1 ? 'recipe' : 'recipes';
+        selectedCountEl.textContent = `${selectedCount} ${label} selected`;
+    }
+    
+    if (exportSelectedButton) {
+        if (isSelectionMode) {
+            exportSelectedButton.textContent = 'Create Shopping List';
+            exportSelectedButton.setAttribute('data-selection-mode', 'true');
+            exportSelectedButton.disabled = selectedCount === 0 || isExportInProgress;
+        } else {
+            exportSelectedButton.textContent = 'Make Shopping List';
+            exportSelectedButton.removeAttribute('data-selection-mode');
+            exportSelectedButton.disabled = isExportInProgress;
+        }
+    }
+    if (clearSelectionButton) {
+        clearSelectionButton.disabled = isExportInProgress;
+    }
+    
+    document.querySelectorAll('.recipe-export-inline').forEach(button => {
+        button.disabled = isExportInProgress;
+    });
+}
+
+function getRecipesByNames(names) {
+    if (!Array.isArray(names) || names.length === 0) return [];
+    const nameSet = new Set(names);
+    return allRecipes.filter(recipe => nameSet.has(recipe.name));
+}
+
+async function exportSelectedRecipes() {
+    if (isExportInProgress) return;
+    const recipes = getRecipesByNames(Array.from(selectedRecipeNames));
+    if (!recipes.length) {
+        showNotification('Select at least one recipe to create a shopping list.');
+        return;
+    }
+    isSelectionMode = false;
+    const exportSelectedButton = document.getElementById('exportSelectedButton');
+    if (exportSelectedButton) {
+        exportSelectedButton.textContent = 'Make Shopping List';
+    }
+    await exportRecipesToGoogleTasks(recipes, { shoppingListOnly: true });
+}
+
+
+async function exportSingleRecipe(recipeName) {
+    if (isExportInProgress || !recipeName) return;
+    const recipe = allRecipes.find(r => r.name === recipeName);
+    if (!recipe) {
+        showNotification('Unable to find that recipe.');
+        return;
+    }
+    await exportRecipesToGoogleTasks([recipe], { shoppingListOnly: true });
+}
+
+async function exportRecipesToGoogleTasks(recipes, options = {}) {
+    if (!window.GOOGLE_TASKS_CLIENT_ID) {
+        showNotification('Google Tasks client ID is not configured.');
+        return;
+    }
+    if (!Array.isArray(recipes) || recipes.length === 0) {
+        showNotification('No recipes available to export.');
+        return;
+    }
+    
+    try {
+        setExportInProgress(true);
+        const token = await ensureGoogleAccessToken();
+        const tasksPayloads = [];
+        
+        if (options.shoppingListOnly) {
+            // Only create shopping list with subtasks for each ingredient
+            const recipeCount = recipes.length;
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Use recipe name if single recipe, otherwise "Shopping List"
+            const listTitle = recipeCount === 1
+                ? `${recipes[0].name} Shopping List (${dateString})`
+                : `Shopping List (${dateString})`;
+            
+            // Create a new task list
+            const taskList = await createGoogleTaskList({
+                title: listTitle
+            }, token);
+            
+            // Get ingredients organized for subtasks
+            const ingredientSubtasks = buildShoppingListSubtasks(recipes);
+            
+            // Create subtasks for each ingredient in the new list
+            for (const ingredient of ingredientSubtasks) {
+                await createGoogleTask({
+                    title: ingredient
+                }, token, taskList.id);
+            }
+            
+            showNotification(`Created shopping list "${listTitle}" with ${ingredientSubtasks.length} items for ${recipeCount} recipe${recipeCount > 1 ? 's' : ''} in Google Tasks`);
+            return;
+        } else {
+            // Legacy behavior: create shopping list + individual recipe tasks
+            if (options.includeShoppingList && recipes.length > 1) {
+                tasksPayloads.push({
+                    title: `Shopping List (${recipes.length} recipes)`,
+                    notes: buildShoppingListNotes(recipes)
+                });
+            }
+            
+            recipes.forEach(recipe => {
+                tasksPayloads.push({
+                    title: recipe.name,
+                    notes: buildRecipeTaskNotes(recipe)
+                });
+            });
+        }
+        
+        for (const payload of tasksPayloads) {
+            await createGoogleTask(payload, token);
+        }
+        
+        const recipeCount = recipes.length;
+        showNotification(`Created shopping list for ${recipeCount} recipe${recipeCount > 1 ? 's' : ''} in Google Tasks`);
+    } catch (error) {
+        console.error('Google Tasks export error:', error);
+        const message = error && error.message ? error.message : 'Unable to export recipes.';
+        showNotification(`Export failed: ${message}`);
+    } finally {
+        setExportInProgress(false);
+    }
+}
+
+function setExportInProgress(state) {
+    isExportInProgress = state;
+    updateSelectionUI();
+}
+
+function buildRecipeTaskNotes(recipe) {
+    const ingredients = collectIngredientEntries([recipe]).map(entry => entry.text);
+    const instructions = flattenInstructionSteps(recipe.instructions);
+    const lines = [];
+    
+    if (ingredients.length) {
+        lines.push('Ingredients:');
+        ingredients.forEach(item => lines.push(`- ${item}`));
+    }
+    
+    if (instructions.length) {
+        if (lines.length) {
+            lines.push('');
+        }
+        lines.push('Instructions:');
+        instructions.forEach((step, index) => {
+            lines.push(`${index + 1}. ${step}`);
+        });
+    }
+    
+    return lines.join('\n') || 'Recipe details unavailable.';
+}
+
+function flattenInstructionSteps(instructions) {
+    if (!Array.isArray(instructions)) return [];
+    const steps = [];
+    const appendStep = (entry) => {
+        if (!entry) return;
+        if (typeof entry === 'string') {
+            steps.push(entry);
+        } else if (typeof entry === 'object' && Array.isArray(entry.items)) {
+            entry.items.forEach(appendStep);
+        }
+    };
+    instructions.forEach(appendStep);
+    return steps;
+}
+
+function collectIngredientEntries(recipes) {
+    const entries = [];
+    let orderCounter = 0;
+    const pushEntry = (entry) => {
+        if (isIngredientSubsection(entry)) {
+            entry.items.forEach(pushEntry);
+            return;
+        }
+        const text = extractIngredientText(entry);
+        if (!text) return;
+        const category = entry && typeof entry === 'object' ? entry.category || null : null;
+        entries.push({
+            text: text.trim(),
+            category,
+            normalizedCategory: normalizeCategory(category),
+            order: orderCounter++
+        });
+    };
+    
+    recipes.forEach(recipe => {
+        if (!Array.isArray(recipe.ingredients)) return;
+        recipe.ingredients.forEach(pushEntry);
+    });
+    
+    return entries;
+}
+
+function normalizeCategory(categoryValue) {
+    if (!categoryValue || typeof categoryValue !== 'string') return null;
+    const cleaned = categoryValue
+        .toLowerCase()
+        .replace(/&/g, 'and')
+        .replace(/[\/_-]/g, ' ')
+        .replace(/[^a-z\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    if (!cleaned) return null;
+    const compact = cleaned.replace(/\band\b/g, '').replace(/\s+/g, ' ').trim();
+    return CATEGORY_SYNONYMS[compact] || CATEGORY_SYNONYMS[cleaned] || null;
+}
+
+function shouldUseCategorizedList(entries) {
+    if (!entries.length) return false;
+    const categorized = entries.filter(entry => entry.normalizedCategory).length;
+    if (categorized === 0) return false;
+    return categorized / entries.length >= 0.5;
+}
+
+function buildShoppingListNotes(recipes) {
+    const entries = collectIngredientEntries(recipes);
+    if (!entries.length) {
+        return 'No ingredients found.';
+    }
+    
+    const combined = combineIngredientEntries(entries);
+    const useCategories = shouldUseCategorizedList(entries);
+    
+    if (!useCategories) {
+        return combined.map(item => `- ${formatCombinedIngredient(item)}`).join('\n');
+    }
+    
+    const grouped = new Map();
+    combined.forEach(item => {
+        const categoryKey = item.normalizedCategory || 'other';
+        const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
+        if (!grouped.has(label)) {
+            grouped.set(label, []);
+        }
+        grouped.get(label).push(item);
+    });
+    
+    const lines = [];
+    CATEGORY_GROUPS.forEach(group => {
+        const items = grouped.get(group.label);
+        if (items && items.length) {
+            lines.push(`${group.label}:`);
+            items
+                .slice()
+                .sort((a, b) => {
+                    const nameA = (a.parsedName || a.rawText).toLowerCase();
+                    const nameB = (b.parsedName || b.rawText).toLowerCase();
+                    return nameA.localeCompare(nameB);
+                })
+                .forEach(item => {
+                    lines.push(`- ${formatCombinedIngredient(item)}`);
+                });
+            lines.push('');
+        }
+    });
+    
+    return lines.join('\n').trim();
+}
+
+function buildShoppingListSubtasks(recipes) {
+    const entries = collectIngredientEntries(recipes);
+    if (!entries.length) {
+        return [];
+    }
+    
+    const combined = combineIngredientEntries(entries);
+    const useCategories = shouldUseCategorizedList(entries);
+    const subtasks = [];
+    
+    if (!useCategories) {
+        // Simple list - just ingredients
+        return combined.map(item => formatCombinedIngredient(item));
+    }
+    
+    // Grouped by category
+    const grouped = new Map();
+    combined.forEach(item => {
+        const categoryKey = item.normalizedCategory || 'other';
+        const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
+        if (!grouped.has(label)) {
+            grouped.set(label, []);
+        }
+        grouped.get(label).push(item);
+    });
+    
+    // Create subtasks organized by category
+    CATEGORY_GROUPS.forEach(group => {
+        const items = grouped.get(group.label);
+        if (items && items.length) {
+            // Add ingredients for this category
+            items
+                .slice()
+                .sort((a, b) => {
+                    const nameA = (a.parsedName || a.rawText).toLowerCase();
+                    const nameB = (b.parsedName || b.rawText).toLowerCase();
+                    return nameA.localeCompare(nameB);
+                })
+                .forEach(item => {
+                    subtasks.push(formatCombinedIngredient(item));
+                });
+        }
+    });
+    
+    return subtasks;
+}
+
+function combineIngredientEntries(entries) {
+    const combined = new Map();
+    
+    entries.forEach(entry => {
+        const normalizedText = normalizeUnicodeFractions(entry.text || '');
+        if (!normalizedText) return;
+        const parsed = parseIngredientText(normalizedText);
+        const key = parsed && parsed.name
+            ? `parsed||${parsed.unit || 'no-unit'}||${parsed.name.toLowerCase()}`
+            : `raw||${normalizedText.toLowerCase()}`;
+        const existing = combined.get(key);
+        
+        if (existing) {
+            existing.count += 1;
+            existing.order = Math.min(existing.order, entry.order);
+            if (parsed && typeof parsed.quantity === 'number' && existing.quantity !== null) {
+                existing.quantity += parsed.quantity;
+            }
+            if (!existing.normalizedCategory && entry.normalizedCategory) {
+                existing.normalizedCategory = entry.normalizedCategory;
+            }
+            if (!existing.category && entry.category) {
+                existing.category = entry.category;
+            }
+        } else {
+            combined.set(key, {
+                key,
+                rawText: normalizedText,
+                parsedName: parsed ? parsed.name : null,
+                unit: parsed ? parsed.unit : '',
+                quantity: parsed && typeof parsed.quantity === 'number' ? parsed.quantity : null,
+                count: 1,
+                category: entry.category || null,
+                normalizedCategory: entry.normalizedCategory || null,
+                order: entry.order
+            });
+        }
+    });
+    
+    return Array.from(combined.values()).sort((a, b) => a.order - b.order);
+}
+
+function parseIngredientText(text) {
+    if (!text) return null;
+    const normalized = normalizeUnicodeFractions(text).trim();
+    if (!normalized) return null;
+    const quantityMatch = normalized.match(/^((?:\d+\s+\d+\/\d+)|(?:\d+\/\d+)|(?:\d*\.\d+)|(?:\d+))(?:\s|$)/);
+    if (!quantityMatch) {
+        return null;
+    }
+    const quantityValue = convertQuantityString(quantityMatch[1]);
+    if (quantityValue === null) {
+        return null;
+    }
+    let remainder = normalized.slice(quantityMatch[0].length).trim();
+    if (!remainder) {
+        return null;
+    }
+    const tokens = remainder.split(/\s+/);
+    let unit = '';
+    let consumed = 0;
+    
+    if (tokens.length >= 2) {
+        const twoWord = `${tokens[0].toLowerCase()} ${tokens[1].toLowerCase()}`;
+        if (UNIT_SYNONYMS[twoWord]) {
+            unit = UNIT_SYNONYMS[twoWord].base;
+            consumed = 2;
+        }
+    }
+    
+    if (!unit && tokens.length) {
+        const singleWord = tokens[0].toLowerCase();
+        if (UNIT_SYNONYMS[singleWord]) {
+            unit = UNIT_SYNONYMS[singleWord].base;
+            consumed = 1;
+        }
+    }
+    
+    const nameTokens = tokens.slice(consumed);
+    const name = nameTokens.join(' ').trim();
+    if (!name) {
+        return null;
+    }
+    
+    return {
+        quantity: quantityValue,
+        unit,
+        name
+    };
+}
+
+function normalizeUnicodeFractions(text) {
+    if (!text || typeof text !== 'string') return '';
+    return text.replace(/[¼½¾⅓⅔⅛⅜⅝⅞]/g, (match) => UNICODE_FRACTIONS[match] || match);
+}
+
+function convertQuantityString(value) {
+    if (!value) return null;
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    if (trimmed.includes(' ')) {
+        const parts = trimmed.split(' ');
+        if (parts.length === 2) {
+            const whole = parseFloat(parts[0]);
+            const fraction = convertQuantityString(parts[1]);
+            if (!isNaN(whole) && fraction !== null) {
+                return whole + fraction;
+            }
+        }
+    }
+    if (trimmed.includes('/')) {
+        const [num, denom] = trimmed.split('/');
+        const numerator = parseFloat(num);
+        const denominator = parseFloat(denom);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+            return numerator / denominator;
+        }
+        return null;
+    }
+    const numeric = parseFloat(trimmed);
+    return isNaN(numeric) ? null : numeric;
+}
+
+function formatCombinedIngredient(ingredient) {
+    if (ingredient.quantity !== null && ingredient.parsedName) {
+        const quantityText = formatQuantity(ingredient.quantity);
+        const unitText = ingredient.unit ? ` ${formatUnit(ingredient.unit, ingredient.quantity)}` : '';
+        return `${quantityText}${unitText} ${ingredient.parsedName}`.trim();
+    }
+    if (ingredient.count > 1) {
+        return `${ingredient.rawText} (x${ingredient.count})`;
+    }
+    return ingredient.rawText;
+}
+
+function formatQuantity(value) {
+    if (Number.isInteger(value)) {
+        return `${value}`;
+    }
+    const precise = Number(value.toFixed(2));
+    return `${precise}`;
+}
+
+function formatUnit(unit, quantity) {
+    if (!unit) return '';
+    const metadata = UNIT_DISPLAY_LOOKUP[unit];
+    if (!metadata) {
+        return unit;
+    }
+    const isPlural = quantity > 1.0001;
+    if (isPlural && metadata.plural) {
+        return metadata.plural;
+    }
+    return metadata.base || unit;
+}
+
+function loadGoogleIdentityServices() {
+    if (window.google && window.google.accounts && window.google.accounts.oauth2) {
+        return Promise.resolve();
+    }
+    if (googleScriptPromise) {
+        return googleScriptPromise;
+    }
+    
+    googleScriptPromise = new Promise((resolve, reject) => {
+        const existing = document.querySelector('script[data-google-identity]');
+        if (existing) {
+            existing.addEventListener('load', () => resolve());
+            existing.addEventListener('error', () => reject(new Error('Failed to load Google Identity Services')));
+            return;
+        }
+        
+        const script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.async = true;
+        script.defer = true;
+        script.dataset.googleIdentity = 'true';
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error('Failed to load Google Identity Services'));
+        document.head.appendChild(script);
+    });
+    
+    return googleScriptPromise;
+}
+
+async function ensureGoogleAccessToken(forcePrompt = false) {
+    await loadGoogleIdentityServices();
+    
+    if (!window.GOOGLE_TASKS_CLIENT_ID) {
+        return Promise.reject(new Error('Google Tasks client ID is not configured.'));
+    }
+    
+    if (googleAccessToken && Date.now() < googleTokenExpiry - 60000 && !forcePrompt) {
+        return googleAccessToken;
+    }
+    
+    return new Promise((resolve, reject) => {
+        if (!window.google || !window.google.accounts || !window.google.accounts.oauth2) {
+            reject(new Error('Google Identity Services unavailable.'));
+            return;
+        }
+        
+        if (!googleTokenClient) {
+            googleTokenClient = window.google.accounts.oauth2.initTokenClient({
+                client_id: window.GOOGLE_TASKS_CLIENT_ID,
+                scope: GOOGLE_TASKS_SCOPE,
+                callback: () => {}
+            });
+        }
+        
+        googleTokenClient.callback = (response) => {
+            if (response && response.access_token) {
+                googleAccessToken = response.access_token;
+                const expiresIn = response.expires_in || 0;
+                googleTokenExpiry = Date.now() + expiresIn * 1000;
+                resolve(googleAccessToken);
+            } else {
+                reject(new Error('Authorization was not granted.'));
+            }
+        };
+        
+        try {
+            googleTokenClient.requestAccessToken({ prompt: forcePrompt ? 'consent' : '' });
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+async function createGoogleTaskList(payload, token, retryCount = 0) {
+    const response = await fetch('https://tasks.googleapis.com/tasks/v1/users/@me/lists', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(payload)
+    });
+    
+    if (response.status === 401 && retryCount === 0) {
+        googleAccessToken = null;
+        const refreshedToken = await ensureGoogleAccessToken(true);
+        return createGoogleTaskList(payload, refreshedToken, retryCount + 1);
+    }
+    
+    if (!response.ok) {
+        const errorBody = await response.json().catch(() => ({}));
+        const message = errorBody && errorBody.error && errorBody.error.message
+            ? errorBody.error.message
+            : 'Google Tasks list creation failed.';
+        throw new Error(message);
+    }
+    
+    return response.json();
+}
+
+async function createGoogleTask(payload, token, listId = '@default', retryCount = 0) {
+    const url = `https://tasks.googleapis.com/tasks/v1/lists/${listId}/tasks`;
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(payload)
+    });
+    
+    if (response.status === 401 && retryCount === 0) {
+        googleAccessToken = null;
+        const refreshedToken = await ensureGoogleAccessToken(true);
+        return createGoogleTask(payload, refreshedToken, listId, retryCount + 1);
+    }
+    
+    if (!response.ok) {
+        const errorBody = await response.json().catch(() => ({}));
+        const message = errorBody && errorBody.error && errorBody.error.message
+            ? errorBody.error.message
+            : 'Google Tasks request failed.';
+        throw new Error(message);
+    }
+    
+    return response.json();
 }
 
 // Register Service Worker for PWA
