@@ -3,6 +3,7 @@ let allRecipes = [];
 let filteredRecipes = [];
 const selectedRecipeNames = new Set();
 let isExportInProgress = false;
+let isSelectionMode = false;
 
 const GOOGLE_TASKS_SCOPE = 'https://www.googleapis.com/auth/tasks';
 let googleScriptPromise = null;
@@ -220,14 +221,27 @@ function displayRecipes() {
             if (e.target.classList.contains('recipe-category') || 
                 e.target.classList.contains('recipe-action-btn') ||
                 e.target.closest('.recipe-actions') ||
-                e.target.classList.contains('recipe-select-checkbox') ||
-                e.target.closest('.recipe-select') ||
                 e.target.classList.contains('recipe-export-inline')) {
                 return;
             }
             
             const recipeName = this.getAttribute('data-recipe-name');
             const isExpanded = this.classList.contains('expanded');
+            
+            // If in selection mode, toggle selection instead of expanding
+            if (isSelectionMode) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (selectedRecipeNames.has(recipeName)) {
+                    selectedRecipeNames.delete(recipeName);
+                    this.classList.remove('selected');
+                } else {
+                    selectedRecipeNames.add(recipeName);
+                    this.classList.add('selected');
+                }
+                updateSelectionUI();
+                return;
+            }
             
             if (isExpanded) {
                 // Collapsing - remove from URL and reset meta tags
@@ -247,22 +261,17 @@ function displayRecipes() {
         });
     });
 
-    // Selection checkboxes
-    grid.querySelectorAll('.recipe-select-checkbox').forEach(checkbox => {
-        const recipeName = checkbox.getAttribute('data-recipe-name');
-        checkbox.checked = selectedRecipeNames.has(recipeName);
-        checkbox.addEventListener('click', (event) => event.stopPropagation());
-        checkbox.addEventListener('change', (event) => {
-            if (event.target.checked) {
-                selectedRecipeNames.add(recipeName);
-            } else {
-                selectedRecipeNames.delete(recipeName);
-            }
-            updateSelectionUI();
-        });
+    // Update selected state on recipe cards
+    grid.querySelectorAll('.recipe-card').forEach(card => {
+        const recipeName = card.getAttribute('data-recipe-name');
+        if (selectedRecipeNames.has(recipeName)) {
+            card.classList.add('selected');
+        } else {
+            card.classList.remove('selected');
+        }
     });
 
-    // Single recipe export buttons
+    // Single recipe export buttons (only visible when expanded)
     grid.querySelectorAll('.recipe-export-inline').forEach(button => {
         button.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -479,11 +488,7 @@ function createRecipeCard(recipe) {
                     <h2 class="recipe-title">${escapeHtml(recipe.name)}</h2>
                 </div>
                 <div class="recipe-header-controls">
-                    <label class="recipe-select">
-                        <input type="checkbox" class="recipe-select-checkbox" data-recipe-name="${escapeHtml(recipe.name)}" ${isSelected ? 'checked' : ''}>
-                        <span>Select</span>
-                    </label>
-                    <button class="recipe-action-btn recipe-export-inline" type="button" data-recipe-name="${escapeHtml(recipe.name)}" title="Export to Google Tasks">Export</button>
+                    <button class="recipe-action-btn recipe-export-inline" type="button" data-recipe-name="${escapeHtml(recipe.name)}" title="Make Shopping List">Make Shopping List</button>
                     <div class="recipe-actions">
                         <button class="recipe-action-btn" onclick="printRecipe('${recipeId}')" title="Print recipe">Print</button>
                         <button class="recipe-action-btn" onclick="shareRecipe('${recipeId}')" title="Share recipe">Share</button>
@@ -931,28 +936,40 @@ function showNotification(message) {
 // Export controls and Google Tasks integration
 function setupExportControls() {
     const exportSelectedButton = document.getElementById('exportSelectedButton');
-    const exportAllButton = document.getElementById('exportAllButton');
-    const selectAllButton = document.getElementById('selectAllButton');
     const clearSelectionButton = document.getElementById('clearSelectionButton');
     
     if (exportSelectedButton) {
-        exportSelectedButton.addEventListener('click', () => exportSelectedRecipes());
-    }
-    if (exportAllButton) {
-        exportAllButton.addEventListener('click', () => exportAllRecipes());
-    }
-    if (selectAllButton) {
-        selectAllButton.addEventListener('click', () => {
-            filteredRecipes.forEach(recipe => selectedRecipeNames.add(recipe.name));
-            updateSelectionUI();
-            syncSelectionCheckboxes();
+        exportSelectedButton.addEventListener('click', () => {
+            if (!isSelectionMode) {
+                // Enter selection mode - collapse all recipes
+                isSelectionMode = true;
+                exportSelectedButton.textContent = 'Create Shopping List';
+                // Collapse all expanded recipe cards
+                document.querySelectorAll('.recipe-card.expanded').forEach(card => {
+                    card.classList.remove('expanded');
+                });
+                // Clear URL hash
+                updateURL(null);
+                updateMetaTags(null);
+                updateSelectionUI();
+            } else {
+                // Create shopping list
+                exportSelectedRecipes();
+            }
         });
     }
     if (clearSelectionButton) {
         clearSelectionButton.addEventListener('click', () => {
             selectedRecipeNames.clear();
+            isSelectionMode = false;
+            document.querySelectorAll('.recipe-card').forEach(card => {
+                card.classList.remove('selected');
+            });
             updateSelectionUI();
-            syncSelectionCheckboxes();
+            const exportSelectedButton = document.getElementById('exportSelectedButton');
+            if (exportSelectedButton) {
+                exportSelectedButton.textContent = 'Make Shopping List';
+            }
         });
     }
     
@@ -970,23 +987,21 @@ function removeStaleSelections() {
         }
     });
     if (mutated) {
-        syncSelectionCheckboxes();
+        // Update selected state on recipe cards
+        document.querySelectorAll('.recipe-card').forEach(card => {
+            const recipeName = card.getAttribute('data-recipe-name');
+            if (selectedRecipeNames.has(recipeName)) {
+                card.classList.add('selected');
+            } else {
+                card.classList.remove('selected');
+            }
+        });
     }
-}
-
-function syncSelectionCheckboxes() {
-    const checkboxes = document.querySelectorAll('.recipe-select-checkbox');
-    checkboxes.forEach(checkbox => {
-        const recipeName = checkbox.getAttribute('data-recipe-name');
-        checkbox.checked = selectedRecipeNames.has(recipeName);
-    });
 }
 
 function updateSelectionUI() {
     const selectedCountEl = document.getElementById('selectedCount');
     const exportSelectedButton = document.getElementById('exportSelectedButton');
-    const exportAllButton = document.getElementById('exportAllButton');
-    const selectAllButton = document.getElementById('selectAllButton');
     const clearSelectionButton = document.getElementById('clearSelectionButton');
     const selectedCount = selectedRecipeNames.size;
     
@@ -996,21 +1011,18 @@ function updateSelectionUI() {
     }
     
     if (exportSelectedButton) {
-        exportSelectedButton.disabled = selectedCount === 0 || isExportInProgress;
-    }
-    if (exportAllButton) {
-        exportAllButton.disabled = isExportInProgress || allRecipes.length === 0;
-    }
-    if (selectAllButton) {
-        selectAllButton.disabled = isExportInProgress || filteredRecipes.length === 0;
+        if (isSelectionMode) {
+            exportSelectedButton.textContent = 'Create Shopping List';
+            exportSelectedButton.disabled = selectedCount === 0 || isExportInProgress;
+        } else {
+            exportSelectedButton.textContent = 'Make Shopping List';
+            exportSelectedButton.disabled = isExportInProgress;
+        }
     }
     if (clearSelectionButton) {
-        clearSelectionButton.disabled = selectedCount === 0 || isExportInProgress;
+        clearSelectionButton.disabled = isExportInProgress;
     }
     
-    document.querySelectorAll('.recipe-select-checkbox').forEach(checkbox => {
-        checkbox.disabled = isExportInProgress;
-    });
     document.querySelectorAll('.recipe-export-inline').forEach(button => {
         button.disabled = isExportInProgress;
     });
@@ -1026,26 +1038,23 @@ async function exportSelectedRecipes() {
     if (isExportInProgress) return;
     const recipes = getRecipesByNames(Array.from(selectedRecipeNames));
     if (!recipes.length) {
-        showNotification('Select at least one recipe to export.');
+        showNotification('Select at least one recipe to create a shopping list.');
         return;
+    }
+    isSelectionMode = false;
+    const exportSelectedButton = document.getElementById('exportSelectedButton');
+    if (exportSelectedButton) {
+        exportSelectedButton.textContent = 'Make Shopping List';
     }
     await exportRecipesToGoogleTasks(recipes, { includeShoppingList: recipes.length > 1 });
 }
 
-async function exportAllRecipes() {
-    if (isExportInProgress) return;
-    if (!allRecipes.length) {
-        showNotification('Recipes are still loading. Please try again.');
-        return;
-    }
-    await exportRecipesToGoogleTasks(allRecipes, { includeShoppingList: allRecipes.length > 1 });
-}
 
 async function exportSingleRecipe(recipeName) {
     if (isExportInProgress || !recipeName) return;
     const recipe = allRecipes.find(r => r.name === recipeName);
     if (!recipe) {
-        showNotification('Unable to find that recipe for export.');
+        showNotification('Unable to find that recipe.');
         return;
     }
     await exportRecipesToGoogleTasks([recipe], { includeShoppingList: false });
@@ -1084,7 +1093,7 @@ async function exportRecipesToGoogleTasks(recipes, options = {}) {
             await createGoogleTask(payload, token);
         }
         
-        showNotification(`Exported ${recipes.length} recipe${recipes.length > 1 ? 's' : ''} to Google Tasks`);
+        showNotification(`Created shopping list for ${recipes.length} recipe${recipes.length > 1 ? 's' : ''} in Google Tasks`);
     } catch (error) {
         console.error('Google Tasks export error:', error);
         const message = error && error.message ? error.message : 'Unable to export recipes.';
