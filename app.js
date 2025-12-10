@@ -1050,7 +1050,7 @@ async function exportSelectedRecipes() {
     if (exportSelectedButton) {
         exportSelectedButton.textContent = 'Make Shopping List';
     }
-    await exportRecipesToGoogleTasks(recipes, { includeShoppingList: recipes.length > 1 });
+    await exportRecipesToGoogleTasks(recipes, { shoppingListOnly: true });
 }
 
 
@@ -1061,7 +1061,7 @@ async function exportSingleRecipe(recipeName) {
         showNotification('Unable to find that recipe.');
         return;
     }
-    await exportRecipesToGoogleTasks([recipe], { includeShoppingList: false });
+    await exportRecipesToGoogleTasks([recipe], { shoppingListOnly: true });
 }
 
 async function exportRecipesToGoogleTasks(recipes, options = {}) {
@@ -1079,25 +1079,61 @@ async function exportRecipesToGoogleTasks(recipes, options = {}) {
         const token = await ensureGoogleAccessToken();
         const tasksPayloads = [];
         
-        if (options.includeShoppingList && recipes.length > 1) {
-            tasksPayloads.push({
-                title: `Shopping List (${recipes.length} recipes)`,
-                notes: buildShoppingListNotes(recipes)
+        if (options.shoppingListOnly) {
+            // Only create shopping list with subtasks for each ingredient
+            const recipeCount = recipes.length;
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Use recipe name if single recipe, otherwise "Shopping List"
+            const listTitle = recipeCount === 1
+                ? `${recipes[0].name} Shopping List (${dateString})`
+                : `Shopping List (${dateString})`;
+            
+            // Create a new task list
+            const taskList = await createGoogleTaskList({
+                title: listTitle
+            }, token);
+            
+            // Get ingredients organized for subtasks
+            const ingredientSubtasks = buildShoppingListSubtasks(recipes);
+            
+            // Create subtasks for each ingredient in the new list
+            for (const ingredient of ingredientSubtasks) {
+                await createGoogleTask({
+                    title: ingredient
+                }, token, taskList.id);
+            }
+            
+            showNotification(`Created shopping list "${listTitle}" with ${ingredientSubtasks.length} items for ${recipeCount} recipe${recipeCount > 1 ? 's' : ''} in Google Tasks`);
+            return;
+        } else {
+            // Legacy behavior: create shopping list + individual recipe tasks
+            if (options.includeShoppingList && recipes.length > 1) {
+                tasksPayloads.push({
+                    title: `Shopping List (${recipes.length} recipes)`,
+                    notes: buildShoppingListNotes(recipes)
+                });
+            }
+            
+            recipes.forEach(recipe => {
+                tasksPayloads.push({
+                    title: recipe.name,
+                    notes: buildRecipeTaskNotes(recipe)
+                });
             });
         }
-        
-        recipes.forEach(recipe => {
-            tasksPayloads.push({
-                title: recipe.name,
-                notes: buildRecipeTaskNotes(recipe)
-            });
-        });
         
         for (const payload of tasksPayloads) {
             await createGoogleTask(payload, token);
         }
         
-        showNotification(`Created shopping list for ${recipes.length} recipe${recipes.length > 1 ? 's' : ''} in Google Tasks`);
+        const recipeCount = recipes.length;
+        showNotification(`Created shopping list for ${recipeCount} recipe${recipeCount > 1 ? 's' : ''} in Google Tasks`);
     } catch (error) {
         console.error('Google Tasks export error:', error);
         const message = error && error.message ? error.message : 'Unable to export recipes.';
@@ -1241,6 +1277,53 @@ function buildShoppingListNotes(recipes) {
     });
     
     return lines.join('\n').trim();
+}
+
+function buildShoppingListSubtasks(recipes) {
+    const entries = collectIngredientEntries(recipes);
+    if (!entries.length) {
+        return [];
+    }
+    
+    const combined = combineIngredientEntries(entries);
+    const useCategories = shouldUseCategorizedList(entries);
+    const subtasks = [];
+    
+    if (!useCategories) {
+        // Simple list - just ingredients
+        return combined.map(item => formatCombinedIngredient(item));
+    }
+    
+    // Grouped by category
+    const grouped = new Map();
+    combined.forEach(item => {
+        const categoryKey = item.normalizedCategory || 'other';
+        const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
+        if (!grouped.has(label)) {
+            grouped.set(label, []);
+        }
+        grouped.get(label).push(item);
+    });
+    
+    // Create subtasks organized by category
+    CATEGORY_GROUPS.forEach(group => {
+        const items = grouped.get(group.label);
+        if (items && items.length) {
+            // Add ingredients for this category
+            items
+                .slice()
+                .sort((a, b) => {
+                    const nameA = (a.parsedName || a.rawText).toLowerCase();
+                    const nameB = (b.parsedName || b.rawText).toLowerCase();
+                    return nameA.localeCompare(nameB);
+                })
+                .forEach(item => {
+                    subtasks.push(formatCombinedIngredient(item));
+                });
+        }
+    });
+    
+    return subtasks;
 }
 
 function combineIngredientEntries(entries) {
@@ -1472,8 +1555,8 @@ async function ensureGoogleAccessToken(forcePrompt = false) {
     });
 }
 
-async function createGoogleTask(payload, token, retryCount = 0) {
-    const response = await fetch('https://tasks.googleapis.com/tasks/v1/lists/@default/tasks', {
+async function createGoogleTaskList(payload, token, retryCount = 0) {
+    const response = await fetch('https://tasks.googleapis.com/tasks/v1/users/@me/lists', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -1485,7 +1568,35 @@ async function createGoogleTask(payload, token, retryCount = 0) {
     if (response.status === 401 && retryCount === 0) {
         googleAccessToken = null;
         const refreshedToken = await ensureGoogleAccessToken(true);
-        return createGoogleTask(payload, refreshedToken, retryCount + 1);
+        return createGoogleTaskList(payload, refreshedToken, retryCount + 1);
+    }
+    
+    if (!response.ok) {
+        const errorBody = await response.json().catch(() => ({}));
+        const message = errorBody && errorBody.error && errorBody.error.message
+            ? errorBody.error.message
+            : 'Google Tasks list creation failed.';
+        throw new Error(message);
+    }
+    
+    return response.json();
+}
+
+async function createGoogleTask(payload, token, listId = '@default', retryCount = 0) {
+    const url = `https://tasks.googleapis.com/tasks/v1/lists/${listId}/tasks`;
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(payload)
+    });
+    
+    if (response.status === 401 && retryCount === 0) {
+        googleAccessToken = null;
+        const refreshedToken = await ensureGoogleAccessToken(true);
+        return createGoogleTask(payload, refreshedToken, listId, retryCount + 1);
     }
     
     if (!response.ok) {
