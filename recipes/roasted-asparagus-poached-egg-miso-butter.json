@@ -8,31 +8,31 @@
   "ingredients": [
     {
       "item": "½ cup shiro (white) miso",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "8 tablespoons (1 stick) unsalted butter, at room temperature, plus more if needed",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "½ pound thin to medium asparagus",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons sherry vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "4 Slow-Poached Eggs or regular poached eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -59,5 +59,11 @@
     "Divide the asparagus among the plates and top each with an egg.",
     "Finish each dish with a few turns of black pepper, and serve at once."
   ],
-  "dateAdded": "2025-12-05T17:19:04.550Z"
+  "dateAdded": "2025-12-05T17:19:04.550Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {},
+  "equipment": [],
+  "techniques": []
 }

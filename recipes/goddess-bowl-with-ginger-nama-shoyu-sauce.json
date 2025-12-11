@@ -8,67 +8,67 @@
   "ingredients": [
     {
       "item": "Serves 4 to 6",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Goddess Bowl",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 cups Quinoa",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1 Avocado",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "sprouted legumes",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "tamari almonds",
-      "category": "International & Specialty"
+      "aisle": "International & Specialty"
     },
     {
       "item": "Kale",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Ginger Nama Shoyu Sauce",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 garlic cloves, chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 inches of fresh peeled ginger, chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 tablespoon of Tamari Sauce (or Nama Shoyu or Soy Sauce)",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 lemons (juiced) (6 tablespoons of lemon juice)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 tablespoons of Tahini (sesame seed butter basically)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 tablespoon of olive oil (or flax oil)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "6 tablespoons of water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     }
   ],
   "instructions": [
@@ -76,5 +76,15 @@
     "Add in the remaining ingredients and blend until you have a creamy consistency.",
     "You may add more water if you would like a less thick sauce."
   ],
-  "dateAdded": "2025-12-05T17:19:11.364Z"
+  "dateAdded": "2025-12-05T17:19:11.364Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

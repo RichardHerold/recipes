@@ -8,23 +8,23 @@
   "ingredients": [
     {
       "item": "1 roll of frozen bread dough (defrosted)",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "Cinnamon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Patties of butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Brown sugar (pinch about a inch worth out of the bag of brown sugar)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Pecans (whole)",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -37,5 +37,15 @@
     "bake at 375 degrees for 20-25 minutes or until the dough is browned",
     "flip upside down onto foil immediately and put onto cooling rack"
   ],
-  "dateAdded": "2025-12-05T17:18:38.557Z"
+  "dateAdded": "2025-12-05T17:18:38.557Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

@@ -8,27 +8,27 @@
   "ingredients": [
     {
       "item": "2 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 ¼ cup (280mL) milk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "140g (1 cup) flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon melted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Pinch Kosher Salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1-2 ½  Tablespoons (8g) sugar (for sweet crepes)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -51,5 +51,15 @@
     "Recipe courtesy of Alton Brown",
     "Read more at: http://www.foodnetwork.com/recipes/alton-brown/crepes-recipe.html?oc=linkback"
   ],
-  "dateAdded": "2025-12-05T17:17:56.946Z"
+  "dateAdded": "2025-12-05T17:17:56.946Z",
+  "tags": [
+    "Breakfast"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 7500,
+    "total": 7515
+  },
+  "equipment": [],
+  "techniques": []
 }

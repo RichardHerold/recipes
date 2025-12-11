@@ -137,6 +137,29 @@ const UNICODE_FRACTIONS = {
     '⅞': '7/8'
 };
 
+const PREP_ACTION_METADATA = {
+    chop: { label: 'Chopping', icon: '🔪' },
+    measure: { label: 'Measuring', icon: '📏' },
+    temper: { label: 'Temper', icon: '🕐' },
+    zest: { label: 'Zesting', icon: '🍋' },
+    grate: { label: 'Grating', icon: '🧀' },
+    sift: { label: 'Sifting', icon: '🌫️' },
+    toast: { label: 'Toasting', icon: '🔥' },
+    drain: { label: 'Draining', icon: '💧' },
+    other: { label: 'Other Prep', icon: '🧂' }
+};
+
+const STORAGE_KEYS = {
+    checklist: 'miseChecklistState',
+    grouping: 'miseGroupingPreference'
+};
+
+const DEFAULT_GROUPING_MODE = 'destination';
+
+let techniqueLibrary = {};
+let recipeMapByName = new Map();
+let miseChecklistState = loadChecklistState();
+
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     loadRecipes();
@@ -149,10 +172,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load all recipe files
 async function loadRecipes() {
     try {
-        // Get list of recipe files
-        const recipesList = await fetchRecipesList();
-        
-        // Load each recipe
+        const [techniques, recipesList] = await Promise.all([
+            loadTechniqueLibrary(),
+            fetchRecipesList()
+        ]);
+
+        techniqueLibrary = techniques || {};
+
         const recipePromises = recipesList.map(filename => 
             fetch(`recipes/${filename}`)
                 .then(res => res.json())
@@ -163,10 +189,13 @@ async function loadRecipes() {
         );
 
         const recipes = await Promise.all(recipePromises);
-        allRecipes = recipes.filter(recipe => recipe !== null);
+        allRecipes = recipes
+            .filter(recipe => recipe !== null)
+            .map(normalizeRecipe);
         
         // Sort alphabetically by name
         allRecipes.sort((a, b) => a.name.localeCompare(b.name));
+        recipeMapByName = new Map(allRecipes.map(recipe => [recipe.name, recipe]));
         
         filteredRecipes = [...allRecipes];
         displayRecipes();
@@ -199,6 +228,18 @@ async function fetchRecipesList() {
     return ['sample-recipe.json'];
 }
 
+async function loadTechniqueLibrary() {
+    try {
+        const response = await fetch('data/techniques.json');
+        if (response.ok) {
+            return response.json();
+        }
+    } catch (error) {
+        console.warn('Unable to load technique library:', error);
+    }
+    return {};
+}
+
 // Display recipes in the grid
 function displayRecipes() {
     const grid = document.getElementById('recipesGrid');
@@ -221,7 +262,8 @@ function displayRecipes() {
             if (e.target.classList.contains('recipe-category') || 
                 e.target.classList.contains('recipe-action-btn') ||
                 e.target.closest('.recipe-actions') ||
-                e.target.classList.contains('recipe-export-inline')) {
+                e.target.classList.contains('recipe-export-inline') ||
+                e.target.closest('.prevent-card-toggle')) {
                 return;
             }
             
@@ -280,10 +322,254 @@ function displayRecipes() {
         });
     });
 
+    grid.querySelectorAll('.recipe-card').forEach(card => {
+        initializeRecipeCardFeatures(card);
+    });
+
     updateSelectionUI();
     
     // Check URL and expand matching recipe
     checkURLAndExpandRecipe();
+}
+
+function initializeRecipeCardFeatures(card) {
+    if (!card) return;
+    const recipeName = card.getAttribute('data-recipe-name');
+    if (!recipeName) return;
+    const recipe = recipeMapByName.get(recipeName);
+    if (!recipe) return;
+    setupInstructionToggle(card, recipe);
+}
+
+
+function setupInstructionToggle(card) {
+    const toggle = card.querySelector('.instructions-view-toggle');
+    const container = card.querySelector('.instructions-views');
+    if (!toggle || !container) return;
+    const buttons = toggle.querySelectorAll('.instructions-view-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const mode = button.getAttribute('data-mode-target');
+            if (!mode || button.classList.contains('active')) return;
+            buttons.forEach(btn => btn.classList.toggle('active', btn === button));
+            container.setAttribute('data-active-mode', mode);
+            container.querySelectorAll('.instructions-view').forEach(view => {
+                view.classList.toggle('active', view.getAttribute('data-mode') === mode);
+            });
+        });
+    });
+}
+
+
+
+function normalizeRecipe(recipe) {
+    if (!recipe || typeof recipe !== 'object') {
+        return recipe;
+    }
+
+    const normalized = { ...recipe };
+    normalized.tags = Array.isArray(recipe.tags) ? recipe.tags.filter(Boolean) : [];
+    if ((!normalized.tags || normalized.tags.length === 0) && recipe.category) {
+        normalized.tags = [recipe.category];
+    }
+    normalized.category = normalized.tags && normalized.tags.length ? normalized.tags[0] : (recipe.category || 'Uncategorized');
+    normalized.slug = createRecipeSlug(recipe.name || '');
+
+    normalized.equipment = normalizeEquipmentList(recipe.equipment);
+    normalized.equipmentMap = normalized.equipment.reduce((map, item) => {
+        if (item.id) {
+            map[item.id] = item;
+        }
+        return map;
+    }, {});
+
+    normalized.miseIngredients = collectMiseIngredients(recipe.ingredients);
+    normalized.hasDestinations = normalized.miseIngredients.some(entry => Boolean(entry.destination));
+    normalized.totalPrepTime = normalized.miseIngredients.reduce((sum, entry) => sum + (entry.prepTime || 0), 0);
+    normalized.techniques = Array.isArray(recipe.techniques) ? recipe.techniques.filter(Boolean) : [];
+    normalized.time = normalizeTimeBreakdown(recipe.time, recipe.prepTime, recipe.cookTime, normalized.totalPrepTime);
+
+    return normalized;
+}
+
+function normalizeEquipmentList(equipment) {
+    if (!Array.isArray(equipment)) {
+        return [];
+    }
+    const seenIds = new Set();
+    return equipment
+        .map((entry, index) => {
+            if (!entry) return null;
+            if (typeof entry === 'string') {
+                const id = generateEquipmentId(entry, index);
+                if (seenIds.has(id)) {
+                    return { name: entry, id: `${id}-${index}`, label: null };
+                }
+                seenIds.add(id);
+                return { name: entry, id, label: null };
+            }
+            if (typeof entry === 'object') {
+                const name = entry.name || entry.label || `Equipment ${index + 1}`;
+                let id = entry.id || (name ? generateEquipmentId(name, index) : null);
+                if (id && seenIds.has(id)) {
+                    id = `${id}-${index}`;
+                }
+                if (id) {
+                    seenIds.add(id);
+                }
+                return {
+                    name,
+                    id,
+                    label: entry.label || null
+                };
+            }
+            return null;
+        })
+        .filter(Boolean);
+}
+
+function generateEquipmentId(name, index) {
+    if (!name) {
+        return `equipment-${index}`;
+    }
+    return name.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '') || `equipment-${index}`;
+}
+
+function collectMiseIngredients(ingredients) {
+    if (!Array.isArray(ingredients)) {
+        return [];
+    }
+    const list = [];
+    let counter = 0;
+    const pushEntry = (entry) => {
+        if (isIngredientSubsection(entry)) {
+            entry.items.forEach(pushEntry);
+            return;
+        }
+        const normalized = normalizeIngredientForMise(entry, counter);
+        if (normalized) {
+            list.push(normalized);
+            counter += 1;
+        }
+    };
+    ingredients.forEach(pushEntry);
+    return list;
+}
+
+function normalizeIngredientForMise(entry, index) {
+    if (!entry) return null;
+    if (typeof entry === 'string') {
+        return buildMiseIngredient(entry.trim(), null, null, null, null, index);
+    }
+    if (typeof entry === 'object' && typeof entry.item === 'string') {
+        return buildMiseIngredient(
+            entry.item.trim(),
+            entry.aisle || entry.category || null,
+            entry.prep || null,
+            entry.prepAction || null,
+            entry.prepTime,
+            index,
+            entry.destination || null
+        );
+    }
+    return null;
+}
+
+function buildMiseIngredient(itemText, aisle, prep, prepAction, prepTimeValue, index, destination = null) {
+    if (!itemText) {
+        return null;
+    }
+    const normalizedAction = normalizePrepAction(prepAction, prep, itemText);
+    const prepTime = parsePrepTime(prepTimeValue);
+    return {
+        key: `ing-${index}`,
+        item: itemText,
+        aisle: aisle || null,
+        prep: prep || null,
+        prepAction: normalizedAction,
+        prepTime,
+        destination: destination || null,
+        label: prep ? `${itemText} — ${prep}` : itemText
+    };
+}
+
+function normalizePrepAction(action, prepText, itemText) {
+    if (action && PREP_ACTION_METADATA[action]) {
+        return action;
+    }
+    const text = `${prepText || ''} ${itemText || ''}`.toLowerCase();
+    if (/chop|dice|mince|slice|julienne/.test(text)) return 'chop';
+    if (/measure|cup|teaspoon|tablespoon/.test(text)) return 'measure';
+    if (/room temperature|temper|soften/.test(text)) return 'temper';
+    if (/zest/.test(text)) return 'zest';
+    if (/grate|shred/.test(text)) return 'grate';
+    if (/sift/.test(text)) return 'sift';
+    if (/toast|roast/.test(text)) return 'toast';
+    if (/drain|strain/.test(text)) return 'drain';
+    return 'other';
+}
+
+function parsePrepTime(value) {
+    if (typeof value === 'number' && value >= 0) {
+        return value;
+    }
+    if (typeof value === 'string') {
+        const numeric = parseFloat(value.replace(/[^\d.]/g, ''));
+        if (!Number.isNaN(numeric)) {
+            return numeric;
+        }
+    }
+    return null;
+}
+
+function normalizeTimeBreakdown(timeMeta, prepTimeText, cookTimeText, aggregatedPrepMinutes = 0) {
+    const result = {
+        prep: null,
+        activeCook: null,
+        passive: null,
+        total: null
+    };
+    if (timeMeta && typeof timeMeta === 'object') {
+        result.prep = typeof timeMeta.prep === 'number' ? timeMeta.prep : (parseFloat(timeMeta.prep) || null);
+        result.activeCook = typeof timeMeta.activeCook === 'number' ? timeMeta.activeCook : (parseFloat(timeMeta.activeCook) || null);
+        result.passive = typeof timeMeta.passive === 'number' ? timeMeta.passive : (parseFloat(timeMeta.passive) || null);
+        result.total = typeof timeMeta.total === 'number' ? timeMeta.total : (parseFloat(timeMeta.total) || null);
+    }
+    if (!result.prep && typeof prepTimeText === 'string') {
+        result.prep = parseTimeStringToMinutes(prepTimeText);
+    }
+    if (!result.activeCook && typeof cookTimeText === 'string') {
+        result.activeCook = parseTimeStringToMinutes(cookTimeText);
+    }
+    if (!result.total) {
+        const parts = [result.prep, result.activeCook, result.passive].filter(value => typeof value === 'number');
+        if (parts.length) {
+            result.total = parts.reduce((sum, value) => sum + value, 0);
+        } else if (aggregatedPrepMinutes) {
+            result.total = aggregatedPrepMinutes;
+        }
+    }
+    if (!result.prep && aggregatedPrepMinutes) {
+        result.prep = aggregatedPrepMinutes;
+    }
+    return result;
+}
+
+function parseTimeStringToMinutes(value) {
+    if (!value || typeof value !== 'string') {
+        return null;
+    }
+    const numeric = parseFloat(value.replace(/[^\d.]/g, ''));
+    if (Number.isNaN(numeric)) {
+        return null;
+    }
+    if (/hour|hr/i.test(value)) {
+        return numeric * 60;
+    }
+    return numeric;
 }
 
 // Render ingredients with support for subsections
@@ -363,7 +649,7 @@ function renderInstructions(instructions) {
     
     // Render items in the order they appear in the JSON
     instructions.forEach(item => {
-        if (typeof item === 'object' && item.subsection && item.items) {
+        if (isInstructionSubsection(item)) {
             // Close any open list before starting a subsection
             if (currentList) {
                 html += '</ol>';
@@ -376,7 +662,10 @@ function renderInstructions(instructions) {
                 <ol class="instructions-list">`;
             
             item.items.forEach(subItem => {
-                html += `<li>${escapeHtml(subItem)}</li>`;
+                const text = extractInstructionText(subItem);
+                if (text) {
+                    html += `<li>${escapeHtml(text)}</li>`;
+                }
             });
             
             html += `</ol></div>`;
@@ -386,7 +675,10 @@ function renderInstructions(instructions) {
                 html += '<ol class="instructions-list">';
                 currentList = true;
             }
-            html += `<li>${escapeHtml(item)}</li>`;
+            const text = extractInstructionText(item);
+            if (text) {
+                html += `<li>${escapeHtml(text)}</li>`;
+            }
         }
     });
     
@@ -396,6 +688,20 @@ function renderInstructions(instructions) {
     }
     
     return html;
+}
+
+function isInstructionSubsection(entry) {
+    return entry && typeof entry === 'object' && entry.subsection && Array.isArray(entry.items);
+}
+
+function extractInstructionText(entry) {
+    if (!entry) return '';
+    if (typeof entry === 'string') return entry;
+    if (typeof entry === 'object') {
+        if (typeof entry.text === 'string') return entry.text;
+        if (typeof entry.step === 'string') return entry.step;
+    }
+    return '';
 }
 
 // Create a slug from recipe name for URL
@@ -469,8 +775,8 @@ function setupURLRouting() {
 // Create HTML for a recipe card
 function createRecipeCard(recipe) {
     const date = recipe.dateAdded ? new Date(recipe.dateAdded).toLocaleDateString() : 'Unknown';
-    const prepTime = recipe.prepTime || 'N/A';
-    const cookTime = recipe.cookTime || 'N/A';
+    const prepTime = getDisplayTimeLabel(recipe, 'prep', 'prepTime');
+    const cookTime = getDisplayTimeLabel(recipe, 'activeCook', 'cookTime');
     const imageHtml = recipe.image ? 
         `<div class="recipe-image-container">
             <img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.name)}" class="recipe-image" onerror="this.style.display='none'">
@@ -480,8 +786,12 @@ function createRecipeCard(recipe) {
     const recipeId = `recipe-${createRecipeSlug(recipe.name)}-${Date.now()}`;
     const isSelected = selectedRecipeNames.has(recipe.name);
     
+    const slug = recipe.slug || createRecipeSlug(recipe.name);
+    const cookView = renderCookView(recipe);
+    const tagLabel = recipe.category || (Array.isArray(recipe.tags) && recipe.tags[0]) || 'Uncategorized';
+
     return `
-        <div class="recipe-card" id="${recipeId}" data-recipe-name="${escapeHtml(recipe.name)}">
+        <div class="recipe-card" id="${recipeId}" data-recipe-name="${escapeHtml(recipe.name)}" data-recipe-slug="${escapeHtml(slug)}">
             ${imageHtml}
             <div class="recipe-header">
                 <div class="recipe-header-main">
@@ -500,23 +810,478 @@ function createRecipeCard(recipe) {
                 <span>Prep: ${prepTime}</span>
                 <span>Cook: ${cookTime}</span>
             </div>
-            <div class="recipe-details">
-                ${recipe.ingredients ? `
-                    <div class="ingredients-section">
-                        <h3>Ingredients</h3>
-                        ${renderIngredients(recipe.ingredients)}
+            <div class="recipe-details prevent-card-toggle">
+                ${cookView}
+            </div>
+            <span class="recipe-category">${escapeHtml(tagLabel)}</span>
+        </div>
+    `;
+}
+
+function renderCookView(recipe) {
+    const ingredientsHtml = recipe.ingredients ? `
+        <div class="ingredients-section">
+            <h3>Ingredients</h3>
+            ${renderIngredients(recipe.ingredients)}
+        </div>` : '';
+
+    const instructionsHtml = renderInstructionsSection(recipe);
+
+    if (!ingredientsHtml && !instructionsHtml) {
+        return `<div class="empty-state">Cooking details coming soon.</div>`;
+    }
+
+    return `
+        <div class="cook-view-grid">
+            ${ingredientsHtml}
+            ${instructionsHtml}
+        </div>
+    `;
+}
+
+function renderEquipmentSection(recipe) {
+    if (!recipe.equipment || !recipe.equipment.length) {
+        return '';
+    }
+    return `
+        <div class="equipment-section">
+            <h3>Equipment</h3>
+            <ul class="equipment-list">
+                ${recipe.equipment.map((item, index) => {
+                    return `
+                        <li>
+                            <span class="equipment-name">${escapeHtml(item.name)}</span>
+                            ${item.label ? `<span class="equipment-label">${escapeHtml(item.label)}</span>` : ''}
+                        </li>
+                    `;
+                }).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderMiseEnPlaceSection(recipe) {
+    if (!recipe.miseIngredients || !recipe.miseIngredients.length) {
+        return '';
+    }
+    
+    const actionGroups = groupIngredientsByAction(recipe);
+    if (!actionGroups.length) {
+        return '';
+    }
+    
+    return `
+        <div class="mise-en-place-section">
+            <h3>Mise en Place</h3>
+            ${actionGroups.map(group => {
+                const meta = PREP_ACTION_METADATA[group.key] || PREP_ACTION_METADATA.other;
+                return `
+                    <div class="mise-action-subsection">
+                        <h4 class="mise-action-title">${meta.icon ? `${meta.icon} ` : ''}${escapeHtml(meta.label)}</h4>
+                        <ol class="mise-action-list">
+                            ${group.items.map(item => {
+                                const prepText = item.prep ? ` — ${escapeHtml(item.prep)}` : '';
+                                const prepTimeText = item.prepTime != null ? ` <span class="mise-prep-time">(${formatMinutes(item.prepTime)} min)</span>` : '';
+                                return `<li>${escapeHtml(item.item)}${prepText}${prepTimeText}</li>`;
+                            }).join('')}
+                        </ol>
                     </div>
-                ` : ''}
-                ${recipe.instructions ? `
-                    <div class="instructions-section">
-                        <h3>Instructions</h3>
-                        ${renderInstructions(recipe.instructions)}
+                `;
+            }).join('')}
+        </div>
+    `;
+}
+
+function renderMiseGroupingControls(recipe, groupingMode) {
+    const disableDestination = !recipe.hasDestinations;
+    return `
+        <div class="mise-group-toggle prevent-card-toggle" role="group" aria-label="Ingredient grouping toggle">
+            <span>Group by</span>
+            <div class="mise-group-buttons">
+                <button type="button" class="mise-group-btn ${groupingMode === 'destination' ? 'active' : ''}" data-group-mode="destination" ${disableDestination ? 'disabled' : ''}>Destination</button>
+                <button type="button" class="mise-group-btn ${groupingMode === 'action' ? 'active' : ''}" data-group-mode="action">Prep action</button>
+            </div>
+        </div>
+    `;
+}
+
+function renderMiseIngredientGroups(recipe, groupingMode) {
+    const groups = groupingMode === 'destination'
+        ? groupIngredientsByDestination(recipe)
+        : groupIngredientsByAction(recipe);
+    if (!groups.length) {
+        return '<p class="empty-state">Add prep metadata to build a mise en place checklist.</p>';
+    }
+
+    return groups.map(group => `
+        <div class="mise-group">
+            <div class="mise-group-header">
+                <div>
+                    <p class="mise-group-title">${group.icon ? `${group.icon} ` : ''}${escapeHtml(group.label)}</p>
+                    ${group.subtitle ? `<p class="mise-group-subtitle">${escapeHtml(group.subtitle)}</p>` : ''}
+                </div>
+                <span class="mise-group-count">${group.items.length} item${group.items.length === 1 ? '' : 's'}</span>
+            </div>
+            <ul class="mise-checklist">
+                ${group.items.map(item => renderMiseIngredientItem(recipe, item)).join('')}
+            </ul>
+        </div>
+    `).join('');
+}
+
+function renderMiseIngredientItem(recipe, item) {
+    const key = `${recipe.slug}::${item.key}`;
+    const prepTimeText = item.prepTime != null ? `🕐 ${formatMinutes(item.prepTime)} min` : '';
+    return `
+        <li>
+            <label class="mise-check-row">
+                <input type="checkbox" class="mise-check" data-type="ingredient" data-key="${escapeHtml(key)}" ${item.prepTime != null ? `data-prep-minutes="${item.prepTime}"` : ''}>
+                <span class="mise-check-label">${escapeHtml(item.label)}</span>
+                ${prepTimeText ? `<span class="mise-check-meta">${prepTimeText}</span>` : ''}
+            </label>
+        </li>
+    `;
+}
+
+function renderMiseEquipmentSection(recipe) {
+    if (!recipe.equipment || !recipe.equipment.length) {
+        return `
+            <div class="mise-section mise-equipment">
+                <h4>Equipment</h4>
+                <p class="empty-state">No equipment metadata yet.</p>
+            </div>
+        `;
+    }
+    return `
+        <div class="mise-section mise-equipment">
+            <h4>Equipment</h4>
+            <ul class="mise-checklist">
+                ${recipe.equipment.map((item, index) => {
+                    const key = `${recipe.slug}::${item.id || `equipment-${index}`}`;
+                    return `
+                        <li>
+                            <label class="mise-check-row">
+                                <input type="checkbox" class="mise-check" data-type="equipment" data-key="${escapeHtml(key)}">
+                                <span class="mise-check-label">${escapeHtml(item.name)}</span>
+                                ${item.label ? `<span class="mise-check-subtext">${escapeHtml(item.label)}</span>` : ''}
+                            </label>
+                        </li>
+                    `;
+                }).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderMiseTechniquesSection(recipe) {
+    if (!recipe.techniques || !recipe.techniques.length) {
+        return '';
+    }
+    return `
+        <div class="mise-section mise-techniques">
+            <h4>Techniques</h4>
+            <ul class="mise-checklist">
+                ${recipe.techniques.map(technique => renderTechniqueChecklistItem(recipe, technique)).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderTechniqueChecklistItem(recipe, techniqueName) {
+    const key = `${recipe.slug}::technique::${techniqueName}`;
+    const normalizedName = (techniqueName || '').toLowerCase();
+    const technique = techniqueLibrary && (techniqueLibrary[normalizedName] || techniqueLibrary[techniqueName]) ? (techniqueLibrary[normalizedName] || techniqueLibrary[techniqueName]) : null;
+    const displayName = technique && technique.label ? technique.label : techniqueName;
+    return `
+        <li>
+            <label class="mise-check-row">
+                <input type="checkbox" class="mise-check" data-type="technique" data-key="${escapeHtml(key)}">
+                <span class="mise-check-label">${escapeHtml(capitalizeWord(displayName))}</span>
+            </label>
+            ${technique ? `
+                <div class="technique-details">
+                    <p class="technique-definition">${escapeHtml(technique.definition)}</p>
+                    ${technique.tips ? `<p class="technique-tips">${escapeHtml(technique.tips)}</p>` : ''}
+                    ${technique.videoUrl ? `<a href="${escapeHtml(technique.videoUrl)}" target="_blank" rel="noopener" class="technique-link">Watch video</a>` : ''}
+                </div>
+            ` : ''}
+        </li>
+    `;
+}
+
+function capitalizeWord(value) {
+    if (!value || typeof value !== 'string') {
+        return '';
+    }
+    return value.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function getTotalMiseItemsCount(recipe) {
+    const ingredientCount = recipe.miseIngredients ? recipe.miseIngredients.length : 0;
+    const equipmentCount = recipe.equipment ? recipe.equipment.length : 0;
+    const techniqueCount = recipe.techniques ? recipe.techniques.length : 0;
+    return ingredientCount + equipmentCount + techniqueCount;
+}
+
+function getIngredientGroupingPreference(recipe) {
+    if (canUseLocalStorage()) {
+        try {
+            const stored = window.localStorage.getItem(STORAGE_KEYS.grouping);
+            if (stored === 'action') {
+                return 'action';
+            }
+            if (stored === 'destination') {
+                return recipe.hasDestinations ? 'destination' : 'action';
+            }
+        } catch (error) {
+            // Ignore storage errors
+        }
+    }
+    return recipe.hasDestinations ? 'destination' : 'action';
+}
+
+function setIngredientGroupingPreference(mode) {
+    if (!canUseLocalStorage()) return;
+    try {
+        window.localStorage.setItem(STORAGE_KEYS.grouping, mode);
+    } catch (error) {
+        // Ignore storage errors
+    }
+}
+
+function groupIngredientsByDestination(recipe) {
+    if (!recipe.miseIngredients || !recipe.miseIngredients.length) {
+        return [];
+    }
+    const groups = [];
+    const equipmentGroups = new Map();
+    recipe.miseIngredients.forEach(item => {
+        const destinationKey = item.destination || '__other__';
+        if (!equipmentGroups.has(destinationKey)) {
+            equipmentGroups.set(destinationKey, []);
+        }
+        equipmentGroups.get(destinationKey).push(item);
+    });
+
+    equipmentGroups.forEach((items, key) => {
+        if (key === '__other__') {
+            groups.push({
+                key,
+                label: 'Other prep',
+                subtitle: 'No equipment assigned',
+                icon: '🧺',
+                items
+            });
+        } else {
+            const equipment = recipe.equipmentMap[key];
+            groups.push({
+                key,
+                label: equipment ? equipment.name : capitalizeWord(key.replace(/[-_]/g, ' ')),
+                subtitle: equipment && equipment.label ? equipment.label : (equipment ? null : 'Assign this destination to equipment'),
+                icon: '📦',
+                items
+            });
+        }
+    });
+
+    return groups;
+}
+
+function groupIngredientsByAction(recipe) {
+    if (!recipe.miseIngredients || !recipe.miseIngredients.length) {
+        return [];
+    }
+    const actionGroups = new Map();
+    recipe.miseIngredients.forEach(item => {
+        const action = item.prepAction && PREP_ACTION_METADATA[item.prepAction] ? item.prepAction : 'other';
+        if (!actionGroups.has(action)) {
+            actionGroups.set(action, []);
+        }
+        actionGroups.get(action).push(item);
+    });
+    return Array.from(actionGroups.entries()).map(([action, items]) => {
+        const meta = PREP_ACTION_METADATA[action] || PREP_ACTION_METADATA.other;
+        return {
+            key: action,
+            label: meta.label,
+            icon: meta.icon,
+            subtitle: null,
+            items
+        };
+    });
+}
+
+function getChecklistForRecipe(recipeId) {
+    if (!recipeId) {
+        return { ingredient: {}, equipment: {}, technique: {} };
+    }
+    if (!miseChecklistState[recipeId]) {
+        miseChecklistState[recipeId] = { ingredient: {}, equipment: {}, technique: {} };
+    }
+    return miseChecklistState[recipeId];
+}
+
+function updateChecklistState(recipeId, type, key, value) {
+    if (!recipeId || !type || !key) return;
+    const state = getChecklistForRecipe(recipeId);
+    if (!state[type]) {
+        state[type] = {};
+    }
+    if (value) {
+        state[type][key] = true;
+    } else {
+        delete state[type][key];
+    }
+    persistChecklistState();
+}
+
+function resetChecklist(recipeId) {
+    if (!recipeId) return;
+    miseChecklistState[recipeId] = { ingredient: {}, equipment: {}, technique: {} };
+    persistChecklistState();
+}
+
+function persistChecklistState() {
+    if (!canUseLocalStorage()) return;
+    try {
+        window.localStorage.setItem(STORAGE_KEYS.checklist, JSON.stringify(miseChecklistState));
+    } catch (error) {
+        // Ignore storage errors
+    }
+}
+
+function loadChecklistState() {
+    if (!canUseLocalStorage()) {
+        return {};
+    }
+    try {
+        const raw = window.localStorage.getItem(STORAGE_KEYS.checklist);
+        if (!raw) {
+            return {};
+        }
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object') {
+            return parsed;
+        }
+    } catch (error) {
+        // Ignore
+    }
+    return {};
+}
+function renderInstructionsSection(recipe) {
+    if (!recipe.instructions || !recipe.instructions.length) {
+        return '';
+    }
+    const defaultInstructions = renderInstructions(recipe.instructions);
+    const workflowGroups = buildEquipmentWorkflowGroups(recipe);
+    const hasWorkflow = workflowGroups.some(group => group.key !== '__general__' && group.steps.length);
+    const workflowHtml = hasWorkflow ? renderEquipmentWorkflow(workflowGroups) : '';
+
+    return `
+        <div class="instructions-section prevent-card-toggle">
+            <h3>Instructions</h3>
+            ${hasWorkflow ? `
+                <div class="instructions-view-toggle prevent-card-toggle" role="group" aria-label="Instruction order toggle">
+                    <button type="button" class="instructions-view-btn active" data-mode-target="order">Recipe order</button>
+                    <button type="button" class="instructions-view-btn" data-mode-target="equipment">Equipment workflow</button>
+                </div>
+            ` : ''}
+            <div class="instructions-views" data-active-mode="order">
+                <div class="instructions-view active" data-mode="order">
+                    ${defaultInstructions}
+                </div>
+                ${hasWorkflow ? `
+                    <div class="instructions-view" data-mode="equipment">
+                        ${workflowHtml}
                     </div>
                 ` : ''}
             </div>
-            <span class="recipe-category">${escapeHtml(recipe.category || 'Uncategorized')}</span>
         </div>
     `;
+}
+
+function buildEquipmentWorkflowGroups(recipe) {
+    if (!recipe || !Array.isArray(recipe.instructions)) {
+        return [];
+    }
+    const steps = extractInstructionSteps(recipe.instructions);
+    if (!steps.length) {
+        return [];
+    }
+    const groups = new Map();
+    steps.forEach((step, index) => {
+        const hasEquipment = step.destination && recipe.equipmentMap && recipe.equipmentMap[step.destination];
+        const key = hasEquipment ? step.destination : '__general__';
+        if (!groups.has(key)) {
+            groups.set(key, []);
+        }
+        groups.get(key).push({
+            ...step,
+            order: index + 1
+        });
+    });
+    return Array.from(groups.entries()).map(([key, items]) => {
+        const equipment = key !== '__general__' ? recipe.equipmentMap[key] || null : null;
+        return {
+            key,
+            equipment,
+            label: equipment ? equipment.name : 'General prep',
+            subtitle: equipment && equipment.label ? equipment.label : (equipment ? 'Equipment workflow' : 'Unassigned steps'),
+            steps: items
+        };
+    });
+}
+
+function renderEquipmentWorkflow(groups) {
+    if (!groups.length) {
+        return '<p class="instructions-empty">No equipment workflow metadata yet.</p>';
+    }
+    const generalGroup = groups.find(group => group.key === '__general__');
+    const equipmentGroups = groups.filter(group => group.key !== '__general__');
+    const orderedGroups = generalGroup ? [...equipmentGroups, generalGroup] : equipmentGroups;
+    return `
+        <div class="equipment-workflow">
+            ${orderedGroups.map(group => `
+                <div class="workflow-group">
+                    <div class="workflow-group-header">
+                        <div>
+                            <p class="workflow-group-title">${escapeHtml(group.label)}</p>
+                            ${group.subtitle ? `<p class="workflow-group-subtitle">${escapeHtml(group.subtitle)}</p>` : ''}
+                        </div>
+                        <span class="workflow-count">${group.steps.length} step${group.steps.length === 1 ? '' : 's'}</span>
+                    </div>
+                    <ol class="workflow-steps">
+                        ${group.steps.map(step => `<li>${escapeHtml(step.text)}</li>`).join('')}
+                    </ol>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function extractInstructionSteps(instructions) {
+    if (!Array.isArray(instructions)) {
+        return [];
+    }
+    const steps = [];
+    const pushStep = (entry, subsectionTitle = null) => {
+        if (isInstructionSubsection(entry)) {
+            entry.items.forEach(item => pushStep(item, entry.subsection || subsectionTitle));
+            return;
+        }
+        const text = extractInstructionText(entry);
+        if (!text) return;
+        const destination = typeof entry === 'object' && entry.destination ? entry.destination : null;
+        const technique = typeof entry === 'object' && entry.technique ? entry.technique : null;
+        steps.push({
+            text,
+            destination,
+            technique,
+            subsection: subsectionTitle
+        });
+    };
+    instructions.forEach(item => pushStep(item, null));
+    return steps;
 }
 
 // Setup search functionality
@@ -553,7 +1318,11 @@ function setupCategoryFilter() {
 function updateCategoryButtons() {
     const categories = new Set();
     allRecipes.forEach(recipe => {
-        if (recipe.category) {
+        if (Array.isArray(recipe.tags) && recipe.tags.length) {
+            recipe.tags.forEach(tag => {
+                if (tag) categories.add(tag);
+            });
+        } else if (recipe.category) {
             categories.add(recipe.category);
         }
     });
@@ -622,7 +1391,8 @@ function filterRecipes() {
     
     filteredRecipes = allRecipes.filter(recipe => {
         // Category filter
-        const categoryMatch = activeCategory === 'all' || recipe.category === activeCategory;
+        const tags = Array.isArray(recipe.tags) ? recipe.tags : (recipe.category ? [recipe.category] : []);
+        const categoryMatch = activeCategory === 'all' || tags.includes(activeCategory);
         
         if (!searchTerm) {
             return categoryMatch;
@@ -1178,8 +1948,13 @@ function flattenInstructionSteps(instructions) {
         if (!entry) return;
         if (typeof entry === 'string') {
             steps.push(entry);
-        } else if (typeof entry === 'object' && Array.isArray(entry.items)) {
+        } else if (isInstructionSubsection(entry)) {
             entry.items.forEach(appendStep);
+        } else if (typeof entry === 'object') {
+            const text = extractInstructionText(entry);
+            if (text) {
+                steps.push(text);
+            }
         }
     };
     instructions.forEach(appendStep);
@@ -1196,7 +1971,7 @@ function collectIngredientEntries(recipes) {
         }
         const text = extractIngredientText(entry);
         if (!text) return;
-        const category = entry && typeof entry === 'object' ? entry.category || null : null;
+        const category = entry && typeof entry === 'object' ? (entry.aisle || entry.category || null) : null;
         entries.push({
             text: text.trim(),
             category,
@@ -1480,6 +2255,31 @@ function formatUnit(unit, quantity) {
         return metadata.plural;
     }
     return metadata.base || unit;
+}
+
+function formatMinutes(value) {
+    if (typeof value !== 'number' || Number.isNaN(value)) {
+        return 0;
+    }
+    return Math.max(0, Math.round(value));
+}
+
+function canUseLocalStorage() {
+    try {
+        return typeof window !== 'undefined' && typeof window.localStorage !== 'undefined';
+    } catch (error) {
+        return false;
+    }
+}
+
+function getDisplayTimeLabel(recipe, timeKey, fallbackField) {
+    if (recipe && recipe.time && typeof recipe.time[timeKey] === 'number') {
+        return `${formatMinutes(recipe.time[timeKey])} min`;
+    }
+    if (fallbackField && recipe && recipe[fallbackField]) {
+        return recipe[fallbackField];
+    }
+    return 'N/A';
 }
 
 function loadGoogleIdentityServices() {

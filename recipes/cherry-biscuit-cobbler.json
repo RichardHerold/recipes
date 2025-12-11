@@ -8,91 +8,91 @@
   "ingredients": [
     {
       "item": "Biscuits",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¼ cup granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 Tbsp. baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tsp. finely grated lemon zest",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tsp. kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 cups all-purpose flour, plus more for surface",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ cup (1 stick) chilled unsalted butter, cut into pieces",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1⅓ cups chilled heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Filling and Assembly",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 lb. fresh (or frozen) sweet cherries, pitted",
-      "category": "Frozen Foods"
+      "aisle": "Frozen Foods"
     },
     {
       "item": "½ cup granulated sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ cup fresh lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 Tbsp. cornstarch",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ tsp. ground cinnamon",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 tsp. vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ tsp. almond extract",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¼ tsp. kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 Tbsp. unsalted butter, melted, slightly cooled",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 Tbsp. raw sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Vanilla ice cream or softly whipped cream (for serving)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Special Equipment",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "A 1½\"-diameter cookie cutter",
-      "category": "Other"
+      "aisle": "Other"
     }
   ],
   "instructions": [
@@ -116,5 +116,15 @@
     "Serve cobbler with ice cream.",
     "Do Ahead: Cobbler can be baked 1 day ahead; store tightly covered at room temperature."
   ],
-  "dateAdded": "2025-12-05T17:17:45.246Z"
+  "dateAdded": "2025-12-05T17:17:45.246Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

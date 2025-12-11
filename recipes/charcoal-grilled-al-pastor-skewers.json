@@ -8,79 +8,79 @@
   "ingredients": [
     {
       "item": "For the Pork:",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 ancho chilies (40g), stemmed and seeded",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 pasilla or guajillo chilies (15g), stemmed and seeded",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 cup (120ml) homemade chicken stock or low-sodium store-bought broth",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 teaspoons (10ml) vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon (2g) dried Mexican oregano",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon (3g) ground cumin",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon (12g) achiote powder or paste",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 chipotle chili in adobo (15g), plus 2 teaspoons (10ml) adobo sauce",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/4 cup (60ml) distilled white vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 1/2 teaspoons (10g) kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons (10g) sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 medium garlic cloves (15g)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 pounds (900g) pork butt, in one piece",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "For the Skewers and Serving:",
-      "category": "Household & Misc"
+      "aisle": "Household & Misc"
     },
     {
       "item": "1 small pineapple (around 2 pounds; 900g), peeled, cored, and cut into 1- by 1/4-inch pieces",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Lime wedges, for serving",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Finely chopped fresh cilantro leaves and tender stems (optional)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Salsa verde, for serving (optional)",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     }
   ],
   "instructions": [
@@ -121,5 +121,14 @@
     "Transfer to serving platter and let rest for 1 to 2 minutes.",
     "Serve immediately, passing lime wedges, as well as cilantro and salsa (if using), at the table."
   ],
-  "dateAdded": "2025-12-05T17:17:07.530Z"
+  "dateAdded": "2025-12-05T17:17:07.530Z",
+  "tags": [
+    "Grilling"
+  ],
+  "time": {
+    "prep": 15,
+    "total": 15
+  },
+  "equipment": [],
+  "techniques": []
 }

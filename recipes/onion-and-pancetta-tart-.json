@@ -8,43 +8,43 @@
   "ingredients": [
     {
       "item": "All-purpose flour, for dusting",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2/3 recipe Walnut Dough (see Note)",
-      "category": "Bakery"
+      "aisle": "Bakery"
     },
     {
       "item": "Extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 ounces pancetta, chopped",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 cups thinly sliced yellow onion (about 1 large)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Heat the oven to 400°F.",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 egg yolk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 cup heavy cream or crème fraîche",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 ounces Gruyère cheese, shredded (1/2 cup)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -70,5 +70,15 @@
     "Bake until the filling is just set, about 20 minutes.",
     "Let the tart cool to warm before cutting and serving."
   ],
-  "dateAdded": "2025-12-05T17:18:18.564Z"
+  "dateAdded": "2025-12-05T17:18:18.564Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

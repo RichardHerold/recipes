@@ -8,55 +8,55 @@
   "ingredients": [
     {
       "item": "1 large onion, finely diced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 shallots, chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 to 6 tablespoons unsalted butter or bacon fat",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 pounds beef chuck, in 1-inch cubes",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 tablespoons all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Kosher salt and black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup Cognac",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "2 cups beef stock",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "½ cup Dijon mustard",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "4 tablespoons whole-grain Dijon mustard",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "4 large carrots, peeled and cut into half-moon slices",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "8 ounces mushrooms, stemmed, cleaned and quartered",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "¼ cup red wine",
-      "category": "Beverages"
+      "aisle": "Beverages"
     }
   ],
   "instructions": [
@@ -94,5 +94,15 @@
     "Stir mushrooms into stew along with remaining mustard and red wine.",
     "Simmer 5 minutes, then taste, and adjust seasoning. Serve hot."
   ],
-  "dateAdded": "2025-12-05T17:19:28.888Z"
+  "dateAdded": "2025-12-05T17:19:28.888Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

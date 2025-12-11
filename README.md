@@ -216,6 +216,7 @@ When multiple recipes are selected, ingredients are:
    - Click **Generate Recipe File**
    - Copy the JSON content or download the file
    - Save the file in the `recipes/` folder with a descriptive name (e.g., `chocolate-chip-cookies.json`)
+   - The form now includes dedicated inputs for prep actions, destination equipment ids, tags, techniques, and a full time breakdown to power Mise en Place mode
 
 2. **Update recipes-index.json**
 
@@ -249,7 +250,7 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
   "ingredients": [
     {
       "item": "Ingredient 1",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Ingredient 2"
@@ -262,22 +263,167 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 
 **Categories:** Appetizer, Main Course, Dessert, Side Dish, Breakfast, Lunch, Dinner, Snack, Beverage, Other
 
-### Ingredient Categories by Grocery Section
+## Recipe Schema
 
-Every ingredient entry can now include a `category` field describing the aisle or section where the item is typically found in a grocery store. This metadata never renders in the UI, but it enables organized shopping lists and future exports.
+The recipe schema supports both the original format and an enhanced format with additional metadata for advanced features. All fields are backward compatible.
 
-- **Format:** `{ "item": "2 cups flour", "category": "Baking & Spices" }`
-- **Optional:** Leave `category` off if you don't want to classify an ingredient.
-- **Fallback:** When a category cannot be determined automatically, label it as `"Other"`.
-- **Recommended sections:** Produce, Meat & Poultry, Seafood, Dairy & Eggs, Bakery, Pantry & Dry Goods, Baking & Spices, Canned & Jarred, Frozen Foods, Condiments & Sauces, International & Specialty, Beverages, Deli & Prepared Foods, Household & Misc, Other.
+### Basic Schema Fields
 
-To retroactively classify existing recipes, run:
+- **`name`** (required): Recipe name
+- **`category`** (required): Primary category (also used as first tag)
+- **`description`** (optional): Recipe description
+- **`prepTime`** (optional): Prep time as string (e.g., "15 minutes")
+- **`cookTime`** (optional): Cook time as string (e.g., "30 minutes")
+- **`image`** (optional): Image URL or path
+- **`ingredients`** (required): Array of ingredient objects or strings
+- **`instructions`** (required): Array of instruction strings or objects
+- **`dateAdded`** (optional): ISO date string
 
-```bash
-node scripts/categorizeIngredients.js
+### Enhanced Schema Fields
+
+The following fields are optional and enable advanced features:
+
+- **`tags`** (optional): Array of strings for filtering. The `category` field automatically becomes the first tag if `tags` is not provided.
+- **`time`** (optional): Object with numeric minutes `{ prep, activeCook, passive, total }`. If not provided, will be parsed from `prepTime` and `cookTime` strings.
+- **`equipment`** (optional): Array of equipment objects `[{ name, id, label }]` for tracking required equipment.
+- **`techniques`** (optional): Array of technique names that match entries in `data/techniques.json`.
+
+### Ingredient Schema
+
+Ingredients can be simple strings or objects with metadata:
+
+**Simple format:**
+
+```json
+"ingredients": ["2 cups flour", "1 cup sugar"]
 ```
 
-The script inspects every recipe in `recipes/` and adds categories when possible (defaulting to `"Other"` when it cannot confidently decide).
+**Object format with aisle:**
+
+```json
+"ingredients": [
+  {
+    "item": "2 cups all-purpose flour",
+    "aisle": "Baking & Spices"
+  }
+]
+```
+
+**Enhanced format with prep metadata:**
+
+```json
+"ingredients": [
+  {
+    "item": "2 cups all-purpose flour",
+    "aisle": "Baking & Spices",
+    "prep": "sifted",
+    "prepAction": "sift",
+    "prepTime": 5,
+    "destination": "bowl-dry"
+  }
+]
+```
+
+**Ingredient fields:**
+
+- **`item`** (required): Ingredient name and quantity
+- **`aisle`** (optional): Grocery store aisle/section (replaces deprecated `category` field)
+- **`prep`** (optional): Prep notes (e.g., "finely chopped", "at room temperature")
+- **`prepAction`** (optional): Prep action type: `chop`, `measure`, `temper`, `zest`, `grate`, `sift`, `toast`, `drain`, `other`
+- **`prepTime`** (optional): Estimated prep time in minutes (number)
+- **`destination`** (optional): Equipment ID where the ingredient should be prepped
+
+**Recommended aisle values:** Produce, Meat & Poultry, Seafood, Dairy & Eggs, Bakery, Pantry & Dry Goods, Baking & Spices, Canned & Jarred, Frozen Foods, Condiments & Sauces, International & Specialty, Beverages, Deli & Prepared Foods, Household & Misc, Other.
+
+### Equipment Schema
+
+Equipment is an array of objects with the following structure:
+
+```json
+"equipment": [
+  {
+    "name": "Large mixing bowl",
+    "id": "bowl-dry",
+    "label": "For dry ingredients"
+  }
+]
+```
+
+**Equipment fields:**
+
+- **`name`** (required): Equipment name
+- **`id`** (optional): Unique identifier for referencing in ingredients/instructions
+- **`label`** (optional): Description or purpose
+
+### Time Schema
+
+Time can be provided as strings or as a structured object:
+
+**String format (backward compatible):**
+
+```json
+{
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes"
+}
+```
+
+**Structured format:**
+
+```json
+{
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "passive": 0,
+    "total": 45
+  }
+}
+```
+
+All time values are in minutes (numbers). If `time` object is provided, it takes precedence over `prepTime`/`cookTime` strings.
+
+### Instruction Schema
+
+Instructions can reference equipment destinations:
+
+**Simple format:**
+
+```json
+"instructions": ["Step 1", "Step 2"]
+```
+
+**Enhanced format with equipment:**
+
+```json
+"instructions": [
+  "Mix dry ingredients",
+  {
+    "text": "Add wet ingredients to bowl",
+    "destination": "bowl-dry"
+  }
+]
+```
+
+**Instruction fields:**
+
+- **`text`** (required if object): Instruction text
+- **`destination`** (optional): Equipment ID where this step occurs
+
+### Migration
+
+To migrate existing recipes to the new schema format, use the migration script:
+
+```bash
+node scripts/migrateRecipes.js --apply
+```
+
+This script will:
+
+- Convert `category` to `tags` array (keeping `category` for backward compatibility)
+- Convert ingredient `category` to `aisle`
+- Parse `prepTime`/`cookTime` strings into `time` object
+- Add empty arrays for `equipment` and `techniques` if missing
 
 ### Using Subsections in Recipes
 
@@ -292,26 +438,26 @@ You can mix regular ingredients with subsections:
   "ingredients": [
     {
       "item": "2 cups all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 cup sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "subsection": "Equipment",
       "items": [
         {
           "item": "Mixing bowl",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         },
         {
           "item": "Whisk",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         },
         {
           "item": "Baking pan",
-          "category": "Household & Misc"
+          "aisle": "Household & Misc"
         }
       ]
     },
@@ -320,11 +466,11 @@ You can mix regular ingredients with subsections:
       "items": [
         {
           "item": "Chocolate chips",
-          "category": "Other"
+          "aisle": "Other"
         },
         {
           "item": "Chopped nuts",
-          "category": "Produce"
+          "aisle": "Produce"
         }
       ]
     }
@@ -367,6 +513,31 @@ You can mix regular instructions with subsections:
 - Each subsection has its own numbered (instructions) or bulleted (ingredients) list
 - Subsection titles are displayed in uppercase with custom styling
 - This feature is backward compatible - existing recipes without subsections will continue to work
+
+### Technique Library
+
+Common techniques are defined in `data/techniques.json`. Each entry includes:
+
+- **`label`**: Display name
+- **`definition`**: Technique description
+- **`tips`**: Helpful tips (optional)
+- **`videoUrl`**: Link to demonstration video (optional)
+
+Update this file to add more entries or customize wording.
+
+### AI Enrichment Workflow
+
+A helper script is available to backfill metadata using the Claude API:
+
+```bash
+# Dry run (no files written)
+ANTHROPIC_API_KEY=sk-... node scripts/enrichRecipes.js recipe-file.json
+
+# Apply changes to every recipe
+ANTHROPIC_API_KEY=sk-... node scripts/enrichRecipes.js --apply
+```
+
+The script sends each recipe to Claude with clear instructions about the desired schema and merges the response into the existing JSON (ingredients stay in order). Use `--apply` only after reviewing the dry-run output. You can target an individual file by passing its filename; otherwise every recipe in `recipes/` is processed.
 
 ### Adding Images to Recipes
 

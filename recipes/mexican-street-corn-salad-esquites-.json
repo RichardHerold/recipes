@@ -8,47 +8,47 @@
   "ingredients": [
     {
       "item": "2 tablespoons vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 cups corn kernels or 4 ears of corn",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons mayonnaise",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "2 ounces feta cheese, finely crumbled",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "½  scallion greens",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½  cup fresh cilantro",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 jalapeño pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 medium cloves garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon fresh juice from 1 lime",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Chili powder or hot chili flakes, to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -76,5 +76,14 @@
     "Add corn to scallion mixture and toss to combine.",
     "Taste and adjust seasoning with salt and more chili powder to taste. Serve immediately."
   ],
-  "dateAdded": "2025-12-05T17:19:06.268Z"
+  "dateAdded": "2025-12-05T17:19:06.268Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "total": 15
+  },
+  "equipment": [],
+  "techniques": []
 }

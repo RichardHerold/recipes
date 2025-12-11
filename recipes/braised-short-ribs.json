@@ -8,51 +8,51 @@
   "ingredients": [
     {
       "item": "2 quarts veal and/or beef stock",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "8 pounds beef short ribs (with bone)",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "Salt and black pepper, to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 cups flour Canola oil, as needed",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 large carrot, finely diced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 large Spanish onion, finely diced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 stalks celery, finely diced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 ½ cups red wine, any variety except sweet",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "2 cups balsamic vinegar",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "1 cup brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 tablespoons finely chopped fresh rosemary leaves, plus additional sprigs for garnish",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 whole hot chile pepper (fresh or dried)",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -76,5 +76,15 @@
     "Cover the roasting pan with foil and bake for 21/2 hours, or until the meat is tender and easily falls away from the bone.",
     "To serve, gently remove the ribs from the braising liquid and place on a serving plate (use a shallow bowl or plate with a raised rim). Ladle some of the braising sauce over the ribs and garnish with a fresh rosemary sprig. Serve with mashed potatoes and a sautéed green vegetable."
   ],
-  "dateAdded": "2025-12-05T17:17:39.537Z"
+  "dateAdded": "2025-12-05T17:17:39.537Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

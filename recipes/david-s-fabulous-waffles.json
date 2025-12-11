@@ -8,63 +8,63 @@
   "ingredients": [
     {
       "item": "Waffle Batter",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 ½ cups all-purpose flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 rounded tablespoon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¾ teaspoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 ½ cups buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "3 medium size eggs or 2 jumbo eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¼ teaspoon vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ stick butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Toppings",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Fresh Strawberries",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Fresh Blueberries",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Maple Syrup",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Whipped Cream (preferably homemade with vanilla and cognac or bourbon mixed in)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -79,5 +79,15 @@
     "Let sit for 5 mins before using.",
     "Serve with whipped cream, maple syrup, sliced strawberries and blueberries."
   ],
-  "dateAdded": "2025-12-05T17:18:02.562Z"
+  "dateAdded": "2025-12-05T17:18:02.562Z",
+  "tags": [
+    "Breakfast"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

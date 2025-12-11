@@ -8,35 +8,41 @@
   "ingredients": [
     {
       "item": "1 shoulder tender steak",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1-2 sprigs rosemary chopped (about 1 tbsp worth)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2-4 sprigs thyme chopped (about 1 tbsp worth)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 teaspoon granulated garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 teaspoons salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1-2 tablespoons butter for cooking",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
     "Rub the chopped rosemary, thyme, garlic, salt, and pepper onto the shoulder tender. Heat a pan to medium high heat and grease with 1 tablespoon of butter. Place the shoulder tender in the pan and pan fry for about 10-15 minutes, flipping occasionally as needed and adding more butter if the pan dries out. Cook to 130 for rare, 135 for medium rare, and 140 for well done."
   ],
-  "dateAdded": "2025-12-05T17:19:23.172Z"
+  "dateAdded": "2025-12-05T17:19:23.172Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {},
+  "equipment": [],
+  "techniques": []
 }

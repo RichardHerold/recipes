@@ -8,31 +8,31 @@
   "ingredients": [
     {
       "item": "7 fresh littleneck clams",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "2 tablespoons olive oil, divided",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 cloves garlic, chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup clam juice",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "2 tablespoons dry white wine",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "4 ounces uncooked spaghetti",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Chopped fresh parsley, to taste",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -49,5 +49,15 @@
     "Drain the spaghetti, adding it to the pan and tossing together.",
     "Sprin-kle with parsley and drizzle with the remaining tablespoon of olive oil."
   ],
-  "dateAdded": "2025-12-05T17:17:48.747Z"
+  "dateAdded": "2025-12-05T17:17:48.747Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

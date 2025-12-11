@@ -8,7 +8,7 @@
   "ingredients": [
     {
       "item": "4 boneless duck breasts, 5-6 ounces each\r2 cups vegetable oil\r6 shallots, finely sliced (about 1 cup)\rKosher salt and freshly cracked black pepper\rToasted and ground Sichuan peppercorns",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -21,5 +21,15 @@
     "Place breasts skin side-down in heavy-bottomed 12-inch non-stick or cast iron skillet and set over high heat until sizzling, about 2 minutes. Reduce heat to medium and cook, moving and pressing breasts to ensure good contact between skin and pan until golden brown and crisp, about 5 minutes. Flip and cook second side until barely covered, about 30 seconds. Transfer to paper towel-lined plate and allow to rest for 5 minutes.",
     "Slice breasts crosswise into 1/2-inch strips and serve, topping with fried shallots and Sichuan peppercorns."
   ],
-  "dateAdded": "2025-12-05T17:18:58.118Z"
+  "dateAdded": "2025-12-05T17:18:58.118Z",
+  "tags": [
+    "Poultry"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

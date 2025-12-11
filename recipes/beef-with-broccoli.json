@@ -124,5 +124,15 @@
       ]
     }
   ],
-  "dateAdded": "2025-12-05T17:19:24.926Z"
+  "dateAdded": "2025-12-05T17:19:24.926Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

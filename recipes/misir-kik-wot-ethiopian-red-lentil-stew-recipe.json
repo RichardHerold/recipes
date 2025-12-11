@@ -8,31 +8,31 @@
   "ingredients": [
     {
       "item": "1½ cups red lentils",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1 large finely chopped onion",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cloves minced garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tbsp berbere",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 tbsp niter kibbeh (Ethiopian clarified butter)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 cups water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1 tsp sweet paprika",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -42,5 +42,15 @@
     "Add berbere and a little bit more water so as to keep the Wot from sticking.\rThen add the lentils you cooked before, and cook them all together at low heat for about 30 more minutes, until you see the lentils disintegrate.",
     "Finally, add the sweet paprika to give the Misir Wot its signature reddish color."
   ],
-  "dateAdded": "2025-12-05T17:17:25.594Z"
+  "dateAdded": "2025-12-05T17:17:25.594Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }
