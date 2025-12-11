@@ -554,6 +554,161 @@ main {
     }
 }
 
+.cook-view-grid .full-width-block {
+    grid-column: 1 / -1;
+}
+
+.servings-section {
+    border: 1px solid var(--border-color);
+    background-color: #faf9f5;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.servings-stepper-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.servings-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.servings-stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+.servings-btn {
+    border: none;
+    background-color: transparent;
+    padding: 0.2rem 0.65rem;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.servings-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.servings-value {
+    min-width: 2.75rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.servings-unit,
+.servings-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.servings-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.servings-preset-btn {
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+}
+
+.servings-preset-btn.active {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.servings-preset-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.servings-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.servings-scaled-badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-color);
+}
+
+.servings-reset-btn {
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.85rem;
+    cursor: pointer;
+}
+
+.servings-reset-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.scale-warning-box {
+    border: 1px solid #e1c048;
+    background-color: #fffbea;
+    padding: 1rem 1.25rem;
+    color: #5b4208;
+}
+
+.scale-warning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.scale-warning-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.scale-warning-dismiss {
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #b4840a;
+    line-height: 1;
+}
+
+.scale-warning-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 .ingredients-section,
 .instructions-section {
     margin-bottom: 0;
@@ -627,6 +782,28 @@ main {
     font-size: 1rem;
 }
 
+.ingredient-line {
+    display: inline;
+}
+
+.ingredient-line-flagged {
+    font-weight: 600;
+}
+
+.ingredient-flag {
+    margin-left: 0.4rem;
+    color: #b75d0c;
+    font-size: 0.85rem;
+}
+
+.ingredient-note {
+    display: block;
+    margin-left: 1.5rem;
+    font-size: 0.8rem;
+    color: #9c5b00;
+    font-style: italic;
+}
+
 .instructions-list {
     list-style: none;
     counter-reset: step-counter;
@@ -656,6 +833,13 @@ main {
     font-size: 0.95rem;
     line-height: inherit;
     font-style: italic;
+}
+
+.instruction-scale-note {
+    display: block;
+    font-size: 0.8rem;
+    color: #b75d0c;
+    margin-top: 0.25rem;
 }
 
 .instruction-subsection {
