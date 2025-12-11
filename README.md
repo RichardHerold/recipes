@@ -216,6 +216,7 @@ When multiple recipes are selected, ingredients are:
    - Click **Generate Recipe File**
    - Copy the JSON content or download the file
    - Save the file in the `recipes/` folder with a descriptive name (e.g., `chocolate-chip-cookies.json`)
+   - The form now includes dedicated inputs for prep actions, destination equipment ids, tags, techniques, and a full time breakdown to power Mise en Place mode
 
 2. **Update recipes-index.json**
 
@@ -367,6 +368,38 @@ You can mix regular instructions with subsections:
 - Each subsection has its own numbered (instructions) or bulleted (ingredients) list
 - Subsection titles are displayed in uppercase with custom styling
 - This feature is backward compatible - existing recipes without subsections will continue to work
+
+## Mise en Place Mode
+
+Toggle between **Cook** and **Mise en Place** views on every recipe card to prep ingredients, equipment, and techniques before you start cooking. The checklist groups items either by destination equipment or by prep action, persists your progress in `localStorage`, surfaces estimated prep time, and highlights techniques with helpful definitions.
+
+### Schema highlights
+
+- **Ingredients** now support `aisle`, `prep`, `prepAction`, `prepTime`, and optional `destination` equipment ids.
+- **Equipment** is an array of objects (`{ name, id, label }`) so ingredients and steps can reference prep vessels or pans.
+- **Time** data is stored as a breakdown `{ prep, activeCook, passive, total }` (minutes).
+- **Tags** replace the single `category`—the selected category becomes the first tag automatically, and you can add extras for filtering.
+- **Techniques** list the key verbs used in the recipe and map to the shared library for in-app tooltips.
+
+All of these fields can be captured through the updated `admin.html` form. Fill in the grocery aisle, prep action, and destination id for each ingredient, link instructions to equipment where it makes sense, and add any important techniques so cooks see what to practice ahead of time.
+
+### Technique library
+
+Common techniques live in `data/techniques.json`. Each entry includes a label, definition, tips, and optional `videoUrl`. Update this file to add more entries or customize wording—the Mise en Place panel automatically pulls from it.
+
+### AI enrichment workflow
+
+A helper script is available to backfill the new metadata with the Claude API:
+
+```bash
+# Dry run (no files written)
+ANTHROPIC_API_KEY=sk-... node scripts/enrichRecipes.js recipe-file.json
+
+# Apply changes to every recipe
+ANTHROPIC_API_KEY=sk-... node scripts/enrichRecipes.js --apply
+```
+
+The script sends each recipe to Claude with clear instructions about the desired schema and merges the response into the existing JSON (ingredients stay in order). Use `--apply` only after reviewing the dry-run output. You can target an individual file by passing its filename; otherwise every recipe in `recipes/` is processed.
 
 ### Adding Images to Recipes
 

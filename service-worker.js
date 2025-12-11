@@ -9,6 +9,7 @@ const PRECACHE_ASSETS = [
   '/styles.css',
   '/app.js',
   '/recipes-index.json',
+  '/data/techniques.json',
   '/manifest.json'
 ];
 

@@ -1,240 +1,328 @@
-// Admin page functionality
-let ingredients = [];
-let instructions = [];
+const PREP_ACTION_CHOICES = [
+  { value: '', label: 'Prep action' },
+  { value: 'chop', label: 'Chop' },
+  { value: 'measure', label: 'Measure' },
+  { value: 'temper', label: 'Temper' },
+  { value: 'zest', label: 'Zest' },
+  { value: 'grate', label: 'Grate' },
+  { value: 'sift', label: 'Sift' },
+  { value: 'toast', label: 'Toast' },
+  { value: 'drain', label: 'Drain' },
+  { value: 'other', label: 'Other' }
+];
+
+let currentRecipe = null;
+let currentFilename = 'recipe';
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupForm();
-    addIngredient();
-    addInstruction();
+  setupForm();
+  addIngredient();
+  addInstruction();
+  addEquipment();
 });
 
 function setupForm() {
-    const form = document.getElementById('recipeForm');
-    form.addEventListener('submit', handleSubmit);
-    
-    document.getElementById('addIngredient').addEventListener('click', addIngredient);
-    document.getElementById('addInstruction').addEventListener('click', addInstruction);
-    document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
-    document.getElementById('downloadBtn').addEventListener('click', downloadFile);
+  const form = document.getElementById('recipeForm');
+  form.addEventListener('submit', handleSubmit);
+
+  document.getElementById('addIngredient').addEventListener('click', () => addIngredient());
+  document.getElementById('addInstruction').addEventListener('click', () => addInstruction());
+  document.getElementById('addEquipment').addEventListener('click', () => addEquipment());
+  document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
+  document.getElementById('downloadBtn').addEventListener('click', downloadFile);
 }
 
-function addIngredient(existing = { item: '', category: '' }) {
-    const ingredientsList = document.getElementById('ingredientsList');
-    const index = ingredients.length;
-    
-    const ingredientDiv = document.createElement('div');
-    ingredientDiv.className = 'ingredient-input';
-    ingredientDiv.innerHTML = `
-        <input type="text" 
-               class="ingredient-field" 
-               placeholder="e.g., 2 cups flour"
-               data-index="${index}"
-               value="${existing.item || ''}">
-        <input type="text"
-               class="ingredient-category-field"
-               placeholder="Category (optional)"
-               list="ingredientCategoryList"
-               data-index="${index}"
-               value="${existing.category || ''}">
-        <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
-    `;
-    
-    ingredientsList.appendChild(ingredientDiv);
-    
-    const itemInput = ingredientDiv.querySelector('.ingredient-field');
-    const categoryInput = ingredientDiv.querySelector('.ingredient-category-field');
-    
-    const handleInput = (inputEl, field) => {
-        inputEl.addEventListener('input', (e) => {
-            const idx = parseInt(e.target.getAttribute('data-index'));
-            ingredients[idx] = ingredients[idx] || { item: '', category: '' };
-            ingredients[idx][field] = e.target.value;
-        });
-    };
-    
-    handleInput(itemInput, 'item');
-    handleInput(categoryInput, 'category');
-    
-    ingredientDiv.querySelector('.remove-btn').addEventListener('click', () => {
-        const idx = parseInt(itemInput.getAttribute('data-index'));
-        ingredients.splice(idx, 1);
-        ingredientDiv.remove();
-        updateIngredientIndices();
-    });
-    
-    ingredients.push({
-        item: existing.item || '',
-        category: existing.category || ''
-    });
+function addIngredient(existing = {}) {
+  const list = document.getElementById('ingredientsList');
+  const wrapper = document.createElement('div');
+  wrapper.className = 'ingredient-input';
+  wrapper.innerHTML = `
+    <div class="ingredient-row">
+      <input type="text" class="ingredient-field" placeholder="e.g., 2 cups flour" data-field="item" value="${escapeInput(existing.item || '')}">
+      <input type="text" class="ingredient-aisle-field" placeholder="Aisle" list="ingredientCategoryList" data-field="aisle" value="${escapeInput(existing.aisle || existing.category || '')}">
+    </div>
+    <div class="ingredient-row ingredient-meta">
+      <input type="text" class="ingredient-prep-field" placeholder="Prep notes (e.g., finely chopped)" data-field="prep" value="${escapeInput(existing.prep || '')}">
+      <select class="ingredient-action-field" data-field="prepAction">
+        ${buildPrepActionOptions(existing.prepAction || '')}
+      </select>
+      <input type="number" class="ingredient-preptime-field" placeholder="Minutes" min="0" data-field="prepTime" value="${escapeInput(existing.prepTime || '')}">
+      <input type="text" class="ingredient-destination-field" placeholder="Destination id" data-field="destination" value="${escapeInput(existing.destination || '')}">
+    </div>
+    <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
+  `;
+
+  wrapper.querySelector('.remove-btn').addEventListener('click', () => {
+    wrapper.remove();
+  });
+
+  list.appendChild(wrapper);
 }
 
-function addInstruction() {
-    const instructionsList = document.getElementById('instructionsList');
-    const index = instructions.length;
-    
-    const instructionDiv = document.createElement('div');
-    instructionDiv.className = 'instruction-input';
-    instructionDiv.innerHTML = `
-        <textarea class="instruction-field" 
-                  placeholder="e.g., Preheat oven to 350°F"
-                  data-index="${index}"></textarea>
-        <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
-    `;
-    
-    instructionsList.appendChild(instructionDiv);
-    
-    const textarea = instructionDiv.querySelector('.instruction-field');
-    textarea.addEventListener('input', (e) => {
-        const idx = parseInt(e.target.getAttribute('data-index'));
-        instructions[idx] = e.target.value;
-    });
-    
-    instructionDiv.querySelector('.remove-btn').addEventListener('click', () => {
-        const idx = parseInt(textarea.getAttribute('data-index'));
-        instructions.splice(idx, 1);
-        instructionDiv.remove();
-        updateInstructionIndices();
-    });
-    
-    instructions.push('');
+function addInstruction(existing = {}) {
+  const list = document.getElementById('instructionsList');
+  const wrapper = document.createElement('div');
+  wrapper.className = 'instruction-input';
+  wrapper.innerHTML = `
+    <textarea class="instruction-field" placeholder="e.g., Preheat oven to 350°F" data-field="text">${escapeInput(existing.text || '')}</textarea>
+    <input type="text" class="instruction-destination-field" placeholder="Destination id (optional)" data-field="destination" value="${escapeInput(existing.destination || '')}">
+    <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
+  `;
+
+  wrapper.querySelector('.remove-btn').addEventListener('click', () => {
+    wrapper.remove();
+  });
+
+  list.appendChild(wrapper);
 }
 
-function updateIngredientIndices() {
-    const wrappers = document.querySelectorAll('.ingredient-input');
-    ingredients = [];
-    wrappers.forEach((wrapper, idx) => {
-        const itemInput = wrapper.querySelector('.ingredient-field');
-        const categoryInput = wrapper.querySelector('.ingredient-category-field');
-        
-        if (itemInput) {
-            itemInput.setAttribute('data-index', idx);
-        }
-        
-        if (categoryInput) {
-            categoryInput.setAttribute('data-index', idx);
-        }
-        
-        ingredients[idx] = {
-            item: itemInput ? itemInput.value : '',
-            category: categoryInput ? categoryInput.value : ''
-        };
-    });
+function addEquipment(existing = {}) {
+  const list = document.getElementById('equipmentList');
+  const wrapper = document.createElement('div');
+  wrapper.className = 'equipment-input';
+  wrapper.innerHTML = `
+    <div class="equipment-row">
+      <input type="text" class="equipment-field" placeholder="Equipment name" data-field="name" value="${escapeInput(existing.name || '')}">
+      <input type="text" class="equipment-field" placeholder="Equipment id (optional)" data-field="id" value="${escapeInput(existing.id || '')}">
+      <input type="text" class="equipment-field" placeholder="Label or purpose" data-field="label" value="${escapeInput(existing.label || '')}">
+    </div>
+    <button type="button" class="btn btn-danger btn-small remove-btn">Remove</button>
+  `;
+
+  wrapper.querySelector('.remove-btn').addEventListener('click', () => {
+    wrapper.remove();
+  });
+
+  list.appendChild(wrapper);
 }
 
-function updateInstructionIndices() {
-    const textareas = document.querySelectorAll('.instruction-field');
-    instructions = [];
-    textareas.forEach((textarea, idx) => {
-        textarea.setAttribute('data-index', idx);
-        instructions[idx] = textarea.value;
-    });
-}
+function handleSubmit(event) {
+  event.preventDefault();
 
-function handleSubmit(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('recipeName').value.trim();
-    const category = document.getElementById('recipeCategory').value.trim();
-    const description = document.getElementById('recipeDescription').value.trim();
-    const prepTime = document.getElementById('prepTime').value.trim();
-    const cookTime = document.getElementById('cookTime').value.trim();
-    const image = document.getElementById('recipeImage').value.trim();
-    
-    // Filter out empty ingredients and instructions
-    const filteredIngredients = ingredients
-        .map(ing => {
-            if (!ing) return null;
-            if (typeof ing === 'string') {
-                const text = ing.trim();
-                return text ? { item: text } : null;
-            }
-            const item = (ing.item || '').trim();
-            const category = (ing.category || '').trim();
-            if (!item) return null;
-            const normalized = { item };
-            if (category) {
-                normalized.category = category;
-            }
-            return normalized;
-        })
-        .filter(ing => ing && ing.item);
-    const filteredInstructions = instructions.filter(inst => inst.trim() !== '');
-    
-    // Validation
-    if (!name || !category) {
-        alert('Please fill in recipe name and category.');
-        return;
+  const name = document.getElementById('recipeName').value.trim();
+  const category = document.getElementById('recipeCategory').value.trim();
+  const description = document.getElementById('recipeDescription').value.trim();
+  const image = document.getElementById('recipeImage').value.trim();
+  const tagsInput = document.getElementById('recipeTags').value.trim();
+  const techniquesInput = document.getElementById('recipeTechniques').value.trim();
+
+  const time = buildTimePayload(
+    document.getElementById('timePrep').value,
+    document.getElementById('timeActive').value,
+    document.getElementById('timePassive').value,
+    document.getElementById('timeTotal').value
+  );
+
+  const ingredients = collectIngredientPayloads();
+  const instructions = collectInstructionPayloads();
+  const equipment = collectEquipmentPayloads();
+  const tags = buildTags(category, tagsInput);
+  const techniques = parseCSV(techniquesInput);
+
+  if (!name || !category) {
+    alert('Please fill in recipe name and category.');
+    return;
+  }
+
+  if (!ingredients.length) {
+    alert('Please add at least one ingredient.');
+    return;
+  }
+
+  if (!instructions.length) {
+    alert('Please add at least one instruction.');
+    return;
+  }
+
+  const recipe = {
+    name,
+    category,
+    tags: tags.length ? tags : undefined,
+    description: description || undefined,
+    image: image || undefined,
+    ingredients,
+    instructions,
+    dateAdded: new Date().toISOString()
+  };
+
+  if (equipment.length) {
+    recipe.equipment = equipment;
+  }
+
+  if (techniques.length) {
+    recipe.techniques = techniques;
+  }
+
+  if (Object.keys(time).length) {
+    recipe.time = time;
+    if (typeof time.prep === 'number') {
+      recipe.prepTime = `${time.prep} minutes`;
     }
-    
-    if (filteredIngredients.length === 0) {
-        alert('Please add at least one ingredient.');
-        return;
+    if (typeof time.activeCook === 'number') {
+      recipe.cookTime = `${time.activeCook} minutes`;
     }
-    
-    if (filteredInstructions.length === 0) {
-        alert('Please add at least one instruction.');
-        return;
+  }
+
+  const json = JSON.stringify(recipe, null, 2);
+  currentRecipe = recipe;
+  currentFilename = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  window.currentRecipe = recipe;
+  window.currentRecipeName = currentFilename;
+
+  const output = document.getElementById('recipeJson');
+  output.value = json;
+  document.getElementById('fileOutput').style.display = 'block';
+  document.getElementById('successMessage').classList.add('show');
+  document.getElementById('fileOutput').scrollIntoView({ behavior: 'smooth' });
+}
+
+function collectIngredientPayloads() {
+  const nodes = document.querySelectorAll('.ingredient-input');
+  return Array.from(nodes).map(node => {
+    const item = node.querySelector('[data-field="item"]').value.trim();
+    if (!item) {
+      return null;
     }
-    
-    // Create recipe object
-    const recipe = {
-        name: name,
-        category: category,
-        description: description || undefined,
-        prepTime: prepTime || undefined,
-        cookTime: cookTime || undefined,
-        image: image || undefined,
-        ingredients: filteredIngredients,
-        instructions: filteredInstructions,
-        dateAdded: new Date().toISOString()
-    };
-    
-    // Generate JSON
-    const json = JSON.stringify(recipe, null, 2);
-    
-    // Display output
-    document.getElementById('recipeJson').value = json;
-    document.getElementById('fileOutput').style.display = 'block';
-    document.getElementById('successMessage').classList.add('show');
-    
-    // Scroll to output
-    document.getElementById('fileOutput').scrollIntoView({ behavior: 'smooth' });
-    
-    // Store recipe for download
-    window.currentRecipe = recipe;
-    window.currentRecipeName = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const payload = { item };
+    const aisle = node.querySelector('[data-field="aisle"]').value.trim();
+    const prep = node.querySelector('[data-field="prep"]').value.trim();
+    const prepAction = node.querySelector('[data-field="prepAction"]').value;
+    const prepTimeValue = node.querySelector('[data-field="prepTime"]').value.trim();
+    const destination = node.querySelector('[data-field="destination"]').value.trim();
+
+    if (aisle) payload.aisle = aisle;
+    if (prep) payload.prep = prep;
+    if (prepAction) payload.prepAction = prepAction;
+    if (prepTimeValue) {
+      const minutes = Number(prepTimeValue);
+      if (!Number.isNaN(minutes)) {
+        payload.prepTime = minutes;
+      }
+    }
+    if (destination) payload.destination = destination;
+    return payload;
+  }).filter(Boolean);
+}
+
+function collectInstructionPayloads() {
+  const nodes = document.querySelectorAll('.instruction-input');
+  return Array.from(nodes).map(node => {
+    const text = node.querySelector('[data-field="text"]').value.trim();
+    if (!text) {
+      return null;
+    }
+    const destination = node.querySelector('[data-field="destination"]').value.trim();
+    if (destination) {
+      return { text, destination };
+    }
+    return text;
+  }).filter(Boolean);
+}
+
+function collectEquipmentPayloads() {
+  const nodes = document.querySelectorAll('.equipment-input');
+  return Array.from(nodes).map(node => {
+    const name = node.querySelector('[data-field="name"]').value.trim();
+    if (!name) {
+      return null;
+    }
+    const payload = { name };
+    const id = node.querySelector('[data-field="id"]').value.trim();
+    const label = node.querySelector('[data-field="label"]').value.trim();
+    if (id) payload.id = id;
+    if (label) payload.label = label;
+    return payload;
+  }).filter(Boolean);
+}
+
+function buildPrepActionOptions(selected) {
+  return PREP_ACTION_CHOICES.map(choice => {
+    const isSelected = choice.value === selected ? 'selected' : '';
+    return `<option value="${choice.value}" ${isSelected}>${choice.label}</option>`;
+  }).join('');
+}
+
+function buildTags(category, extraTags) {
+  const base = category ? [category] : [];
+  const extras = parseCSV(extraTags);
+  return Array.from(new Set([...base, ...extras]));
+}
+
+function buildTimePayload(prep, active, passive, total) {
+  const payload = {};
+  const prepValue = sanitizeNumber(prep);
+  const activeValue = sanitizeNumber(active);
+  const passiveValue = sanitizeNumber(passive);
+  const totalValue = sanitizeNumber(total);
+
+  if (prepValue != null) payload.prep = prepValue;
+  if (activeValue != null) payload.activeCook = activeValue;
+  if (passiveValue != null) payload.passive = passiveValue;
+  if (totalValue != null) payload.total = totalValue;
+
+  return payload;
+}
+
+function sanitizeNumber(value) {
+  if (!value && value !== 0) {
+    return null;
+  }
+  const numeric = Number(value);
+  return Number.isNaN(numeric) ? null : numeric;
+}
+
+function parseCSV(value) {
+  if (!value) {
+    return [];
+  }
+  return value
+    .split(',')
+    .map(item => item.trim())
+    .filter(Boolean)
+    .map(tag => tag.toLowerCase());
 }
 
 function copyToClipboard() {
-    const textarea = document.getElementById('recipeJson');
-    textarea.select();
-    document.execCommand('copy');
-    
-    const btn = document.getElementById('copyBtn');
-    const originalText = btn.textContent;
-    btn.textContent = 'Copied!';
-    btn.style.backgroundColor = '#2ecc71';
-    
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.backgroundColor = '';
-    }, 2000);
+  const textarea = document.getElementById('recipeJson');
+  textarea.select();
+  document.execCommand('copy');
+
+  const btn = document.getElementById('copyBtn');
+  const originalText = btn.textContent;
+  btn.textContent = 'Copied!';
+  btn.style.backgroundColor = '#2ecc71';
+
+  setTimeout(() => {
+    btn.textContent = originalText;
+    btn.style.backgroundColor = '';
+  }, 2000);
 }
 
 function downloadFile() {
-    const recipe = window.currentRecipe;
-    const filename = window.currentRecipeName || 'recipe';
-    
-    const json = JSON.stringify(recipe, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${filename}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+  if (!currentRecipe) {
+    alert('Please generate a recipe first.');
+    return;
+  }
+
+  const json = JSON.stringify(currentRecipe, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${currentFilename || 'recipe'}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
+function escapeInput(value) {
+  const safeValue = value == null ? '' : String(value);
+  return safeValue.replace(/["&<>]/g, char => ({
+    '"': '&quot;',
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;'
+  }[char] || char));
+}
