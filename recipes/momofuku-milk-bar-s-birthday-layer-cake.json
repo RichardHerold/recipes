@@ -16,51 +16,122 @@
     },
     {
       "item": "2 cups cake flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "cake flour",
+      "prepAction": "measure"
     },
     {
       "item": "1½ teaspoons baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "¾ teaspoon kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup plus 2 tablespoons rainbow sprinkles, divided",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "plus 2 tablespoons rainbow sprinkles, divided",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "⅓ cup grapeseed oil",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "grapeseed oil",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons clear imitation vanilla extract, preferably McCormick brand",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "clear imitation vanilla extract, preferably McCormick brand",
+      "prepAction": "measure"
     },
     {
       "item": "1¼ cups granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.75,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "⅓ cup vegetable shortening",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "vegetable shortening",
+      "prepAction": "measure"
     },
     {
       "item": "4 tablespoons (½ stick) unsalted butter, room temperature",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "(1/2 stick) unsalted butter, room temperature",
+      "prepAction": "measure"
     },
     {
       "item": "3 tablespoons light brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "light brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "3 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "Crumbs:",
@@ -68,35 +139,83 @@
     },
     {
       "item": "¾ cup cake or all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "cake or all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons light brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "light brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons rainbow sprinkles",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "rainbow sprinkles",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup grapeseed oil",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "grapeseed oil",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon clear imitation vanilla extract",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "clear imitation vanilla extract",
+      "prepAction": "measure"
     },
     {
       "item": "For the frosting and assembly:",
@@ -104,43 +223,103 @@
     },
     {
       "item": "½ cup (1 stick) unsalted butter, room temperature",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(1 stick) unsalted butter, room temperature",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup vegetable shortening",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "vegetable shortening",
+      "prepAction": "measure"
     },
     {
       "item": "2 ounces cream cheese, room temperature",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "cream cheese, room temperature",
+      "prepAction": "temper"
     },
     {
       "item": "2 tablespoons light corn syrup",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "light corn syrup",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon plus 1 teaspoon clear imitation vanilla extract, divided",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "plus 1 teaspoon clear imitation vanilla extract, divided",
+      "prepAction": "measure"
     },
     {
       "item": "1¼ cups powdered sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.75,
+        "unit": "cup"
+      },
+      "name": "powdered sugar",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "¼ teaspoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "⅛ teaspoon citric acid (or ½ teaspoon fresh lemon juice)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.125,
+        "unit": "teaspoon"
+      },
+      "name": "citric acid (or 1/2 teaspoon fresh lemon juice)",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup milk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "milk",
+      "prepAction": "measure"
     },
     {
       "item": "Special equipment:",
@@ -152,7 +331,12 @@
     },
     {
       "item": "2 strips acetate (flexible plastic paper), each 3\" wide and 20\" long",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "strips acetate (flexible plastic paper), each 3\" wide and 20\" long"
     }
   ],
   "instructions": [

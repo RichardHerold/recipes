@@ -12,55 +12,129 @@
     },
     {
       "item": "2 ancho chilies (40g), stemmed and seeded",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "ancho chilies (40g), stemmed and seeded"
     },
     {
       "item": "2 pasilla or guajillo chilies (15g), stemmed and seeded",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "pasilla or guajillo chilies (15g), stemmed and seeded"
     },
     {
       "item": "1/2 cup (120ml) homemade chicken stock or low-sodium store-bought broth",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(120ml) homemade chicken stock or low-sodium store-bought broth",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons (10ml) vegetable oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "(10ml) vegetable oil",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon (2g) dried Mexican oregano",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "(2g) dried Mexican oregano",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon (3g) ground cumin",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "(3g) ground cumin",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon (12g) achiote powder or paste",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "(12g) achiote powder or paste",
+      "prepAction": "measure"
     },
     {
       "item": "1 chipotle chili in adobo (15g), plus 2 teaspoons (10ml) adobo sauce",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "chipotle chili in adobo (15g), plus 2 teaspoons (10ml) adobo sauce",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 cup (60ml) distilled white vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "(60ml) distilled white vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "2 1/2 teaspoons (10g) kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "teaspoon"
+      },
+      "name": "(10g) kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons (10g) sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "(10g) sugar",
+      "prepAction": "measure"
     },
     {
       "item": "3 medium garlic cloves (15g)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "garlic cloves (15g)"
     },
     {
       "item": "2 pounds (900g) pork butt, in one piece",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "(900g) pork butt, in one piece"
     },
     {
       "item": "For the Skewers and Serving:",
@@ -68,7 +142,12 @@
     },
     {
       "item": "1 small pineapple (around 2 pounds; 900g), peeled, cored, and cut into 1- by 1/4-inch pieces",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "pineapple (around 2 pounds; 900g), peeled, cored, and cut into 1- by 1/4-inch pieces"
     },
     {
       "item": "Lime wedges, for serving",
@@ -76,7 +155,8 @@
     },
     {
       "item": "Finely chopped fresh cilantro leaves and tender stems (optional)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Salsa verde, for serving (optional)",

@@ -8,11 +8,23 @@
   "ingredients": [
     {
       "item": "2 tablespoons vegetable oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
     },
     {
       "item": "3 cups corn kernels or 4 ears of corn",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "corn kernels or 4 ears of corn",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt",
@@ -20,31 +32,69 @@
     },
     {
       "item": "2 tablespoons mayonnaise",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "mayonnaise",
+      "prepAction": "measure"
     },
     {
       "item": "2 ounces feta cheese, finely crumbled",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "feta cheese, finely crumbled"
     },
     {
       "item": "½  scallion greens",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "scallion greens"
     },
     {
       "item": "½  cup fresh cilantro",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "fresh cilantro",
+      "prepAction": "measure"
     },
     {
       "item": "1 jalapeño pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "jalapeño pepper"
     },
     {
       "item": "2 medium cloves garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves garlic"
     },
     {
       "item": "1 tablespoon fresh juice from 1 lime",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "fresh juice from 1 lime",
+      "prepAction": "measure"
     },
     {
       "item": "Chili powder or hot chili flakes, to taste",

@@ -8,31 +8,69 @@
   "ingredients": [
     {
       "item": "1 large bunch cilantro, leaves and tender stems only",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "bunch cilantro, leaves and tender stems only"
     },
     {
       "item": "4 large cloves garlic, peeled",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "cloves garlic, peeled"
     },
     {
       "item": "2 limes, juiced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "limes, juiced"
     },
     {
       "item": "½ teaspoon cumin",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "cumin",
+      "prepAction": "measure"
     },
     {
       "item": "1 jalapeno, stemmed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "jalapeno, stemmed"
     },
     {
       "item": "1 tablespoon white wine vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "white wine vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt, to taste",

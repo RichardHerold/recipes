@@ -12,51 +12,121 @@
     },
     {
       "item": "3 tablespoons vegetable oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
     },
     {
       "item": "2 medium yellow onions, medium dice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "yellow onions, medium dice",
+      "prepAction": "chop"
     },
     {
       "item": "⅔ cup roasted red peppers, medium dice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.6666666666666666,
+        "unit": "cup"
+      },
+      "name": "roasted red peppers, medium dice",
+      "prepAction": "chop"
     },
     {
       "item": "6 medium garlic cloves, finely chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "garlic cloves, finely chopped",
+      "prepAction": "chop"
     },
     {
       "item": "1/4 cup chili powder",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "chili powder",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon ground cumin",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "ground cumin",
+      "prepAction": "measure"
     },
     {
       "item": "2 pounds lean ground beef",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "lean ground beef"
     },
     {
       "item": "1 1/2 teaspoons kosher salt, plus more as needed",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt, plus more as needed",
+      "prepAction": "measure"
     },
     {
       "item": "1 (28-ounce) can diced tomatoes",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(28-ounce) can diced tomatoes",
+      "prepAction": "chop"
     },
     {
       "item": "1 (14-ounce) can tomato sauce",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(14-ounce) can tomato sauce"
     },
     {
       "item": "2 (15-ounce) cans kidney beans, drained and rinsed",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "(15-ounce) cans kidney beans, drained and rinsed",
+      "prepAction": "drain"
     },
     {
       "item": "1/4 cup coarsely chopped pickled jalapeños or green chiles, drained",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "coarsely chopped pickled jalapeños or green chiles, drained",
+      "prepAction": "chop"
     },
     {
       "item": "For serving:",
@@ -64,11 +134,13 @@
     },
     {
       "item": "Shredded cheddar cheese",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "prepAction": "grate"
     },
     {
       "item": "Thinly sliced scallions",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Sour cream",

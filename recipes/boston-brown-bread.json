@@ -12,47 +12,109 @@
     },
     {
       "item": "140 grams rye flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 140,
+        "unit": "gram"
+      },
+      "name": "rye flour"
     },
     {
       "item": "140 grams stone-ground whole wheat flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 140,
+        "unit": "gram"
+      },
+      "name": "stone-ground whole wheat flour"
     },
     {
       "item": "142 grams fine-ground cornmeal",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 142,
+        "unit": "gram"
+      },
+      "name": "fine-ground cornmeal"
     },
     {
       "item": "198 grams lightly packed dark brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 198,
+        "unit": "gram"
+      },
+      "name": "lightly packed dark brown sugar"
     },
     {
       "item": "½ teaspoon (3 grams) baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "(3 grams) baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons (11 grams) baking soda",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "(11 grams) baking soda",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon (3 grams) kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "(3 grams) kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon (16 grams) doenjang (Korean soybean paste)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "(16 grams) doenjang (Korean soybean paste)",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup egg whites (from 4 to 5 large eggs)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "egg whites (from 4 to 5 large eggs)",
+      "prepAction": "measure"
     },
     {
       "item": "¾ cup blackstrap molasses",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "blackstrap molasses",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

@@ -8,59 +8,141 @@
   "ingredients": [
     {
       "item": "1 large red onion, about 2 cups, sliced thin",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "red onion, about 2 cups, sliced thin",
+      "prepAction": "chop"
     },
     {
       "item": "1/4 cup niter kebbeh or ghee spiced butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "niter kebbeh or ghee spiced butter",
+      "prepAction": "measure"
     },
     {
       "item": "2 pounds venison, lamb or beef, cut into bite-sized pieces",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "venison, lamb or beef, cut into bite-sized pieces"
     },
     {
       "item": "2 tablespoons berbere",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "berbere",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon ground fenugreek",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground fenugreek",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon cardamom (optional)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "cardamom (optional)",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon ground ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "ground ginger",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 teaspoon cumin",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "cumin",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 teaspoon ground clove",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "ground clove",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon black pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "black pepper",
+      "prepAction": "measure"
     },
     {
       "item": "3 to 4 garlic cloves, sliced thinly",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "to 4 garlic cloves, sliced thinly",
+      "prepAction": "chop"
     },
     {
       "item": "2 cups whole peeled tomatoes, broken into bits",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "whole peeled tomatoes, broken into bits",
+      "prepAction": "measure"
     },
     {
       "item": "1 to 5 green chiles, such as jalapenos or serranos",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "to 5 green chiles, such as jalapenos or serranos"
     },
     {
       "item": "1/2 cup red wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "red wine",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

@@ -18,60 +18,95 @@
     {
       "item": "2 1/4 cups all-purpose flour",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 2.25, "unit": "cups" },
-      "scaleBehavior": "linear"
+      "quantity": {
+        "amount": 2.25,
+        "unit": "cups"
+      },
+      "scaleBehavior": "linear",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon baking soda",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 1, "unit": "teaspoon" },
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
       "scaleBehavior": "sublinear",
-      "scaleNote": "Use about 1.5 teaspoons for a double batch"
+      "scaleNote": "Use about 1.5 teaspoons for a double batch",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon salt",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 1, "unit": "teaspoon" },
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
       "scaleBehavior": "taste",
-      "scaleNote": "Season to taste after mixing"
+      "scaleNote": "Season to taste after mixing",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup butter, softened",
       "aisle": "Dairy & Eggs",
-      "quantity": { "amount": 1, "unit": "cup" },
-      "scaleBehavior": "linear"
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "scaleBehavior": "linear",
+      "prepAction": "measure"
     },
     {
       "item": "3/4 cup granulated sugar",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 0.75, "unit": "cup" },
-      "scaleBehavior": "linear"
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "scaleBehavior": "linear",
+      "prepAction": "measure"
     },
     {
       "item": "3/4 cup packed brown sugar",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 0.75, "unit": "cup" },
-      "scaleBehavior": "linear"
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "scaleBehavior": "linear",
+      "prepAction": "measure"
     },
     {
       "item": "2 large eggs",
       "aisle": "Dairy & Eggs",
-      "quantity": { "amount": 2, "unit": null },
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
       "scaleBehavior": "stepped",
       "scaleNote": "Round to the nearest whole egg"
     },
     {
       "item": "2 teaspoons vanilla extract",
       "aisle": "Baking & Spices",
-      "quantity": { "amount": 2, "unit": "teaspoon" },
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
       "scaleBehavior": "fixed",
-      "scaleNote": "2 teaspoons is plenty even when doubling"
+      "scaleNote": "2 teaspoons is plenty even when doubling",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups chocolate chips",
       "aisle": "Other",
-      "quantity": { "amount": 2, "unit": "cups" },
-      "scaleBehavior": "linear"
+      "quantity": {
+        "amount": 2,
+        "unit": "cups"
+      },
+      "scaleBehavior": "linear",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

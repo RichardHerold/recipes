@@ -12,7 +12,12 @@
     },
     {
       "item": "2/3 recipe Walnut Dough (see Note)",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 0.6666666666666666,
+        "unit": null
+      },
+      "name": "recipe Walnut Dough (see Note)"
     },
     {
       "item": "Extra-virgin olive oil",
@@ -20,11 +25,23 @@
     },
     {
       "item": "3 ounces pancetta, chopped",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "ounce"
+      },
+      "name": "pancetta, chopped",
+      "prepAction": "chop"
     },
     {
       "item": "3 cups thinly sliced yellow onion (about 1 large)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "thinly sliced yellow onion (about 1 large)",
+      "prepAction": "chop"
     },
     {
       "item": "Heat the oven to 400°F.",
@@ -36,15 +53,32 @@
     },
     {
       "item": "1 egg yolk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "egg yolk"
     },
     {
       "item": "1/2 cup heavy cream or crème fraîche",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "heavy cream or crème fraîche",
+      "prepAction": "measure"
     },
     {
       "item": "2 ounces Gruyère cheese, shredded (1/2 cup)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "Gruyère cheese, shredded (1/2 cup)",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

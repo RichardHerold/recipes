@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "1 pound spaghetti",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "spaghetti"
     },
     {
       "item": "Salt",
@@ -16,27 +21,62 @@
     },
     {
       "item": "1/4 cup extra-virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "extra-virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "4 garlic cloves, minced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "garlic cloves, minced",
+      "prepAction": "chop"
     },
     {
       "item": "1/2 teaspoon crushed red pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "crushed red pepper",
+      "prepAction": "measure"
     },
     {
       "item": "2 dozen littleneck clams, scrubbed",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "dozen littleneck clams, scrubbed"
     },
     {
       "item": "1/4 cup white wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "white wine",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 cup finely chopped parsley",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "finely chopped parsley",
+      "prepAction": "chop"
     },
     {
       "item": "Freshly ground black pepper",

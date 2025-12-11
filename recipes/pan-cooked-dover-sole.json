@@ -20,11 +20,23 @@
     },
     {
       "item": "2 tablespoons extra virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "extra virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "4 tablespoons butter or more oil",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "butter or more oil",
+      "prepAction": "measure"
     },
     {
       "item": "All-purpose cornmeal for dredging",
@@ -32,11 +44,18 @@
     },
     {
       "item": "1/4 cup freshly squeezed lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "freshly squeezed lemon juice",
+      "prepAction": "measure"
     },
     {
       "item": "Chopped fresh parsley leaves for garnish",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Lemon wedges for serving",

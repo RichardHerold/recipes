@@ -8,23 +8,46 @@
   "ingredients": [
     {
       "item": "4 pork loin steaks",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "pork loin steaks"
     },
     {
       "item": "1 tbsp olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "olive oil"
     },
     {
       "item": "2 shallots chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "shallots chopped",
+      "prepAction": "chop"
     },
     {
       "item": "2-3 large field mushrooms or portobello mushrooms chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "2 rosemary sprigs chopped",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "rosemary sprigs chopped",
+      "prepAction": "chop"
     },
     {
       "item": "a splash of cognac or brandy optional",
@@ -32,19 +55,36 @@
     },
     {
       "item": "1 tbsp flour if you using cream instead of creme fraiche",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "flour if you using cream instead of creme fraiche"
     },
     {
       "item": "80ml/1/4 cup stock pork or chicken",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "prepAction": "measure"
     },
     {
       "item": "1 tbsp whole-grain mustard",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "whole-grain mustard"
     },
     {
       "item": "200 g / ⅔ cup creme fraiche or heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 200,
+        "unit": "gram"
+      },
+      "name": "/ 2/3 cup creme fraiche or heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "salt and pepper to taste",

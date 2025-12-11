@@ -12,31 +12,72 @@
     },
     {
       "item": "1½ cups (250g) coarse yellow cornmeal, preferably Anson Mills",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "(250g) coarse yellow cornmeal, preferably Anson Mills",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon fine sea salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fine sea salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon baking soda",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "baking soda",
+      "prepAction": "measure"
     },
     {
       "item": "1 large whole egg",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "whole egg"
     },
     {
       "item": "2 tablespoons unsalted melted butter, plus more for later",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted melted butter, plus more for later",
+      "prepAction": "measure"
     },
     {
       "item": "1½ cups buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "For the Butter:",
@@ -44,11 +85,22 @@
     },
     {
       "item": "4 ounces butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "ounce"
+      },
+      "name": "butter"
     },
     {
       "item": "½ cup sorghum syrup or Honey",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "sorghum syrup or Honey",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

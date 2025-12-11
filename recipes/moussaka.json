@@ -8,11 +8,22 @@
   "ingredients": [
     {
       "item": "4 pounds eggplant (about 3-4 medium)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "pound"
+      },
+      "name": "eggplant (about 3-4 medium)"
     },
     {
       "item": "3 tablespoons olive oil (not exact)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "olive oil (not exact)",
+      "prepAction": "measure"
     },
     {
       "item": "salt and ground black pepper",
@@ -20,55 +31,131 @@
     },
     {
       "item": "2 pounds ground lamb",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "ground lamb"
     },
     {
       "item": "1 medium onion, minced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, minced",
+      "prepAction": "chop"
     },
     {
       "item": "2 tablespoons tomato paste",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "tomato paste",
+      "prepAction": "measure"
     },
     {
       "item": "4 medium garlic cloves, minced (about 4 teaspoons)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "garlic cloves, minced (about 4 teaspoons)",
+      "prepAction": "chop"
     },
     {
       "item": "1 teaspoon dried oregano",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "dried oregano",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "3/4 teaspoon ground cinnamon",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "teaspoon"
+      },
+      "name": "ground cinnamon",
+      "prepAction": "measure"
     },
     {
       "item": "1 28-ounce can tomato puree",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "28-ounce can tomato puree"
     },
     {
       "item": "1/2 cup dry red wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "dry red wine",
+      "prepAction": "measure"
     },
     {
       "item": "3 tablespoons unsalted butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted butter",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 cup all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups whole milk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "whole milk",
+      "prepAction": "measure"
     },
     {
       "item": "2 ounces Parmesan cheese, grated (about 1 cup)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "Parmesan cheese, grated (about 1 cup)",
+      "prepAction": "measure"
     },
     {
       "item": "pinch ground nutmeg",
@@ -76,7 +163,8 @@
     },
     {
       "item": "(optional) ¼ cup chopped mint and 1 cup parsley",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Kitchen Tools Required",

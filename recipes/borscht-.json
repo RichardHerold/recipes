@@ -8,31 +8,62 @@
   "ingredients": [
     {
       "item": "2 large beets (apple size), or 4 small ones",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "beets (apple size), or 4 small ones"
     },
     {
       "item": "1 large carrot (or 2 small ones)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "carrot (or 2 small ones)"
     },
     {
       "item": "1 small red onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "red onion"
     },
     {
       "item": "1/2 head of small green cabbage (use 1/3 if it's a big one)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "head of small green cabbage (use 1/3 if it's a big one)"
     },
     {
       "item": "2 small red bliss potatoes",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "red bliss potatoes"
     },
     {
       "item": "1 pint cherry tomatoes",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "pint cherry tomatoes"
     },
     {
       "item": "10-12 cups water (start with less at first, and you can add more if the soup looks too dense once you combine all the ingredients)",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "prepAction": "measure"
     },
     {
       "item": "ketchup - 4 generous squirts (maybe more to taste)",
@@ -40,11 +71,21 @@
     },
     {
       "item": "12 cloves of garlic, peeled but kept whole",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 12,
+        "unit": null
+      },
+      "name": "cloves of garlic, peeled but kept whole"
     },
     {
       "item": "3 bay leaves",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "bay leaves"
     },
     {
       "item": "crushed black pepper (a few turns of pepper mill)",
@@ -52,15 +93,27 @@
     },
     {
       "item": "salt (to taste, maybe 1/2 teaspoon?)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 cup fresh parsley",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "fresh parsley",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 bunch scallions, whole (ends just a bit trimmed)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "bunch scallions, whole (ends just a bit trimmed)"
     },
     {
       "item": "dry parsley - 8 shakes of spice bottle",
@@ -72,11 +125,18 @@
     },
     {
       "item": "cayenne pepper - 1-2 shakes (1/2 teaspoon maybe?  go slow, very spicy!)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "For serving:",
@@ -92,7 +152,8 @@
     },
     {
       "item": "fresh dill (finely chopped)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Bread",

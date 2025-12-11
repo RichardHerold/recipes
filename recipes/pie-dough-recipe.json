@@ -8,23 +8,52 @@
   "ingredients": [
     {
       "item": "2 1/2 cups (12.5 ounces; 350 grams) all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "cup"
+      },
+      "name": "(12.5 ounces; 350 grams) all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons (25 grams) sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "(25 grams) sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon (5 grams) kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "(5 grams) kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 1/2 sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2.5,
+        "unit": null
+      },
+      "name": "sticks (10 ounces; 280 grams) unsalted butter, cut into 1/4-inch pats"
     },
     {
       "item": "6 tablespoons (3 ounces; 85 milliliters) cold water",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "(3 ounces; 85 milliliters) cold water",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

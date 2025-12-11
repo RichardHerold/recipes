@@ -12,23 +12,51 @@
     },
     {
       "item": "½ cup fresh shelled peas",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "fresh shelled peas",
+      "prepAction": "measure"
     },
     {
       "item": "4 tablespoons butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "butter",
+      "prepAction": "measure"
     },
     {
       "item": "¼ pound morels, about 8 medium",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "pound"
+      },
+      "name": "morels, about 8 medium"
     },
     {
       "item": "8 ounces pasta",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "pasta"
     },
     {
       "item": "1 cup finely grated Parmesan",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "finely grated Parmesan",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

@@ -8,23 +8,49 @@
   "ingredients": [
     {
       "item": "2 tablespoons unsalted butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted butter",
+      "prepAction": "measure"
     },
     {
       "item": "2 large leeks, white and pale green parts only, rinsed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "leeks, white and pale green parts only, rinsed"
     },
     {
       "item": "1 quart homemade or store-bought low-sodium chicken stock",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "quart homemade or store-bought low-sodium chicken stock"
     },
     {
       "item": "2 medium russet potatoes (about 3/4 pound)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "russet potatoes (about 3/4 pound)"
     },
     {
       "item": "1 bay leaf",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "bay leaf"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
@@ -32,19 +58,38 @@
     },
     {
       "item": "1 cup buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 cup heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon freshly ground nutmeg",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "freshly ground nutmeg",
+      "prepAction": "measure"
     },
     {
       "item": "Sliced chives or scallions, for serving",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     }
   ],
   "instructions": [

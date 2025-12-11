@@ -8,19 +8,36 @@
   "ingredients": [
     {
       "item": "1 onion chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion chopped",
+      "prepAction": "chop"
     },
     {
       "item": "1 ham hock (split at butcher shop)",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "ham hock (split at butcher shop)"
     },
     {
       "item": "2-3 carrots sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "2 bags of split peas",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "bags of split peas"
     }
   ],
   "instructions": [

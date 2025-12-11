@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "1 ½ pounds boneless, skinless chicken thighs",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "pound"
+      },
+      "name": "boneless, skinless chicken thighs"
     },
     {
       "item": "Salt and pepper",
@@ -16,35 +21,81 @@
     },
     {
       "item": "12 ounces jumbo shrimp (16 to 20 per pound)",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 12,
+        "unit": "ounce"
+      },
+      "name": "jumbo shrimp (16 to 20 per pound)"
     },
     {
       "item": "6 tablespoons Extra-Virgin Olive Oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "Extra-Virgin Olive Oil",
+      "prepAction": "measure"
     },
     {
       "item": "6 garlic cloves, minced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "garlic cloves, minced",
+      "prepAction": "chop"
     },
     {
       "item": "1 ¾ teaspoons hot smoked paprika",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.75,
+        "unit": "teaspoon"
+      },
+      "name": "hot smoked paprika",
+      "prepAction": "measure"
     },
     {
       "item": "3 tablespoons Tomato Paste",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "Tomato Paste",
+      "prepAction": "measure"
     },
     {
       "item": "4 cups Chicken Broth",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": "cup"
+      },
+      "name": "Chicken Broth",
+      "prepAction": "measure"
     },
     {
       "item": "1 (8-ounce) bottle clam juice",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(8-ounce) bottle clam juice"
     },
     {
       "item": "⅔ cup Dry Sherry",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.6666666666666666,
+        "unit": "cup"
+      },
+      "name": "Dry Sherry",
+      "prepAction": "measure"
     },
     {
       "item": "Pinch saffron threads(optional)",
@@ -52,27 +103,61 @@
     },
     {
       "item": "1 onion, chopped fine",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, chopped fine",
+      "prepAction": "chop"
     },
     {
       "item": "½ cup Jarred Roasted Red Peppers, chopped fine",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Jarred Roasted Red Peppers, chopped fine",
+      "prepAction": "chop"
     },
     {
       "item": "3 cups Arborio Rice",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "Arborio Rice",
+      "prepAction": "measure"
     },
     {
       "item": "2 pound littleneck clams, scrubbed",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "littleneck clams, scrubbed"
     },
     {
       "item": "1 pound Spanish-style chorizo sausage",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "Spanish-style chorizo sausage"
     },
     {
       "item": "1 cup Frozen Peas, thawed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "Frozen Peas, thawed",
+      "prepAction": "measure"
     },
     {
       "item": "Lemon wedges",

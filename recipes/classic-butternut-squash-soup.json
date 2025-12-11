@@ -8,39 +8,89 @@
   "ingredients": [
     {
       "item": "1 (2 1/2 pound/1kg) butternut squash, peeled, seeded, and cut into 1-inch cubes",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(2 1/2 pound/1kg) butternut squash, peeled, seeded, and cut into 1-inch cubes"
     },
     {
       "item": "1 large (8-ounce; 215g) carrot, peeled and cut into 1-inch chunks",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(8-ounce; 215g) carrot, peeled and cut into 1-inch chunks"
     },
     {
       "item": "2 tablespoons (30ml) extra-virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "(30ml) extra-virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "7 tablespoons (100g) unsalted butter, divided (see note above)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 7,
+        "unit": "tablespoon"
+      },
+      "name": "(100g) unsalted butter, divided (see note above)",
+      "prepAction": "measure"
     },
     {
       "item": "1 large (8-ounce; 215g) yellow onion, thinly sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(8-ounce; 215g) yellow onion, thinly sliced",
+      "prepAction": "chop"
     },
     {
       "item": "4 medium cloves garlic, thinly sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "cloves garlic, thinly sliced",
+      "prepAction": "chop"
     },
     {
       "item": "4 cups (1l) homemade or store-bought low-sodium chicken or vegetable stock, plus more as needed",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": "cup"
+      },
+      "name": "(1l) homemade or store-bought low-sodium chicken or vegetable stock, plus more as needed",
+      "prepAction": "measure"
     },
     {
       "item": "2 sprigs fresh thyme",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "sprigs fresh thyme"
     },
     {
       "item": "1 bay leaf",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "bay leaf"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
@@ -48,11 +98,23 @@
     },
     {
       "item": "3/4 cup (180ml) heavy whipping cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "(180ml) heavy whipping cream",
+      "prepAction": "measure"
     },
     {
       "item": "1/4 cup (60ml) sour cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "(60ml) sour cream",
+      "prepAction": "measure"
     },
     {
       "item": "Pinch ground cinnamon",
@@ -64,7 +126,12 @@
     },
     {
       "item": "20 fresh sage leaves (optional, see note above)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 20,
+        "unit": null
+      },
+      "name": "fresh sage leaves (optional, see note above)"
     }
   ],
   "instructions": [

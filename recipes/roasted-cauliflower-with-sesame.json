@@ -8,23 +8,52 @@
   "ingredients": [
     {
       "item": "1 head of cauliflower, broken by hand into bite-sized florets",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "head of cauliflower, broken by hand into bite-sized florets"
     },
     {
       "item": "¼ cup olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon ground coriander",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground coriander",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon dried oregano",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "dried oregano",
+      "prepAction": "measure"
     },
     {
       "item": "freshly ground black pepper, to taste (I like to add a healthy amount of coarsely ground black pepper, personally)",
@@ -32,23 +61,53 @@
     },
     {
       "item": "2 tablespoons tahini",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "tahini",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon white miso",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "white miso",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons red wine vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "red wine vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "1½ tablespoons water",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "tablespoon"
+      },
+      "name": "water",
+      "prepAction": "measure"
     },
     {
       "item": "3 tablespoons toasted white sesame seeds",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "toasted white sesame seeds",
+      "prepAction": "measure"
     },
     {
       "item": "chili oil/paste, for serving (optional but recommended)",
@@ -56,23 +115,28 @@
     },
     {
       "item": "Measure out and grind the coriander and pepper together. Reserve in ramekin",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "measure"
     },
     {
       "item": "Measure out the Salt and Oregano. Add to the coriander and pepper ramekin.",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "measure"
     },
     {
       "item": "Measure ¼ cup olive oil and put into a pourable small ramekin or beaker.",
-      "aisle": "Household & Misc"
+      "aisle": "Household & Misc",
+      "prepAction": "measure"
     },
     {
       "item": "Measure 2 Teaspoons red wine vinegar and 1½ Tablespoons of water and combine into a pourable small ramekin or beaker.",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "prepAction": "measure"
     },
     {
       "item": "Measure 2 Tablespoon Tahini and 1 Tablespoon White Miso and combine in a small bowl.",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

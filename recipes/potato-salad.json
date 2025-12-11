@@ -8,11 +8,21 @@
   "ingredients": [
     {
       "item": "1 5 lbs bag of Yukon Gold Potato",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "5 lbs bag of Yukon Gold Potato"
     },
     {
       "item": "12 eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 12,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "6-7 stalks of celery",
@@ -20,11 +30,21 @@
     },
     {
       "item": "1 medium sweet onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "sweet onion"
     },
     {
       "item": "1 package of radishes.",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "package of radishes."
     }
   ],
   "instructions": [

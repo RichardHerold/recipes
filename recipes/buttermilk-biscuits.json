@@ -8,31 +8,62 @@
   "ingredients": [
     {
       "item": "240g all-purpose flour (2 cups)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon salt plus extra for seasoning",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "salt plus extra for seasoning",
+      "prepAction": "measure"
     },
     {
       "item": "¼ pound butter, cubed, cold",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "pound"
+      },
+      "name": "butter, cubed, cold"
     },
     {
       "item": "¾ cup buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "~2 Tablespoons honey, Warmed (optional)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "measure"
     },
     {
       "subsection": "Equipment",

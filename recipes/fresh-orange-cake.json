@@ -20,23 +20,52 @@
     },
     {
       "item": "1 cup fresh orange juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "fresh orange juice",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup vegetable oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon vanilla extract",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "vanilla extract",
+      "prepAction": "measure"
     },
     {
       "item": "4 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "Glaze",
@@ -44,15 +73,33 @@
     },
     {
       "item": "1 cup confectioners' sugar, sifted",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "confectioners' sugar, sifted",
+      "prepAction": "measure"
     },
     {
       "item": "3 tablespoons fresh orange juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "fresh orange juice",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon fresh grated orange zest",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fresh grated orange zest",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

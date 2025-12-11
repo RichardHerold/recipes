@@ -8,23 +8,52 @@
   "ingredients": [
     {
       "item": "1 large onion, finely diced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, finely diced",
+      "prepAction": "chop"
     },
     {
       "item": "3 shallots, chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "shallots, chopped",
+      "prepAction": "chop"
     },
     {
       "item": "4 to 6 tablespoons unsalted butter or bacon fat",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "to 6 tablespoons unsalted butter or bacon fat",
+      "prepAction": "measure"
     },
     {
       "item": "2 pounds beef chuck, in 1-inch cubes",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "beef chuck, in 1-inch cubes"
     },
     {
       "item": "2 tablespoons all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt and black pepper",
@@ -32,31 +61,72 @@
     },
     {
       "item": "½ cup Cognac",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Cognac",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups beef stock",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "beef stock",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup Dijon mustard",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Dijon mustard",
+      "prepAction": "measure"
     },
     {
       "item": "4 tablespoons whole-grain Dijon mustard",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "whole-grain Dijon mustard",
+      "prepAction": "measure"
     },
     {
       "item": "4 large carrots, peeled and cut into half-moon slices",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "carrots, peeled and cut into half-moon slices",
+      "prepAction": "chop"
     },
     {
       "item": "8 ounces mushrooms, stemmed, cleaned and quartered",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "mushrooms, stemmed, cleaned and quartered"
     },
     {
       "item": "¼ cup red wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "red wine",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

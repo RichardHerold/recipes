@@ -12,31 +12,71 @@
     },
     {
       "item": "¼ cup granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 Tbsp. baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. baking powder"
     },
     {
       "item": "2 tsp. finely grated lemon zest",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "tsp. finely grated lemon zest",
+      "prepAction": "zest"
     },
     {
       "item": "1 tsp. kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "tsp. kosher salt"
     },
     {
       "item": "2 cups all-purpose flour, plus more for surface",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour, plus more for surface",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup (1 stick) chilled unsalted butter, cut into pieces",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(1 stick) chilled unsalted butter, cut into pieces",
+      "prepAction": "measure"
     },
     {
       "item": "1⅓ cups chilled heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3.6666666666666665,
+        "unit": "cup"
+      },
+      "name": "chilled heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "Filling and Assembly",
@@ -44,43 +84,95 @@
     },
     {
       "item": "2 lb. fresh (or frozen) sweet cherries, pitted",
-      "aisle": "Frozen Foods"
+      "aisle": "Frozen Foods",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "lb. fresh (or frozen) sweet cherries, pitted"
     },
     {
       "item": "½ cup granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup fresh lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "fresh lemon juice",
+      "prepAction": "measure"
     },
     {
       "item": "3 Tbsp. cornstarch",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "Tbsp. cornstarch"
     },
     {
       "item": "½ tsp. ground cinnamon",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "tsp. ground cinnamon"
     },
     {
       "item": "1 tsp. vanilla extract",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "tsp. vanilla extract"
     },
     {
       "item": "¼ tsp. almond extract",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": null
+      },
+      "name": "tsp. almond extract"
     },
     {
       "item": "¼ tsp. kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": null
+      },
+      "name": "tsp. kosher salt"
     },
     {
       "item": "3 Tbsp. unsalted butter, melted, slightly cooled",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "Tbsp. unsalted butter, melted, slightly cooled"
     },
     {
       "item": "2 Tbsp. raw sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. raw sugar"
     },
     {
       "item": "Vanilla ice cream or softly whipped cream (for serving)",

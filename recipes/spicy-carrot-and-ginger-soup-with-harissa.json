@@ -8,47 +8,107 @@
   "ingredients": [
     {
       "item": "1 to 2 tablespoons harissa paste",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "to 2 tablespoons harissa paste",
+      "prepAction": "measure"
     },
     {
       "item": "8 tablespoons extra-virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 8,
+        "unit": "tablespoon"
+      },
+      "name": "extra-virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "1 medium leek,",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "leek,"
     },
     {
       "item": "1 small onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion"
     },
     {
       "item": "2 cloves garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves garlic"
     },
     {
       "item": "1 (2-inch) knob of ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(2-inch) knob of ginger"
     },
     {
       "item": "1 teaspoon ground cumin seed",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground cumin seed",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon ground coriander",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "ground coriander",
+      "prepAction": "measure"
     },
     {
       "item": "1 to 2 tablespoons harissa paste",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "to 2 tablespoons harissa paste",
+      "prepAction": "measure"
     },
     {
       "item": "2 ½ pounds carrots (get a 5lb bag, weigh after peeled)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "pound"
+      },
+      "name": "carrots (get a 5lb bag, weigh after peeled)"
     },
     {
       "item": "1 ½ quarts chicken broth or Carrot Juice (approx 5lbs of carrots)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": null
+      },
+      "name": "quarts chicken broth or Carrot Juice (approx 5lbs of carrots)"
     },
     {
       "item": "Kosher salt",
@@ -56,15 +116,32 @@
     },
     {
       "item": "¼ to ½ cup pine nuts",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": null
+      },
+      "name": "to 1/2 cup pine nuts",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons chopped fresh parsley leaves",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "chopped fresh parsley leaves",
+      "prepAction": "chop"
     },
     {
       "item": "1 lemon",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "lemon"
     }
   ],
   "instructions": [

@@ -12,35 +12,67 @@
     },
     {
       "item": "2 hard-boiled egg yolks, cooled",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "hard-boiled egg yolks, cooled"
     },
     {
       "item": "160g (1⅓ cups) all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "20g (3 tablespoons) fine-grind cornmeal",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "¼ teaspoon kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "40g (3 tablespoons) granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "6 tablespoons chilled unsalted butter, cut into pieces",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "chilled unsalted butter, cut into pieces",
+      "prepAction": "measure"
     },
     {
       "item": "⅔ cup plus 2 tablespoons heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.6666666666666666,
+        "unit": "cup"
+      },
+      "name": "plus 2 tablespoons heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "Sanding or granulated sugar (for sprinkling)",
@@ -52,15 +84,32 @@
     },
     {
       "item": "1½ pounds strawberries (about 1 quart), hulled, halved, quartered if large",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "pound"
+      },
+      "name": "strawberries (about 1 quart), hulled, halved, quartered if large"
     },
     {
       "item": "¼ cup granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon finely grated lemon zest",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "finely grated lemon zest",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt",
@@ -68,7 +117,13 @@
     },
     {
       "item": "2 teaspoons fresh lemon juice, divided",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "fresh lemon juice, divided",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

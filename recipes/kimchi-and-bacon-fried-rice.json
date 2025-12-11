@@ -8,35 +8,76 @@
   "ingredients": [
     {
       "item": "3 ¼ cups cooked Japanese-style short-grain rice, preferably chilled",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3.25,
+        "unit": "cup"
+      },
+      "name": "cooked Japanese-style short-grain rice, preferably chilled",
+      "prepAction": "measure"
     },
     {
       "item": "6-8 ounces bacon, preferably thick-cut, chopped",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "prepAction": "chop"
     },
     {
       "item": "1 medium yellow onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "yellow onion"
     },
     {
       "item": "2 cups well-drained napa cabbage kimchi",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "well-drained napa cabbage kimchi",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup frozen peas, thawed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "frozen peas, thawed",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons toasted sesame oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "toasted sesame oil",
+      "prepAction": "measure"
     },
     {
       "item": "4 scallions",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "scallions"
     },
     {
       "item": "Kosher salt and ground black pepper",
@@ -44,7 +85,12 @@
     },
     {
       "item": "4 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "Furikake seasoning (optional)",
@@ -64,7 +110,8 @@
     },
     {
       "item": "Small Bowl and strainer",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "drain"
     },
     {
       "item": "Range",
@@ -76,11 +123,13 @@
     },
     {
       "item": "Liquid measuring cups",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "measure"
     },
     {
       "item": "Dry measuring cups",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

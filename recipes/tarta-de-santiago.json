@@ -8,27 +8,60 @@
   "ingredients": [
     {
       "item": "4 eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "1 cup sugar 200g (caster sugar is better, if possible)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "sugar 200g (caster sugar is better, if possible)",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups almond flour 200g",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "almond flour 200g",
+      "prepAction": "measure"
     },
     {
       "item": "1 lemon zest ie from 1 lemon",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "lemon zest ie from 1 lemon",
+      "prepAction": "zest"
     },
     {
       "item": "½ tsp cinnamon",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "cinnamon"
     },
     {
       "item": "2 tbsp confectioners sugar approx, to dust (icing sugar)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "confectioners sugar approx, to dust (icing sugar)"
     }
   ],
   "instructions": [

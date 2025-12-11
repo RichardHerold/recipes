@@ -8,31 +8,57 @@
   "ingredients": [
     {
       "item": "1 shoulder tender steak",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "shoulder tender steak"
     },
     {
       "item": "1-2 sprigs rosemary chopped (about 1 tbsp worth)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "chop"
     },
     {
       "item": "2-4 sprigs thyme chopped (about 1 tbsp worth)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "chop"
     },
     {
       "item": "1 teaspoon granulated garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "granulated garlic",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "pepper",
+      "prepAction": "measure"
     },
     {
       "item": "1-2 tablespoons butter for cooking",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

@@ -8,23 +8,47 @@
   "ingredients": [
     {
       "item": "1 pound breakfast sausage, hot or mild",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "breakfast sausage, hot or mild"
     },
     {
       "item": "40g (⅓ cup) all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "3 to 4 cups whole milk, more to taste",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "to 4 cups whole milk, more to taste",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon seasoned salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "seasoned salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons freshly ground black pepper, more to taste",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "freshly ground black pepper, more to taste",
+      "prepAction": "measure"
     },
     {
       "item": "Biscuits, warmed, for serving",

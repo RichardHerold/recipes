@@ -8,19 +8,36 @@
   "ingredients": [
     {
       "item": "3 pounds seedless watermelon (about 1 small or 1/4 large)",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "pound"
+      },
+      "name": "seedless watermelon (about 1 small or 1/4 large)"
     },
     {
       "item": "1 Lemon",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Lemon"
     },
     {
       "item": "3 tablespoons (45ml) extra-virgin olive oil, plus more for drizzling",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "(45ml) extra-virgin olive oil, plus more for drizzling",
+      "prepAction": "measure"
     },
     {
       "item": "10g fresh mint leaves (¼ cup chopped)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     },
     {
       "item": "Up to 4 ounces (1 quart) arugula leaves (optional; see note)",
@@ -28,7 +45,12 @@
     },
     {
       "item": "4 ounces (110g) feta cheese (see note)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "ounce"
+      },
+      "name": "(110g) feta cheese (see note)"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",

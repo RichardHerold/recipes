@@ -12,23 +12,53 @@
     },
     {
       "item": "1 cup (230g; 2 sticks) unsalted butter, melted",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "(230g; 2 sticks) unsalted butter, melted",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 cup (100g) granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(100g) granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons pure vanilla extract",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "pure vanilla extract",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups + 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "+ 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
+      "prepAction": "measure"
     },
     {
       "item": "Lemon Filling",
@@ -36,19 +66,42 @@
     },
     {
       "item": "2 cups (400g) granulated sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "(400g) granulated sugar",
+      "prepAction": "measure"
     },
     {
       "item": "6 Tablespoons (48g) all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "(48g) all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "6 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "1 cup (240ml) lemon juice (about 4 lemons)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "(240ml) lemon juice (about 4 lemons)",
+      "prepAction": "measure"
     },
     {
       "item": "optional: confectioners’ sugar for dusting",
