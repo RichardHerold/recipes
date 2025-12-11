@@ -8,31 +8,70 @@
   "ingredients": [
     {
       "item": "1½ cups red lentils",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "red lentils",
+      "prepAction": "measure"
     },
     {
       "item": "1 large finely chopped onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "finely chopped onion",
+      "prepAction": "chop"
     },
     {
       "item": "2 cloves minced garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves minced garlic",
+      "prepAction": "chop"
     },
     {
       "item": "2 tbsp berbere",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "berbere"
     },
     {
       "item": "2 tbsp niter kibbeh (Ethiopian clarified butter)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "niter kibbeh (Ethiopian clarified butter)"
     },
     {
       "item": "2 cups water",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
     },
     {
       "item": "1 tsp sweet paprika",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "sweet paprika"
     }
   ],
   "instructions": [

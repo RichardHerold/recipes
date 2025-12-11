@@ -8,15 +8,31 @@
   "ingredients": [
     {
       "item": "6 Tbsp mayonnaise (or plain yogurt)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "mayonnaise (or plain yogurt)"
     },
     {
       "item": "1 Tbsp lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "lemon juice"
     },
     {
       "item": "1/2 teaspoon salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "Pinch of freshly ground black pepper",
@@ -24,19 +40,43 @@
     },
     {
       "item": "2 sweet apples, cored and chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "sweet apples, cored and chopped",
+      "prepAction": "chop"
     },
     {
       "item": "1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "red seedless grapes, sliced in half (or 1/4 cup of raisins)",
+      "prepAction": "chop"
     },
     {
       "item": "1 cup celery, thinly sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "celery, thinly sliced",
+      "prepAction": "chop"
     },
     {
       "item": "1 cup chopped, slightly toasted walnuts",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "chopped, slightly toasted walnuts",
+      "prepAction": "chop"
     },
     {
       "item": "Lettuce",

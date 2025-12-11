@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "8 ears corn",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 8,
+        "unit": null
+      },
+      "name": "ears corn"
     },
     {
       "item": "Kosher salt",

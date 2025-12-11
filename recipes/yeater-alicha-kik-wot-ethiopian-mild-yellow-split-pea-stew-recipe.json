@@ -8,39 +8,90 @@
   "ingredients": [
     {
       "item": "1 cup split peas",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "split peas",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup onion (minced)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "onion (minced)",
+      "prepAction": "chop"
     },
     {
       "item": "1 tbsp ginger (minced)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "ginger (minced)",
+      "prepAction": "chop"
     },
     {
       "item": "1 tbsp garlic (minced)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "garlic (minced)",
+      "prepAction": "chop"
     },
     {
       "item": "1 tsp Alicha Kimem (Afrenje)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Alicha Kimem (Afrenje)"
     },
     {
       "item": "1 tsp Netch Azmud (Caraway Seed)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Netch Azmud (Caraway Seed)"
     },
     {
       "item": "1 tsp of Turmeric",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "of Turmeric"
     },
     {
       "item": "½ cup oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "oil",
+      "prepAction": "measure"
     },
     {
       "item": "3 cups water",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
     },
     {
       "item": "Salt (to taste)",

@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "4 lb. 2\"-thick boneless beef short ribs or 5 lb. 2\"-thick cross cut bone-in short ribs (flanken style), cut into 2x2\" pieces",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "lb. 2\"-thick boneless beef short ribs or 5 lb. 2\"-thick cross cut bone-in short ribs (flanken style), cut into 2x2\" pieces"
     },
     {
       "item": "Kosher salt",
@@ -16,47 +21,104 @@
     },
     {
       "item": "2 Tbsp. plus 1 tsp. grapeseed or extra-virgin olive oil",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. plus 1 tsp. grapeseed or extra-virgin olive oil"
     },
     {
       "item": "1 large onion, chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, chopped",
+      "prepAction": "chop"
     },
     {
       "item": "8 garlic cloves, crushed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": null
+      },
+      "name": "garlic cloves, crushed"
     },
     {
       "item": "1 2\" piece ginger, peeled, sliced ⅛\" thick",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "2\" piece ginger, peeled, sliced 1/8\" thick",
+      "prepAction": "chop"
     },
     {
       "item": "2 cups dry red wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "dry red wine",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup mirin (sweet Japanese rice wine)",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "mirin (sweet Japanese rice wine)",
+      "prepAction": "measure"
     },
     {
       "item": "⅓ cup soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "¼ cup (packed) light brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "(packed) light brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "¼ mu radish or daikon (about 8 oz.), peeled, cut into 1\" pieces",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": null
+      },
+      "name": "mu radish or daikon (about 8 oz.), peeled, cut into 1\" pieces"
     },
     {
       "item": "1 large egg, beaten to blend",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "egg, beaten to blend"
     },
     {
       "item": "Shilgochu or gochugaru (coarse Korean hot pepper flakes), sliced scallions, and cooked rice (for serving) was a a great day",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     }
   ],
   "instructions": [

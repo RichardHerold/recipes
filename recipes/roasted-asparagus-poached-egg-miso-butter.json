@@ -8,15 +8,32 @@
   "ingredients": [
     {
       "item": "½ cup shiro (white) miso",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "shiro (white) miso",
+      "prepAction": "measure"
     },
     {
       "item": "8 tablespoons (1 stick) unsalted butter, at room temperature, plus more if needed",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 8,
+        "unit": "tablespoon"
+      },
+      "name": "(1 stick) unsalted butter, at room temperature, plus more if needed",
+      "prepAction": "measure"
     },
     {
       "item": "½ pound thin to medium asparagus",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "pound"
+      },
+      "name": "thin to medium asparagus"
     },
     {
       "item": "Kosher salt",
@@ -24,11 +41,22 @@
     },
     {
       "item": "2 teaspoons sherry vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sherry vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "4 Slow-Poached Eggs or regular poached eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "Slow-Poached Eggs or regular poached eggs"
     },
     {
       "item": "Freshly ground black pepper",

@@ -8,11 +8,21 @@
   "ingredients": [
     {
       "item": "2 quarts veal and/or beef stock",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "quarts veal and/or beef stock"
     },
     {
       "item": "8 pounds beef short ribs (with bone)",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 8,
+        "unit": "pound"
+      },
+      "name": "beef short ribs (with bone)"
     },
     {
       "item": "Salt and black pepper, to taste",
@@ -20,39 +30,92 @@
     },
     {
       "item": "3 cups flour Canola oil, as needed",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "flour Canola oil, as needed",
+      "prepAction": "measure"
     },
     {
       "item": "1 large carrot, finely diced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "carrot, finely diced",
+      "prepAction": "chop"
     },
     {
       "item": "1 large Spanish onion, finely diced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Spanish onion, finely diced",
+      "prepAction": "chop"
     },
     {
       "item": "2 stalks celery, finely diced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "stalks celery, finely diced",
+      "prepAction": "chop"
     },
     {
       "item": "1 ½ cups red wine, any variety except sweet",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "cup"
+      },
+      "name": "red wine, any variety except sweet",
+      "prepAction": "measure"
     },
     {
       "item": "2 cups balsamic vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "balsamic vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons finely chopped fresh rosemary leaves, plus additional sprigs for garnish",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "finely chopped fresh rosemary leaves, plus additional sprigs for garnish",
+      "prepAction": "chop"
     },
     {
       "item": "1 whole hot chile pepper (fresh or dried)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "hot chile pepper (fresh or dried)"
     }
   ],
   "instructions": [

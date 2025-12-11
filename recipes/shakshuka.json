@@ -12,27 +12,63 @@
     },
     {
       "item": "2 tablespoons extra-virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "extra-virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "4 teaspoons finely chopped garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": "teaspoon"
+      },
+      "name": "finely chopped garlic",
+      "prepAction": "chop"
     },
     {
       "item": "1 (28-ounce) can diced tomatoes, including the liquid",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(28-ounce) can diced tomatoes, including the liquid",
+      "prepAction": "chop"
     },
     {
       "item": "1 teaspoon Aleppo pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Aleppo pepper",
+      "prepAction": "measure"
     },
     {
       "item": "1 ½ teaspoons hawayej or teaspoon curry powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "hawayej or teaspoon curry powder",
+      "prepAction": "measure"
     },
     {
       "item": "1 ½ teaspoon freshly squeezed lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "freshly squeezed lemon juice",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
@@ -48,7 +84,12 @@
     },
     {
       "item": "6 eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "Kosher salt",

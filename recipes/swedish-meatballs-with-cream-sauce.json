@@ -12,7 +12,12 @@
     },
     {
       "item": "1 pound freshly ground pork shoulder",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "freshly ground pork shoulder"
     },
     {
       "item": "Kosher salt",
@@ -20,43 +25,100 @@
     },
     {
       "item": "¼ cup buttermilk or heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "buttermilk or heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "¼ ounce (1 packet) unflavored gelatin",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "ounce"
+      },
+      "name": "(1 packet) unflavored gelatin"
     },
     {
       "item": "2 slices high-quality white sandwich bread, crusts removed",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "slices high-quality white sandwich bread, crusts removed",
+      "prepAction": "chop"
     },
     {
       "item": "1 teaspoon soy sauce ½ teaspoon Marmite",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "soy sauce 1/2 teaspoon Marmite",
+      "prepAction": "measure"
     },
     {
       "item": "2 anchovy fillets, mashed to a paste with the back of a fork",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "anchovy fillets, mashed to a paste with the back of a fork"
     },
     {
       "item": "3 medium cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
+      "prepAction": "chop"
     },
     {
       "item": "1 teaspoon red pepper flakes",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "red pepper flakes",
+      "prepAction": "measure"
     },
     {
       "item": "1 large egg",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "egg"
     },
     {
       "item": "1 tablespoon sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon ground fennel",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "ground fennel",
+      "prepAction": "measure"
     },
     {
       "item": "Freshly ground black pepper",
@@ -64,7 +126,13 @@
     },
     {
       "item": "2 cups vegetable oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
     },
     {
       "item": "For the Sauce",
@@ -72,15 +140,33 @@
     },
     {
       "item": "3 tablespoons unsalted butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted butter",
+      "prepAction": "measure"
     },
     {
       "item": "8 ounces buttom mushrooms, cleaned and sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "buttom mushrooms, cleaned and sliced",
+      "prepAction": "chop"
     },
     {
       "item": "1 small onion, finely diced (about 1 cup)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, finely diced (about 1 cup)",
+      "prepAction": "chop"
     },
     {
       "item": "Reserved garlic from above",
@@ -88,23 +174,53 @@
     },
     {
       "item": "1 tablespoon all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "1½ cups homemade or low-sodium canned chicken stock",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "homemade or low-sodium canned chicken stock",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup heavy cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "heavy cream",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
@@ -112,11 +228,23 @@
     },
     {
       "item": "1 teaspoon fresh lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fresh lemon juice",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon fresh thyme leaves",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fresh thyme leaves",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

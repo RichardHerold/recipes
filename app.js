@@ -137,6 +137,99 @@ const UNICODE_FRACTIONS = {
     '⅞': '7/8'
 };
 
+const SCALE_BEHAVIOR_METADATA = {
+    linear: { label: 'Scales normally', icon: null },
+    sublinear: { label: 'Season gently when scaling', icon: '⚠️' },
+    fixed: { label: 'Does not scale', icon: '⚠️' },
+    taste: { label: 'Adjust to taste', icon: '⚠️' },
+    stepped: { label: 'Rounded to whole units', icon: '⚠️' }
+};
+
+const DEFAULT_SCALE_BEHAVIOR = 'linear';
+const SCALE_FACTOR_MIN = 0.25;
+const SCALE_FACTOR_MAX = 4;
+const FRACTION_DENOMINATORS = [2, 3, 4, 6, 8, 12, 16];
+
+function createInitialScaleState(servingsMeta) {
+    const hasMeta = servingsMeta && typeof servingsMeta === 'object';
+    const baseAmount = hasMeta && typeof servingsMeta.amount === 'number'
+        ? servingsMeta.amount
+        : null;
+    return {
+        baseServings: baseAmount,
+        unit: hasMeta && servingsMeta.unit ? servingsMeta.unit : 'servings',
+        note: hasMeta && servingsMeta.note ? servingsMeta.note : null,
+        currentServings: baseAmount,
+        scaleFactor: 1
+    };
+}
+
+function getScaleState(recipe) {
+    if (!recipe) {
+        return createInitialScaleState(null);
+    }
+    if (!recipe.scaleState) {
+        recipe.scaleState = createInitialScaleState(recipe.servings || null);
+    }
+    return recipe.scaleState;
+}
+
+function clampScaleFactor(value) {
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
+        return 1;
+    }
+    return Math.min(SCALE_FACTOR_MAX, Math.max(SCALE_FACTOR_MIN, value));
+}
+
+function setRecipeScaleFactor(recipe, factor) {
+    const state = getScaleState(recipe);
+    if (!state) return state;
+    const clamped = clampScaleFactor(factor);
+    state.scaleFactor = clamped;
+    if (typeof state.baseServings === 'number') {
+        const nextValue = state.baseServings * clamped;
+        state.currentServings = Math.max(0.01, Math.round(nextValue * 100) / 100);
+    }
+    recipe._dismissedScaleWarningFor = null;
+    return state;
+}
+
+function setRecipeServings(recipe, servingsValue) {
+    const state = getScaleState(recipe);
+    if (typeof state.baseServings !== 'number') {
+        return state;
+    }
+    if (typeof servingsValue !== 'number' || !Number.isFinite(servingsValue) || servingsValue <= 0) {
+        return setRecipeScaleFactor(recipe, 1);
+    }
+    const nextFactor = servingsValue / state.baseServings;
+    return setRecipeScaleFactor(recipe, nextFactor);
+}
+
+function adjustRecipeServings(recipe, delta) {
+    const state = getScaleState(recipe);
+    if (typeof state.baseServings !== 'number') {
+        return state;
+    }
+    const currentValue = typeof state.currentServings === 'number'
+        ? state.currentServings
+        : state.baseServings;
+    const minServings = Math.max(0.25, state.baseServings * SCALE_FACTOR_MIN);
+    const nextServings = Math.max(minServings, currentValue + delta);
+    return setRecipeServings(recipe, nextServings);
+}
+
+function resetRecipeScale(recipe) {
+    return setRecipeScaleFactor(recipe, 1);
+}
+
+function isApproximatelyEqual(a, b, tolerance = 0.01) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return false;
+    }
+    return Math.abs(a - b) <= tolerance;
+}
+
 const PREP_ACTION_METADATA = {
     chop: { label: 'Chopping', icon: '🔪' },
     measure: { label: 'Measuring', icon: '📏' },
@@ -339,6 +432,7 @@ function initializeRecipeCardFeatures(card) {
     const recipe = recipeMapByName.get(recipeName);
     if (!recipe) return;
     setupInstructionToggle(card, recipe);
+    setupRecipeScaling(card, recipe);
 }
 
 
@@ -361,6 +455,106 @@ function setupInstructionToggle(card) {
     });
 }
 
+function setupRecipeScaling(card, recipe) {
+    if (!card || !recipe) return;
+    const controls = card.querySelector('[data-role="servings-controls"]');
+    if (controls) {
+        controls.querySelectorAll('[data-scale-action]').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                const action = button.getAttribute('data-scale-action');
+                handleServingsAction(recipe, action);
+            });
+        });
+        controls.querySelectorAll('[data-scale-preset]').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                const preset = button.getAttribute('data-scale-preset');
+                handleServingsPreset(recipe, preset);
+            });
+        });
+    }
+    card.querySelectorAll('[data-role="dismiss-scale-warning"]').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const state = getScaleState(recipe);
+            if (state) {
+                recipe._dismissedScaleWarningFor = state.scaleFactor.toFixed(2);
+            }
+            const warningBox = button.closest('[data-role="scale-warning"]');
+            if (warningBox) {
+                warningBox.remove();
+            }
+        });
+    });
+}
+
+function handleServingsAction(recipe, action) {
+    if (!recipe || !action) return;
+    switch (action) {
+        case 'increment':
+            adjustRecipeServings(recipe, 1);
+            break;
+        case 'decrement':
+            adjustRecipeServings(recipe, -1);
+            break;
+        case 'reset':
+            resetRecipeScale(recipe);
+            break;
+        default:
+            return;
+    }
+    refreshRecipeCookView(recipe);
+}
+
+function handleServingsPreset(recipe, preset) {
+    if (!recipe || !preset) return;
+    switch (preset) {
+        case 'half':
+            setRecipeScaleFactor(recipe, 0.5);
+            break;
+        case 'original':
+            setRecipeScaleFactor(recipe, 1);
+            break;
+        case 'double':
+            setRecipeScaleFactor(recipe, 2);
+            break;
+        default:
+            return;
+    }
+    refreshRecipeCookView(recipe);
+}
+
+function refreshRecipeCookView(recipe) {
+    if (!recipe || !recipe.name) return;
+    const selector = buildRecipeCardSelector(recipe.name);
+    const card = document.querySelector(selector);
+    if (!card) return;
+    const details = card.querySelector('.recipe-details');
+    if (!details) return;
+    const existingViews = details.querySelector('.instructions-views');
+    const activeMode = existingViews ? existingViews.getAttribute('data-active-mode') : 'order';
+    details.innerHTML = renderCookView(recipe);
+    initializeRecipeCardFeatures(card);
+    if (activeMode && activeMode !== 'order') {
+        const toggleBtn = card.querySelector(`.instructions-view-btn[data-mode-target="${activeMode}"]`);
+        if (toggleBtn && !toggleBtn.classList.contains('active')) {
+            toggleBtn.click();
+        }
+    }
+}
+
+function buildRecipeCardSelector(recipeName) {
+    if (window.CSS && window.CSS.escape) {
+        return `.recipe-card[data-recipe-name="${window.CSS.escape(recipeName)}"]`;
+    }
+    const safeName = recipeName.replace(/["\\]/g, '\\$&');
+    return `.recipe-card[data-recipe-name="${safeName}"]`;
+}
+
 
 
 function normalizeRecipe(recipe) {
@@ -369,6 +563,9 @@ function normalizeRecipe(recipe) {
     }
 
     const normalized = { ...recipe };
+    normalized.servings = normalizeServings(recipe.servings);
+    normalized.scaleWarnings = Array.isArray(recipe.scaleWarnings) ? recipe.scaleWarnings.filter(Boolean) : [];
+    normalized.scaleState = createInitialScaleState(normalized.servings);
     normalized.tags = Array.isArray(recipe.tags) ? recipe.tags.filter(Boolean) : [];
     if ((!normalized.tags || normalized.tags.length === 0) && recipe.category) {
         normalized.tags = [recipe.category];
@@ -391,6 +588,17 @@ function normalizeRecipe(recipe) {
     normalized.time = normalizeTimeBreakdown(recipe.time, recipe.prepTime, recipe.cookTime, normalized.totalPrepTime);
 
     return normalized;
+}
+
+function normalizeServings(servings) {
+    if (!servings || typeof servings !== 'object' || typeof servings.amount !== 'number') {
+        return null;
+    }
+    return {
+        amount: servings.amount,
+        unit: servings.unit || 'servings',
+        note: servings.note || null
+    };
 }
 
 function normalizeEquipmentList(equipment) {
@@ -586,18 +794,18 @@ function extractIngredientText(entry) {
     return '';
 }
 
-function renderIngredientItems(items) {
+function renderIngredientItems(recipe, items) {
     if (!Array.isArray(items) || items.length === 0) return '';
     return items.map(subItem => {
         if (isIngredientSubsection(subItem)) {
-            return renderIngredientItems(subItem.items);
+            return renderIngredientItems(recipe, subItem.items);
         }
-        const text = extractIngredientText(subItem);
-        return text ? `<li>${escapeHtml(text)}</li>` : '';
+        const markup = renderIngredientLine(recipe, subItem);
+        return markup ? `<li>${markup}</li>` : '';
     }).join('');
 }
 
-function renderIngredients(ingredients) {
+function renderIngredients(recipe, ingredients) {
     if (!ingredients || ingredients.length === 0) return '';
     
     let html = '';
@@ -613,7 +821,7 @@ function renderIngredients(ingredients) {
     // Render items in the order they appear in the JSON
     ingredients.forEach(item => {
         if (isIngredientSubsection(item)) {
-            const subsectionItems = renderIngredientItems(item.items);
+            const subsectionItems = renderIngredientItems(recipe, item.items);
             if (!subsectionItems) return;
             closeList();
             
@@ -624,15 +832,15 @@ function renderIngredients(ingredients) {
                 </ul>
             </div>`;
         } else {
-            const text = extractIngredientText(item);
-            if (!text) return;
+            const markup = renderIngredientLine(recipe, item);
+            if (!markup) return;
             
             // Regular ingredient - start a list if needed
             if (!listOpen) {
                 html += '<ul class="ingredients-list">';
                 listOpen = true;
             }
-            html += `<li>${escapeHtml(text)}</li>`;
+            html += `<li>${markup}</li>`;
         }
     });
     
@@ -641,14 +849,16 @@ function renderIngredients(ingredients) {
 }
 
 // Render instructions with support for subsections
-function renderInstructions(instructions) {
-    if (!instructions || instructions.length === 0) return '';
+function renderInstructions(recipe) {
+    if (!recipe || !recipe.instructions || recipe.instructions.length === 0) return '';
     
     let html = '';
     let currentList = null;
+    const state = getScaleState(recipe);
+    const scaleFactor = state ? state.scaleFactor || 1 : 1;
     
     // Render items in the order they appear in the JSON
-    instructions.forEach(item => {
+    recipe.instructions.forEach(item => {
         if (isInstructionSubsection(item)) {
             // Close any open list before starting a subsection
             if (currentList) {
@@ -662,9 +872,9 @@ function renderInstructions(instructions) {
                 <ol class="instructions-list">`;
             
             item.items.forEach(subItem => {
-                const text = extractInstructionText(subItem);
-                if (text) {
-                    html += `<li>${escapeHtml(text)}</li>`;
+                const row = renderInstructionLine(subItem, scaleFactor);
+                if (row) {
+                    html += row;
                 }
             });
             
@@ -675,9 +885,9 @@ function renderInstructions(instructions) {
                 html += '<ol class="instructions-list">';
                 currentList = true;
             }
-            const text = extractInstructionText(item);
-            if (text) {
-                html += `<li>${escapeHtml(text)}</li>`;
+            const row = renderInstructionLine(item, scaleFactor);
+            if (row) {
+                html += row;
             }
         }
     });
@@ -688,6 +898,32 @@ function renderInstructions(instructions) {
     }
     
     return html;
+}
+
+function renderInstructionLine(entry, scaleFactor) {
+    const text = extractInstructionText(entry);
+    if (!text) {
+        return '';
+    }
+    const note = getInstructionScaleNote(entry, scaleFactor);
+    return `<li>${escapeHtml(text)}${note}</li>`;
+}
+
+function getInstructionScaleNote(entry, scaleFactor) {
+    if (!entry || typeof entry !== 'object' || !entry.scaleAdjustment) {
+        return '';
+    }
+    const adjustment = entry.scaleAdjustment;
+    if (typeof adjustment.trigger === 'number' && scaleFactor < adjustment.trigger) {
+        return '';
+    }
+    if (typeof adjustment.trigger !== 'number' && isApproximatelyEqual(scaleFactor, 1)) {
+        return '';
+    }
+    if (!adjustment.note) {
+        return '';
+    }
+    return `<span class="instruction-scale-note">⚠️ ${escapeHtml(adjustment.note)}</span>`;
 }
 
 function isInstructionSubsection(entry) {
@@ -819,11 +1055,9 @@ function createRecipeCard(recipe) {
 }
 
 function renderCookView(recipe) {
-    const ingredientsHtml = recipe.ingredients ? `
-        <div class="ingredients-section">
-            <h3>Ingredients</h3>
-            ${renderIngredients(recipe.ingredients)}
-        </div>` : '';
+    const servingsHtml = renderServingsSection(recipe);
+    const warningsHtml = renderScaleWarningsSection(recipe);
+    const ingredientsHtml = renderIngredientsSection(recipe);
 
     const instructionsHtml = renderInstructionsSection(recipe);
 
@@ -833,10 +1067,263 @@ function renderCookView(recipe) {
 
     return `
         <div class="cook-view-grid">
+            ${servingsHtml}
+            ${warningsHtml}
             ${ingredientsHtml}
             ${instructionsHtml}
         </div>
     `;
+}
+
+function renderServingsSection(recipe) {
+    if (!recipe) return '';
+    const state = getScaleState(recipe);
+    if (!state || typeof state.baseServings !== 'number') {
+        return '';
+    }
+    const isServingUnit = !state.unit ? true : /serving|portion/i.test(state.unit);
+    const label = isServingUnit ? 'Serves' : 'Makes';
+    const currentValue = typeof state.currentServings === 'number' ? state.currentServings : state.baseServings;
+    const displayValue = formatQuantityForDisplay(currentValue);
+    const unitLabel = state.unit || (isServingUnit ? 'servings' : 'portions');
+    const note = state.note ? `<span class="servings-note">(${escapeHtml(state.note)})</span>` : '';
+    const scaledIndicator = isApproximatelyEqual(state.scaleFactor, 1)
+        ? ''
+        : `<span class="servings-scaled-badge">Scaled from ${formatQuantityForDisplay(state.baseServings)} ${escapeHtml(unitLabel)}</span>`;
+    const decrementDisabled = state.scaleFactor <= SCALE_FACTOR_MIN + 0.001;
+    const incrementDisabled = state.scaleFactor >= SCALE_FACTOR_MAX - 0.001;
+    
+    return `
+        <div class="servings-section full-width-block prevent-card-toggle" data-role="servings-controls">
+            <div class="servings-stepper-row">
+                <span class="servings-label">${label}</span>
+                <div class="servings-stepper">
+                    <button type="button" class="servings-btn" data-scale-action="decrement" ${decrementDisabled ? 'disabled' : ''} aria-label="Decrease servings">−</button>
+                    <span class="servings-value" data-role="servings-value">${displayValue}</span>
+                    <button type="button" class="servings-btn" data-scale-action="increment" ${incrementDisabled ? 'disabled' : ''} aria-label="Increase servings">+</button>
+                </div>
+                <span class="servings-unit">${escapeHtml(unitLabel)}</span>
+                ${note}
+            </div>
+            <div class="servings-presets">
+                ${renderServingsPresetButton('Half', 'half', state.scaleFactor, 0.5)}
+                ${renderServingsPresetButton('Original', 'original', state.scaleFactor, 1)}
+                ${renderServingsPresetButton('Double', 'double', state.scaleFactor, 2)}
+            </div>
+            <div class="servings-meta-row">
+                ${scaledIndicator}
+                <button type="button" class="servings-reset-btn" data-scale-action="reset" ${isApproximatelyEqual(state.scaleFactor, 1) ? 'disabled' : ''}>Reset</button>
+            </div>
+        </div>
+    `;
+}
+
+function renderServingsPresetButton(label, presetKey, currentFactor, targetFactor) {
+    const disabled = isApproximatelyEqual(currentFactor, targetFactor);
+    const classes = ['servings-preset-btn'];
+    if (disabled) {
+        classes.push('active');
+    }
+    return `<button type="button" class="${classes.join(' ')}" data-scale-preset="${presetKey}" ${disabled ? 'disabled' : ''}>${label}</button>`;
+}
+
+function renderScaleWarningsSection(recipe) {
+    if (!recipe || !Array.isArray(recipe.scaleWarnings) || recipe.scaleWarnings.length === 0) {
+        return '';
+    }
+    const state = getScaleState(recipe);
+    if (!state || isApproximatelyEqual(state.scaleFactor, 1)) {
+        return '';
+    }
+    const factorKey = state.scaleFactor.toFixed(2);
+    if (recipe._dismissedScaleWarningFor === factorKey) {
+        return '';
+    }
+    const items = recipe.scaleWarnings.map(warning => `<li>${escapeHtml(warning)}</li>`).join('');
+    return `
+        <div class="scale-warning-box full-width-block prevent-card-toggle" data-role="scale-warning" data-scale-factor="${factorKey}">
+            <div class="scale-warning-header">
+                <span class="scale-warning-title">⚠️ Scaling Tips</span>
+                <button type="button" class="scale-warning-dismiss" data-role="dismiss-scale-warning" aria-label="Dismiss scaling warnings">×</button>
+            </div>
+            <ul class="scale-warning-list">
+                ${items}
+            </ul>
+        </div>
+    `;
+}
+
+function renderIngredientsSection(recipe) {
+    if (!recipe || !recipe.ingredients || !recipe.ingredients.length) {
+        return '';
+    }
+    const listMarkup = renderIngredients(recipe, recipe.ingredients);
+    if (!listMarkup) {
+        return '';
+    }
+    return `
+        <div class="ingredients-section">
+            <h3>Ingredients</h3>
+            ${listMarkup}
+        </div>
+    `;
+}
+
+function renderIngredientLine(recipe, entry) {
+    const meta = getScaledIngredientMeta(recipe, entry);
+    if (!meta || !meta.displayText) {
+        return '';
+    }
+    const classes = ['ingredient-line'];
+    if (meta.flagged) {
+        classes.push('ingredient-line-flagged');
+    }
+    const icon = meta.flagged ? `<span class="ingredient-flag"${meta.warningLabel ? ` title="${escapeHtml(meta.warningLabel)}"` : ''}>⚠️</span>` : '';
+    const note = meta.note ? `<span class="ingredient-note">${escapeHtml(meta.note)}</span>` : '';
+    return `<span class="${classes.join(' ')}">${escapeHtml(meta.displayText)}</span>${icon}${note}`;
+}
+
+function getScaledIngredientMeta(recipe, entry) {
+    const baseText = extractIngredientText(entry);
+    if (!baseText) {
+        return null;
+    }
+    const normalizedText = baseText.trim();
+    const state = getScaleState(recipe);
+    const scaleFactor = state ? state.scaleFactor || 1 : 1;
+    const behavior = getScaleBehavior(entry);
+    const quantityMeta = getIngredientQuantity(entry);
+    const parsed = parseIngredientText(baseText);
+    const normalizedUnit = quantityMeta && quantityMeta.unit ? quantityMeta.unit : (parsed && parsed.unit ? parsed.unit : null);
+    const scaleNote = entry && typeof entry === 'object' && entry.scaleNote ? entry.scaleNote : null;
+    let flagged = behavior !== DEFAULT_SCALE_BEHAVIOR || Boolean(scaleNote);
+    let warningLabel = behavior !== DEFAULT_SCALE_BEHAVIOR
+        ? (SCALE_BEHAVIOR_METADATA[behavior]?.label || 'Scaling caution')
+        : (scaleNote ? 'Scaling note' : null);
+    let note = scaleNote || null;
+    let displayText = normalizedText;
+    let scaledQuantity = null;
+    const isTasteBehavior = behavior === 'taste';
+
+    if (isTasteBehavior) {
+        if (!note) {
+            note = 'Adjust to taste';
+        }
+        flagged = true;
+        warningLabel = SCALE_BEHAVIOR_METADATA.taste.label;
+        return {
+            displayText,
+            flagged,
+            warningLabel,
+            note,
+            scaleBehavior: behavior,
+            rawText: normalizedText,
+            parsedName: parsed && parsed.name ? parsed.name : baseText,
+            scaledQuantity: null,
+            unit: normalizedUnit,
+            isTaste: true
+        };
+    }
+
+    if (quantityMeta && typeof quantityMeta.amount === 'number') {
+        const scaledResult = scaleQuantityValue(quantityMeta.amount, behavior, scaleFactor);
+        if (scaledResult) {
+            scaledQuantity = scaledResult.amount;
+            const amountText = formatQuantityForDisplay(scaledResult.amount);
+            const unitText = normalizedUnit ? formatUnit(normalizedUnit, scaledResult.amount) : '';
+            const ingredientName = parsed && parsed.name ? parsed.name : normalizedText.replace(/^[\d\s/().-]+/, '').trim();
+            displayText = `${amountText}${unitText ? ` ${unitText}` : ''}${ingredientName ? ` ${ingredientName}` : ''}`.trim();
+
+            if (behavior === 'fixed' && !isApproximatelyEqual(scaleFactor, 1)) {
+                note = note || 'Does not scale automatically';
+                flagged = true;
+                warningLabel = SCALE_BEHAVIOR_METADATA.fixed.label;
+            }
+            if (behavior === 'stepped') {
+                warningLabel = SCALE_BEHAVIOR_METADATA.stepped.label;
+                if (scaledResult.roundedFrom != null && Math.abs(scaledResult.roundedFrom - scaledResult.amount) >= 0.01) {
+                    note = note || `Rounded from ${formatQuantityForDisplay(scaledResult.roundedFrom)}`;
+                    flagged = true;
+                }
+            }
+            if (behavior === 'sublinear' && !note) {
+                note = SCALE_BEHAVIOR_METADATA.sublinear.label;
+            }
+        }
+    }
+
+    return {
+        displayText,
+        flagged,
+        warningLabel,
+        note,
+        scaleBehavior: behavior,
+        rawText: normalizedText,
+        parsedName: parsed && parsed.name ? parsed.name : null,
+        scaledQuantity,
+        unit: normalizedUnit,
+        isTaste: false
+    };
+}
+
+function getScaleBehavior(entry) {
+    if (entry && typeof entry === 'object' && entry.scaleBehavior) {
+        const behavior = entry.scaleBehavior.toLowerCase();
+        if (SCALE_BEHAVIOR_METADATA[behavior] || behavior === DEFAULT_SCALE_BEHAVIOR) {
+            return behavior;
+        }
+    }
+    return DEFAULT_SCALE_BEHAVIOR;
+}
+
+function getIngredientQuantity(entry) {
+    if (entry && typeof entry === 'object' && entry.quantity && typeof entry.quantity.amount === 'number') {
+        return {
+            amount: entry.quantity.amount,
+            unit: entry.quantity.unit || null
+        };
+    }
+    const text = extractIngredientText(entry);
+    if (!text) return null;
+    const parsed = parseIngredientText(text);
+    if (!parsed || typeof parsed.quantity !== 'number') {
+        return null;
+    }
+    return {
+        amount: parsed.quantity,
+        unit: parsed.unit || null
+    };
+}
+
+function scaleQuantityValue(amount, behavior, scaleFactor) {
+    if (typeof amount !== 'number' || Number.isNaN(amount)) {
+        return null;
+    }
+    const factor = typeof scaleFactor === 'number' && Number.isFinite(scaleFactor) ? scaleFactor : 1;
+    let scaledAmount = amount;
+    let roundedFrom = null;
+    switch (behavior) {
+        case 'linear':
+            scaledAmount = amount * factor;
+            break;
+        case 'sublinear':
+            scaledAmount = amount * Math.sqrt(Math.max(factor, 0));
+            break;
+        case 'fixed':
+            scaledAmount = amount;
+            break;
+        case 'stepped':
+            roundedFrom = amount * factor;
+            scaledAmount = Math.max(1, Math.round(roundedFrom));
+            break;
+        default:
+            scaledAmount = amount * factor;
+            break;
+    }
+    return {
+        amount: Math.max(0, Math.round(scaledAmount * 100) / 100),
+        roundedFrom
+    };
 }
 
 function renderEquipmentSection(recipe) {
@@ -1172,7 +1659,7 @@ function renderInstructionsSection(recipe) {
     if (!recipe.instructions || !recipe.instructions.length) {
         return '';
     }
-    const defaultInstructions = renderInstructions(recipe.instructions);
+    const defaultInstructions = renderInstructions(recipe);
     const workflowGroups = buildEquipmentWorkflowGroups(recipe);
     const hasWorkflow = workflowGroups.some(group => group.key !== '__general__' && group.steps.length);
     const workflowHtml = hasWorkflow ? renderEquipmentWorkflow(workflowGroups) : '';
@@ -1964,25 +2451,31 @@ function flattenInstructionSteps(instructions) {
 function collectIngredientEntries(recipes) {
     const entries = [];
     let orderCounter = 0;
-    const pushEntry = (entry) => {
+    const pushEntry = (entry, recipe) => {
         if (isIngredientSubsection(entry)) {
-            entry.items.forEach(pushEntry);
+            entry.items.forEach(subItem => pushEntry(subItem, recipe));
             return;
         }
-        const text = extractIngredientText(entry);
-        if (!text) return;
+        const meta = getScaledIngredientMeta(recipe, entry);
+        if (!meta || !meta.displayText) return;
         const category = entry && typeof entry === 'object' ? (entry.aisle || entry.category || null) : null;
         entries.push({
-            text: text.trim(),
+            text: meta.displayText.trim(),
+            rawText: meta.rawText || extractIngredientText(entry) || '',
             category,
             normalizedCategory: normalizeCategory(category),
-            order: orderCounter++
+            order: orderCounter++,
+            parsedName: meta.parsedName || null,
+            unitKey: meta.unit || '',
+            quantity: typeof meta.scaledQuantity === 'number' ? meta.scaledQuantity : null,
+            isTaste: Boolean(meta.isTaste),
+            scaleBehavior: meta.scaleBehavior || DEFAULT_SCALE_BEHAVIOR
         });
     };
     
     recipes.forEach(recipe => {
         if (!Array.isArray(recipe.ingredients)) return;
-        recipe.ingredients.forEach(pushEntry);
+        recipe.ingredients.forEach(item => pushEntry(item, recipe));
     });
     
     return entries;
@@ -2009,6 +2502,19 @@ function shouldUseCategorizedList(entries) {
     return categorized / entries.length >= 0.5;
 }
 
+function extractTasteWarnings(entries) {
+    const warnings = new Set();
+    entries.forEach(entry => {
+        if (entry && entry.isTaste) {
+            const label = entry.parsedName || entry.rawText || entry.text;
+            if (label) {
+                warnings.add(label.trim());
+            }
+        }
+    });
+    return Array.from(warnings);
+}
+
 function buildShoppingListNotes(recipes) {
     const entries = collectIngredientEntries(recipes);
     if (!entries.length) {
@@ -2017,41 +2523,50 @@ function buildShoppingListNotes(recipes) {
     
     const combined = combineIngredientEntries(entries);
     const useCategories = shouldUseCategorizedList(entries);
+    const tasteWarnings = extractTasteWarnings(entries);
+    let result = '';
     
     if (!useCategories) {
-        return combined.map(item => `- ${formatCombinedIngredient(item)}`).join('\n');
+        result = combined.map(item => `- ${formatCombinedIngredient(item)}`).join('\n');
+    } else {
+        const grouped = new Map();
+        combined.forEach(item => {
+            const categoryKey = item.normalizedCategory || 'other';
+            const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
+            if (!grouped.has(label)) {
+                grouped.set(label, []);
+            }
+            grouped.get(label).push(item);
+        });
+        
+        const lines = [];
+        CATEGORY_GROUPS.forEach(group => {
+            const items = grouped.get(group.label);
+            if (items && items.length) {
+                lines.push(`${group.label}:`);
+                items
+                    .slice()
+                    .sort((a, b) => {
+                        const nameA = (a.parsedName || a.rawText).toLowerCase();
+                        const nameB = (b.parsedName || b.rawText).toLowerCase();
+                        return nameA.localeCompare(nameB);
+                    })
+                    .forEach(item => {
+                        lines.push(`- ${formatCombinedIngredient(item)}`);
+                    });
+                lines.push('');
+            }
+        });
+        
+        result = lines.join('\n').trim();
     }
     
-    const grouped = new Map();
-    combined.forEach(item => {
-        const categoryKey = item.normalizedCategory || 'other';
-        const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
-        if (!grouped.has(label)) {
-            grouped.set(label, []);
-        }
-        grouped.get(label).push(item);
-    });
+    if (tasteWarnings.length) {
+        const warningLine = `⚠️ Adjust to taste: ${tasteWarnings.join(', ')}`;
+        result = result ? `${result}\n\n${warningLine}` : warningLine;
+    }
     
-    const lines = [];
-    CATEGORY_GROUPS.forEach(group => {
-        const items = grouped.get(group.label);
-        if (items && items.length) {
-            lines.push(`${group.label}:`);
-            items
-                .slice()
-                .sort((a, b) => {
-                    const nameA = (a.parsedName || a.rawText).toLowerCase();
-                    const nameB = (b.parsedName || b.rawText).toLowerCase();
-                    return nameA.localeCompare(nameB);
-                })
-                .forEach(item => {
-                    lines.push(`- ${formatCombinedIngredient(item)}`);
-                });
-            lines.push('');
-        }
-    });
-    
-    return lines.join('\n').trim();
+    return result;
 }
 
 function buildShoppingListSubtasks(recipes) {
@@ -2062,41 +2577,46 @@ function buildShoppingListSubtasks(recipes) {
     
     const combined = combineIngredientEntries(entries);
     const useCategories = shouldUseCategorizedList(entries);
-    const subtasks = [];
+    const tasteWarnings = extractTasteWarnings(entries);
+    let subtasks = [];
     
     if (!useCategories) {
         // Simple list - just ingredients
-        return combined.map(item => formatCombinedIngredient(item));
+        subtasks = combined.map(item => formatCombinedIngredient(item));
+    } else {
+        // Grouped by category
+        const grouped = new Map();
+        combined.forEach(item => {
+            const categoryKey = item.normalizedCategory || 'other';
+            const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
+            if (!grouped.has(label)) {
+                grouped.set(label, []);
+            }
+            grouped.get(label).push(item);
+        });
+        
+        // Create subtasks organized by category
+        CATEGORY_GROUPS.forEach(group => {
+            const items = grouped.get(group.label);
+            if (items && items.length) {
+                // Add ingredients for this category
+                items
+                    .slice()
+                    .sort((a, b) => {
+                        const nameA = (a.parsedName || a.rawText).toLowerCase();
+                        const nameB = (b.parsedName || b.rawText).toLowerCase();
+                        return nameA.localeCompare(nameB);
+                    })
+                    .forEach(item => {
+                        subtasks.push(formatCombinedIngredient(item));
+                    });
+            }
+        });
     }
     
-    // Grouped by category
-    const grouped = new Map();
-    combined.forEach(item => {
-        const categoryKey = item.normalizedCategory || 'other';
-        const label = CATEGORY_LABEL_BY_KEY[categoryKey] || CATEGORY_LABEL_BY_KEY.other;
-        if (!grouped.has(label)) {
-            grouped.set(label, []);
-        }
-        grouped.get(label).push(item);
-    });
-    
-    // Create subtasks organized by category
-    CATEGORY_GROUPS.forEach(group => {
-        const items = grouped.get(group.label);
-        if (items && items.length) {
-            // Add ingredients for this category
-            items
-                .slice()
-                .sort((a, b) => {
-                    const nameA = (a.parsedName || a.rawText).toLowerCase();
-                    const nameB = (b.parsedName || b.rawText).toLowerCase();
-                    return nameA.localeCompare(nameB);
-                })
-                .forEach(item => {
-                    subtasks.push(formatCombinedIngredient(item));
-                });
-        }
-    });
+    if (tasteWarnings.length) {
+        subtasks.push(`⚠️ Adjust to taste: ${tasteWarnings.join(', ')}`);
+    }
     
     return subtasks;
 }
@@ -2107,17 +2627,40 @@ function combineIngredientEntries(entries) {
     entries.forEach(entry => {
         const normalizedText = normalizeUnicodeFractions(entry.text || '');
         if (!normalizedText) return;
-        const parsed = parseIngredientText(normalizedText);
-        const key = parsed && parsed.name
-            ? `parsed||${parsed.unit || 'no-unit'}||${parsed.name.toLowerCase()}`
+        let parsedName = entry.parsedName || null;
+        let normalizedName = parsedName ? parsedName.toLowerCase() : null;
+        let unitKey = entry.unitKey || '';
+        let quantityValue = typeof entry.quantity === 'number' ? entry.quantity : null;
+        let parsed = null;
+
+        if (!normalizedName) {
+            parsed = parseIngredientText(normalizedText);
+            if (parsed && parsed.name) {
+                parsedName = parsed.name;
+                normalizedName = parsedName.toLowerCase();
+                if (!unitKey) {
+                    unitKey = parsed.unit || '';
+                }
+                if (quantityValue === null && typeof parsed.quantity === 'number') {
+                    quantityValue = parsed.quantity;
+                }
+            }
+        }
+
+        const key = normalizedName
+            ? `parsed||${unitKey || 'no-unit'}||${normalizedName}`
             : `raw||${normalizedText.toLowerCase()}`;
         const existing = combined.get(key);
         
         if (existing) {
             existing.count += 1;
             existing.order = Math.min(existing.order, entry.order);
-            if (parsed && typeof parsed.quantity === 'number' && existing.quantity !== null) {
-                existing.quantity += parsed.quantity;
+            if (quantityValue !== null) {
+                if (existing.quantity === null || typeof existing.quantity !== 'number') {
+                    existing.quantity = quantityValue;
+                } else {
+                    existing.quantity += quantityValue;
+                }
             }
             if (!existing.normalizedCategory && entry.normalizedCategory) {
                 existing.normalizedCategory = entry.normalizedCategory;
@@ -2128,10 +2671,10 @@ function combineIngredientEntries(entries) {
         } else {
             combined.set(key, {
                 key,
-                rawText: normalizedText,
-                parsedName: parsed ? parsed.name : null,
-                unit: parsed ? parsed.unit : '',
-                quantity: parsed && typeof parsed.quantity === 'number' ? parsed.quantity : null,
+                rawText: entry.rawText || normalizedText,
+                parsedName,
+                unit: unitKey,
+                quantity: quantityValue,
                 count: 1,
                 category: entry.category || null,
                 normalizedCategory: entry.normalizedCategory || null,
@@ -2226,7 +2769,7 @@ function convertQuantityString(value) {
 
 function formatCombinedIngredient(ingredient) {
     if (ingredient.quantity !== null && ingredient.parsedName) {
-        const quantityText = formatQuantity(ingredient.quantity);
+        const quantityText = formatQuantityForDisplay(ingredient.quantity);
         const unitText = ingredient.unit ? ` ${formatUnit(ingredient.unit, ingredient.quantity)}` : '';
         return `${quantityText}${unitText} ${ingredient.parsedName}`.trim();
     }
@@ -2236,12 +2779,45 @@ function formatCombinedIngredient(ingredient) {
     return ingredient.rawText;
 }
 
-function formatQuantity(value) {
+function formatQuantityForDisplay(value) {
+    if (typeof value !== 'number' || Number.isNaN(value)) {
+        return '';
+    }
+    if (value === 0) {
+        return '0';
+    }
+    const absValue = Math.abs(value);
+    if (absValue < 0.0625) {
+        return value < 0 ? '< -1/16' : '< 1/16';
+    }
+    const wholePart = value < 0 ? Math.ceil(value) : Math.floor(value);
+    const remainder = Math.abs(value - wholePart);
+    const fraction = remainder > 0 ? convertToFraction(remainder) : '';
+    if (fraction) {
+        if (wholePart === 0) {
+            return value < 0 ? `-${fraction}` : fraction;
+        }
+        return `${wholePart} ${fraction}`;
+    }
+    if (absValue >= 1000) {
+        return value.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
     if (Number.isInteger(value)) {
         return `${value}`;
     }
-    const precise = Number(value.toFixed(2));
-    return `${precise}`;
+    return `${Number(value.toFixed(2))}`;
+}
+
+function convertToFraction(value) {
+    for (const denominator of FRACTION_DENOMINATORS) {
+        const numerator = Math.round(value * denominator);
+        if (numerator === 0) continue;
+        const approximation = numerator / denominator;
+        if (Math.abs(approximation - value) <= 0.01) {
+            return `${numerator}/${denominator}`;
+        }
+    }
+    return '';
 }
 
 function formatUnit(unit, quantity) {

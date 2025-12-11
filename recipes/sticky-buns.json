@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "1 roll of frozen bread dough (defrosted)",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "roll of frozen bread dough (defrosted)"
     },
     {
       "item": "Cinnamon sugar",

@@ -8,11 +8,21 @@
   "ingredients": [
     {
       "item": "1 stick organic salted butter (you can use cultured vegan butter instead)",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "stick organic salted butter (you can use cultured vegan butter instead)"
     },
     {
       "item": "14 leaves fresh sage or to taste",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 14,
+        "unit": null
+      },
+      "name": "leaves fresh sage or to taste"
     },
     {
       "item": "freshly cracked black pepper to taste",
@@ -20,11 +30,21 @@
     },
     {
       "item": "1/2 lemon optional",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "lemon optional"
     },
     {
       "item": "3/4 lb butternut squash ravioli or potato gnocchi",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "pound"
+      },
+      "name": "butternut squash ravioli or potato gnocchi"
     }
   ],
   "instructions": [

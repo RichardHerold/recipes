@@ -8,55 +8,130 @@
   "ingredients": [
     {
       "item": "1 cup mayonnaise",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "mayonnaise",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup sour cream",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "sour cream",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 cup buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon white pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "white pepper",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons grated onions",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "grated onions",
+      "prepAction": "measure"
     },
     {
       "item": "4 dashes Tabasco sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "dashes Tabasco sauce"
     },
     {
       "item": "1 tablespoon lemon juice",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "lemon juice",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon Worcestershire sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Worcestershire sauce",
+      "prepAction": "measure"
     },
     {
       "item": "1/2 teaspoon salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 dash cayenne pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "dash cayenne pepper"
     },
     {
       "item": "1 teaspoon minced garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "minced garlic",
+      "prepAction": "chop"
     },
     {
       "item": "2 teaspoons sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
     },
     {
       "item": "6 ounces crumbled blue cheese",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": "ounce"
+      },
+      "name": "crumbled blue cheese"
     }
   ],
   "instructions": [

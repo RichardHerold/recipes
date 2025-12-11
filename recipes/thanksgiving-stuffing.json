@@ -8,51 +8,122 @@
   "ingredients": [
     {
       "item": "¾ cup (1 ½ sticks) unsalted butter plus more for baking dish",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "(1 1/2 sticks) unsalted butter plus more for baking dish",
+      "prepAction": "measure"
     },
     {
       "item": "1 pound good-quality day-old white bread, torn into 1\" pieces (about 10 cups)",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "good-quality day-old white bread, torn into 1\" pieces (about 10 cups)",
+      "prepAction": "measure"
     },
     {
       "item": "2 ½ cups chopped yellow onions",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "cup"
+      },
+      "name": "chopped yellow onions",
+      "prepAction": "chop"
     },
     {
       "item": "1 ½ cups celery",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "cup"
+      },
+      "name": "celery",
+      "prepAction": "measure"
     },
     {
       "item": "½ cup chopped flat-leaf parsley",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "chopped flat-leaf parsley",
+      "prepAction": "chop"
     },
     {
       "item": "2 tablespoons fresh sage",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "fresh sage",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon fresh rosemary",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "fresh rosemary",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon fresh thyme",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "fresh thyme",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon freshly ground black pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "freshly ground black pepper",
+      "prepAction": "measure"
     },
     {
       "item": "2 ½ cups low-sodium chicken broth",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "cup"
+      },
+      "name": "low-sodium chicken broth",
+      "prepAction": "measure"
     },
     {
       "item": "2 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "eggs"
     }
   ],
   "instructions": [

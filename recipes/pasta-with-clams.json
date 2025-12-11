@@ -8,31 +8,66 @@
   "ingredients": [
     {
       "item": "7 fresh littleneck clams",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 7,
+        "unit": null
+      },
+      "name": "fresh littleneck clams"
     },
     {
       "item": "2 tablespoons olive oil, divided",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "olive oil, divided",
+      "prepAction": "measure"
     },
     {
       "item": "2 cloves garlic, chopped",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves garlic, chopped",
+      "prepAction": "chop"
     },
     {
       "item": "½ cup clam juice",
-      "aisle": "Seafood"
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "clam juice",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons dry white wine",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "dry white wine",
+      "prepAction": "measure"
     },
     {
       "item": "4 ounces uncooked spaghetti",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 4,
+        "unit": "ounce"
+      },
+      "name": "uncooked spaghetti"
     },
     {
       "item": "Chopped fresh parsley, to taste",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "prepAction": "chop"
     }
   ],
   "instructions": [

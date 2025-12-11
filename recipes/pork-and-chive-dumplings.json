@@ -16,39 +16,80 @@
     },
     {
       "item": "1-2 Tablespoons kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "½ bunch garlic chives",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "bunch garlic chives"
     },
     {
       "item": "2 teaspoons sesame oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sesame oil",
+      "prepAction": "measure"
     },
     {
       "item": "3 Tablespoons soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "1 pound ground pork",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "ground pork"
     },
     {
       "item": "1 Tablespoon chopped fresh ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "chopped fresh ginger",
+      "prepAction": "chop"
     },
     {
       "item": "1 package round dumpling wrappers",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "package round dumpling wrappers"
     },
     {
       "item": "2-3 Tablespoons canola oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "prepAction": "measure"
     },
     {
       "item": "¾ cup water",
-      "aisle": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
     },
     {
       "item": "Dumpling Sauce",
@@ -56,23 +97,50 @@
     },
     {
       "item": "1/2 cup soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "1 Tbsp. black Chiangking vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. black Chiangking vinegar"
     },
     {
       "item": "2 tsp. sriracha chili sauce",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "tsp. sriracha chili sauce"
     },
     {
       "item": "2 tsp. sesame oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "tsp. sesame oil"
     },
     {
       "item": "1 Tbsp. chopped ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. chopped ginger",
+      "prepAction": "chop"
     }
   ],
   "instructions": [

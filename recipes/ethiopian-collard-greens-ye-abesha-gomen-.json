@@ -8,7 +8,12 @@
   "ingredients": [
     {
       "item": "4 tbsp. unsalted butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "tbsp. unsalted butter"
     },
     {
       "item": "1tsp Ethiopian Spice",
@@ -16,23 +21,50 @@
     },
     {
       "item": "¼ cup extra-virgin olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "extra-virgin olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "1 large yellow onion",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "yellow onion"
     },
     {
       "item": "3 cloves garlic, minced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "cloves garlic, minced",
+      "prepAction": "chop"
     },
     {
       "item": "1 1\" piece ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "1\" piece ginger"
     },
     {
       "item": "1½ lbs. collard greens, stemmed and cut crosswise into ¼\"-wide strips",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 5.5,
+        "unit": null
+      },
+      "name": "lbs. collard greens, stemmed and cut crosswise into 1/4\"-wide strips"
     },
     {
       "item": "Kosher salt and freshly ground black pepper, to taste",
@@ -44,7 +76,13 @@
     },
     {
       "item": "2 Thai chiles, stemmed, seeded, and minced (optional)",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Thai chiles, stemmed, seeded, and minced (optional)",
+      "prepAction": "chop"
     }
   ],
   "instructions": [

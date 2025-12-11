@@ -12,39 +12,91 @@
     },
     {
       "item": "2 ½ cups all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "1 rounded tablespoon sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "rounded tablespoon sugar",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons baking soda",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "baking soda",
+      "prepAction": "measure"
     },
     {
       "item": "¾ teaspoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "2 ½ cups buttermilk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2.5,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
     },
     {
       "item": "3 medium size eggs or 2 jumbo eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "size eggs or 2 jumbo eggs"
     },
     {
       "item": "¼ teaspoon vanilla extract",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "vanilla extract",
+      "prepAction": "measure"
     },
     {
       "item": "½ stick butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "stick butter"
     },
     {
       "item": "Toppings",

@@ -7,6 +7,156 @@ const RECIPES_DIR = path.join(__dirname, '..', 'recipes');
 const APPLY_CHANGES = process.argv.includes('--apply');
 const TARGET_ARG = process.argv.find(arg => arg.endsWith('.json'));
 
+// Unit synonyms mapping (simplified version from app.js)
+const UNIT_SYNONYMS = {
+    'cup': { base: 'cup' },
+    'cups': { base: 'cup' },
+    'c': { base: 'cup' },
+    'tablespoon': { base: 'tablespoon' },
+    'tablespoons': { base: 'tablespoon' },
+    'tbsp': { base: 'tablespoon' },
+    'tbs': { base: 'tablespoon' },
+    'teaspoon': { base: 'teaspoon' },
+    'teaspoons': { base: 'teaspoon' },
+    'tsp': { base: 'teaspoon' },
+    'pound': { base: 'pound' },
+    'pounds': { base: 'pound' },
+    'lb': { base: 'pound' },
+    'lbs': { base: 'pound' },
+    'ounce': { base: 'ounce' },
+    'ounces': { base: 'ounce' },
+    'oz': { base: 'ounce' },
+    'gram': { base: 'gram' },
+    'grams': { base: 'gram' },
+    'g': { base: 'gram' },
+    'kilogram': { base: 'kilogram' },
+    'kilograms': { base: 'kilogram' },
+    'kg': { base: 'kilogram' },
+    'liter': { base: 'liter' },
+    'liters': { base: 'liter' },
+    'l': { base: 'liter' },
+    'milliliter': { base: 'milliliter' },
+    'milliliters': { base: 'milliliter' },
+    'ml': { base: 'milliliter' },
+    'piece': { base: null },
+    'pieces': { base: null },
+    'whole': { base: null },
+    'large': { base: null },
+    'medium': { base: null },
+    'small': { base: null }
+};
+
+const UNICODE_FRACTIONS = {
+    '¼': '1/4',
+    '½': '1/2',
+    '¾': '3/4',
+    '⅓': '1/3',
+    '⅔': '2/3',
+    '⅛': '1/8',
+    '⅜': '3/8',
+    '⅝': '5/8',
+    '⅞': '7/8'
+};
+
+function normalizeUnicodeFractions(text) {
+    if (!text || typeof text !== 'string') return '';
+    return text.replace(/[¼½¾⅓⅔⅛⅜⅝⅞]/g, (match) => UNICODE_FRACTIONS[match] || match);
+}
+
+function convertQuantityString(value) {
+    if (!value) return null;
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    if (trimmed.includes(' ')) {
+        const parts = trimmed.split(' ');
+        if (parts.length === 2) {
+            const whole = parseFloat(parts[0]);
+            const fraction = convertQuantityString(parts[1]);
+            if (!isNaN(whole) && fraction !== null) {
+                return whole + fraction;
+            }
+        }
+    }
+    if (trimmed.includes('/')) {
+        const [num, denom] = trimmed.split('/');
+        const numerator = parseFloat(num);
+        const denominator = parseFloat(denom);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+            return numerator / denominator;
+        }
+        return null;
+    }
+    const numeric = parseFloat(trimmed);
+    return isNaN(numeric) ? null : numeric;
+}
+
+function parseIngredientText(text) {
+    if (!text) return null;
+    const normalized = normalizeUnicodeFractions(text).trim();
+    if (!normalized) return null;
+    const quantityMatch = normalized.match(/^((?:\d+\s+\d+\/\d+)|(?:\d+\/\d+)|(?:\d*\.\d+)|(?:\d+))(?:\s|$)/);
+    if (!quantityMatch) {
+        return null;
+    }
+    const quantityValue = convertQuantityString(quantityMatch[1]);
+    if (quantityValue === null) {
+        return null;
+    }
+    let remainder = normalized.slice(quantityMatch[0].length).trim();
+    if (!remainder) {
+        return null;
+    }
+    const tokens = remainder.split(/\s+/);
+    let unit = '';
+    let consumed = 0;
+    
+    if (tokens.length >= 2) {
+        const twoWord = `${tokens[0].toLowerCase()} ${tokens[1].toLowerCase()}`;
+        if (UNIT_SYNONYMS[twoWord]) {
+            unit = UNIT_SYNONYMS[twoWord].base;
+            consumed = 2;
+        }
+    }
+    
+    if (!unit && tokens.length) {
+        const singleWord = tokens[0].toLowerCase();
+        if (UNIT_SYNONYMS[singleWord]) {
+            unit = UNIT_SYNONYMS[singleWord].base;
+            consumed = 1;
+        }
+    }
+    
+    const nameTokens = tokens.slice(consumed);
+    const name = nameTokens.join(' ').trim();
+    if (!name) {
+        return null;
+    }
+    
+    return {
+        quantity: quantityValue,
+        unit,
+        name
+    };
+}
+
+function inferPrepAction(itemText, prepText) {
+    if (!itemText) return null;
+    const text = `${prepText || ''} ${itemText || ''}`.toLowerCase();
+    
+    // Check for common prep patterns
+    if (/chop|dice|mince|slice|julienne|chopped|diced|minced|sliced/.test(text)) return 'chop';
+    if (/measure|cup|teaspoon|tablespoon|measured/.test(text)) return 'measure';
+    if (/room temperature|temper|soften|softened|at room temp/.test(text)) return 'temper';
+    if (/zest|zested/.test(text)) return 'zest';
+    if (/grate|shred|grated|shredded/.test(text)) return 'grate';
+    if (/sift|sifted/.test(text)) return 'sift';
+    if (/toast|roast|toasted|roasted/.test(text)) return 'toast';
+    if (/drain|strain|drained|strained/.test(text)) return 'drain';
+    
+    // Default to 'other' if we can't determine
+    return null;
+}
+
 function parseTimeStringToMinutes(value) {
     if (!value || typeof value !== 'string') {
         return null;
@@ -31,11 +181,25 @@ function migrateRecipe(recipe) {
         migrated.tags = [];
     }
 
-    // Convert ingredient category to aisle
+    // Convert ingredient category to aisle and parse quantity/unit/name
     if (Array.isArray(recipe.ingredients)) {
         migrated.ingredients = recipe.ingredients.map(ing => {
             if (typeof ing === 'string') {
-                return { item: ing };
+                const parsed = parseIngredientText(ing);
+                const result = { item: ing };
+                if (parsed) {
+                    result.quantity = {
+                        amount: parsed.quantity,
+                        unit: parsed.unit || null
+                    };
+                    result.name = parsed.name;
+                }
+                // Infer prepAction from text
+                const inferredAction = inferPrepAction(ing, null);
+                if (inferredAction) {
+                    result.prepAction = inferredAction;
+                }
+                return result;
             }
             if (typeof ing === 'object' && ing !== null) {
                 const migratedIng = { ...ing };
@@ -43,6 +207,26 @@ function migrateRecipe(recipe) {
                 if (ing.category && !ing.aisle) {
                     migratedIng.aisle = ing.category;
                     delete migratedIng.category;
+                }
+                // Parse quantity/unit/name if not already present
+                if (!migratedIng.quantity && migratedIng.item) {
+                    const parsed = parseIngredientText(migratedIng.item);
+                    if (parsed) {
+                        migratedIng.quantity = {
+                            amount: parsed.quantity,
+                            unit: parsed.unit || null
+                        };
+                        if (!migratedIng.name) {
+                            migratedIng.name = parsed.name;
+                        }
+                    }
+                }
+                // Infer prepAction from ingredient text if not present
+                if (!migratedIng.prepAction && migratedIng.item) {
+                    const inferredAction = inferPrepAction(migratedIng.item, migratedIng.prep);
+                    if (inferredAction) {
+                        migratedIng.prepAction = inferredAction;
+                    }
                 }
                 return migratedIng;
             }

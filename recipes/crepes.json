@@ -8,19 +8,37 @@
   "ingredients": [
     {
       "item": "2 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "1 ¼ cup (280mL) milk",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1.25,
+        "unit": "cup"
+      },
+      "name": "(280mL) milk",
+      "prepAction": "measure"
     },
     {
       "item": "140g (1 cup) flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "1 tablespoon melted butter",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "melted butter",
+      "prepAction": "measure"
     },
     {
       "item": "Pinch Kosher Salt",
@@ -28,7 +46,8 @@
     },
     {
       "item": "1-2 ½  Tablespoons (8g) sugar (for sweet crepes)",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     }
   ],
   "instructions": [

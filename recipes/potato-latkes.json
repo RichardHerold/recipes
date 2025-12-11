@@ -8,31 +8,70 @@
   "ingredients": [
     {
       "item": "2 large Russet potatoes (about 1 pound), scrubbed and cut lengthwise into quarters",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Russet potatoes (about 1 pound), scrubbed and cut lengthwise into quarters"
     },
     {
       "item": "1 large onion (8 ounces), peeled and cut into quarters",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion (8 ounces), peeled and cut into quarters"
     },
     {
       "item": "2 large eggs",
-      "aisle": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "eggs"
     },
     {
       "item": "½ cup all-purpose flour",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
     },
     {
       "item": "2 teaspoons coarse kosher salt (or 1 teaspoon fine sea salt), plus more for sprinkling",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "coarse kosher salt (or 1 teaspoon fine sea salt), plus more for sprinkling",
+      "prepAction": "measure"
     },
     {
       "item": "1 teaspoon baking powder",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
     },
     {
       "item": "½ teaspoon freshly ground black pepper",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "freshly ground black pepper",
+      "prepAction": "measure"
     },
     {
       "item": "Vegetable oil, for frying",

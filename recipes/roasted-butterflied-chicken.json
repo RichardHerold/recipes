@@ -8,11 +8,22 @@
   "ingredients": [
     {
       "item": "1 whole chicken, 3½ to 4 pounds, butterflied according to the instructions here",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "chicken, 31/2 to 4 pounds, butterflied according to the instructions here"
     },
     {
       "item": "1 tablespoon vegetable, canola, or olive oil",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "vegetable, canola, or olive oil",
+      "prepAction": "measure"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",

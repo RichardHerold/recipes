@@ -8,35 +8,77 @@
   "ingredients": [
     {
       "item": "1 12–14-lb. turkey, neck and giblets removed",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "12–14-lb. turkey, neck and giblets removed"
     },
     {
       "item": "2 Tbsp. whole black peppercorns",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. whole black peppercorns"
     },
     {
       "item": "2 Tbsp. whole pink or black peppercorns",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. whole pink or black peppercorns"
     },
     {
       "item": "½ cup Diamond Crystal or ¼ cup plus 1½ tsp. Morton kosher salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Diamond Crystal or 1/4 cup plus 11/2 tsp. Morton kosher salt",
+      "prepAction": "measure"
     },
     {
       "item": "2 Tbsp. garlic powder",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. garlic powder"
     },
     {
       "item": "2 Tbsp. onion powder",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "Tbsp. onion powder"
     },
     {
       "item": "1 Tbsp. smoked paprika",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. smoked paprika"
     },
     {
       "item": "1 Tbsp. plus ⅓ cup (packed) light brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. plus 1/3 cup (packed) light brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "Small handful of hardy herbs (such as sage, rosemary, bay leaves, and/or thyme)",
@@ -44,23 +86,51 @@
     },
     {
       "item": "4 garlic cloves, crushed",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "garlic cloves, crushed"
     },
     {
       "item": "2 strips orange zest",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "strips orange zest",
+      "prepAction": "zest"
     },
     {
       "item": "⅓ cup low-sodium soy sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "low-sodium soy sauce",
+      "prepAction": "measure"
     },
     {
       "item": "⅓ cup sherry vinegar or red wine vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "sherry vinegar or red wine vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "6 Tbsp. neutral oil (such as vegetable, peanut, or canola)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "Tbsp. neutral oil (such as vegetable, peanut, or canola)"
     }
   ],
   "instructions": [

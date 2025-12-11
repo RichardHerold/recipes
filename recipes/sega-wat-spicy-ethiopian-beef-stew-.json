@@ -8,27 +8,62 @@
   "ingredients": [
     {
       "item": "2 pounds boneless beef chuck, cut into 1/2 inch cubes",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "boneless beef chuck, cut into 1/2 inch cubes"
     },
     {
       "item": "6 tablespoons niter kibbeh , divided",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "niter kibbeh , divided",
+      "prepAction": "measure"
     },
     {
       "item": "3 cups chunky pureed onions (pulse in food processor to form a chunky paste)",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "chunky pureed onions (pulse in food processor to form a chunky paste)",
+      "prepAction": "measure"
     },
     {
       "item": "1 1/2 tablespoons minced garlic",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "tablespoon"
+      },
+      "name": "minced garlic",
+      "prepAction": "chop"
     },
     {
       "item": "1 1/2 tablespoons minced fresh ginger",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "tablespoon"
+      },
+      "name": "minced fresh ginger",
+      "prepAction": "chop"
     },
     {
       "item": "1/4 cup berbere spice blend",
-      "aisle": "Other"
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "berbere spice blend",
+      "prepAction": "measure"
     },
     {
       "item": "Homemade Berbere Recipe ,HIGHLY recommended!",
@@ -36,15 +71,32 @@
     },
     {
       "item": "1 1/2 teaspoons salt",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup strong beef broth",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "strong beef broth",
+      "prepAction": "measure"
     },
     {
       "item": "4 hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)"
     }
   ],
   "instructions": [

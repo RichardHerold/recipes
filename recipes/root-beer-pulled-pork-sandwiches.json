@@ -8,19 +8,40 @@
   "ingredients": [
     {
       "item": "1 boneless pork shoulder butt roast (3 to 4 pounds)",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "boneless pork shoulder butt roast (3 to 4 pounds)",
+      "prepAction": "toast"
     },
     {
       "item": "1 can (12 ounces) root beer or cola",
-      "aisle": "Beverages"
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "can (12 ounces) root beer or cola"
     },
     {
       "item": "1 bottle (18 ounces) barbecue sauce",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "bottle (18 ounces) barbecue sauce"
     },
     {
       "item": "12 kaiser rolls, split",
-      "aisle": "Bakery"
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 12,
+        "unit": null
+      },
+      "name": "kaiser rolls, split"
     }
   ],
   "instructions": [

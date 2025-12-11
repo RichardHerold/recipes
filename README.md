@@ -265,165 +265,67 @@ You can also create recipe files manually. Each recipe should be a JSON file in 
 
 ## Recipe Schema
 
-The recipe schema supports both the original format and an enhanced format with additional metadata for advanced features. All fields are backward compatible.
+The recipe schema supports both simple recipes and enhanced formats with metadata for advanced features. All new fields are optional, ensuring full backward compatibility.
 
-### Basic Schema Fields
+> 📖 **For complete schema documentation**, see **[SCHEMA.md](SCHEMA.md)** - a comprehensive guide covering all fields, formats, examples, and best practices.
 
-- **`name`** (required): Recipe name
-- **`category`** (required): Primary category (also used as first tag)
-- **`description`** (optional): Recipe description
-- **`prepTime`** (optional): Prep time as string (e.g., "15 minutes")
-- **`cookTime`** (optional): Cook time as string (e.g., "30 minutes")
-- **`image`** (optional): Image URL or path
-- **`ingredients`** (required): Array of ingredient objects or strings
-- **`instructions`** (required): Array of instruction strings or objects
-- **`dateAdded`** (optional): ISO date string
+### Quick Reference
 
-### Enhanced Schema Fields
+**Required fields:**
 
-The following fields are optional and enable advanced features:
+- `name` - Recipe name
+- `ingredients` - Array of ingredients
+- `instructions` - Array of instructions
 
-- **`tags`** (optional): Array of strings for filtering. The `category` field automatically becomes the first tag if `tags` is not provided.
-- **`time`** (optional): Object with numeric minutes `{ prep, activeCook, passive, total }`. If not provided, will be parsed from `prepTime` and `cookTime` strings.
-- **`equipment`** (optional): Array of equipment objects `[{ name, id, label }]` for tracking required equipment.
-- **`techniques`** (optional): Array of technique names that match entries in `data/techniques.json`.
+**Common optional fields:**
 
-### Ingredient Schema
+- `category` - Primary category
+- `description` - Recipe description
+- `prepTime` / `cookTime` - Time as strings (e.g., "15 minutes")
+- `image` - Image URL or path
+- `dateAdded` - ISO date string
 
-Ingredients can be simple strings or objects with metadata:
+**Enhanced optional fields:**
 
-**Simple format:**
+- `tags` - Array of tags for filtering
+- `time` - Structured time breakdown `{ prep, activeCook, passive, total }` (minutes)
+- `equipment` - Array of equipment objects `[{ name, id, label }]`
+- `techniques` - Array of technique names
+- Ingredient objects can include: `aisle`, `prep`, `prepAction`, `prepTime`, `destination`
+- Instruction objects can include: `text`, `destination`
 
-```json
-"ingredients": ["2 cups flour", "1 cup sugar"]
-```
-
-**Object format with aisle:**
-
-```json
-"ingredients": [
-  {
-    "item": "2 cups all-purpose flour",
-    "aisle": "Baking & Spices"
-  }
-]
-```
-
-**Enhanced format with prep metadata:**
-
-```json
-"ingredients": [
-  {
-    "item": "2 cups all-purpose flour",
-    "aisle": "Baking & Spices",
-    "prep": "sifted",
-    "prepAction": "sift",
-    "prepTime": 5,
-    "destination": "bowl-dry"
-  }
-]
-```
-
-**Ingredient fields:**
-
-- **`item`** (required): Ingredient name and quantity
-- **`aisle`** (optional): Grocery store aisle/section (replaces deprecated `category` field)
-- **`prep`** (optional): Prep notes (e.g., "finely chopped", "at room temperature")
-- **`prepAction`** (optional): Prep action type: `chop`, `measure`, `temper`, `zest`, `grate`, `sift`, `toast`, `drain`, `other`
-- **`prepTime`** (optional): Estimated prep time in minutes (number)
-- **`destination`** (optional): Equipment ID where the ingredient should be prepped
-
-**Recommended aisle values:** Produce, Meat & Poultry, Seafood, Dairy & Eggs, Bakery, Pantry & Dry Goods, Baking & Spices, Canned & Jarred, Frozen Foods, Condiments & Sauces, International & Specialty, Beverages, Deli & Prepared Foods, Household & Misc, Other.
-
-### Equipment Schema
-
-Equipment is an array of objects with the following structure:
-
-```json
-"equipment": [
-  {
-    "name": "Large mixing bowl",
-    "id": "bowl-dry",
-    "label": "For dry ingredients"
-  }
-]
-```
-
-**Equipment fields:**
-
-- **`name`** (required): Equipment name
-- **`id`** (optional): Unique identifier for referencing in ingredients/instructions
-- **`label`** (optional): Description or purpose
-
-### Time Schema
-
-Time can be provided as strings or as a structured object:
-
-**String format (backward compatible):**
+### Basic Example
 
 ```json
 {
+  "name": "Chocolate Chip Cookies",
+  "category": "Dessert",
   "prepTime": "15 minutes",
-  "cookTime": "30 minutes"
+  "cookTime": "12 minutes",
+  "ingredients": [
+    "2 1/4 cups all-purpose flour",
+    "1 cup butter, softened",
+    "3/4 cup granulated sugar"
+  ],
+  "instructions": [
+    "Preheat oven to 375°F",
+    "Mix dry ingredients in a bowl",
+    "Bake for 9-11 minutes"
+  ]
 }
 ```
-
-**Structured format:**
-
-```json
-{
-  "time": {
-    "prep": 15,
-    "activeCook": 30,
-    "passive": 0,
-    "total": 45
-  }
-}
-```
-
-All time values are in minutes (numbers). If `time` object is provided, it takes precedence over `prepTime`/`cookTime` strings.
-
-### Instruction Schema
-
-Instructions can reference equipment destinations:
-
-**Simple format:**
-
-```json
-"instructions": ["Step 1", "Step 2"]
-```
-
-**Enhanced format with equipment:**
-
-```json
-"instructions": [
-  "Mix dry ingredients",
-  {
-    "text": "Add wet ingredients to bowl",
-    "destination": "bowl-dry"
-  }
-]
-```
-
-**Instruction fields:**
-
-- **`text`** (required if object): Instruction text
-- **`destination`** (optional): Equipment ID where this step occurs
 
 ### Migration
 
-To migrate existing recipes to the new schema format, use the migration script:
+To migrate existing recipes to the new schema format:
 
 ```bash
 node scripts/migrateRecipes.js --apply
 ```
 
-This script will:
+This script converts `category` to `tags`, ingredient `category` to `aisle`, parses time strings into a `time` object, and adds empty arrays for `equipment` and `techniques`.
 
-- Convert `category` to `tags` array (keeping `category` for backward compatibility)
-- Convert ingredient `category` to `aisle`
-- Parse `prepTime`/`cookTime` strings into `time` object
-- Add empty arrays for `equipment` and `techniques` if missing
+**For detailed schema documentation, including all field descriptions, formats, examples, and best practices, see [SCHEMA.md](SCHEMA.md).**
 
 ### Using Subsections in Recipes
 

@@ -8,43 +8,87 @@
   "ingredients": [
     {
       "item": "1 medium head red cabbage",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "head red cabbage"
     },
     {
       "item": "6 thick slices applewood-smoked bacon or other smoked bacon",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "thick slices applewood-smoked bacon or other smoked bacon",
+      "prepAction": "chop"
     },
     {
       "item": "1 medium yellow onion, thinly sliced",
-      "aisle": "Produce"
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "yellow onion, thinly sliced",
+      "prepAction": "chop"
     },
     {
       "item": "2 tablespoons packed dark brown sugar",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "packed dark brown sugar",
+      "prepAction": "measure"
     },
     {
       "item": "2 tablespoons Dijon mustard",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "Dijon mustard",
+      "prepAction": "measure"
     },
     {
       "item": "⅓ cup cider vinegar",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "cider vinegar",
+      "prepAction": "measure"
     },
     {
       "item": "1 cup low-sodium beef broth",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "low-sodium beef broth",
+      "prepAction": "measure"
     },
     {
       "item": "Measure 2 Tablespoons packed dark brown sugar and 2 Tablespoons Dijon mustard and put in a ramekin.",
-      "aisle": "Baking & Spices"
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
     },
     {
       "item": "Measure ⅓ cup cider vinegar and put in a pourable ramekin or beaker.",
-      "aisle": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces",
+      "prepAction": "measure"
     },
     {
       "item": "Measure 1 cup of beef broth in a liquid measuring cup.",
-      "aisle": "Meat & Poultry"
+      "aisle": "Meat & Poultry",
+      "prepAction": "measure"
     }
   ],
   "instructions": [
