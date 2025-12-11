@@ -1659,7 +1659,7 @@ function renderInstructionsSection(recipe) {
     if (!recipe.instructions || !recipe.instructions.length) {
         return '';
     }
-    const defaultInstructions = renderInstructions(recipe.instructions);
+    const defaultInstructions = renderInstructions(recipe);
     const workflowGroups = buildEquipmentWorkflowGroups(recipe);
     const hasWorkflow = workflowGroups.some(group => group.key !== '__general__' && group.steps.length);
     const workflowHtml = hasWorkflow ? renderEquipmentWorkflow(workflowGroups) : '';

@@ -200,15 +200,58 @@ Add grocery aisle information for shopping list organization:
 }
 ```
 
-### Enhanced Format with Prep Metadata
+### Enhanced Format with Structured Quantity
 
-For advanced prep tracking, include prep information:
+For better parsing and scaling, use structured quantity fields:
 
 ```json
 {
   "ingredients": [
     {
       "item": "2 cups all-purpose flour",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
+      "aisle": "Baking & Spices"
+    },
+    {
+      "item": "1 cup butter",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "butter",
+      "aisle": "Dairy & Eggs"
+    },
+    {
+      "item": "2 large eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "large eggs",
+      "aisle": "Dairy & Eggs"
+    }
+  ]
+}
+```
+
+### Enhanced Format with Prep Metadata
+
+For advanced prep tracking, include prep information along with structured quantities:
+
+```json
+{
+  "ingredients": [
+    {
+      "item": "2 cups all-purpose flour",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
       "aisle": "Baking & Spices",
       "prep": "sifted",
       "prepAction": "sift",
@@ -217,6 +260,11 @@ For advanced prep tracking, include prep information:
     },
     {
       "item": "1 cup butter",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "butter",
       "aisle": "Dairy & Eggs",
       "prep": "softened, at room temperature",
       "prepAction": "temper",
@@ -225,6 +273,11 @@ For advanced prep tracking, include prep information:
     },
     {
       "item": "2 large eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "large eggs",
       "aisle": "Dairy & Eggs",
       "prep": "beaten",
       "prepAction": "other",
@@ -238,12 +291,32 @@ For advanced prep tracking, include prep information:
 
 | Field         | Type   | Required | Description                                                                             |
 | ------------- | ------ | -------- | --------------------------------------------------------------------------------------- |
-| `item`        | string | Yes      | Ingredient name and quantity                                                            |
+| `item`        | string | Yes      | Ingredient name and quantity (human-readable format, e.g., "2 cups flour")              |
+| `quantity`    | object | No       | Structured quantity object with `amount` (number) and `unit` (string or null)           |
+| `name`        | string | No       | Ingredient name without quantity/unit (e.g., "all-purpose flour")                       |
 | `aisle`       | string | No       | Grocery store aisle/section (see [Recommended Aisle Values](#recommended-aisle-values)) |
 | `prep`        | string | No       | Prep notes (e.g., "finely chopped", "at room temperature")                              |
 | `prepAction`  | string | No       | Prep action type (see [Prep Actions](#prep-actions))                                    |
 | `prepTime`    | number | No       | Estimated prep time in minutes                                                          |
 | `destination` | string | No       | Equipment ID where ingredient should be prepped                                         |
+
+**Quantity Object:**
+
+- **`amount`** (number, required if quantity is provided): The numeric quantity (e.g., 2, 1.5, 0.5)
+- **`unit`** (string or null, optional): The unit of measurement (e.g., "cup", "tablespoon", "pound", "gram"). Use `null` for count-based items (e.g., "2 eggs" has unit `null`)
+
+**Notes:**
+
+- The `item` field is always required and should contain the full human-readable text
+- The `quantity` and `name` fields are optional but enable better parsing, scaling, and unit conversion
+- If `quantity` is provided, `amount` is required; `unit` can be `null` for count-based items
+- Common units: cup, tablespoon, teaspoon, pound, ounce, gram, kilogram, liter, milliliter, piece, whole, etc.
+- Migration scripts automatically parse `item` text to extract `quantity` and `name` when possible
+- Migration scripts attempt to infer `prepAction` from ingredient text patterns (e.g., "chopped" → `chop`, "sifted" → `sift`, ingredients with units → `measure`)
+- Prep fields (`prep`, `prepAction`, `prepTime`, `destination`) can be added:
+  - **Manually** through the admin interface (`admin.html`)
+  - **Automatically** using the AI enrichment script: `ANTHROPIC_API_KEY=sk-... node scripts/enrichRecipes.js --apply`
+- Complex formats (e.g., "3 to 4 cups", "40g (⅓ cup)") may require manual adjustment after migration
 
 **Note:** The `category` field in ingredients is deprecated in favor of `aisle`. Migration scripts automatically convert `category` to `aisle`.
 
@@ -583,6 +656,10 @@ node scripts/migrateRecipes.js recipe-name.json --apply
 2. **Converts ingredient `category` to `aisle`**: Renames the `category` field in ingredients to `aisle`
 3. **Parses time strings**: Converts `prepTime` and `cookTime` strings into a `time` object with numeric minutes
 4. **Adds empty arrays**: Adds empty `equipment` and `techniques` arrays if missing
+5. **Parses ingredient quantities**: Extracts `quantity` (amount and unit) and `name` from ingredient `item` text when possible
+6. **Infers prep actions**: Attempts to infer `prepAction` from ingredient text patterns (e.g., "chopped" → `chop`, "sifted" → `sift`)
+
+**Note:** For full prep metadata (`prep`, `prepAction`, `prepTime`, `destination`), use the AI enrichment script which analyzes instructions and ingredients to provide comprehensive prep information.
 
 ### Backward Compatibility
 
