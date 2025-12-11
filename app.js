@@ -338,32 +338,9 @@ function initializeRecipeCardFeatures(card) {
     if (!recipeName) return;
     const recipe = recipeMapByName.get(recipeName);
     if (!recipe) return;
-    setupRecipeViewToggle(card);
     setupInstructionToggle(card, recipe);
-    setupMiseView(card, recipe);
 }
 
-function setupRecipeViewToggle(card) {
-    const buttons = card.querySelectorAll('.recipe-view-btn');
-    const panels = card.querySelectorAll('.recipe-view-panel');
-    const details = card.querySelector('.recipe-details');
-    if (!buttons.length) return;
-    buttons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const target = button.getAttribute('data-view-target');
-            if (!target || button.classList.contains('active')) return;
-            buttons.forEach(btn => btn.classList.toggle('active', btn === button));
-            panels.forEach(panel => {
-                const view = panel.getAttribute('data-view');
-                panel.classList.toggle('active', view === target);
-            });
-            if (details) {
-                details.setAttribute('data-active-view', target);
-            }
-        });
-    });
-}
 
 function setupInstructionToggle(card) {
     const toggle = card.querySelector('.instructions-view-toggle');
@@ -384,111 +361,7 @@ function setupInstructionToggle(card) {
     });
 }
 
-function setupMiseView(card, recipe) {
-    const miseView = card.querySelector('.mise-view');
-    if (!miseView) return;
-    miseView.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-    miseView.addEventListener('change', (event) => {
-        const target = event.target;
-        if (!target.classList.contains('mise-check')) return;
-        event.stopPropagation();
-        const type = target.getAttribute('data-type');
-        const key = target.getAttribute('data-key');
-        updateChecklistState(recipe.slug, type, key, target.checked);
-        updateMiseStats(card, recipe);
-    });
 
-    const groupingButtons = miseView.querySelectorAll('.mise-group-btn');
-    const groupsContainer = miseView.querySelector('.mise-ingredient-groups');
-    groupingButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const mode = button.getAttribute('data-group-mode');
-            if (!mode || button.classList.contains('active') || button.disabled) return;
-            setIngredientGroupingPreference(mode);
-            if (groupsContainer) {
-                groupsContainer.setAttribute('data-grouping', mode);
-                groupsContainer.innerHTML = renderMiseIngredientGroups(recipe, mode);
-                syncMiseCheckboxes(miseView, recipe);
-                updateMiseStats(card, recipe);
-            }
-            groupingButtons.forEach(btn => btn.classList.toggle('active', btn === button));
-        });
-    });
-
-    const resetButton = miseView.querySelector('.mise-reset-btn');
-    if (resetButton) {
-        resetButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            resetChecklist(recipe.slug);
-            syncMiseCheckboxes(miseView, recipe);
-            updateMiseStats(card, recipe);
-        });
-    }
-
-    const readyButton = miseView.querySelector('.mise-ready-btn');
-    if (readyButton) {
-        readyButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            if (readyButton.disabled) return;
-            const cookButton = card.querySelector('.recipe-view-btn[data-view-target="cook"]');
-            cookButton?.click();
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    }
-
-    const skipButton = miseView.querySelector('.mise-skip-btn');
-    if (skipButton) {
-        skipButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const cookButton = card.querySelector('.recipe-view-btn[data-view-target="cook"]');
-            cookButton?.click();
-        });
-    }
-
-    syncMiseCheckboxes(miseView, recipe);
-    updateMiseStats(card, recipe);
-}
-
-function syncMiseCheckboxes(miseView, recipe) {
-    const recipeState = getChecklistForRecipe(recipe.slug);
-    const checkboxes = miseView.querySelectorAll('.mise-check');
-    checkboxes.forEach(input => {
-        const type = input.getAttribute('data-type');
-        const key = input.getAttribute('data-key');
-        input.checked = Boolean(recipeState[type] && recipeState[type][key]);
-    });
-}
-
-function updateMiseStats(card, recipe) {
-    const miseView = card.querySelector('.mise-view');
-    if (!miseView) return;
-    const checkboxes = Array.from(miseView.querySelectorAll('.mise-check'));
-    const total = checkboxes.length;
-    const checked = checkboxes.filter(cb => cb.checked).length;
-    const progressEl = miseView.querySelector('.mise-progress');
-    if (progressEl) {
-        const totalItems = parseInt(progressEl.getAttribute('data-total-items'), 10) || total;
-        progressEl.textContent = `${checked} of ${totalItems} items ready`;
-    }
-
-    if (recipe.totalPrepTime) {
-        const remaining = checkboxes
-            .filter(cb => cb.getAttribute('data-type') === 'ingredient' && !cb.checked && cb.dataset.prepMinutes)
-            .reduce((sum, cb) => sum + Number(cb.dataset.prepMinutes || 0), 0);
-        const remainingEl = miseView.querySelector('.mise-remaining-time');
-        if (remainingEl) {
-            remainingEl.textContent = remaining ? `Remaining prep: ~${formatMinutes(remaining)} min` : 'Remaining prep: Ready';
-        }
-    }
-
-    const readyButton = miseView.querySelector('.mise-ready-btn');
-    if (readyButton) {
-        readyButton.disabled = total === 0 || checked < total;
-    }
-}
 
 function normalizeRecipe(recipe) {
     if (!recipe || typeof recipe !== 'object') {
@@ -915,7 +788,6 @@ function createRecipeCard(recipe) {
     
     const slug = recipe.slug || createRecipeSlug(recipe.name);
     const cookView = renderCookView(recipe);
-    const miseView = renderMiseEnPlaceView(recipe);
     const tagLabel = recipe.category || (Array.isArray(recipe.tags) && recipe.tags[0]) || 'Uncategorized';
 
     return `
@@ -938,19 +810,8 @@ function createRecipeCard(recipe) {
                 <span>Prep: ${prepTime}</span>
                 <span>Cook: ${cookTime}</span>
             </div>
-            <div class="recipe-details prevent-card-toggle" data-active-view="cook">
-                <div class="recipe-view-toggle prevent-card-toggle">
-                    <button type="button" class="recipe-view-btn active" data-view-target="cook">Cook</button>
-                    <button type="button" class="recipe-view-btn" data-view-target="mise">Mise en Place</button>
-                </div>
-                <div class="recipe-view-panels">
-                    <div class="recipe-view-panel cook-view active" data-view="cook">
-                        ${cookView}
-                    </div>
-                    <div class="recipe-view-panel mise-view" data-view="mise">
-                        ${miseView}
-                    </div>
-                </div>
+            <div class="recipe-details prevent-card-toggle">
+                ${cookView}
             </div>
             <span class="recipe-category">${escapeHtml(tagLabel)}</span>
         </div>
@@ -978,38 +839,55 @@ function renderCookView(recipe) {
     `;
 }
 
-function renderMiseEnPlaceView(recipe) {
-    const groupingMode = getIngredientGroupingPreference(recipe);
-    const totalPrepMinutes = recipe.totalPrepTime || 0;
-    const totalItems = getTotalMiseItemsCount(recipe);
+function renderEquipmentSection(recipe) {
+    if (!recipe.equipment || !recipe.equipment.length) {
+        return '';
+    }
     return `
-        <div class="mise-view prevent-card-toggle" data-recipe-id="${escapeHtml(recipe.slug)}" data-grouping="${groupingMode}">
-            <div class="mise-header">
-                <div class="mise-time-summary">
-                    <div class="mise-total-time" data-total-minutes="${totalPrepMinutes}">
-                        ${totalPrepMinutes ? `Total prep time: ~${formatMinutes(totalPrepMinutes)} min` : 'Total prep time: estimate coming soon'}
+        <div class="equipment-section">
+            <h3>Equipment</h3>
+            <ul class="equipment-list">
+                ${recipe.equipment.map((item, index) => {
+                    return `
+                        <li>
+                            <span class="equipment-name">${escapeHtml(item.name)}</span>
+                            ${item.label ? `<span class="equipment-label">${escapeHtml(item.label)}</span>` : ''}
+                        </li>
+                    `;
+                }).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderMiseEnPlaceSection(recipe) {
+    if (!recipe.miseIngredients || !recipe.miseIngredients.length) {
+        return '';
+    }
+    
+    const actionGroups = groupIngredientsByAction(recipe);
+    if (!actionGroups.length) {
+        return '';
+    }
+    
+    return `
+        <div class="mise-en-place-section">
+            <h3>Mise en Place</h3>
+            ${actionGroups.map(group => {
+                const meta = PREP_ACTION_METADATA[group.key] || PREP_ACTION_METADATA.other;
+                return `
+                    <div class="mise-action-subsection">
+                        <h4 class="mise-action-title">${meta.icon ? `${meta.icon} ` : ''}${escapeHtml(meta.label)}</h4>
+                        <ol class="mise-action-list">
+                            ${group.items.map(item => {
+                                const prepText = item.prep ? ` — ${escapeHtml(item.prep)}` : '';
+                                const prepTimeText = item.prepTime != null ? ` <span class="mise-prep-time">(${formatMinutes(item.prepTime)} min)</span>` : '';
+                                return `<li>${escapeHtml(item.item)}${prepText}${prepTimeText}</li>`;
+                            }).join('')}
+                        </ol>
                     </div>
-                    <div class="mise-remaining-time">
-                        ${totalPrepMinutes ? `Remaining prep: ~${formatMinutes(totalPrepMinutes)} min` : ''}
-                    </div>
-                </div>
-                <div class="mise-progress" data-total-items="${totalItems}">
-                    0 of ${totalItems} items ready
-                </div>
-                <div class="mise-controls">
-                    <button type="button" class="mise-reset-btn">Reset checklist</button>
-                </div>
-            </div>
-            ${renderMiseGroupingControls(recipe, groupingMode)}
-            <div class="mise-ingredient-groups" data-grouping="${groupingMode}">
-                ${renderMiseIngredientGroups(recipe, groupingMode)}
-            </div>
-            ${renderMiseEquipmentSection(recipe)}
-            ${renderMiseTechniquesSection(recipe)}
-            <div class="mise-ready-row">
-                <button type="button" class="mise-ready-btn" disabled>Ready to Cook</button>
-                <button type="button" class="mise-skip-btn">Skip for now</button>
-            </div>
+                `;
+            }).join('')}
         </div>
     `;
 }
