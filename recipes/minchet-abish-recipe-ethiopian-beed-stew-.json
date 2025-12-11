@@ -18,5 +18,15 @@
     "Make sure you allow the ghee, onion/garlic mixture, berbere, and salt to saute until it is fairly dry. This is an important step in creating the proper flavor profile for this Ethiopian Beef Stew.",
     "This dish freezes quite well, and I think it tastes even better the next day, so don't be afraid to make an extra-large batch!"
   ],
-  "dateAdded": "2025-12-05T17:17:27.745Z"
+  "dateAdded": "2025-12-05T17:17:27.745Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 10,
+    "activeCook": 10,
+    "total": 20
+  },
+  "equipment": [],
+  "techniques": []
 }

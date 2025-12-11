@@ -8,71 +8,71 @@
   "ingredients": [
     {
       "item": "For the chili:",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 tablespoons vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 medium yellow onions, medium dice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "⅔ cup roasted red peppers, medium dice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "6 medium garlic cloves, finely chopped",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/4 cup chili powder",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tablespoon ground cumin",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 pounds lean ground beef",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 1/2 teaspoons kosher salt, plus more as needed",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 (28-ounce) can diced tomatoes",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 (14-ounce) can tomato sauce",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 (15-ounce) cans kidney beans, drained and rinsed",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1/4 cup coarsely chopped pickled jalapeños or green chiles, drained",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "For serving:",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Shredded cheddar cheese",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Thinly sliced scallions",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Sour cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -91,5 +91,15 @@
     "Taste and season with salt as needed",
     "serve with the cheese, scallions, and sour cream."
   ],
-  "dateAdded": "2025-12-05T17:19:19.384Z"
+  "dateAdded": "2025-12-05T17:19:19.384Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 274080,
+    "total": 274095
+  },
+  "equipment": [],
+  "techniques": []
 }

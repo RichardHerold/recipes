@@ -8,19 +8,19 @@
   "ingredients": [
     {
       "item": "1 boneless pork shoulder butt roast (3 to 4 pounds)",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1 can (12 ounces) root beer or cola",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "1 bottle (18 ounces) barbecue sauce",
-      "category": "Condiments & Sauces"
+      "aisle": "Condiments & Sauces"
     },
     {
       "item": "12 kaiser rolls, split",
-      "category": "Bakery"
+      "aisle": "Bakery"
     }
   ],
   "instructions": [
@@ -33,5 +33,14 @@
     "Cook, covered, until heated through, about 30 minutes.",
     "Serve on rolls."
   ],
-  "dateAdded": "2025-12-05T17:19:30.485Z"
+  "dateAdded": "2025-12-05T17:19:30.485Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "total": 15
+  },
+  "equipment": [],
+  "techniques": []
 }

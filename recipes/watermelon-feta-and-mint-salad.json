@@ -8,31 +8,31 @@
   "ingredients": [
     {
       "item": "3 pounds seedless watermelon (about 1 small or 1/4 large)",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "1 Lemon",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "3 tablespoons (45ml) extra-virgin olive oil, plus more for drizzling",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "10g fresh mint leaves (¼ cup chopped)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Up to 4 ounces (1 quart) arugula leaves (optional; see note)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "4 ounces (110g) feta cheese (see note)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -55,5 +55,15 @@
     "Drizzle with more olive oil and a few grinds of black pepper.",
     "Serve immediately."
   ],
-  "dateAdded": "2025-12-05T17:19:07.706Z"
+  "dateAdded": "2025-12-05T17:19:07.706Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 5,
+    "total": 20
+  },
+  "equipment": [],
+  "techniques": []
 }

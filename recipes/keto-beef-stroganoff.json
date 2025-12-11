@@ -8,47 +8,47 @@
   "ingredients": [
     {
       "item": "2 tbsp Olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1/2 large Onion (sliced into thin quarter moons)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "8 oz Cremini mushrooms (sliced)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 lb Ground beef",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "1/2 tsp Sea salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1/4 tsp Black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 cloves Garlic (minced)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup Beef bone broth",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 tbsp Coconut aminos (optional)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1/2 cup Sour cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 oz Cream cheese",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     }
   ],
   "instructions": [
@@ -60,5 +60,15 @@
     "Add the bone broth and coconut aminos, if using. Bring to a boil, then simmer for 5 minutes, until most of the liquid is reduced but a little is left.",
     "Stir in the sour cream and cream cheese, until smooth."
   ],
-  "dateAdded": "2025-12-05T17:19:17.580Z"
+  "dateAdded": "2025-12-05T17:19:17.580Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

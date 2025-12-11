@@ -8,51 +8,51 @@
   "ingredients": [
     {
       "item": "Spicy Tomato Sauce",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 tablespoons extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 teaspoons finely chopped garlic",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 (28-ounce) can diced tomatoes, including the liquid",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon Aleppo pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 ½ teaspoons hawayej or teaspoon curry powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 ½ teaspoon freshly squeezed lemon juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Corn Grits",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Shakshuka",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "6 eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -80,5 +80,15 @@
     "While eggs are baking, prepare corn grits according to package instructions",
     "Serve in bowl with grits at the bottom and shakshuka on top."
   ],
-  "dateAdded": "2025-12-05T17:18:00.779Z"
+  "dateAdded": "2025-12-05T17:18:00.779Z",
+  "tags": [
+    "Breakfast"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 40,
+    "total": 55
+  },
+  "equipment": [],
+  "techniques": []
 }

@@ -8,51 +8,51 @@
   "ingredients": [
     {
       "item": "Cake",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1(18 ¼ ounce) package yellow cake mix with pudding",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "(Or Yellow Cake Mix plus Instant Pudding Mix)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 cup fresh orange juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ cup vegetable oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "¼ cup sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon vanilla extract",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "4 large eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "Glaze",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 cup confectioners' sugar, sifted",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "3 tablespoons fresh orange juice",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 teaspoon fresh grated orange zest",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -61,5 +61,15 @@
     "Bake the cake until it's golden brown and just starts to pull away from the sides of the pan, 45-47 minutes. Remove pan from oven and place on wire rack to cool for 20 minutes. Run a long, sharp knife around the edge of the cake and invert it onto a rack to cool completely, 30 minutes more.",
     "Meanwhile, prepare the glaze. Combine the confectioners sugar, fresh orange juice, and orange zest in a small bowl and stir until smooth. Place the cake on a platter and pour the glaze over the top, letting it drizzle down the sides and into the center. Let the glze set for a few minutes before slicing."
   ],
-  "dateAdded": "2025-12-05T17:18:32.192Z"
+  "dateAdded": "2025-12-05T17:18:32.192Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 5557,
+    "total": 5572
+  },
+  "equipment": [],
+  "techniques": []
 }

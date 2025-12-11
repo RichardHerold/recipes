@@ -8,39 +8,39 @@
   "ingredients": [
     {
       "item": "1 pound spaghetti",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1/4 cup extra-virgin olive oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "4 garlic cloves, minced",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1/2 teaspoon crushed red pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "2 dozen littleneck clams, scrubbed",
-      "category": "Seafood"
+      "aisle": "Seafood"
     },
     {
       "item": "1/4 cup white wine",
-      "category": "Beverages"
+      "aisle": "Beverages"
     },
     {
       "item": "1/4 cup finely chopped parsley",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "Freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -51,5 +51,15 @@
     "Add the spaghetti and the chopped parsley to the clams in the skillet and season with pepper. Toss over moderately high heat just until the spaghetti absorbs some of the juices, about 1 minute.",
     "Transfer the spaghetti and clams to shallow bowls and serve right away."
   ],
-  "dateAdded": "2025-12-05T17:19:37.884Z"
+  "dateAdded": "2025-12-05T17:19:37.884Z",
+  "tags": [
+    "Pasta"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

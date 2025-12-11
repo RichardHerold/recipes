@@ -8,51 +8,51 @@
   "ingredients": [
     {
       "item": "Nonstick cooking spray",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "140 grams rye flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "140 grams stone-ground whole wheat flour",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "142 grams fine-ground cornmeal",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "198 grams lightly packed dark brown sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon (3 grams) baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 teaspoons (11 grams) baking soda",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "½ teaspoon (3 grams) kosher salt",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon (16 grams) doenjang (Korean soybean paste)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 cups buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "½ cup egg whites (from 4 to 5 large eggs)",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¾ cup blackstrap molasses",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -80,5 +80,15 @@
     "Let cool for 20 minutes on a wire rack, then invert and remove the bread to a cutting board.",
     "Let cool completely before slicing."
   ],
-  "dateAdded": "2025-12-05T17:18:26.702Z"
+  "dateAdded": "2025-12-05T17:18:26.702Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 15000,
+    "total": 15015
+  },
+  "equipment": [],
+  "techniques": []
 }

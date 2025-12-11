@@ -8,31 +8,31 @@
   "ingredients": [
     {
       "item": "240g all-purpose flour (2 cups)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon sugar",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 tablespoon baking powder",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 teaspoon salt plus extra for seasoning",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "¼ pound butter, cubed, cold",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "¾ cup buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "~2 Tablespoons honey, Warmed (optional)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "subsection": "Equipment",
@@ -98,5 +98,15 @@
     "Warm up honey in microwave for 20 seconds",
     "Brush biscuits with honey and season with salt"
   ],
-  "dateAdded": "2025-12-05T17:18:28.448Z"
+  "dateAdded": "2025-12-05T17:18:28.448Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }

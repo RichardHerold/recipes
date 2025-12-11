@@ -8,27 +8,27 @@
   "ingredients": [
     {
       "item": "4 eggs",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1 cup sugar 200g (caster sugar is better, if possible)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "2 cups almond flour 200g",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "1 lemon zest ie from 1 lemon",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "½ tsp cinnamon",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "2 tbsp confectioners sugar approx, to dust (icing sugar)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -45,5 +45,15 @@
     "Allow it to cool completely before placing the stencil on top of the middle then dusting some confectioners sugar over the top. Carefully remove the stencil without letting the sugar fall on the area you had covered.",
     "Slice and serve or store at room temp, covered."
   ],
-  "dateAdded": "2025-12-05T17:18:23.234Z"
+  "dateAdded": "2025-12-05T17:18:23.234Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 10,
+    "activeCook": 40,
+    "total": 50
+  },
+  "equipment": [],
+  "techniques": []
 }

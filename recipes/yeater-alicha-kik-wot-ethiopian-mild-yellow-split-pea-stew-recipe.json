@@ -8,43 +8,43 @@
   "ingredients": [
     {
       "item": "1 cup split peas",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup onion (minced)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tbsp ginger (minced)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tbsp garlic (minced)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 tsp Alicha Kimem (Afrenje)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 tsp Netch Azmud (Caraway Seed)",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "1 tsp of Turmeric",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "½ cup oil",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "3 cups water",
-      "category": "Pantry & Dry Goods"
+      "aisle": "Pantry & Dry Goods"
     },
     {
       "item": "Salt (to taste)",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     }
   ],
   "instructions": [
@@ -60,5 +60,11 @@
     "Lower the heat and simmer the mixture for about 5 min. and add the Netch Azmud while stirring.",
     "Finally, turn the heat off, add some salt, and serve your Alicha Kik Wot along with Injera."
   ],
-  "dateAdded": "2025-12-05T17:17:23.646Z"
+  "dateAdded": "2025-12-05T17:17:23.646Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {},
+  "equipment": [],
+  "techniques": []
 }

@@ -8,43 +8,43 @@
   "ingredients": [
     {
       "item": "2 tablespoons unsalted butter",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "2 large leeks, white and pale green parts only, rinsed",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 quart homemade or store-bought low-sodium chicken stock",
-      "category": "Meat & Poultry"
+      "aisle": "Meat & Poultry"
     },
     {
       "item": "2 medium russet potatoes (about 3/4 pound)",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 bay leaf",
-      "category": "Other"
+      "aisle": "Other"
     },
     {
       "item": "Kosher salt and freshly ground black pepper",
-      "category": "Produce"
+      "aisle": "Produce"
     },
     {
       "item": "1 cup buttermilk",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 cup heavy cream",
-      "category": "Dairy & Eggs"
+      "aisle": "Dairy & Eggs"
     },
     {
       "item": "1/2 teaspoon freshly ground nutmeg",
-      "category": "Baking & Spices"
+      "aisle": "Baking & Spices"
     },
     {
       "item": "Sliced chives or scallions, for serving",
-      "category": "Produce"
+      "aisle": "Produce"
     }
   ],
   "instructions": [
@@ -74,5 +74,15 @@
     "Whisking frequently, bring soup to a simmer over medium-high heat.",
     "Whisk in grated nutmeg. Season to taste with salt and pepper and serve with chives or scallions."
   ],
-  "dateAdded": "2025-12-05T17:19:47.684Z"
+  "dateAdded": "2025-12-05T17:19:47.684Z",
+  "tags": [
+    "Soups"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "equipment": [],
+  "techniques": []
 }
