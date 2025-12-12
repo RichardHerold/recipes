@@ -1,0 +1,19 @@
+{
+  "name": "soustack",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ghpages": "vite build --mode ghpages",
+    "preview": "vite preview",
+    "deploy:ghpages": "npm run build:ghpages && npx gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "gh-pages": "^6.3.0",
+    "svelte": "^5.43.8",
+    "vite": "^7.2.4"
+  }
+}

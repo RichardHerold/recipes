@@ -1,0 +1,98 @@
+{
+  "name": "Pasta with Morels, Peas and Parmesan",
+  "category": "Pasta",
+  "description": "An elegant spring pasta dish featuring wild morel mushrooms, fresh peas, and Parmesan cheese.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Salt and ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "½ cup fresh shelled peas",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "fresh shelled peas",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 tablespoons butter",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "butter",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ pound morels, about 8 medium",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "pound"
+      },
+      "name": "morels, about 8 medium"
+    },
+    {
+      "item": "8 ounces pasta",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "pasta"
+    },
+    {
+      "item": "1 cup finely grated Parmesan",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "finely grated Parmesan",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "small pot",
+      "id": "pot-small"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
+  "instructions": [
+    "Bring to a boil 2 pots of water, one small and one large, and salt both.",
+    "Prepare Ice Bath",
+    "Cut the morels into 4 pieces each, the long way",
+    "Cook the peas for 1 minute in the small pot;",
+    "Drain and cool quickly by submerging in ice water bath.",
+    "IN TANDEM Melt half the butter in a skillet.,",
+    "Add Morels to pan",
+    "Brown Morels lightly in the butter, seasoning them with salt and pepper.",
+    "Cook the pasta until it is nearly done.",
+    "Just before draining the pasta, toss the peas and remaining butter (½ of total amount) with the morels in Saute pan",
+    "turn the heat for saute pan to medium.",
+    "Drain the pasta, reserving a little of the cooking water.",
+    "Toss the pasta with the morels and peas in the pasta pot; adding a little water if necessary to make the mixture saucy.",
+    "Toss with the Parmesan and lots of black pepper and serve immediately."
+  ],
+  "dateAdded": "2025-12-05T17:19:40.058Z",
+  "tags": [
+    "Pasta"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Misir Kik Wot (Ethiopian Red Lentil Stew) Recipe",
+  "category": "Untested",
+  "description": "A traditional Ethiopian red lentil stew cooked with berbere spices and niter kibbeh until creamy and flavorful.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1½ cups red lentils",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "red lentils",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 large finely chopped onion",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "finely chopped onion",
+      "prepAction": "chop"
+    },
+    {
+      "item": "2 cloves minced garlic",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves minced garlic",
+      "prepAction": "chop"
+    },
+    {
+      "item": "2 tbsp berbere",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "berbere"
+    },
+    {
+      "item": "2 tbsp niter kibbeh (Ethiopian clarified butter)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "niter kibbeh (Ethiopian clarified butter)"
+    },
+    {
+      "item": "2 cups water",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tsp sweet paprika",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "sweet paprika"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
+  "instructions": [
+    "Begin by cooking the lentils and water in a mid-sized pot for approx. 30 minutes.",
+    "Next, sauté the chopped onion with some olive oil added using a large-enough pan or skillet – until the color of the onion starts to clear or get translucent.",
+    "Then add the minced garlic and sauté the mix some more.",
+    "Add berbere and a little bit more water so as to keep the Wot from sticking.\rThen add the lentils you cooked before, and cook them all together at low heat for about 30 more minutes, until you see the lentils disintegrate.",
+    "Finally, add the sweet paprika to give the Misir Wot its signature reddish color."
+  ],
+  "dateAdded": "2025-12-05T17:17:25.594Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

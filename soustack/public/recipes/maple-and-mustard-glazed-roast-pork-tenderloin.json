@@ -1,0 +1,126 @@
+{
+  "name": "Maple and Mustard Glazed Roast Pork Tenderloin",
+  "category": "Meat",
+  "description": "Tender pork tenderloin roasted with a sweet and tangy maple-mustard glaze made with brandy.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "⅓ cup maple syrup",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "maple syrup",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons whole-grain mustard",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "whole-grain mustard",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ cup brandy (Or Applejack)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "brandy (Or Applejack)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 pork tenderloins, about 1½ pounds each",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "pork tenderloins, about 11/2 pounds each"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "¼ cup cornstarch",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "cornstarch",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons vegetable oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon balsamic vinegar",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "balsamic vinegar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons unsalted butter",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted butter",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
+  "instructions": [
+    "1.  Adjust an oven rack to the middle position and preheat the oven to 400°F. Combine ⅓ cup maple syrup and 2 tablespoons whole-grain mustard with the brandy.",
+    "2.  Pat the pork dry with a paper towel and season on all sides with salt and pepper. Place the cornstarch in a shallow dish and dredge the tenderloins in it, turning to coat. Set on a large plate.",
+    "3.  Heat the oil in a 12-inch ovenproof nonstick or cast-iron skillet over high heat until shimmering. Add the pork tenderloins and cook, turning occasionally, until well browned on all sides, about 12 minutes (the pork may not fit initially, but just curve the tenderloins so they fit—they will shrink and straighten as they cook). Transfer to a large plate and set aside.",
+    "4.  Pour the glaze mixture into the skillet and cook, scraping up any browned bits from the bottom of the pan, for about 2 minutes. Return the pork to the skillet and turn to coat. Transfer to the oven and cook, turning the pork to coat it in the glaze every 4 minutes, until the thickest part of pork registers 130°F on an instant-read thermometer, about 15 minutes. Transfer to a large plate, and allow to rest for 5 minutes.",
+    "5.  Meanwhile, whisk the vinegar and butter into the glaze. Carve the pork and serve with the glaze.",
+    "FOR SMALLER ROASTS:",
+    "By the time you put it in the oven it will be almost at the right internat temperature. try cooking for only 2 minutes"
+  ],
+  "dateAdded": "2025-12-05T17:19:32.274Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

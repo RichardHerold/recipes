@@ -1,0 +1,21 @@
+{
+  "name": "Foolproof Hollandaise Sauce",
+  "category": "Sauces",
+  "description": "A rich, creamy French butter sauce made with egg yolks and lemon, perfect for eggs Benedict or vegetables.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [],
+  "equipment": [],
+  "instructions": [],
+  "dateAdded": "2025-12-05T17:18:43.778Z",
+  "tags": [
+    "Sauces"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

@@ -1,0 +1,203 @@
+{
+  "name": "Dijon and Cognac Beef Stew",
+  "category": "Meat",
+  "description": "A rich and flavorful beef stew enhanced with Dijon mustard, cognac, and red wine, with carrots and mushrooms.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 large onion, finely diced",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, finely diced",
+      "prepAction": "chop"
+    },
+    {
+      "item": "3 shallots, chopped",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "shallots, chopped",
+      "prepAction": "chop"
+    },
+    {
+      "item": "4 to 6 tablespoons unsalted butter or bacon fat",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "to 6 tablespoons unsalted butter or bacon fat",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 pounds beef chuck, in 1-inch cubes",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "beef chuck, in 1-inch cubes"
+    },
+    {
+      "item": "2 tablespoons all-purpose flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Kosher salt and black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "½ cup Cognac",
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Cognac",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 cups beef stock",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "beef stock",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ cup Dijon mustard",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Dijon mustard",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 tablespoons whole-grain Dijon mustard",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "whole-grain Dijon mustard",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 large carrots, peeled and cut into half-moon slices",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "carrots, peeled and cut into half-moon slices",
+      "prepAction": "chop"
+    },
+    {
+      "item": "8 ounces mushrooms, stemmed, cleaned and quartered",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "mushrooms, stemmed, cleaned and quartered"
+    },
+    {
+      "item": "¼ cup red wine",
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "red wine",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "medium skillet",
+      "id": "skillet-medium"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "For Steps 1-3",
+    "Finely dice 1 onion and put in a small bowl.",
+    "Chop 3 shallots and add to the onion bowl.",
+    "For Steps 4-8",
+    "Cut 2lbs beef chuck into 1-inch cubes and put into medium bowl",
+    "Measure 2Tbps of flour and put into a large bowl.",
+    "For Steps 9-12",
+    "Measure ½ cup Conac and put into pourable container.",
+    "Measure 2 cups Beef stock and put into a pourable container.",
+    "Measure 1 Tbsp of full grain mustard and add to the dijon bowl.",
+    "Measure 3 Tbsp of dijon mustard and set aside.",
+    "For Steps 12-16",
+    "Peel and slice 4 large carrots and put into a small bowl.",
+    "Measure, stem, clean, and quarter 8 ounces of mushrooms and put into a small bowl.",
+    "Measure ½ cup Dijon mustard and put into a small bowl.",
+    "Measure ¼ cup red wine.",
+    "Melt 2 Tbps of butter in a dutch oven over medium heat until foam subsides.",
+    "add onion and shallots to pot and cook until softened but not browned, 10 to 15 minutes.",
+    "Use a slotted spoon to transfer to a large bowl.",
+    "If necessary, add 2 tablespoons butter to the pot to augment fat.",
+    "Dust beef cubes with flour, and season with salt and pepper.",
+    "Shake off excess flour, and place half the cubes in the pot.",
+    "Cook the beef over medium-high heat until well browned, almost crusty, on all sides.",
+    "Transfer the beef to a bowl with onions. Repeat with remaining beef.",
+    "Add Cognac to the empty pot, and cook, stirring, until the bottom is deglazed and the crust comes loose.",
+    "Add stock, Dijon mustard and 1 tablespoon Pommery mustard. Whisk to blend",
+    "Return meat and onion mixture to pot.",
+    "Lower heat, partly cover, and simmer gently until meat is very tender, about 1 1/2 hours.",
+    "Add carrots, and continue simmering for 30 minutes, or until slices are tender.",
+    "As they cook, heat 2 tablespoons butter in a medium skillet over medium-high, and sauté mushrooms until browned.",
+    "Stir mushrooms into stew along with remaining mustard and red wine.",
+    "Simmer 5 minutes, then taste, and adjust seasoning. Serve hot."
+  ],
+  "dateAdded": "2025-12-05T17:19:28.888Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

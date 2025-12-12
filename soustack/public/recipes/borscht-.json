@@ -1,0 +1,217 @@
+{
+  "name": "Borscht Борщ",
+  "category": "Untested",
+  "description": "A traditional Eastern European beet soup with cabbage, vegetables, and served with sour cream.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "2 large beets (apple size), or 4 small ones",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "beets (apple size), or 4 small ones"
+    },
+    {
+      "item": "1 large carrot (or 2 small ones)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "carrot (or 2 small ones)"
+    },
+    {
+      "item": "1 small red onion",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "red onion"
+    },
+    {
+      "item": "1/2 head of small green cabbage (use 1/3 if it's a big one)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "head of small green cabbage (use 1/3 if it's a big one)"
+    },
+    {
+      "item": "2 small red bliss potatoes",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "red bliss potatoes"
+    },
+    {
+      "item": "1 pint cherry tomatoes",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "pint cherry tomatoes"
+    },
+    {
+      "item": "10-12 cups water (start with less at first, and you can add more if the soup looks too dense once you combine all the ingredients)",
+      "aisle": "Pantry & Dry Goods",
+      "prepAction": "measure"
+    },
+    {
+      "item": "ketchup - 4 generous squirts (maybe more to taste)",
+      "aisle": "Condiments & Sauces"
+    },
+    {
+      "item": "12 cloves of garlic, peeled but kept whole",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 12,
+        "unit": null
+      },
+      "name": "cloves of garlic, peeled but kept whole"
+    },
+    {
+      "item": "3 bay leaves",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "bay leaves"
+    },
+    {
+      "item": "crushed black pepper (a few turns of pepper mill)",
+      "aisle": "Produce"
+    },
+    {
+      "item": "salt (to taste, maybe 1/2 teaspoon?)",
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 cup fresh parsley",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "fresh parsley",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 bunch scallions, whole (ends just a bit trimmed)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "bunch scallions, whole (ends just a bit trimmed)"
+    },
+    {
+      "item": "dry parsley - 8 shakes of spice bottle",
+      "aisle": "Produce"
+    },
+    {
+      "item": "dry dill - 8 shakes, same as dill",
+      "aisle": "Produce"
+    },
+    {
+      "item": "cayenne pepper - 1-2 shakes (1/2 teaspoon maybe?  go slow, very spicy!)",
+      "aisle": "Produce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon olive oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "olive oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "For serving:",
+      "aisle": "Other"
+    },
+    {
+      "item": "sour cream",
+      "aisle": "Dairy & Eggs"
+    },
+    {
+      "item": "cayenne",
+      "aisle": "Other"
+    },
+    {
+      "item": "fresh dill (finely chopped)",
+      "aisle": "Produce",
+      "prepAction": "chop"
+    },
+    {
+      "item": "Bread",
+      "aisle": "Bakery"
+    },
+    {
+      "item": "Vidalia onion",
+      "aisle": "Produce"
+    },
+    {
+      "item": "fresh scallions",
+      "aisle": "Produce"
+    },
+    {
+      "item": "coarse salt",
+      "aisle": "Baking & Spices"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "grater",
+      "id": "grater"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Peel and Shred the Beets with a medium-holed grater",
+    "Peel and Shred the Carrots",
+    "Peel and Slice Thin the Red Onion",
+    "Peel and Slice Thin the Cabbage",
+    "Cube the Potatoes (but do not peel)",
+    "Measure out ½ cup parsley and finely chop it",
+    "Finely chop the dill (enough for the amount being served)",
+    "In a large Dutch Oven,  add water and shredded cabbage, cover the lid, and bring to a boil.",
+    "meanwhile, in a large searing pan, add 1 tablespoon olive oil, shredded beets, shredded carrots, sliced red onion, and 4 generous squirts of ketchup, mix well, and sautee on medium heat for 15-20 minutes.",
+    "Once the water and cabbage are brought to a boil, turn down the heat, add the beet mixture from pan, potatoes, garlic, bay leaves, black pepper, salt, dry parsley, and dry dill.  (Add more water here if necessary, but probably you will not need to.)  Mix well and bring everything to a simmer with the lid open.  Within a few minutes you will see foam start to form on top - monitor the soup and gently remove as much of this foam as possible over the next 10-15 minutes as everything cooks.",
+    "Once the foam subsides, add the fresh parsley, mix well, and then add the half bunch of scallions (uncut) - just place it on the top surface of the soup and submerge it a bit and let it hang out there.",
+    "Simmer on medium-low with the lid slightly ajar for about an hour.",
+    "Taste and correct seasonings (More ketchup?  Quite possibly so!)  Add the tiny bit of cayenne and cherry tomatoes.",
+    "Cook another 10-15 minutes on medium-low heat.  (You could remove the whole scallions once soup is done, but I would just keep them in there to keep building flavor for leftovers - just do not serve them.)",
+    "To serve - ladle soup into bowls, top with a tiny pinch of cayenne (optional - give your guests a heads up as this is not traditional at all), a dollop of sour cream and a generous pinch of fresh dill.  Serve with rye and/or pumpernickel bread, and wedges of Vidalia onion and whole scallions arranged around a little bowl of salt for dipping (onion and scallion.)"
+  ],
+  "dateAdded": "2025-12-05T17:17:52.649Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

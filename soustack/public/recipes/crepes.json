@@ -1,0 +1,93 @@
+{
+  "name": "Crepes",
+  "category": "Breakfast",
+  "description": "Thin, delicate French pancakes that can be filled with sweet or savory ingredients.",
+  "prepTime": "15 minutes",
+  "cookTime": "1 hour 25 Minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "2 large eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "1 ¼ cup (280mL) milk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1.25,
+        "unit": "cup"
+      },
+      "name": "(280mL) milk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "140g (1 cup) flour",
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon melted butter",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "melted butter",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Pinch Kosher Salt",
+      "aisle": "Baking & Spices"
+    },
+    {
+      "item": "1-2 ½  Tablespoons (8g) sugar (for sweet crepes)",
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
+  "instructions": [
+    "Crepe Batter",
+    "In a blender, combine all of the ingredients",
+    "Use the soup setting on the blender or pulse 10 times.",
+    "Refrigerate for an hour up to 48 hours (optional).",
+    "Crepes",
+    "Heat a small non-stick pan.",
+    "Add butter to coat.",
+    "Pour 1 ounce of batter into the center of the pan and swirl to spread evenly.",
+    "Cook for 30 seconds and flip.",
+    "Cook for another 10 seconds and remove to the cutting board.",
+    "Lay them out flat so they can cool.",
+    "Continue until all batter is gone.",
+    "Savory Variation",
+    "Add 1/4 teaspoon salt and 1/4 cup chopped fresh herbs, spinach or sun-dried tomatoes to the egg mixture.",
+    "Sweet Variation",
+    "Add 2 ½ Tablespoons sugar, 1 teaspoon vanilla extract and 2 tablespoons of your favorite liqueur to the egg mixture.",
+    "Recipe courtesy of Alton Brown",
+    "Read more at: http://www.foodnetwork.com/recipes/alton-brown/crepes-recipe.html?oc=linkback"
+  ],
+  "dateAdded": "2025-12-05T17:17:56.946Z",
+  "tags": [
+    "Breakfast"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 7500,
+    "total": 7515
+  },
+  "techniques": []
+}

@@ -1,0 +1,121 @@
+{
+  "name": "YeAter Alicha Kik Wot (Ethiopian Mild Yellow Split Pea Stew) Recipe",
+  "category": "Untested",
+  "description": "A mild Ethiopian yellow split pea stew seasoned with turmeric and traditional spices, served with injera bread.",
+  "prepTime": "Prep time",
+  "cookTime": "Total time",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 cup split peas",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "split peas",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 cup onion (minced)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "onion (minced)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 tbsp ginger (minced)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "ginger (minced)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 tbsp garlic (minced)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "garlic (minced)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 tsp Alicha Kimem (Afrenje)",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Alicha Kimem (Afrenje)"
+    },
+    {
+      "item": "1 tsp Netch Azmud (Caraway Seed)",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Netch Azmud (Caraway Seed)"
+    },
+    {
+      "item": "1 tsp of Turmeric",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "of Turmeric"
+    },
+    {
+      "item": "½ cup oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 cups water",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Salt (to taste)",
+      "aisle": "Baking & Spices"
+    }
+  ],
+  "equipment": [],
+  "instructions": [
+    "Thoroughly wash the split peas using hot water until they’re clean enough that the water they are placed is clear.",
+    "Soak the split peas in water until they are fully rehydrated. Then strain the remaining water for approx. 20 min.",
+    "Cook the onions for 10 min. in water over medium heat until the onions are thoroughly cooked and transparent.",
+    "Add some water, then the minced ginger, and stir for about 3 min. until the mixture reaches a paste-like in texture.",
+    "Add the minced garlic and the oil, and mix well.",
+    "Pour in some water now and again as the sauce starts to thicken while stirring gently.",
+    "Now, add the split peas slowly along with some water, making sure the split peas are not burnt. Then stir the mix for 2 min.",
+    "Pour in more water till the split peas are submerged completely, and continue stirring for approx. 8 min. when the split peas become soft.",
+    "Then add the Tumeric and Alicha Kimem and continue cooking for 1 min. till the mixture becomes fragrant.",
+    "Lower the heat and simmer the mixture for about 5 min. and add the Netch Azmud while stirring.",
+    "Finally, turn the heat off, add some salt, and serve your Alicha Kik Wot along with Injera."
+  ],
+  "dateAdded": "2025-12-05T17:17:23.646Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {},
+  "techniques": []
+}

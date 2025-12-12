@@ -1,0 +1,163 @@
+{
+  "name": "Lega Tibs",
+  "category": "Untested",
+  "description": "An Ethiopian stir-fry dish with venison, lamb, or beef cooked with berbere spices, tomatoes, and wine.",
+  "prepTime": "20 minutes",
+  "cookTime": "Total Time 30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 large red onion, about 2 cups, sliced thin",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "red onion, about 2 cups, sliced thin",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1/4 cup niter kebbeh or ghee spiced butter",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "niter kebbeh or ghee spiced butter",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 pounds venison, lamb or beef, cut into bite-sized pieces",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "venison, lamb or beef, cut into bite-sized pieces"
+    },
+    {
+      "item": "2 tablespoons berbere",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "berbere",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon ground fenugreek",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground fenugreek",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 teaspoon cardamom (optional)",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "cardamom (optional)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 teaspoon ground ginger",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "ground ginger",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/4 teaspoon cumin",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "cumin",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/4 teaspoon ground clove",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "ground clove",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon black pepper",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "black pepper",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 to 4 garlic cloves, sliced thinly",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "to 4 garlic cloves, sliced thinly",
+      "prepAction": "chop"
+    },
+    {
+      "item": "2 cups whole peeled tomatoes, broken into bits",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "whole peeled tomatoes, broken into bits",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 to 5 green chiles, such as jalapenos or serranos",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "to 5 green chiles, such as jalapenos or serranos"
+    },
+    {
+      "item": "1/2 cup red wine",
+      "aisle": "Beverages",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "red wine",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [],
+  "instructions": [
+    "Get the saute pan or wok very hot. Stir-fry the onions without the butter for a few minutes, until they char just a little on the outside. Add the spiced butter and the venison. Stir-fry hot and fast until the outside of the meat is brown but the inside of the meat is still very rare. You need to do this on as hot a burner as you have. Do it in two batches unless you have a very large wok or pan.",
+    "The moment the meat has browned, add it all back into the pan along with the spices, garlic and chiles. Stir-fry another 30 seconds or so, then add the tomatoes and the wine. Toss to combine and let this cook for a minute or two. Serve at once with bread or injera."
+  ],
+  "dateAdded": "2025-12-05T17:17:31.982Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 20,
+    "activeCook": 30,
+    "total": 50
+  },
+  "techniques": []
+}

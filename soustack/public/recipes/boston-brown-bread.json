@@ -1,0 +1,181 @@
+{
+  "name": "Boston Brown Bread",
+  "category": "Baked Goods",
+  "description": "A dense, slightly sweet steamed bread made with rye, whole wheat, and cornmeal.",
+  "prepTime": "15 minutes",
+  "cookTime": "2 Hours 50 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Nonstick cooking spray",
+      "aisle": "Other"
+    },
+    {
+      "item": "140 grams rye flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 140,
+        "unit": "gram"
+      },
+      "name": "rye flour"
+    },
+    {
+      "item": "140 grams stone-ground whole wheat flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 140,
+        "unit": "gram"
+      },
+      "name": "stone-ground whole wheat flour"
+    },
+    {
+      "item": "142 grams fine-ground cornmeal",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 142,
+        "unit": "gram"
+      },
+      "name": "fine-ground cornmeal"
+    },
+    {
+      "item": "198 grams lightly packed dark brown sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 198,
+        "unit": "gram"
+      },
+      "name": "lightly packed dark brown sugar"
+    },
+    {
+      "item": "½ teaspoon (3 grams) baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "(3 grams) baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons (11 grams) baking soda",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "(11 grams) baking soda",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon (3 grams) kosher salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "(3 grams) kosher salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon (16 grams) doenjang (Korean soybean paste)",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "(16 grams) doenjang (Korean soybean paste)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 cups buttermilk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ cup egg whites (from 4 to 5 large eggs)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "egg whites (from 4 to 5 large eggs)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¾ cup blackstrap molasses",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "blackstrap molasses",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "stand mixer",
+      "id": "mixer-stand"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Oven and Vessel",
+    "Preheat oven to 350 degrees",
+    "Generously coat the insides of 2 10-ounce coffee cans or a 9-by-5-inch loaf pan with cooking spray.",
+    "Cut a piece of foil large enough to cover the cooking tray(s) and spray or coat with oil.",
+    "Batter",
+    "Use a scale to measure 142g cornmeal, 140g wheat flour, 140g rye flour, 3g baking powder, 11g baking soda, 3g salt in a large mixing bowl.",
+    "Mix to Combine 1 Tablespoon (16g) doenjang and 2 cups of buttermilk in a large mixing bowl.",
+    "Add 198g brown sugar to the buttermilk mixing bowl",
+    "Measure ¾ cup molasses and put into the buttermilk mixing bowl.",
+    "Measure 1 Tablespoon of measured molasses. Add to the stand mixer bowl.",
+    "Separate enough egg whites to measure ½ cups of egg whites. Add to the stand mixer bowl.",
+    "With an electric stand mixer, whip the egg whites and the 1 Tablespoon of molasses: starting slow and gradually increasing the speed to high; until stiff, silky peaks form, about 5 minutes.",
+    "While the eggs are mixing, Whisk large mixing bowl dry ingredients to combine.",
+    "Whisk the remaining molasses into the buttermilk mixture.",
+    "Gradually stir the buttermilk wet mixture into the dry ingredients until combined.",
+    "Fold in the whipped egg whites in 2 additions.",
+    "Pour batter into the prepared cans or loaf pan.",
+    "Cover the tops of the cans or pan securely with prepared oil sprayed foil",
+    "Set the cans or pan in a baking dish and add enough hot water to come about 1/4 inch up the side.",
+    "Transfer to the oven and bake until the top springs back when lightly touched, about 1 hour 40 minutes for the cans, or 2 hours for the loaf pan.",
+    "Let cool for 20 minutes on a wire rack, then invert and remove the bread to a cutting board.",
+    "Let cool completely before slicing."
+  ],
+  "dateAdded": "2025-12-05T17:18:26.702Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 15000,
+    "total": 15015
+  },
+  "techniques": []
+}

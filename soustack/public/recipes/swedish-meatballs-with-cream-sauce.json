@@ -1,0 +1,314 @@
+{
+  "name": "Swedish Meatballs with Cream Sauce",
+  "category": "Untested",
+  "description": "Tender pork meatballs pan-fried until golden, then simmered in a creamy mushroom and onion sauce.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "For the Meatballs",
+      "aisle": "Other"
+    },
+    {
+      "item": "1 pound freshly ground pork shoulder",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "freshly ground pork shoulder"
+    },
+    {
+      "item": "Kosher salt",
+      "aisle": "Baking & Spices"
+    },
+    {
+      "item": "¼ cup buttermilk or heavy cream",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "buttermilk or heavy cream",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ ounce (1 packet) unflavored gelatin",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "ounce"
+      },
+      "name": "(1 packet) unflavored gelatin"
+    },
+    {
+      "item": "2 slices high-quality white sandwich bread, crusts removed",
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "slices high-quality white sandwich bread, crusts removed",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 teaspoon soy sauce ½ teaspoon Marmite",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "soy sauce 1/2 teaspoon Marmite",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 anchovy fillets, mashed to a paste with the back of a fork",
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "anchovy fillets, mashed to a paste with the back of a fork"
+    },
+    {
+      "item": "3 medium cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "cloves garlic, minced or grated on a Microplane (about 1 tablespoon; reserve about 2 teaspoons for the sauce)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 teaspoon red pepper flakes",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "red pepper flakes",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 large egg",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "egg"
+    },
+    {
+      "item": "1 tablespoon sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon ground fennel",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "ground fennel",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Freshly ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "2 cups vegetable oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "vegetable oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "For the Sauce",
+      "aisle": "Condiments & Sauces"
+    },
+    {
+      "item": "3 tablespoons unsalted butter",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "unsalted butter",
+      "prepAction": "measure"
+    },
+    {
+      "item": "8 ounces buttom mushrooms, cleaned and sliced",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "buttom mushrooms, cleaned and sliced",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 small onion, finely diced (about 1 cup)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, finely diced (about 1 cup)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "Reserved garlic from above",
+      "aisle": "Produce"
+    },
+    {
+      "item": "1 tablespoon all-purpose flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1½ cups homemade or low-sodium canned chicken stock",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "cup"
+      },
+      "name": "homemade or low-sodium canned chicken stock",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon soy sauce",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ cup heavy cream",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "heavy cream",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "1 teaspoon fresh lemon juice",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fresh lemon juice",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon fresh thyme leaves",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "fresh thyme leaves",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "microwave",
+      "id": "microwave"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    }
+  ],
+  "instructions": [
+    "To make the meatballs",
+    "In a large bowl, combine the ground pork with the salt. Mix thoroughly with your hands, then set aside at room temperature for 30 minutes.",
+    "Meanwhile, pour the buttermilk into a large bowl and sprinkle the gelatin over it. Allow to hydrate for 10 minutes.",
+    "Add the bread and allow to soak for 10 minutes, turning the bread occasionally until completely saturated.",
+    "After the meat has rested, add the soy sauce, Marmite, anchovy paste, 1 teaspoon of garlic, red pepper flakes, egg, sugar, fennel, and pepper to taste to the bowl.",
+    "Add the bread and buttermilk mixture and mix gently with your hands until well combined; do not over-knead.",
+    "Pull off a teaspoon-sized portion of the mixture, place it on a microwave-safe plate, and microwave it on high power until cooked through, about 15 seconds.",
+    "Taste for seasoning, and add more salt and pepper to the meat mixture as desired.",
+    "Using wet hands, form the mixture into meatballs about 1 inch in diameter (a generous tablespoon per meatballs—you should get roughly 30 meatballs), placing them on a large plate as you go.",
+    "Heat the vegetable oil in a 10-inch nonstick or cast-iron skillet over medium-high heat until it reaches 350°F (a meatball should sizzle vigorously when you dip the edge of it into the hot oil).",
+    "Set aside 4 meatballs and carefully transfer half of the remaining meatballs to the pan. The temperature will drop to around 300°F—adjust the flame to maintain this temperature (the oil should continue to look sizzle vigorously but not smoke) and cook until the meatballs are well browned on the first side, 1 to 2 minutes.",
+    "Carefully flip them with a small offset spatula or a fork and cook on the second side until well browned, about 3 to 4 minutes longer.",
+    "Using tongs, transfer the meatballs to a paper-towel-lined plate.",
+    "Repeat with the remaining meatballs, allowing the oil to return to 350°F before adding the second batch.",
+    "Set the meatballs aside (discard the oil or strain and save for another use).",
+    "To make the sauce",
+    "Return the skillet to medium-high heat, add 2 tablespoons of the butter, and heat until the foaming subsides.",
+    "Add the mushrooms and cook, stirring occasionally, until they give up their liquid and start to brown, about 8 minutes.",
+    "Push the mushrooms to one side and add the remaining tablespoon of butter to the center of the skillet.",
+    "Add the reserved 4 raw meatballs and mash with a wooden spoon, then cook, stirring to break up the meat, until it is no longer pink, about 1 minute.",
+    "Add the onions, stir the meat, mushrooms, and onions together, and cook, stirring occasionally, until the onions are softened, about 3 minutes. Add the remaining garlic and cook, stirring, until fragrant, about 30 seconds.",
+    "Add the flour and cook, stirring constantly, for 30 seconds.",
+    "Slowly pour in the chicken stock, scraping up any browned bits from the bottom of the pan.",
+    "Add the soy sauce, heavy cream, and sugar, stir to combine, and bring to a simmer.",
+    "Add the remaining meatballs to the sauce and cook, stirring and turning them occasionally, until they are cooked through and the sauce has thickened to the consistency of heavy cream, about 5 minutes.",
+    "Season with salt and pepper to taste, stir in the lemon juice and thyme, and serve."
+  ],
+  "dateAdded": "2025-12-05T17:17:21.883Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

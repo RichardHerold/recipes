@@ -1,0 +1,197 @@
+{
+  "name": "Roasted Cauliflower with Sesame",
+  "category": "Vegetables",
+  "description": "Roasted cauliflower florets tossed with a tahini-miso dressing and toasted sesame seeds.",
+  "prepTime": "15 minutes",
+  "cookTime": "45 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 head of cauliflower, broken by hand into bite-sized florets",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "head of cauliflower, broken by hand into bite-sized florets"
+    },
+    {
+      "item": "¼ cup olive oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "olive oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons kosher salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon ground coriander",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground coriander",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon dried oregano",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "dried oregano",
+      "prepAction": "measure"
+    },
+    {
+      "item": "freshly ground black pepper, to taste (I like to add a healthy amount of coarsely ground black pepper, personally)",
+      "aisle": "Produce"
+    },
+    {
+      "item": "2 tablespoons tahini",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "tahini",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon white miso",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "white miso",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons red wine vinegar",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "red wine vinegar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1½ tablespoons water",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "tablespoon"
+      },
+      "name": "water",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoons toasted white sesame seeds",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "toasted white sesame seeds",
+      "prepAction": "measure"
+    },
+    {
+      "item": "chili oil/paste, for serving (optional but recommended)",
+      "aisle": "Produce"
+    },
+    {
+      "item": "Measure out and grind the coriander and pepper together. Reserve in ramekin",
+      "aisle": "Produce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Measure out the Salt and Oregano. Add to the coriander and pepper ramekin.",
+      "aisle": "Produce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Measure ¼ cup olive oil and put into a pourable small ramekin or beaker.",
+      "aisle": "Household & Misc",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Measure 2 Teaspoons red wine vinegar and 1½ Tablespoons of water and combine into a pourable small ramekin or beaker.",
+      "aisle": "Pantry & Dry Goods",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Measure 2 Tablespoon Tahini and 1 Tablespoon White Miso and combine in a small bowl.",
+      "aisle": "Condiments & Sauces",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Oven",
+    "Preheat the oven to 450 degrees F and set aside.",
+    "Cauliflower",
+    "Break the cauliflower by hand into bite-sized florets",
+    "Place the cauliflower in a large bowl and combine with the oil, salt, coriander, oregano, and pepper. Toss to combine.",
+    "Line a baking sheet with parchment paper and spread the cauliflower out over it.",
+    "Roast the cauliflower for about 10 minutes",
+    "Turn the cauliflower and roast for about another 10 minutes",
+    "While the cauliflower roasts, whisk together the tahini, miso, vinegar, and 1½ tablespoons of water in a small bowl. Set aside.",
+    "When the cauliflower is roasted, move it to a large mixing bowl while it's still warm",
+    "Toss the cauliflower with the sauce and sesame seeds.",
+    "Serve immediately"
+  ],
+  "dateAdded": "2025-12-05T17:19:13.393Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 45,
+    "total": 60
+  },
+  "techniques": []
+}

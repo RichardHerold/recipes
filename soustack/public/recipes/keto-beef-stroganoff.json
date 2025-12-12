@@ -1,0 +1,139 @@
+{
+  "name": "Keto Beef Stroganoff",
+  "category": "Meat",
+  "description": "A low-carb version of the classic Russian dish with ground beef, mushrooms, and a creamy sauce.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "2 tbsp Olive oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "Olive oil"
+    },
+    {
+      "item": "1/2 large Onion (sliced into thin quarter moons)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "Onion (sliced into thin quarter moons)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "8 oz Cremini mushrooms (sliced)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 8,
+        "unit": "ounce"
+      },
+      "name": "Cremini mushrooms (sliced)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 lb Ground beef",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "Ground beef"
+    },
+    {
+      "item": "1/2 tsp Sea salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "Sea salt"
+    },
+    {
+      "item": "1/4 tsp Black pepper",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "Black pepper"
+    },
+    {
+      "item": "2 cloves Garlic (minced)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "cloves Garlic (minced)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 cup Beef bone broth",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "Beef bone broth",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tbsp Coconut aminos (optional)",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "Coconut aminos (optional)"
+    },
+    {
+      "item": "1/2 cup Sour cream",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Sour cream",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 oz Cream cheese",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "Cream cheese"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "spatula",
+      "id": "spatula"
+    }
+  ],
+  "instructions": [
+    "Heat the olive oil in a large saute pan over medium heat.",
+    "Add the onions and mushrooms. Saute for about 10 minutes, until onions and mushrooms are soft and browned, and extra liquid has evaporated.",
+    "Increase heat to medium-high. Push the mushrooms and onions to the sides, and add the ground beef to the center of the pan, and season with salt and pepper. Cook for 8-10 minutes, stirring occasionally and breaking the beef apart with a spatula, until beef is cooked through.",
+    "Once it starts to cook through a bit you can mix it with the mushrooms and onions.",
+    "Make a well in the center and add the minced garlic. Saute for about a minute, until fragrant, then stir in with the meat.",
+    "Add the bone broth and coconut aminos, if using. Bring to a boil, then simmer for 5 minutes, until most of the liquid is reduced but a little is left.",
+    "Stir in the sour cream and cream cheese, until smooth."
+  ],
+  "dateAdded": "2025-12-05T17:19:17.580Z",
+  "tags": [
+    "Meat"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

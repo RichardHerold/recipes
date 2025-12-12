@@ -1,0 +1,271 @@
+{
+  "name": "Paella on the Grill",
+  "category": "Seafood",
+  "description": "A Spanish rice dish cooked on the grill with chicken, shrimp, clams, chorizo, and saffron.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 ½ pounds boneless, skinless chicken thighs",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "pound"
+      },
+      "name": "boneless, skinless chicken thighs"
+    },
+    {
+      "item": "Salt and pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "12 ounces jumbo shrimp (16 to 20 per pound)",
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 12,
+        "unit": "ounce"
+      },
+      "name": "jumbo shrimp (16 to 20 per pound)"
+    },
+    {
+      "item": "6 tablespoons Extra-Virgin Olive Oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "Extra-Virgin Olive Oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "6 garlic cloves, minced",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "garlic cloves, minced",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 ¾ teaspoons hot smoked paprika",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.75,
+        "unit": "teaspoon"
+      },
+      "name": "hot smoked paprika",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoons Tomato Paste",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "Tomato Paste",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 cups Chicken Broth",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 4,
+        "unit": "cup"
+      },
+      "name": "Chicken Broth",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 (8-ounce) bottle clam juice",
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(8-ounce) bottle clam juice"
+    },
+    {
+      "item": "⅔ cup Dry Sherry",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.6666666666666666,
+        "unit": "cup"
+      },
+      "name": "Dry Sherry",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Pinch saffron threads(optional)",
+      "aisle": "Other"
+    },
+    {
+      "item": "1 onion, chopped fine",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "onion, chopped fine",
+      "prepAction": "chop"
+    },
+    {
+      "item": "½ cup Jarred Roasted Red Peppers, chopped fine",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "Jarred Roasted Red Peppers, chopped fine",
+      "prepAction": "chop"
+    },
+    {
+      "item": "3 cups Arborio Rice",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "cup"
+      },
+      "name": "Arborio Rice",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 pound littleneck clams, scrubbed",
+      "aisle": "Seafood",
+      "quantity": {
+        "amount": 2,
+        "unit": "pound"
+      },
+      "name": "littleneck clams, scrubbed"
+    },
+    {
+      "item": "1 pound Spanish-style chorizo sausage",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "Spanish-style chorizo sausage"
+    },
+    {
+      "item": "1 cup Frozen Peas, thawed",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "Frozen Peas, thawed",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Lemon wedges",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "grill",
+      "id": "grill"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "Large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Charcoal Grill",
+    "For a Charcoal Grill: Open bottom vent completely.",
+    "Light large chimney starter mounded with charcoal briquettes (7 quarts).",
+    "When top coals are partially covered with ash, pour evenly over grill.",
+    "Using tongs, arrange 20 unlit briquettes evenly over coals.",
+    "Set cooking grate in place, cover, and open lid vent completely.",
+    "Heat grill until hot, about 5 minutes.",
+    "Chicken",
+    "Half crosswise 1½ pounds of chicken breast and place on plate in one layer.",
+    "Season both sides with salt and pepper.",
+    "Refrigerate until ready.",
+    "Shrimp",
+    "Peel and devein 12 ounces of shrimp. Put Shrimp in Large bowl.",
+    "Mince 6 cloves of garlic.",
+    "Measure ½ teaspoon of garlic and put into large bowl with shrimp.",
+    "Put remaining garlic in ramekin and reserve for sofrito.",
+    "Measure 1 Tablespoon olive oil, ¼ teaspoon paprika, and ¼ teaspoon salt in large bowl with shrimp",
+    "Toss to combine ingredients and refrigerate until ready",
+    "Linguica/chorizo",
+    "Cut 1 pound of linguica into ½ in slices and put in a regular bowl in the fridge.",
+    "Clams",
+    "Scrub 2 pounds of littleneck clams and put into large bowl of cold water.",
+    "Sofrito",
+    "Measure 1 Tablespoon of olive oil and put in medium saucepan.",
+    "Measure 1½ teaspoons of paprika and 3 Tablespoons of tomato pyaste. Put in ramekin.",
+    "Measure ⅔ cup dry sherry and put in pourable container.",
+    "Locate and set aside saffron container next to sherry by the range.",
+    "Open Chicken Broth and clamjuice containers and set aside by the sherry.",
+    "I Paella Vegetables",
+    "measure 1 cup of frozen peas out of the freezer and put into ramekin.",
+    "Leave peas out to thaw.",
+    "Finely chop 1 onion.",
+    "Finely chop enough roasted red to make ½ cup.",
+    "Paella Rice",
+    "Measure 3 cups of paella rice and put in large container.",
+    "fill up the container with water to the level of the rice.",
+    "Agitate the rice so the water becomes cloudy and drain.",
+    "Repeat steps 1-3 2 more times for 3 total rinses of the rice.",
+    "Measure 4 Tablespoons of Olive oil and put into pourable container.",
+    "Leave olive oil container out to help oil the grill later.",
+    "Measure ½ teaspoon of salt and put into small ramekin.",
+    "Cut desired amount of lemon wedges for serving.",
+    "Sofrito",
+    "Heat 1 tablespoon oil in medium saucepan over medium heat until shimmering.",
+    "Add remaining garlic and cook, stirring constantly, until garlic sticks to bottom of saucepan and begins to brown, about 1 minute.",
+    "Add tomato paste and remaining 1½ teaspoons paprika and continue to cook, stirring constantly, until dark brown bits form on bottom of saucepan, about 1 minute.",
+    "Add broth, clam juice, sherry, and saffron, if using. Increase heat to high and bring to boil. Remove saucepan from heat and set aside.",
+    "Chicken",
+    "Clean and oil cooking grate.",
+    "Place chicken on grill and cook until both sides are lightly browned, 5 to 7 minutes total.",
+    "Return chicken to plate.",
+    "Clean cooking grate.",
+    "Paella",
+    "Place roasting pan on grill and add remaining ¼ cup oil.",
+    "When oil begins to shimmer, add onion, red peppers, and ½ teaspoon salt.",
+    "Cook, stirring frequently, until onion begins to brown, 4 to 7 minutes.",
+    "Add rice and stir until grains are well coated with oil.",
+    "Arrange chicken around perimeter of pan.",
+    "Pour broth mixture and any accumulated juices from chicken over rice.",
+    "Smooth rice into even layer, making sure nothing sticks to the sides of the pan and no rice rests atop chicken.",
+    "When liquid reaches gentle simmer, place shrimp in center of pan in single layer.",
+    "Arrange clams in center of pan, evenly distributing with shrimp and pushing hinge sides of clams into rice slightly so they stand up.",
+    "Distribute chorizo evenly over the surface of rice.",
+    "Cook, moving and rotating pan to maintain gentle simmer across entire surface of pan, until rice is almost cooked through; about 12 to 18 minutes.",
+    "Sprinkle peas evenly over paella.",
+    "Cover grill, and cook until liquid is fully absorbed and rice on bottom of pan sizzles, 5 to 8 minutes.",
+    "Continue to cook, uncovered, checking bottom of pan frequently with metal spoon, until uniform golden-brown crust forms, 8 to 15 minutes longer. (Rotate and slide pan around grill as necessary to ensure even crust formation.)",
+    "Remove pan from grill, cover with aluminum foil, and let stand for 10 minutes.",
+    "Serve with lemon wedges."
+  ],
+  "dateAdded": "2025-12-05T17:18:45.605Z",
+  "tags": [
+    "Seafood"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

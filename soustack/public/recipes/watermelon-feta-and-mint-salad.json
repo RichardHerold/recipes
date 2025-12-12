@@ -1,0 +1,100 @@
+{
+  "name": "Watermelon, Feta, and Mint Salad",
+  "category": "Vegetables",
+  "description": "A refreshing summer salad combining sweet watermelon, salty feta cheese, fresh mint, and lemon zest.",
+  "prepTime": "15 minutes",
+  "cookTime": "5 Minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "3 pounds seedless watermelon (about 1 small or 1/4 large)",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "pound"
+      },
+      "name": "seedless watermelon (about 1 small or 1/4 large)"
+    },
+    {
+      "item": "1 Lemon",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Lemon"
+    },
+    {
+      "item": "3 tablespoons (45ml) extra-virgin olive oil, plus more for drizzling",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "(45ml) extra-virgin olive oil, plus more for drizzling",
+      "prepAction": "measure"
+    },
+    {
+      "item": "10g fresh mint leaves (¼ cup chopped)",
+      "aisle": "Produce",
+      "prepAction": "chop"
+    },
+    {
+      "item": "Up to 4 ounces (1 quart) arugula leaves (optional; see note)",
+      "aisle": "Produce"
+    },
+    {
+      "item": "4 ounces (110g) feta cheese (see note)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "ounce"
+      },
+      "name": "(110g) feta cheese (see note)"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Watermelon",
+    "Remove rind of watermelon",
+    "Cut watermelon into 1-inch chunks (about 2 pounds/1kg chunks after rind is discarded)",
+    "Lemon",
+    "Cut 4 2-inch strips of zest from the lemon",
+    "Juice lemon and reserve 1 tablespoon (15ml) juice in a small ramekin",
+    "Mint",
+    "Roughly chop ¼ cup of mint and put in a ramekin",
+    "Place watermelon chunks in a large bowl.",
+    "Finely chop lemon zest and divide into two bowls.",
+    "Add lemon juice,  oil, mint, arugula (if using), and half of zest to bowl with watermelon.and toss until watermelon is evenly dressed",
+    "Season lightly to taste with salt and pepper. (The cheese will add saltiness, so go light on the salt at this stage.)",
+    "Transfer salad to a wide, shallow bowl or a large plate and spread out evenly.",
+    "Crumble feta over the top.",
+    "Sprinkle with remaining lemon zest.",
+    "Drizzle with more olive oil and a few grinds of black pepper.",
+    "Serve immediately."
+  ],
+  "dateAdded": "2025-12-05T17:19:07.706Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 5,
+    "total": 20
+  },
+  "techniques": []
+}

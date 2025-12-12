@@ -1,0 +1,431 @@
+{
+  "name": "Momofuku Milk Bar’s Birthday Layer Cake",
+  "category": "Baked Goods",
+  "description": "A whimsical layer cake with vanilla cake, birthday crumbs, and a signature stark white frosting from Momofuku Milk Bar.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Cake:",
+      "aisle": "Other"
+    },
+    {
+      "item": "Nonstick vegetable oil spray",
+      "aisle": "Other"
+    },
+    {
+      "item": "2 cups cake flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "cake flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1½ teaspoons baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 5.5,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¾ teaspoon kosher salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ cup plus 2 tablespoons rainbow sprinkles, divided",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "plus 2 tablespoons rainbow sprinkles, divided",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ cup buttermilk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "⅓ cup grapeseed oil",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "grapeseed oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons clear imitation vanilla extract, preferably McCormick brand",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "clear imitation vanilla extract, preferably McCormick brand",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1¼ cups granulated sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.75,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "⅓ cup vegetable shortening",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.3333333333333333,
+        "unit": "cup"
+      },
+      "name": "vegetable shortening",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 tablespoons (½ stick) unsalted butter, room temperature",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": "tablespoon"
+      },
+      "name": "(1/2 stick) unsalted butter, room temperature",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoons light brown sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "light brown sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 large eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "Crumbs:",
+      "aisle": "Beverages"
+    },
+    {
+      "item": "¾ cup cake or all-purpose flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "cake or all-purpose flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ cup granulated sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "granulated sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons light brown sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "light brown sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons rainbow sprinkles",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "rainbow sprinkles",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon kosher salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ cup grapeseed oil",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "grapeseed oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon clear imitation vanilla extract",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "clear imitation vanilla extract",
+      "prepAction": "measure"
+    },
+    {
+      "item": "For the frosting and assembly:",
+      "aisle": "Other"
+    },
+    {
+      "item": "½ cup (1 stick) unsalted butter, room temperature",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(1 stick) unsalted butter, room temperature",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ cup vegetable shortening",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "vegetable shortening",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 ounces cream cheese, room temperature",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": "ounce"
+      },
+      "name": "cream cheese, room temperature",
+      "prepAction": "temper"
+    },
+    {
+      "item": "2 tablespoons light corn syrup",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "light corn syrup",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon plus 1 teaspoon clear imitation vanilla extract, divided",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "plus 1 teaspoon clear imitation vanilla extract, divided",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1¼ cups powdered sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2.75,
+        "unit": "cup"
+      },
+      "name": "powdered sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon kosher salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "kosher salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ teaspoon baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "⅛ teaspoon citric acid (or ½ teaspoon fresh lemon juice)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.125,
+        "unit": "teaspoon"
+      },
+      "name": "citric acid (or 1/2 teaspoon fresh lemon juice)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ cup milk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      "name": "milk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Special equipment:",
+      "aisle": "Other"
+    },
+    {
+      "item": "6\" cake ring or springform mold",
+      "aisle": "Other"
+    },
+    {
+      "item": "2 strips acetate (flexible plastic paper), each 3\" wide and 20\" long",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "strips acetate (flexible plastic paper), each 3\" wide and 20\" long"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "electric mixer",
+      "id": "mixer-electric"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "stand mixer",
+      "id": "mixer-stand"
+    },
+    {
+      "name": "paring knife",
+      "id": "knife-paring"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    }
+  ],
+  "instructions": [
+    "Cake:",
+    "Preheat oven to 350°. Line a 13x9\" rimmed baking sheet with parchment paper and coat with nonstick spray; set aside.",
+    "Whisk flour, baking powder, salt, and ¼ cup sprinkles in a large bowl. Combine buttermilk, oil, and vanilla in a medium bowl.",
+    "Using an electric mixer on medium-high, beat granulated sugar, shortening, butter, and light brown sugar in another large bowl until light and fluffy, about 4 minutes. Add eggs one at a time, beating to blend between additions and occasionally scraping down sides and bottom of bowl. Continue to beat mixture, occasionally scraping down sides and bottom of bowl, until almost doubled in volume and very light, airy, and pale yellow, about 4 minutes.",
+    "With mixer on low, add buttermilk mixture until incorporated. Add dry ingredients, beating until just combined, about 1 minute.",
+    "Scrape batter into prepared pan; smooth top. Sprinkle with remaining 2 Tbsp. sprinkles. Bake until cake is light golden brown, the center springs back when gently pressed, and a tester inserted into the center comes out with a few moist crumbs attached, 30–35 minutes.",
+    "Remove cake from oven and cool on a wire rack or, in a pinch, in the fridge or freezer (don’t worry, it’s not cheating).",
+    "Do ahead: Store cooled cake wrapped in plastic in fridge up to 5 days.",
+    "Crumbs:",
+    "Preheat oven to 300°. Line a rimmed baking sheet with parchment paper; set aside.",
+    "Combine flour, granulated sugar, light brown sugar, sprinkles, baking powder, and salt in a medium bowl. Add oil and vanilla, and using your hands, mix until no dry spots remain and large clumps form when mixture is pressed together. As though you were making a crumble topping, break mixture up into clusters (some small, some large) and spread onto prepared baking sheet. Bake, stirring occasionally, until crumble is light golden brown and crunchy, 10–12 minutes (it will firm up as it cools). Let cool completely.",
+    "Do ahead: Wrap crumbs tightly in plastic and store at room temperature up to 5 days.",
+    "Frosting and assembly:",
+    "Combine butter, shortening, and cream cheese in large bowl of a stand mixer fitted with the paddle attachment. Beat on medium-high until mixture is smooth and fluffy, 2–3 minutes. Scrape down sides of bowl and slowly stream in corn syrup and 1 Tbsp. vanilla. Beat until mixture is silky smooth and glossy white, about 3 minutes.",
+    "Scrape down sides of bowl and, with mixer on low, add powdered sugar, salt, baking powder, and citric acid until just combined. Increase speed to medium-high and beat until you have a brilliant stark white, beautifully smooth frosting, about 4 minutes (it should look just like it came out of a plastic tub at the grocery store!).",
+    "Do ahead: Store frosting in an airtight container in fridge up to 1 week.",
+    "For the assembly:",
+    "Place a silicone baking mat or piece of parchment on a counter. Invert cake onto mat, then peel off parchment. Use cake ring to punch out two 6\" rounds from cake (or, using a springform pan as a guide, cut out 2 rounds using a paring knife). These are your top 2 cake layers (the remaining cake scraps will form the bottom layer of the cake).",
+    "Line a sheet pan with a clean piece of parchment. Clean cake ring and place it in center of the pan. Use 1 acetate strip to line inside of cake ring. Place cake scraps inside ring and use the back of your hand to press scraps together into a flat, even layer (you never see this layer, so it’s okay that it’s messy—but since it’s the base of the cake, it needs to be flat).",
+    "Combine milk and remaining 1 tsp. vanilla in a small bowl. Dunk a pastry brush in milk mixture and use half of it to generously moisten the base layer.",
+    "Use the back of a spoon to spread about 3 Tbsp. frosting evenly over cake. Sprinkle ⅔ cup birthday crumbs evenly over frosting. Use the back of your hand to press them in place. Use the back of a spoon to spread another 3 Tbsp. frosting as evenly as possible over crumbs.",
+    "With your index finger, gently tuck second acetate strip between cake ring and the top ¼\" of the first acetate strip, so that you have a clear ring of acetate 5–6\" tall—high enough to support the height of the finished cake. Top with a cake round (if 1 of your 2 cake rounds is less pretty than the other, use it for the middle layer and save the most perfect one for the top). Brush layer with remaining milk mixture. Repeat frosting-crumb layering process.",
+    "Nestle remaining cake round into frosting. Cover top of cake with remaining frosting. Use an offset spatula to form decorative swirls, or do as they do at Milk Bar and shape it into a perfectly flat top. Top with remaining birthday crumbs.",
+    "Transfer cake to freezer and freeze at least 3 hours to set cake and filling.",
+    "At least 3 hours before serving the cake, pull sheet pan out of freezer and, using your fingers and thumbs, pop cake out of cake ring. Gently peel off acetate and transfer cake to a platter or cake stand. Defrost in fridge at least 3 hours.",
+    "Do ahead: Cake will keep up to 2 weeks in freezer or 5 days in refrigerator.",
+    "Recipe by Christina Tosi Momofuku Milk Bar New York New York"
+  ],
+  "dateAdded": "2025-12-05T17:18:34.205Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

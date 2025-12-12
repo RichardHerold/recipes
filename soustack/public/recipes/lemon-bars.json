@@ -1,0 +1,167 @@
+{
+  "name": "Lemon Bars",
+  "category": "Baked Goods",
+  "description": "Classic dessert bars with a buttery shortbread crust and tangy lemon custard filling, dusted with powdered sugar.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Shortbread Crust",
+      "aisle": "Bakery"
+    },
+    {
+      "item": "1 cup (230g; 2 sticks) unsalted butter, melted",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "(230g; 2 sticks) unsalted butter, melted",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 cup (100g) granulated sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "(100g) granulated sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 teaspoons pure vanilla extract",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "pure vanilla extract",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1/2 teaspoon salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 cups + 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "+ 2 Tablespoons (265g) all-purpose flour (spoon & leveled)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Lemon Filling",
+      "aisle": "Produce"
+    },
+    {
+      "item": "2 cups (400g) granulated sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "(400g) granulated sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "6 Tablespoons (48g) all-purpose flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "(48g) all-purpose flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "6 large eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "1 cup (240ml) lemon juice (about 4 lemons)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "(240ml) lemon juice (about 4 lemons)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "optional: confectioners’ sugar for dusting",
+      "aisle": "Baking & Spices"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    }
+  ],
+  "instructions": [
+    "Preheat the oven to 325°F (163°C).",
+    "Line the bottom and sides of a 9×13 baking pan* with parchment paper, leaving an overhang on the sides to lift the finished bars out (makes cutting easier!). Set aside.",
+    "Make the crust: Mix the melted butter, sugar, vanilla extract, and salt together in a medium bowl.",
+    "Add the flour and stir to completely combine. The dough will be thick.",
+    "Press firmly into prepared pan, making sure the layer of crust is nice and even.",
+    "Bake for 20-22 minutes or until the edges are lightly browned.",
+    "Remove from the oven.",
+    "Using a fork, poke holes all over the top of the warm crust (not all the way through the crust). A new step I swear by, this helps the filling stick and holds the crust in place. Set aside until step 11.",
+    "Make the filling: Sift the sugar and flour together in a large bowl.",
+    "Add the eggs and lemon juice and whisk until completely combined.",
+    "Pour filling over warm crust.",
+    "Bake the bars for 22-26 minutes or until the center is relatively set and no longer jiggles. (Give the pan a light tap with an oven mitt to test.)",
+    "Remove bars from the oven and cool completely at room temperature",
+    "Once cool, lift the parchment paper out of the pan using the overhang on the sides.",
+    "Dust with confectioners’ sugar and cut into squares before serving.",
+    "For neat squares, wipe the knife clean between each cut.",
+    "Cover and store leftover lemon bars in the refrigerator for up to 1 week.",
+    "Lemon bars can be frozen for up to 3-4 months. Cut the cooled bars (without confectioners’ sugar topping) into squares, then place onto a baking sheet. Freeze for 1 hour. Individually wrap each bar in aluminum foil or plastic wrap and place into a large bag or freezer container to freeze. Thaw in the refrigerator, then dust with confectioners’ sugar before serving."
+  ],
+  "dateAdded": "2025-12-05T17:18:24.909Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

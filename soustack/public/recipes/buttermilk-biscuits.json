@@ -1,0 +1,196 @@
+{
+  "name": "Buttermilk Biscuits",
+  "category": "Baked Goods",
+  "description": "Flaky, tender buttermilk biscuits with a golden crust, perfect for breakfast or as a side.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "240g all-purpose flour (2 cups)",
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon sugar",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "sugar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon salt plus extra for seasoning",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "salt plus extra for seasoning",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ pound butter, cubed, cold",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "pound"
+      },
+      "name": "butter, cubed, cold"
+    },
+    {
+      "item": "¾ cup buttermilk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "buttermilk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "~2 Tablespoons honey, Warmed (optional)",
+      "aisle": "Other",
+      "prepAction": "measure"
+    },
+    {
+      "subsection": "Equipment",
+      "items": [
+        {
+          "item": "Food processor",
+          "category": "Other"
+        },
+        {
+          "item": "Dough Cutter",
+          "category": "Bakery"
+        },
+        {
+          "item": "Spatula",
+          "category": "Other"
+        },
+        {
+          "item": "Rolling pin",
+          "category": "Bakery"
+        },
+        {
+          "item": "3in round cutter",
+          "category": "Other"
+        },
+        {
+          "item": "Large mixing bowl",
+          "category": "Other"
+        },
+        {
+          "item": "Half size baking sheet",
+          "category": "Other"
+        },
+        {
+          "item": "Parchment paper",
+          "category": "Household & Misc"
+        }
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "name": "dough cutter",
+      "id": "dough-cutter"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "rolling pin",
+      "id": "rolling-pin"
+    },
+    {
+      "name": "biscuit cutter",
+      "id": "biscuit-cutter"
+    },
+    {
+      "name": "sheet tray",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "microwave",
+      "id": "microwave"
+    },
+    {
+      "name": "3in round cutter",
+      "id": "3in-round-cutter"
+    },
+    {
+      "name": "Half size baking sheet",
+      "id": "half-size-baking-sheet"
+    },
+    {
+      "name": "Parchment paper",
+      "id": "parchment-paper"
+    }
+  ],
+  "instructions": [
+    {
+      "subsection": "Mise en Place",
+      "items": [
+        "Using a dough cutter cut a stick of butter lengthwise into thirds.",
+        "Turn the butter 90degrees and cut again into thirds.",
+        "Starting on one side, cut the butter into ½ slices.",
+        "Put butter into ramekin and keep in refrigerator until ready to use."
+      ]
+    },
+    "Preheat the oven to 350°. Convention if possible.",
+    "Pulse dry ingredients in food processor 2-3 times.",
+    "Pulse the flour in a food processor with the cold butter until the butter is the size of small pebbles approx 6-8 times.",
+    "Move food processor mixture into a large bowl.",
+    "Fold in the buttermilk using a spatula until mixed.",
+    "Dust a counter with the flour as well as your hands, the rolling pin and the dough cutter.",
+    "Transfer the dough to the counter and gently knead the dough until a rollable ball is created.",
+    "Roll the dough so it is ¾ inch high.",
+    "Cut the dough with a large floured biscuit cutter.",
+    "Knead scraps to make the final 2 biscuits.",
+    "Place the pieces 1½ inches apart on a lined sheet tray.",
+    "Bake for 12 minutes",
+    "Rotate the sheet tray and bake for another 12 minutes.",
+    "Warm up honey in microwave for 20 seconds",
+    "Brush biscuits with honey and season with salt"
+  ],
+  "dateAdded": "2025-12-05T17:18:28.448Z",
+  "tags": [
+    "Baked Goods"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

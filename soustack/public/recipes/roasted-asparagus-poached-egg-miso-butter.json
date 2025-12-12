@@ -1,0 +1,122 @@
+{
+  "name": "Roasted Asparagus Poached Egg & Miso Butter",
+  "category": "Vegetables",
+  "description": "Tender roasted asparagus topped with a poached egg and drizzled with umami-rich miso butter sauce.",
+  "prepTime": "missing",
+  "cookTime": "missing",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "½ cup shiro (white) miso",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "shiro (white) miso",
+      "prepAction": "measure"
+    },
+    {
+      "item": "8 tablespoons (1 stick) unsalted butter, at room temperature, plus more if needed",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 8,
+        "unit": "tablespoon"
+      },
+      "name": "(1 stick) unsalted butter, at room temperature, plus more if needed",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ pound thin to medium asparagus",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "pound"
+      },
+      "name": "thin to medium asparagus"
+    },
+    {
+      "item": "Kosher salt",
+      "aisle": "Baking & Spices"
+    },
+    {
+      "item": "2 teaspoons sherry vinegar",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sherry vinegar",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 Slow-Poached Eggs or regular poached eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 4,
+        "unit": null
+      },
+      "name": "Slow-Poached Eggs or regular poached eggs"
+    },
+    {
+      "item": "Freshly ground black pepper",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Asparagus",
+    "Snap off the woodier bottom inch or so of each asparagus stalk.",
+    "If thick asparagus, use a vegetable peeler to shave away the tougher outer layer from each stalk.",
+    "Line a plate with paper towels for draining the asparagus.",
+    "Miso Butter",
+    "Combine the miso with 5 tablespoons of the butter in a small bowl and beat with a wooden spoon until well mixed.",
+    "Reserve until needed.",
+    "Asparagus",
+    "Heat the remaining 3 tablespoons butter in a wide skillet over medium high heat.",
+    "When the butter sends up the first wisp of smoke, put the asparagus in the pan and cook until the asparagus start to take on some color, about  2-3 minutes.",
+    "Season the asparagus with a generous pinch of salt and turn the heat down to medium.",
+    "Turn the asparagus with a spatula or tongs and cool until they have color on the second side, about 2-3 minutes.",
+    "Transfer them to the plate with paper towels to drain.",
+    "Season the cooked asparagus with another pinch of salt if needed.",
+    "Miso Sauce",
+    "While the asparagus are cooking, heat the sherry vinegar in a small saucepan over medium heat for 30 seconds.",
+    "Add the miso butter, turn the heat to low, and stir to warm it through until the butter has loosened slightly.",
+    "Remove the pan from the burner and put it in a warm spot.",
+    "Smear a quarter of the warmed miso butter into a thickish puddle in the middle of each plate.",
+    "Divide the asparagus among the plates and top each with an egg.",
+    "Finish each dish with a few turns of black pepper, and serve at once."
+  ],
+  "dateAdded": "2025-12-05T17:19:04.550Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {},
+  "techniques": []
+}

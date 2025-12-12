@@ -1,0 +1,161 @@
+{
+  "name": "Goddess Bowl with Ginger Nama Shoyu Sauce",
+  "category": "Vegetables",
+  "description": "A healthy grain bowl with quinoa, avocado, eggs, and kale, topped with a creamy ginger-tahini sauce.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Serves 4 to 6",
+      "aisle": "Other"
+    },
+    {
+      "item": "Goddess Bowl",
+      "aisle": "Other"
+    },
+    {
+      "item": "2 cups Quinoa",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "name": "Quinoa",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 Avocado",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Avocado"
+    },
+    {
+      "item": "6 eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "sprouted legumes",
+      "aisle": "Other"
+    },
+    {
+      "item": "tamari almonds",
+      "aisle": "International & Specialty"
+    },
+    {
+      "item": "Kale",
+      "aisle": "Produce"
+    },
+    {
+      "item": "Ginger Nama Shoyu Sauce",
+      "aisle": "Produce"
+    },
+    {
+      "item": "6 garlic cloves, chopped",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "garlic cloves, chopped",
+      "prepAction": "chop"
+    },
+    {
+      "item": "6 inches of fresh peeled ginger, chopped",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "inches of fresh peeled ginger, chopped",
+      "prepAction": "chop"
+    },
+    {
+      "item": "3 tablespoon of Tamari Sauce (or Nama Shoyu or Soy Sauce)",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "of Tamari Sauce (or Nama Shoyu or Soy Sauce)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 lemons (juiced) (6 tablespoons of lemon juice)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "lemons (juiced) (6 tablespoons of lemon juice)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "6 tablespoons of Tahini (sesame seed butter basically)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "of Tahini (sesame seed butter basically)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoon of olive oil (or flax oil)",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "of olive oil (or flax oil)",
+      "prepAction": "measure"
+    },
+    {
+      "item": "6 tablespoons of water",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "of water",
+      "prepAction": "measure"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    }
+  ],
+  "instructions": [
+    "Combine the garlic and ginger in a mini food processor or blender. Blend well.",
+    "Add in the remaining ingredients and blend until you have a creamy consistency.",
+    "You may add more water if you would like a less thick sauce."
+  ],
+  "dateAdded": "2025-12-05T17:19:11.364Z",
+  "tags": [
+    "Vegetables"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

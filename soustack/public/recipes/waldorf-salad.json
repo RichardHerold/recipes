@@ -1,0 +1,110 @@
+{
+  "name": "Waldorf Salad",
+  "category": "Thanksgiving",
+  "description": "A classic American salad with crisp apples, celery, grapes, and walnuts in a creamy mayonnaise dressing.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "6 Tbsp mayonnaise (or plain yogurt)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": "tablespoon"
+      },
+      "name": "mayonnaise (or plain yogurt)"
+    },
+    {
+      "item": "1 Tbsp lemon juice",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "lemon juice"
+    },
+    {
+      "item": "1/2 teaspoon salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Pinch of freshly ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "2 sweet apples, cored and chopped",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "sweet apples, cored and chopped",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins)",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "red seedless grapes, sliced in half (or 1/4 cup of raisins)",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 cup celery, thinly sliced",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "celery, thinly sliced",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 cup chopped, slightly toasted walnuts",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "name": "chopped, slightly toasted walnuts",
+      "prepAction": "chop"
+    },
+    {
+      "item": "Lettuce",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
+  "instructions": [
+    "In a medium sized bowl, whisk together the mayonnaise, lemon juice, salt and pepper.",
+    "Stir in the apple, celery, grapes,"
+  ],
+  "dateAdded": "2025-12-05T17:17:15.489Z",
+  "tags": [
+    "Thanksgiving"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

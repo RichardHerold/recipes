@@ -1,0 +1,67 @@
+{
+  "name": "Roasted Butterflied Chicken",
+  "category": "Poultry",
+  "description": "A whole chicken butterflied and roasted until the skin is crispy and the meat is juicy and tender.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 whole chicken, 3½ to 4 pounds, butterflied according to the instructions here",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "chicken, 31/2 to 4 pounds, butterflied according to the instructions here"
+    },
+    {
+      "item": "1 tablespoon vegetable, canola, or olive oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "vegetable, canola, or olive oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
+  "instructions": [
+    "1.  Adjust an oven rack to the upper-middle position and preheat the oven to 425°F (400 convection).",
+    "2.  Dry the chicken thoroughly with paper towels. Separate the skin from the breasts (see here), then rub the chicken evenly all over and under the skin with the oil. Season all sides with salt and pepper (go light on the salt if the bird has been dry-brined).",
+    "3.  Set a wire rack on a rimmed baking sheet lined with aluminum foil. Position the chicken so that the breasts are in the center of the baking sheet and the legs are close to the edges. Roast until the thickest part of the breast close to the bone registers 145°F on an instant-read thermometer and the joint between thighs and body registers at least 160°F, 35 to 45 minutes.",
+    "4.  Transfer the chicken to a cutting board, tent loosely with foil, and allow to rest for 10 minutes, then carve and serve."
+  ],
+  "dateAdded": "2025-12-05T17:18:56.258Z",
+  "tags": [
+    "Poultry"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

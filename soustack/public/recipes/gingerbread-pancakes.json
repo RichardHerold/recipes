@@ -1,0 +1,173 @@
+{
+  "name": "Gingerbread Pancakes",
+  "category": "Untested",
+  "description": "Spiced pancakes flavored with ginger, cinnamon, and molasses, perfect for a cozy breakfast.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 ½ cups all-purpose flour",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "cup"
+      },
+      "name": "all-purpose flour",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 tablespoons cornmeal",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "cornmeal",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon baking powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "baking powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon baking soda",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "baking soda",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 tablespoon powdered ginger",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "powdered ginger",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 teaspoon ground cinnamon",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "ground cinnamon",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¼ teaspoon powdered cloves",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 0.25,
+        "unit": "teaspoon"
+      },
+      "name": "powdered cloves",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ teaspoon salt",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "salt",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 ½ cups milk",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "cup"
+      },
+      "name": "milk",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoons butter, melted",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "butter, melted",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 tablespoons molasses",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "molasses",
+      "prepAction": "measure"
+    },
+    {
+      "item": "2 eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "½ teaspoon vanilla extract",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "teaspoon"
+      },
+      "name": "vanilla extract",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Fresh berries, for garnish",
+      "aisle": "Produce"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "frying pan",
+      "id": "pan-frying"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "In a large mixing bowl, mix together the flour, cornmeal, baking powder, baking soda, ginger, cinnamon, cloves, and salt.",
+    "In a separate bowl, mix together the milk, butter, molasses, eggs, and vanilla.",
+    "Add the milk mixture to the flour mixture and stir until combined.",
+    "Lightly grease a griddle or large frying pan with butter. oil, or nonstick cooking spray and heat it on the stove (or to 350 degrees if using an electric griddle).",
+    "Pour the batter about 2 tablespoons at a time onto the griddle. spacing so the pancakes have room to spread.",
+    "Cook the pancakes until bubbles appear and pop. about 2 to 3 minutes.",
+    "Flip and cook for 2 minutes more."
+  ],
+  "dateAdded": "2025-12-05T17:17:50.768Z",
+  "tags": [
+    "Untested"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

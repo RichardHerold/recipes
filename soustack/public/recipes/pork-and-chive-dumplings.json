@@ -1,0 +1,222 @@
+{
+  "name": "Pork and Chive Dumplings",
+  "category": "Sides",
+  "description": "Homemade Chinese dumplings filled with ground pork, napa cabbage, and garlic chives, pan-fried until crispy.",
+  "prepTime": "15 minutes",
+  "cookTime": "30 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Dumplings",
+      "aisle": "Other"
+    },
+    {
+      "item": "6-8 large napa cabbage leaves",
+      "aisle": "Produce"
+    },
+    {
+      "item": "1-2 Tablespoons kosher salt",
+      "aisle": "Baking & Spices",
+      "prepAction": "measure"
+    },
+    {
+      "item": "½ bunch garlic chives",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "bunch garlic chives"
+    },
+    {
+      "item": "2 teaspoons sesame oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "teaspoon"
+      },
+      "name": "sesame oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "3 Tablespoons soy sauce",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 pound ground pork",
+      "aisle": "Meat & Poultry",
+      "quantity": {
+        "amount": 1,
+        "unit": "pound"
+      },
+      "name": "ground pork"
+    },
+    {
+      "item": "1 Tablespoon chopped fresh ginger",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "tablespoon"
+      },
+      "name": "chopped fresh ginger",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 package round dumpling wrappers",
+      "aisle": "Bakery",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "package round dumpling wrappers"
+    },
+    {
+      "item": "2-3 Tablespoons canola oil",
+      "aisle": "Other",
+      "prepAction": "measure"
+    },
+    {
+      "item": "¾ cup water",
+      "aisle": "Pantry & Dry Goods",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "cup"
+      },
+      "name": "water",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Dumpling Sauce",
+      "aisle": "Condiments & Sauces"
+    },
+    {
+      "item": "1/2 cup soy sauce",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      "name": "soy sauce",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 Tbsp. black Chiangking vinegar",
+      "aisle": "Condiments & Sauces",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. black Chiangking vinegar"
+    },
+    {
+      "item": "2 tsp. sriracha chili sauce",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "tsp. sriracha chili sauce"
+    },
+    {
+      "item": "2 tsp. sesame oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": null
+      },
+      "name": "tsp. sesame oil"
+    },
+    {
+      "item": "1 Tbsp. chopped ginger",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "Tbsp. chopped ginger",
+      "prepAction": "chop"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "measuring cup",
+      "id": "measuring-cup"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Dumpling Filling",
+    "Thinly Slice 6-8 nappa cabbage leaves and place in a large bowl.",
+    "Salt cabbage generously with about 1-2 tablespoons of kosher salt.",
+    "Let sit for 10 minutes.",
+    "Meanwhile",
+    "Mince ½ a bunch of garlic chives.",
+    "Combine garlic chives with 1 pound of ground pork into a large bowl.",
+    "Peel and chop 1 Tablespoon of fresh ginger and combine with pork mixture in existing bowl.",
+    "Measure 2 teaspoons of sesame oil and add to pork mixture in existing bowl.",
+    "Measure 3 Tablespoons of soy sauce and add to pork mixture in existing bowl.",
+    "After 10 minutes elapsed, Squeeze cabbage to take all the water our and add to pork mixture in existing bowl.",
+    "Mix dumpling mixture well.",
+    "Dumpling Sauce",
+    "Measure ½ cup of soy sauce and put in a small bowl",
+    "Measure 1 Tablespoon of black Chiangking vinegar and put in existing small bowl with soy sauce.",
+    "Measure 2 teaspoons of siracha and put in existing small bowl with soy sauce mixture.",
+    "Measure 2 teaspoons of sesame oil and put in existing small bowl with soy sauce mixture.",
+    "Miscellaneous",
+    "Fill liquid measuring cup with ¾ cup of water",
+    "Making Dumplings",
+    "Place the dumpling wrapper on a flat surface.",
+    "Dip your finger in water and use to dab water all around the edge of the wrapper.",
+    "Put small spoonful of filling in center of wrapper.",
+    "Pinch in the middle to create taco-like shape.",
+    "Make two inward pleats at each end of the dumpling on the side of the wrapper facing away from you. The end result should resemble a small couch. (If you don’t want to cook them immediately, you can freeze them as long as you wrap them tightly.)",
+    "Repeat 1-5 until all the desired amount of dumplings is formed.",
+    "Preserve any remaining mixture of sheets.",
+    "Cooking Dumplings",
+    "Place oil in a large cast iron skillet and heat on high.",
+    "Add dumplings and immediately turn the heat down to medium-low",
+    "Cook, checking bottoms of dumplings, until golden brown (about 2-3 minutes).",
+    "Add about ¼ cup water to pan and cover immediately.",
+    "Let cook for a few minutes and add another ¼ cup of water when the water evaporates.",
+    "Cover and cook again.",
+    "Add one final ¼ cup of water and cover and cook again. Dumplings are done when the water completely evaporates and the bottoms are brown and crispy.",
+    "Serve with dumpling sauce.",
+    "Prepare Dumpling Sauce",
+    "Mix dumpling sauce ingredients together in a medium bowl. (May be made in advance.)",
+    "Makes: 50-60 dumplings",
+    "Joanne Chang",
+    "Chef Joanne Chang is the chef and owner of Myers + Chang and Flour Bakery. She shared this recipe with us when she was featured as our guest on Neighborhood Kitchens."
+  ],
+  "dateAdded": "2025-12-05T17:18:52.455Z",
+  "tags": [
+    "Sides"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 30,
+    "total": 45
+  },
+  "techniques": []
+}

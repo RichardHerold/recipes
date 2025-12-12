@@ -1,0 +1,156 @@
+{
+  "name": "Shakshuka",
+  "category": "Breakfast",
+  "description": "A Middle Eastern dish of eggs poached in a spicy tomato and pepper sauce, served over corn grits.",
+  "prepTime": "15 minutes",
+  "cookTime": "40 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "Spicy Tomato Sauce",
+      "aisle": "Produce"
+    },
+    {
+      "item": "2 tablespoons extra-virgin olive oil",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "name": "extra-virgin olive oil",
+      "prepAction": "measure"
+    },
+    {
+      "item": "4 teaspoons finely chopped garlic",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 4,
+        "unit": "teaspoon"
+      },
+      "name": "finely chopped garlic",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 (28-ounce) can diced tomatoes, including the liquid",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "(28-ounce) can diced tomatoes, including the liquid",
+      "prepAction": "chop"
+    },
+    {
+      "item": "1 teaspoon Aleppo pepper",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "name": "Aleppo pepper",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 ½ teaspoons hawayej or teaspoon curry powder",
+      "aisle": "Baking & Spices",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "hawayej or teaspoon curry powder",
+      "prepAction": "measure"
+    },
+    {
+      "item": "1 ½ teaspoon freshly squeezed lemon juice",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 1.5,
+        "unit": "teaspoon"
+      },
+      "name": "freshly squeezed lemon juice",
+      "prepAction": "measure"
+    },
+    {
+      "item": "Kosher salt and freshly ground black pepper",
+      "aisle": "Produce"
+    },
+    {
+      "item": "Corn Grits",
+      "aisle": "Other"
+    },
+    {
+      "item": "Shakshuka",
+      "aisle": "Other"
+    },
+    {
+      "item": "6 eggs",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 6,
+        "unit": null
+      },
+      "name": "eggs"
+    },
+    {
+      "item": "Kosher salt",
+      "aisle": "Baking & Spices"
+    }
+  ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "immersion blender",
+      "id": "blender-immersion"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    }
+  ],
+  "instructions": [
+    "Mise en Place:",
+    "Preheat the oven to 350°F",
+    "Open tomato can and pour into a large saucepan",
+    "Chop garlic and put into large saucepan",
+    "Measure 1 ½ teaspoons hawayej and 1 teaspoon Aleppo pepper into large saucepan",
+    "Measure 2 Tablespoons olive oil into large saucepan",
+    "Cut lemon in half and reserve.",
+    "Spicy Tomato Sauce",
+    "Place large saucepan over low heat and simmer until the tomatoes are soft and melted, about 15 minutes.",
+    "Set the sauce aside to cool slightly.",
+    "Using an immersion blender and starting at low speed, puree the sauce, gradually increasing the speed as the mixture becomes smoother and resembles a silky tomato soup.",
+    "Stir in the lemon juice",
+    "Season with salt and pepper to taste.",
+    "Cover and refrigerate up for up to I week or use immediately.",
+    "Making the Shakuka",
+    "Gently reheat the sauce",
+    "Pour sauce into desired pot",
+    "Crack each egg into a small bowl or ramekin to ensure that the yolks stay intact.",
+    "Using the back of a spoon, make a divot for each egg and slide it onto the spoon into the sauce, one at a time, so that it doesn't float on top; leave a little space between each egg.",
+    "Lightly season the eggs with salt and transfer to the oven.",
+    "Bake until the egg whites are just barely set and the yolks are very loose, about 20 minutes.",
+    "While eggs are baking, prepare corn grits according to package instructions",
+    "Serve in bowl with grits at the bottom and shakshuka on top."
+  ],
+  "dateAdded": "2025-12-05T17:18:00.779Z",
+  "tags": [
+    "Breakfast"
+  ],
+  "time": {
+    "prep": 15,
+    "activeCook": 40,
+    "total": 55
+  },
+  "techniques": []
+}

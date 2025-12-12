@@ -1,0 +1,70 @@
+{
+  "name": "Brown Butter Sage Sauce",
+  "category": "Pasta",
+  "description": "A simple yet elegant pasta sauce made with nutty brown butter and crispy fried sage leaves.",
+  "prepTime": "Prep Time 3 minutes",
+  "cookTime": "Total Time 8 minutes",
+  "image": "",
+  "ingredients": [
+    {
+      "item": "1 stick organic salted butter (you can use cultured vegan butter instead)",
+      "aisle": "Dairy & Eggs",
+      "quantity": {
+        "amount": 1,
+        "unit": null
+      },
+      "name": "stick organic salted butter (you can use cultured vegan butter instead)"
+    },
+    {
+      "item": "14 leaves fresh sage or to taste",
+      "aisle": "Other",
+      "quantity": {
+        "amount": 14,
+        "unit": null
+      },
+      "name": "leaves fresh sage or to taste"
+    },
+    {
+      "item": "freshly cracked black pepper to taste",
+      "aisle": "Produce"
+    },
+    {
+      "item": "1/2 lemon optional",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.5,
+        "unit": null
+      },
+      "name": "lemon optional"
+    },
+    {
+      "item": "3/4 lb butternut squash ravioli or potato gnocchi",
+      "aisle": "Produce",
+      "quantity": {
+        "amount": 0.75,
+        "unit": "pound"
+      },
+      "name": "butternut squash ravioli or potato gnocchi"
+    }
+  ],
+  "equipment": [],
+  "instructions": [
+    "Cut the butter into large pieces and add it to a light colored pan over medium low flame.",
+    "As soon as the butter starts to foam up add the sage leaves, (make sure they are dry) and cook together for 3 to 5 minutes.",
+    "The butter will foam up and start turning brown (noisette). Do not touch it, and do not stir.",
+    "The moment the foam subsides remove from heat. The sage should be crispy by now.",
+    "Hit it with a squeeze of lemon juice if you prefer and serve it over cooked ravioli or gnocchi.",
+    "Add the cooked ravioli to the butter sage sauce and gently toss to coat. When cooking the pasta make sure to reserve a little bit of the pasta water. Add a little bit of the reserved pasta water If needed to loosen up the sauce.",
+    "Serve with freshly cracked black pepper on top."
+  ],
+  "dateAdded": "2025-12-05T17:19:35.995Z",
+  "tags": [
+    "Pasta"
+  ],
+  "time": {
+    "prep": 3,
+    "activeCook": 8,
+    "total": 11
+  },
+  "techniques": []
+}
