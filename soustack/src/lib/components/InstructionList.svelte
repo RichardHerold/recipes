@@ -13,7 +13,7 @@
   }
 </script>
 
-<ol class="instruction-list">
+<ol class="instructions-list">
   {#each instructions as step, index}
     {#if isInstructionSubsection(step)}
       <li class="instruction-subsection">

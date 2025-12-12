@@ -17,12 +17,26 @@
   } from './lib/stores/ui.js';
   import { scalingStore } from './lib/stores/scaling.js';
 
+  let focusedSlug = '';
+
   onMount(() => {
     loadRecipes();
+    if (typeof window === 'undefined') {
+      return;
+    }
+    focusedSlug = window.location.hash.replace('#', '') || '';
+    const handleHashChange = () => {
+      focusedSlug = window.location.hash.replace('#', '') || '';
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   });
 
   $: filteredRecipes = filterRecipes($recipes, $searchQuery, $activeFilters);
   $: hasSelection = $selectionCount > 0;
+  $: selectionLabel = formatSelectionLabel($selectionCount);
 
   function filterRecipes(list, query, filters) {
     if (!Array.isArray(list)) return [];
@@ -46,23 +60,59 @@
   }
 
   function handleShoppingAction() {
+    if (!$shoppingListMode) {
+      shoppingListMode.set(true);
+      showShoppingModal.set(false);
+      collapseExpandedRecipes();
+      return;
+    }
     if (hasSelection) {
       showShoppingModal.set(true);
-    } else {
-      shoppingListMode.set(true);
     }
   }
 
-  function toggleSelectionMode() {
-    shoppingListMode.update((value) => !value);
-    if (!$shoppingListMode) {
-      clearSelections();
+  function handleClearSelection() {
+    clearSelections();
+    shoppingListMode.set(false);
+    showShoppingModal.set(false);
+    collapseExpandedRecipes();
+  }
+
+  function collapseExpandedRecipes() {
+    updateShareUrl('');
+  }
+
+  function updateShareUrl(slug) {
+    if (typeof window === 'undefined') {
+      focusedSlug = slug || '';
+      return;
+    }
+    const baseUrl = `${window.location.origin}${window.location.pathname}`;
+    if (slug) {
+      window.history.replaceState({}, '', `${baseUrl}#${slug}`);
+    } else {
+      window.history.replaceState({}, '', baseUrl);
+    }
+    focusedSlug = slug || '';
+  }
+
+  function handleCardToggle(recipe, event) {
+    const { expanded } = event.detail;
+    if (expanded) {
+      updateShareUrl(recipe.slug);
+    } else if (focusedSlug === recipe.slug) {
+      updateShareUrl('');
     }
   }
 
   function recipeKey(recipe, index) {
     const base = recipe?.slug || recipe?.name || 'recipe';
     return `${base}-${index}`;
+  }
+
+  function formatSelectionLabel(count) {
+    const unit = count === 1 ? 'recipe' : 'recipes';
+    return `${count} ${unit} selected`;
   }
 </script>
 
@@ -75,33 +125,29 @@
   <section class="export-controls">
     <div class="export-controls-row">
       <div>
-        <p class="selection-count">{$selectionCount} selected</p>
+        <p class="selection-count">{selectionLabel}</p>
         <p class="export-hint">Select recipes to build a shopping list</p>
       </div>
       <div class="export-buttons">
         <button
           type="button"
-          class="export-btn export-btn-primary"
-          on:click={handleShoppingAction}
-        >
-          {$shoppingListMode && !hasSelection ? 'Select recipes' : 'Make Shopping List'}
-        </button>
-        <button
-          type="button"
           class="export-btn export-btn-secondary"
-          class:active={$shoppingListMode}
-          on:click={toggleSelectionMode}
+          class:export-btn-primary={$shoppingListMode}
+          data-selection-mode={$shoppingListMode}
+          on:click={handleShoppingAction}
+          disabled={$shoppingListMode && !hasSelection}
         >
-          {$shoppingListMode ? 'Done Selecting' : 'Select Recipes'}
+          {$shoppingListMode ? 'Create Shopping List' : 'Make Shopping List'}
         </button>
-        <button
-          type="button"
-          class="export-btn export-btn-link"
-          disabled={!hasSelection}
-          on:click={clearSelections}
-        >
-          Clear
-        </button>
+        {#if $shoppingListMode}
+          <button
+            type="button"
+            class="export-btn export-btn-secondary"
+            on:click={handleClearSelection}
+          >
+            Clear Selection
+          </button>
+        {/if}
       </div>
     </div>
   </section>
@@ -115,7 +161,11 @@
   {:else}
     <div class="recipes-grid" id="recipesGrid">
       {#each filteredRecipes as recipe, index (recipeKey(recipe, index))}
-        <RecipeCard {recipe} />
+        <RecipeCard
+          {recipe}
+          focusedSlug={focusedSlug}
+          on:toggle={(event) => handleCardToggle(recipe, event)}
+        />
       {/each}
     </div>
   {/if}
