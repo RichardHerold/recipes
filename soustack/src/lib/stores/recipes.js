@@ -5,8 +5,8 @@ export const loading = writable(true);
 export const error = writable(null);
 export const techniques = writable({});
 
-const RECIPES_INDEX_PATH = `${import.meta.env.BASE_URL}recipes-index.json`;
-const TECHNIQUES_PATH = `${import.meta.env.BASE_URL}data/techniques.json`;
+const RECIPES_INDEX_PATH = 'recipes-index.json';
+const TECHNIQUES_PATH = 'data/techniques.json';
 
 export async function loadRecipes() {
   loading.set(true);
@@ -14,11 +14,11 @@ export async function loadRecipes() {
 
   try {
     const [indexData, techniqueData] = await Promise.all([
-      fetch(RECIPES_INDEX_PATH).then(handleJsonResponse),
-      fetch(TECHNIQUES_PATH).then(handleTechniquesResponse)
+      fetchJsonAsset(RECIPES_INDEX_PATH),
+      fetchJsonAsset(TECHNIQUES_PATH).catch(() => ({}))
     ]);
 
-    techniques.set(techniqueData || {});
+    techniques.set(techniqueData);
 
     const recipeFiles = Array.isArray(indexData?.recipes)
       ? indexData.recipes
@@ -30,10 +30,7 @@ export async function loadRecipes() {
     const loadedRecipes = await Promise.all(
       filesToLoad.map(async (filename) => {
         try {
-          const recipeResponse = await fetch(
-            `${import.meta.env.BASE_URL}recipes/${filename}`
-          );
-          const recipe = await handleJsonResponse(recipeResponse);
+          const recipe = await fetchJsonAsset(`recipes/${filename}`);
           return normalizeRecipe(recipe, filename);
         } catch (recipeError) {
           console.error(`Failed to load recipe ${filename}`, recipeError);
@@ -104,4 +101,48 @@ export function slugify(value) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .substring(0, 80);
+}
+
+function getAssetCandidates(path) {
+  const cleanPath = path.replace(/^\/+/, '');
+  const candidates = [];
+  const normalizedBase = normalizeBase(import.meta.env.BASE_URL);
+  if (normalizedBase) {
+    candidates.push(`${normalizedBase}${cleanPath}`);
+  }
+  candidates.push(`/${cleanPath}`);
+  candidates.push(cleanPath);
+  return Array.from(new Set(candidates));
+}
+
+function normalizeBase(base) {
+  if (!base || base === '/' || base === './') {
+    return '';
+  }
+  let normalized = base;
+  if (!normalized.startsWith('/')) {
+    normalized = `/${normalized}`;
+  }
+  if (!normalized.endsWith('/')) {
+    normalized = `${normalized}/`;
+  }
+  return normalized;
+}
+
+async function fetchJsonAsset(path) {
+  const candidates = getAssetCandidates(path);
+  let lastError = null;
+  for (const candidate of candidates) {
+    try {
+      const response = await fetch(candidate);
+      if (!response.ok) {
+        lastError = new Error(`Request failed with status ${response.status}`);
+        continue;
+      }
+      return await response.json();
+    } catch (err) {
+      lastError = err;
+    }
+  }
+  throw lastError || new Error(`Unable to load ${path}`);
 }
