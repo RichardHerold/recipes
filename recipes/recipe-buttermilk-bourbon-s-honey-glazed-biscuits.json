@@ -6,6 +6,7 @@
   "cookTime": "30 minutes",
   "image": "",
   "ingredients": [],
+  "equipment": [],
   "instructions": [],
   "dateAdded": "2025-12-05T17:17:47.114Z",
   "tags": [
@@ -16,6 +17,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

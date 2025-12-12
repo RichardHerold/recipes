@@ -118,6 +118,24 @@
       "name": "hot chile pepper (fresh or dried)"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "large skillet",
+      "id": "skillet-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Preheat the oven to 400 degrees.",
@@ -148,6 +166,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

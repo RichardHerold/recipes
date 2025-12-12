@@ -117,6 +117,32 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "stand mixer",
+      "id": "mixer-stand"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Oven and Vessel",
@@ -151,6 +177,5 @@
     "activeCook": 15000,
     "total": 15015
   },
-  "equipment": [],
   "techniques": []
 }

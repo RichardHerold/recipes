@@ -91,6 +91,12 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    }
+  ],
   "instructions": [
     "Rub your pork loin steaks with some sea salt.",
     "In a cast iron pan or a stainless steel pan heat a tablespoon of olive oil and brown your pork loin steaks for no longer than 2 minutes on each side.",
@@ -112,6 +118,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

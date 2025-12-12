@@ -187,6 +187,40 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "rolling pin",
+      "id": "rolling-pin"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    }
+  ],
   "instructions": [
     "Biscuits",
     "Whisk granulated sugar, baking powder, lemon zest, salt, and 2 cups flour in a medium bowl.",
@@ -217,6 +251,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

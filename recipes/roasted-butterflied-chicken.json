@@ -30,6 +30,24 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
   "instructions": [
     "1.  Adjust an oven rack to the upper-middle position and preheat the oven to 425°F (400 convection).",
     "2.  Dry the chicken thoroughly with paper towels. Separate the skin from the breasts (see here), then rub the chicken evenly all over and under the skin with the oil. Season all sides with salt and pepper (go light on the salt if the bird has been dry-brined).",
@@ -45,6 +63,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

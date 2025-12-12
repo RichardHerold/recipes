@@ -44,6 +44,12 @@
       "name": "kaiser rolls, split"
     }
   ],
+  "equipment": [
+    {
+      "name": "slow cooker",
+      "id": "slow-cooker"
+    }
+  ],
   "instructions": [
     "Place roast in a 4- or 5-qt. slow cooker. Add root beer",
     "cook, covered, on low until meat is tender, 8-10 hours.",
@@ -62,6 +68,5 @@
     "prep": 15,
     "total": 15
   },
-  "equipment": [],
   "techniques": []
 }

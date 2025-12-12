@@ -126,6 +126,32 @@
       "name": "eggs"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "large skillet",
+      "id": "skillet-large"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Vegetables",
@@ -167,6 +193,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

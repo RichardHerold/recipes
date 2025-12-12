@@ -103,6 +103,60 @@
       ]
     }
   ],
+  "equipment": [
+    {
+      "name": "dough cutter",
+      "id": "dough-cutter"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "rolling pin",
+      "id": "rolling-pin"
+    },
+    {
+      "name": "biscuit cutter",
+      "id": "biscuit-cutter"
+    },
+    {
+      "name": "sheet tray",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "microwave",
+      "id": "microwave"
+    },
+    {
+      "name": "3in round cutter",
+      "id": "3in-round-cutter"
+    },
+    {
+      "name": "Half size baking sheet",
+      "id": "half-size-baking-sheet"
+    },
+    {
+      "name": "Parchment paper",
+      "id": "parchment-paper"
+    }
+  ],
   "instructions": [
     {
       "subsection": "Mise en Place",
@@ -138,6 +192,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

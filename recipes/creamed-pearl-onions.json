@@ -276,6 +276,20 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "stovetop",
+      "id": "stovetop"
+    }
+  ],
   "instructions": [],
   "dateAdded": "2025-12-05T17:17:11.662Z",
   "tags": [
@@ -286,6 +300,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

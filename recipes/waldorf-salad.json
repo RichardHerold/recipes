@@ -83,6 +83,16 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
   "instructions": [
     "In a medium sized bowl, whisk together the mayonnaise, lemon juice, salt and pepper.",
     "Stir in the apple, celery, grapes,"
@@ -96,6 +106,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

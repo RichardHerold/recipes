@@ -57,6 +57,16 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Watermelon",
@@ -86,6 +96,5 @@
     "activeCook": 5,
     "total": 20
   },
-  "equipment": [],
   "techniques": []
 }

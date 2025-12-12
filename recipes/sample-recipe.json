@@ -2,15 +2,6 @@
   "name": "Chocolate Chip Cookies",
   "category": "Dessert",
   "description": "Classic homemade chocolate chip cookies that are crispy on the edges and chewy in the middle.",
-  "servings": {
-    "amount": 24,
-    "unit": "cookies",
-    "note": "makes about two dozen"
-  },
-  "scaleWarnings": [
-    "Chill dough between batches when making more than 36 cookies",
-    "Bake in batches—do not crowd sheets when scaling up"
-  ],
   "prepTime": "15 minutes",
   "cookTime": "12 minutes",
   "image": "images/chocolate-chip-cookies.jpg",
@@ -109,6 +100,32 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    }
+  ],
   "instructions": [
     {
       "text": "Preheat oven to 375°F (190°C).",
@@ -135,6 +152,14 @@
     "activeCook": 12,
     "total": 27
   },
-  "equipment": [],
-  "techniques": []
+  "techniques": [],
+  "servings": {
+    "amount": 24,
+    "unit": "cookies",
+    "note": "makes about two dozen"
+  },
+  "scaleWarnings": [
+    "Chill dough between batches when making more than 36 cookies",
+    "Bake in batches—do not crowd sheets when scaling up"
+  ]
 }

@@ -143,6 +143,28 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "measuring cup",
+      "id": "measuring-cup"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Dumpling Filling",
@@ -196,6 +218,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

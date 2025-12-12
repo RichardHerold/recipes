@@ -32,6 +32,12 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "cooling rack",
+      "id": "rack-wire"
+    }
+  ],
   "instructions": [
     "grease square glass dish with butter",
     "roll out dough with no flour on counter (approx 7 inches wide)",
@@ -51,6 +57,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

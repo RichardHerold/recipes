@@ -55,6 +55,20 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "large liquid measuring cup",
+      "id": "measuring-cup-large"
+    },
+    {
+      "name": "large heavy skillet",
+      "id": "skillet-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Weigh 40g of all-purpose flour and put into small bowl.",
@@ -81,6 +95,5 @@
     "prep": 15,
     "total": 15
   },
-  "equipment": [],
   "techniques": []
 }

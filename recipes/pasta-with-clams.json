@@ -70,6 +70,7 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Mise en Place:",
     "Bring 2 quarts of salted water to a boil.",
@@ -93,6 +94,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

@@ -92,6 +92,36 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "strainer",
+      "id": "strainer"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Roughly Chop the Leeks",
@@ -128,6 +158,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

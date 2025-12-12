@@ -195,6 +195,36 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "colander",
+      "id": "colander"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    },
+    {
+      "name": "strainer",
+      "id": "strainer"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "Large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Mise en Place:",
@@ -235,6 +265,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

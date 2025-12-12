@@ -119,6 +119,12 @@
       "aisle": "Dairy & Eggs"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Mix dry ingredients thoroughly in a large bowl with electric egg beater.",
     "Separate the eggs, putting the whites and yolks in separate bowls",
@@ -140,6 +146,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

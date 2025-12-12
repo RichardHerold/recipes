@@ -40,6 +40,7 @@
       "name": "bags of split peas"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Fill a soup pot (tall pot like a spaghetti pot) with water leaving one inch at the top",
     "Put onions and ham hock into water, bring to a boil and let cook 1-2 hours (until meat is tender and falling off the bone) - do not drain water.",
@@ -56,6 +57,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

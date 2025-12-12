@@ -77,6 +77,20 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    }
+  ],
   "instructions": [
     "In the bowl of a food processor or blender, combine the cilantro, garlic, lime juice, cumin, jalapeno, white wine vinegar, and olive oil.",
     "Process until well combined.",
@@ -91,6 +105,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

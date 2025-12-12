@@ -277,6 +277,60 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "paring knife",
+      "id": "knife-paring"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "rubber spatula",
+      "id": "spatula-rubber"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Oven and Baking Sheet",
@@ -356,6 +410,5 @@
     "activeCook": 13200,
     "total": 13215
   },
-  "equipment": [],
   "techniques": []
 }

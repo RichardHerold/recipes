@@ -133,6 +133,24 @@
       "name": "Tbsp. neutral oil (such as vegetable, peanut, or canola)"
     }
   ],
+  "equipment": [
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    }
+  ],
   "instructions": [
     "Turkey Prep (1-2 days prior): Place turkey, breast side up, on a cutting board and pat dry. Remove wings and legs. Remove backbone (spatchcock style or separated pieces).",
     "Dry Rub: Grind peppercorns and mix with salt, garlic powder, onion powder, paprika, and 1 Tbsp brown sugar.",
@@ -152,6 +170,5 @@
     "activeCook": 150,
     "total": 195
   },
-  "equipment": [],
   "techniques": []
 }

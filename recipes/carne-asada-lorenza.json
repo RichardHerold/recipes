@@ -82,6 +82,16 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "grill",
+      "id": "grill"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    }
+  ],
   "instructions": [
     "Start a charcoal or gas grill, and get it very hot. For gas, set to high heat. For charcoal, grill is ready when coals are red but entirely covered with gray ash, and you can hold your hand about 5 to 6 inches above the coals for only about 4 to 5 seconds before it becomes too hot.",
     "Clean and season the grill: Using a pair of tongs, rub a quarter of a white onion over it. Next, rub the beef fat over the grill to season it further. (Alternately, you can do this using tallow or vegetable oil.)",
@@ -101,6 +111,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

@@ -147,6 +147,24 @@
       "aisle": "Dairy & Eggs"
     }
   ],
+  "equipment": [
+    {
+      "name": "frying pan",
+      "id": "pan-frying"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    },
+    {
+      "name": "slow cooker",
+      "id": "slow-cooker"
+    }
+  ],
   "instructions": [
     "Heat the oil in a large frying pan over medium heat until shimmering.",
     "Add the onions and bell pepper, season with salt",
@@ -172,6 +190,5 @@
     "activeCook": 274080,
     "total": 274095
   },
-  "equipment": [],
   "techniques": []
 }

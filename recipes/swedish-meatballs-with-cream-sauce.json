@@ -247,6 +247,32 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "microwave",
+      "id": "microwave"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    }
+  ],
   "instructions": [
     "To make the meatballs",
     "In a large bowl, combine the ground pork with the salt. Mix thoroughly with your hands, then set aside at room temperature for 30 minutes.",
@@ -284,6 +310,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

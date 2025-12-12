@@ -93,6 +93,16 @@
       ]
     }
   ],
+  "equipment": [
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    }
+  ],
   "instructions": [
     {
       "subsection": "Marinade Sauce",
@@ -133,6 +143,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

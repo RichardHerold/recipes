@@ -134,6 +134,7 @@
       "name": "crumbled blue cheese"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Combine mayonnaise, sour cream and buttermilk, mixing well.",
     "Add remaining ingredients mixing thoroughly.",
@@ -148,6 +149,5 @@
     "activeCook": 15,
     "total": 30
   },
-  "equipment": [],
   "techniques": []
 }

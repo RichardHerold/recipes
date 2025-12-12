@@ -61,6 +61,7 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Rub the chopped rosemary, thyme, garlic, salt, and pepper onto the shoulder tender. Heat a pan to medium high heat and grease with 1 tablespoon of butter. Place the shoulder tender in the pan and pan fry for about 10-15 minutes, flipping occasionally as needed and adding more butter if the pan dries out. Cook to 130 for rare, 135 for medium rare, and 140 for well done."
   ],
@@ -69,6 +70,5 @@
     "Meat"
   ],
   "time": {},
-  "equipment": [],
   "techniques": []
 }

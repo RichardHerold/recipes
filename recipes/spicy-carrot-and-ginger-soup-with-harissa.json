@@ -144,6 +144,36 @@
       "name": "lemon"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "strainer",
+      "id": "strainer"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "small skillet",
+      "id": "skillet-small"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Carrot Ginger Soup",
@@ -191,6 +221,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

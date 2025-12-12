@@ -163,6 +163,32 @@
       "aisle": "Condiments & Sauces"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "chef's knife",
+      "id": "knife-chef"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "rubber spatula",
+      "id": "spatula-rubber"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Marinade",
@@ -209,6 +235,5 @@
     "prep": 15,
     "total": 15
   },
-  "equipment": [],
   "techniques": []
 }

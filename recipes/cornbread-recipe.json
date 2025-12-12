@@ -103,6 +103,16 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
   "instructions": [
     "For the cornbread:",
     "Place the Cast Iron Pans in the oven",
@@ -125,6 +135,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

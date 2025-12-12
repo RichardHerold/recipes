@@ -121,6 +121,24 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "small pot",
+      "id": "pot-small"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Chop 1 large onion and put into small bowl.",
@@ -163,6 +181,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

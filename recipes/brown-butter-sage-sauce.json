@@ -47,6 +47,7 @@
       "name": "butternut squash ravioli or potato gnocchi"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Cut the butter into large pieces and add it to a light colored pan over medium low flame.",
     "As soon as the butter starts to foam up add the sage leaves, (make sure they are dry) and cook together for 3 to 5 minutes.",
@@ -65,6 +66,5 @@
     "activeCook": 8,
     "total": 11
   },
-  "equipment": [],
   "techniques": []
 }

@@ -112,6 +112,12 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Chope",
@@ -128,6 +134,5 @@
     "activeCook": 20,
     "total": 35
   },
-  "equipment": [],
   "techniques": []
 }

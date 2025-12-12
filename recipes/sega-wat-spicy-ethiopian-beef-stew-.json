@@ -99,6 +99,16 @@
       "name": "hard-boiled eggs, shelled and pierced all over with a fork 1/4 inch deep (optional: traditionally added to doro wat, the chicken version of this stew; I like them in sega wat as well)"
     }
   ],
+  "equipment": [
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    }
+  ],
   "instructions": [
     "Heat 3 tablespoons of niter kibbeh or butter in a heavy pot or Dutch oven. Add the onions and cook, covered, over low heat for 20 minutes, stirring occasionally.",
     "Add the garlic, ginger, and 1 tablespoon niter kibbeh and continue to cook for another 10 minutes, stirring occasionally.",
@@ -117,6 +127,5 @@
     "activeCook": 8700,
     "total": 8715
   },
-  "equipment": [],
   "techniques": []
 }

@@ -74,6 +74,12 @@
       "name": "sweet paprika"
     }
   ],
+  "equipment": [
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
   "instructions": [
     "Begin by cooking the lentils and water in a mid-sized pot for approx. 30 minutes.",
     "Next, sauté the chopped onion with some olive oil added using a large-enough pan or skillet – until the color of the onion starts to clear or get translucent.",
@@ -90,6 +96,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

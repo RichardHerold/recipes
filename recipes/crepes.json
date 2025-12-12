@@ -50,6 +50,16 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "cutting board",
+      "id": "cutting-board"
+    }
+  ],
   "instructions": [
     "Crepe Batter",
     "In a blender, combine all of the ingredients",
@@ -79,6 +89,5 @@
     "activeCook": 7500,
     "total": 7515
   },
-  "equipment": [],
   "techniques": []
 }

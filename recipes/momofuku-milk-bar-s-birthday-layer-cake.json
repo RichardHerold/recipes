@@ -339,6 +339,56 @@
       "name": "strips acetate (flexible plastic paper), each 3\" wide and 20\" long"
     }
   ],
+  "equipment": [
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "electric mixer",
+      "id": "mixer-electric"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "stand mixer",
+      "id": "mixer-stand"
+    },
+    {
+      "name": "paring knife",
+      "id": "knife-paring"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    }
+  ],
   "instructions": [
     "Cake:",
     "Preheat oven to 350°. Line a 13x9\" rimmed baking sheet with parchment paper and coat with nonstick spray; set aside.",
@@ -377,6 +427,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

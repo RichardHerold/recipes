@@ -6,6 +6,16 @@
   "cookTime": "10 MINUTESCOOK TIME",
   "image": "",
   "ingredients": [],
+  "equipment": [
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    }
+  ],
   "instructions": [
     "INSTANT POT:",
     "In the bowl of a food processor, pulse onion and garlic until roughly chopped, scraping bowl as necessary.",
@@ -27,6 +37,5 @@
     "activeCook": 10,
     "total": 20
   },
-  "equipment": [],
   "techniques": []
 }

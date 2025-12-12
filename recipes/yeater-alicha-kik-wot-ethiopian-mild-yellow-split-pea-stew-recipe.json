@@ -98,6 +98,7 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [],
   "instructions": [
     "Thoroughly wash the split peas using hot water until they’re clean enough that the water they are placed is clear.",
     "Soak the split peas in water until they are fully rehydrated. Then strain the remaining water for approx. 20 min.",
@@ -116,6 +117,5 @@
     "Untested"
   ],
   "time": {},
-  "equipment": [],
   "techniques": []
 }

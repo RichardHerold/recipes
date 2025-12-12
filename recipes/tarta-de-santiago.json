@@ -64,6 +64,24 @@
       "name": "confectioners sugar approx, to dust (icing sugar)"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "cooling rack",
+      "id": "rack-wire"
+    }
+  ],
   "instructions": [
     "Preheat oven to 350F/180C.",
     "Line an 8 inch/20cm round cake tin with parchment on the bottom",
@@ -87,6 +105,5 @@
     "activeCook": 40,
     "total": 50
   },
-  "equipment": [],
   "techniques": []
 }

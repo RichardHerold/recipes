@@ -47,6 +47,7 @@
       "name": "package of radishes."
     }
   ],
+  "equipment": [],
   "instructions": [
     "boil potatoes until you can stick a fork in them and are soft but not mushy (about 40-45 min)",
     "peel potatoes when cool",
@@ -64,6 +65,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

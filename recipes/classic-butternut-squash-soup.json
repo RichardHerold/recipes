@@ -134,6 +134,32 @@
       "name": "fresh sage leaves (optional, see note above)"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "blender",
+      "id": "blender"
+    },
+    {
+      "name": "small skillet",
+      "id": "skillet-small"
+    }
+  ],
   "instructions": [
     "Active time:30 minutes",
     "Total cooking time:1 hour 45 minutes",
@@ -183,6 +209,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

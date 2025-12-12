@@ -164,6 +164,28 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "grill",
+      "id": "grill"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "Large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Charcoal Grill",
@@ -245,6 +267,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

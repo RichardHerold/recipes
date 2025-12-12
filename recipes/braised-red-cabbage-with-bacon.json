@@ -91,6 +91,28 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "measuring cup",
+      "id": "measuring-cup"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Cabbage",
@@ -122,6 +144,5 @@
     "activeCook": 6900,
     "total": 6915
   },
-  "equipment": [],
   "techniques": []
 }

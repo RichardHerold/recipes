@@ -126,6 +126,32 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "measuring cup",
+      "id": "measuring-cup"
+    },
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Hard Boiled Egg preparation",
@@ -166,6 +192,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

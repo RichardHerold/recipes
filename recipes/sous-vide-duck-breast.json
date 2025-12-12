@@ -17,6 +17,20 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "strainer",
+      "id": "strainer"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
   "instructions": [
     "Place duck on paper towel-lined plate and refrigerate, uncovered, overnight.",
     "Add vegetable oil and shallots to small saucepot and heat over medium-high heat, stirring constantly. Cook, stirring constantly until shallots are light golden brown, about 5 minutes.",
@@ -36,6 +50,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

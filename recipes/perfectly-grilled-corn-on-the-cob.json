@@ -20,6 +20,20 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [
+    {
+      "name": "grill",
+      "id": "grill"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "paring knife",
+      "id": "knife-paring"
+    }
+  ],
   "instructions": [
     "Heat the grill to medium.",
     "Pull the outer husks down the ear to the base. Strip away the silk from each ear of corn by hand. Fold husks back into place, and place the ears of corn in a large bowl of cold water with 1 tablespoon of salt for 10 minutes.",
@@ -34,6 +48,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

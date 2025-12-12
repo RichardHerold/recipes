@@ -140,6 +140,16 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "frying pan",
+      "id": "pan-frying"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "In a large mixing bowl, mix together the flour, cornmeal, baking powder, baking soda, ginger, cinnamon, cloves, and salt.",
@@ -159,6 +169,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

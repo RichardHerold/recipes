@@ -59,6 +59,16 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "small pot",
+      "id": "pot-small"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
   "instructions": [
     "Bring to a boil 2 pots of water, one small and one large, and salt both.",
     "Prepare Ice Bath",
@@ -84,6 +94,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

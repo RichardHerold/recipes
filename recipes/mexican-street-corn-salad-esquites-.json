@@ -101,6 +101,24 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Corn",
@@ -134,6 +152,5 @@
     "prep": 15,
     "total": 15
   },
-  "equipment": [],
   "techniques": []
 }

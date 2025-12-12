@@ -63,6 +63,32 @@
       "aisle": "Produce"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "wooden spoon",
+      "id": "spoon-wooden"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    },
+    {
+      "name": "tongs",
+      "id": "tongs"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Asparagus",
@@ -92,6 +118,5 @@
     "Vegetables"
   ],
   "time": {},
-  "equipment": [],
   "techniques": []
 }

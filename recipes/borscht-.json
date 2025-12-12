@@ -172,6 +172,20 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [
+    {
+      "name": "grater",
+      "id": "grater"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Peel and Shred the Beets with a medium-holed grater",
@@ -199,6 +213,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

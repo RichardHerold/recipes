@@ -139,6 +139,36 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Oven",
@@ -163,6 +193,5 @@
     "activeCook": 45,
     "total": 60
   },
-  "equipment": [],
   "techniques": []
 }

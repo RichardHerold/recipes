@@ -78,6 +78,20 @@
       "aisle": "Other"
     }
   ],
+  "equipment": [
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    }
+  ],
   "instructions": [
     "Using a food processor with a coarse grating disc, grate the potatoes and onion. Transfer the mixture to a clean dishtowel and squeeze and wring out as much of the liquid as possible.",
     "Working quickly, transfer the mixture to a large bowl. Add the eggs, flour, salt, baking powder and pepper, and mix until the flour is absorbed.",
@@ -92,6 +106,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

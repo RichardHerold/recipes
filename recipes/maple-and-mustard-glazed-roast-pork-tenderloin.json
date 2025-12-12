@@ -90,6 +90,20 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
   "instructions": [
     "1.  Adjust an oven rack to the middle position and preheat the oven to 400°F. Combine ⅓ cup maple syrup and 2 tablespoons whole-grain mustard with the brandy.",
     "2.  Pat the pork dry with a paper towel and season on all sides with salt and pepper. Place the cornstarch in a shallow dish and dredge the tenderloins in it, turning to coat. Set on a large plate.",
@@ -108,6 +122,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

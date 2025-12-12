@@ -56,6 +56,20 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    },
+    {
+      "name": "rubber spatula",
+      "id": "spatula-rubber"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    }
+  ],
   "instructions": [
     "Combine two thirds of flour with sugar and salt in the bowl of a food processor.",
     "Pulse twice to incorporate.",
@@ -80,6 +94,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

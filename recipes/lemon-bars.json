@@ -108,6 +108,32 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "medium mixing bowl",
+      "id": "bowl-medium"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    },
+    {
+      "name": "baking sheet",
+      "id": "sheet-pan"
+    }
+  ],
   "instructions": [
     "Preheat the oven to 325°F (163°C).",
     "Line the bottom and sides of a 9×13 baking pan* with parchment paper, leaving an overhang on the sides to lift the finished bars out (makes cutting easier!). Set aside.",
@@ -137,6 +163,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

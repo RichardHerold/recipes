@@ -96,6 +96,28 @@
       "aisle": "Baking & Spices"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "saucepan",
+      "id": "saucepan"
+    },
+    {
+      "name": "immersion blender",
+      "id": "blender-immersion"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Preheat the oven to 350°F",
@@ -130,6 +152,5 @@
     "activeCook": 40,
     "total": 55
   },
-  "equipment": [],
   "techniques": []
 }

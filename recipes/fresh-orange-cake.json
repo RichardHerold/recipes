@@ -102,6 +102,28 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "mixer",
+      "id": "mixer"
+    },
+    {
+      "name": "wire rack",
+      "id": "rack-wire"
+    },
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    }
+  ],
   "instructions": [
     "Preheat the oven to 350. Lightly mist a 12 cup bundt pan with vegetable oil spray, then dust with flour. Shake out excess flour.",
     "Place cake mix, orange juice, oil, sugar, vanilla and eggs in large mixing bowl. Blend with mixer on low speed for 1 minute. Stop machine and scrape down sides of bowl. Increase mixer speed to medium and beat 2 minutes more, scraping sides again if needed. The batter should look thick and well blended. Pour the batter into the prepared pan and place in the oven.",
@@ -117,6 +139,5 @@
     "activeCook": 5557,
     "total": 5572
   },
-  "equipment": [],
   "techniques": []
 }

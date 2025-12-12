@@ -81,6 +81,32 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "rolling pin",
+      "id": "rolling-pin"
+    },
+    {
+      "name": "parchment paper",
+      "id": "parchment-paper"
+    },
+    {
+      "name": "large skillet",
+      "id": "skillet-large"
+    },
+    {
+      "name": "dutch oven",
+      "id": "dutch-oven"
+    },
+    {
+      "name": "bowl",
+      "id": "bowl"
+    },
+    {
+      "name": "whisk",
+      "id": "whisk"
+    }
+  ],
   "instructions": [
     "Tart Shell",
     "On a lightly floured work surface, roll the dough to a 13-inch round.",
@@ -113,6 +139,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

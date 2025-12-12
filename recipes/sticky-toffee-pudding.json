@@ -133,6 +133,20 @@
       "name": "pint vanilla ice cream (optional, but not really)"
     }
   ],
+  "equipment": [
+    {
+      "name": "oven",
+      "id": "oven"
+    },
+    {
+      "name": "stand mixer",
+      "id": "mixer-stand"
+    },
+    {
+      "name": "food processor",
+      "id": "food-processor"
+    }
+  ],
   "instructions": [
     "Cooking Time:",
     "Total Time:",
@@ -164,6 +178,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

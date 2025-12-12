@@ -85,6 +85,12 @@
       "prepAction": "chop"
     }
   ],
+  "equipment": [
+    {
+      "name": "ramekin",
+      "id": "ramekin"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Collard Greens",
@@ -112,6 +118,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }

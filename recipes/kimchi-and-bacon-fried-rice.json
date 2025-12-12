@@ -132,6 +132,24 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "small mixing bowl",
+      "id": "bowl-small"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    },
+    {
+      "name": "strainer",
+      "id": "strainer"
+    },
+    {
+      "name": "spatula",
+      "id": "spatula"
+    }
+  ],
   "instructions": [
     "Mise en Place:",
     "Measure, cook, and chill 2 cups of sushi rice.",
@@ -173,6 +191,5 @@
     "activeCook": 45,
     "total": 60
   },
-  "equipment": [],
   "techniques": []
 }

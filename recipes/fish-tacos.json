@@ -99,6 +99,16 @@
       "prepAction": "measure"
     }
   ],
+  "equipment": [
+    {
+      "name": "large mixing bowl",
+      "id": "bowl-large"
+    },
+    {
+      "name": "skillet",
+      "id": "skillet"
+    }
+  ],
   "instructions": [
     "1. In a large bowl, combine the sour cream and lime juice; season with salt and pepper. Transfer half the mixture to another container; set aside for serving. Toss the cabbage, scallions, and minced jalapeno with the remaining sour-cream mixture. Season again with salt and pepper.",
     "2. In a large nonstick skillet, heat the oil and remaining jalapeno half over medium-high heat; swirl to coat the bottom of the pan. Season the fish on both sides with salt and pepper. In two batches (starting with any larger pieces), cook the fish until golden brown on all sides, 5 to 6 minutes. Discard the jalapeno.",
@@ -114,6 +124,5 @@
     "activeCook": 30,
     "total": 45
   },
-  "equipment": [],
   "techniques": []
 }
