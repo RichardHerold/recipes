@@ -59,6 +59,11 @@
       clearSelections();
     }
   }
+
+  function recipeKey(recipe, index) {
+    const base = recipe?.slug || recipe?.name || 'recipe';
+    return `${base}-${index}`;
+  }
 </script>
 
 <Header />
@@ -109,7 +114,7 @@
     <p id="noResults">No recipes match that search.</p>
   {:else}
     <div class="recipes-grid" id="recipesGrid">
-      {#each filteredRecipes as recipe (recipe.slug)}
+      {#each filteredRecipes as recipe, index (recipeKey(recipe, index))}
         <RecipeCard {recipe} />
       {/each}
     </div>
