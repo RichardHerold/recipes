@@ -30,9 +30,10 @@ async function main() {
       const recipe = JSON.parse(original);
       const enrichment = await requestEnrichment(recipe);
       const updated = mergeEnrichment(recipe, enrichment);
+      const reordered = reorderRecipeProperties(updated);
 
       if (APPLY_CHANGES) {
-        await fs.promises.writeFile(absolutePath, JSON.stringify(updated, null, 2) + '\n', 'utf8');
+        await fs.promises.writeFile(absolutePath, JSON.stringify(reordered, null, 2) + '\n', 'utf8');
         console.log(`✔ Updated ${file}`);
       } else {
         console.log(`ℹ Would update ${file}`);
@@ -110,11 +111,18 @@ function buildPrompt(recipe) {
     'You are an assistant that enriches structured recipe data for a Mise en Place cooking mode.',
     'Given the following recipe JSON, extract the following:',
     '- `tags`: array of descriptive tags (lowercase, hyphen-safe).',
-    '- `equipment`: array of objects `{"name", "id", "label"}`. Generate stable ids like `bowl-dry`. Include key vessels and tools mentioned in instructions.',
+    '- `equipment`: array of objects `{"name", "id", "label"}`. Parse ALL equipment mentioned in the instructions and ingredients. Include bowls, pans, skillets, mixers, measuring cups, baking sheets, tools, and any other vessels or equipment. Generate stable kebab-case ids like `bowl-dry`, `skillet-large`, `measuring-cup`. For each piece of equipment, provide a descriptive `label` explaining its purpose in the recipe.',
     '- `techniques`: array of verbs matching the technique library (e.g., saute, deglaze, temper).',
     '- `time`: object with numeric minutes `{ prep, activeCook, passive, total }`. Leave fields off when unknown.',
     '- `ingredients`: enrich each object with `aisle`, `prep`, `prepAction`, `prepTime` (minutes), and `destination` (equipment id). Maintain the original order and quantities.',
     '- Prefer destinations that match equipment ids you provide. Leave null when unclear.',
+    '',
+    'Equipment extraction guidelines:',
+    '- Scan all instruction text carefully for equipment mentions (e.g., "in a bowl", "using a skillet", "with a whisk", "on a baking sheet")',
+    '- Include all sizes and types (e.g., "large bowl", "small bowl", "12-inch skillet")',
+    '- Extract equipment from ingredient subsections if they contain equipment lists',
+    '- Create unique, descriptive IDs for each piece of equipment',
+    '- Provide helpful labels that explain when/why each piece of equipment is used',
     '',
     'Respond ONLY with JSON using this shape:',
     '{',
@@ -209,6 +217,40 @@ function filterTime(time) {
 
 function uniqueStrings(values) {
   return Array.from(new Set(values.filter(Boolean).map(value => value.toString().trim())));
+}
+
+// Reorder recipe properties to ensure equipment comes before instructions
+function reorderRecipeProperties(recipe) {
+  // Define the desired property order
+  const orderedRecipe = {};
+  
+  // Core fields (always present)
+  if (recipe.name !== undefined) orderedRecipe.name = recipe.name;
+  if (recipe.category !== undefined) orderedRecipe.category = recipe.category;
+  if (recipe.description !== undefined) orderedRecipe.description = recipe.description;
+  if (recipe.prepTime !== undefined) orderedRecipe.prepTime = recipe.prepTime;
+  if (recipe.cookTime !== undefined) orderedRecipe.cookTime = recipe.cookTime;
+  if (recipe.image !== undefined) orderedRecipe.image = recipe.image;
+  if (recipe.ingredients !== undefined) orderedRecipe.ingredients = recipe.ingredients;
+  
+  // Equipment comes before instructions
+  if (recipe.equipment !== undefined) orderedRecipe.equipment = recipe.equipment;
+  if (recipe.instructions !== undefined) orderedRecipe.instructions = recipe.instructions;
+  
+  // Remaining fields
+  if (recipe.dateAdded !== undefined) orderedRecipe.dateAdded = recipe.dateAdded;
+  if (recipe.tags !== undefined) orderedRecipe.tags = recipe.tags;
+  if (recipe.time !== undefined) orderedRecipe.time = recipe.time;
+  if (recipe.techniques !== undefined) orderedRecipe.techniques = recipe.techniques;
+  
+  // Include any other properties that might exist
+  for (const key in recipe) {
+    if (!orderedRecipe.hasOwnProperty(key)) {
+      orderedRecipe[key] = recipe[key];
+    }
+  }
+  
+  return orderedRecipe;
 }
 
 if (require.main === module) {
