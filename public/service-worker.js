@@ -1,6 +1,6 @@
 // Service Worker for Recipe Collection PWA
-const CACHE_NAME = 'soustack-recipes-v1';
-const RUNTIME_CACHE = 'soustack-runtime-v1';
+const CACHE_NAME = 'soustack-recipes-v2';
+const RUNTIME_CACHE = 'soustack-runtime-v2';
 const APP_BASE = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 
 // Assets to cache on install
@@ -35,6 +35,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
+          // Delete ALL old caches, not just ones that don't match
           if (cacheName !== CACHE_NAME && cacheName !== RUNTIME_CACHE) {
             console.log('Service Worker: Deleting old cache', cacheName);
             return caches.delete(cacheName);
@@ -42,7 +43,10 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
-    .then(() => self.clients.claim())
+    .then(() => {
+      // Force claim all clients immediately
+      return self.clients.claim();
+    })
   );
 });
 
