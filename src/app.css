@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Sorts+Mill+Goudy:ital,wght@0,400;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -127,8 +129,13 @@ main {
     left: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1rem;
     color: var(--text-light);
+}
+
+.search-icon svg {
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .category-filter {
@@ -248,7 +255,8 @@ main {
     color: var(--primary-color);
 }
 
-.category-filter label {
+.category-filter label,
+.category-label {
     display: block;
     margin-bottom: 0.75rem;
     font-weight: 400;
@@ -927,11 +935,17 @@ main {
 }
 
 .mise-total-time {
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .mise-remaining-time {
     color: var(--text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .mise-progress {
@@ -1026,19 +1040,22 @@ main {
 
 .mise-group-title {
     font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .mise-group-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .mise-group-count {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--text-light);
 }
 
@@ -1082,9 +1099,10 @@ main {
 .mise-section h4 {
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
+    font-weight: 400;
 }
 
 .mise-section {
@@ -1492,5 +1510,190 @@ footer p {
     .ingredient-input .ingredient-category-field {
         width: 100%;
     }
+}
+
+/* Svelte-specific enhancements */
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.lead {
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--text-light);
+}
+
+.recipe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.recipe-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: var(--border-color);
+    padding: 0.15rem 0.5rem;
+}
+
+.recipe-select {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+.recipe-select.selected {
+    border-color: var(--primary-color);
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.recipe-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.recipe-card-inner:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.recipe-content {
+    margin-top: 1.5rem;
+}
+
+.view-toggle {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.view-toggle button {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.view-toggle button.active {
+    border-color: var(--primary-color);
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.ingredients-list,
+.instruction-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ingredient-note,
+.instruction-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+.ingredient-subsection,
+.instruction-subsection {
+    margin-top: 1rem;
+}
+
+.subsection-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.mise-en-place {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.mise-group ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.time-summary {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 10;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 1.5rem;
+    max-width: 640px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+}
+
+.modal header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-close {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modal-actions button {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+}
+
+.modal-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
 }
 

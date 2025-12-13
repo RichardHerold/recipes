@@ -1,16 +1,15 @@
 // Service Worker for Recipe Collection PWA
-const CACHE_NAME = 'recipe-collection-v1';
-const RUNTIME_CACHE = 'recipe-runtime-v1';
+const CACHE_NAME = 'soustack-recipes-v1';
+const RUNTIME_CACHE = 'soustack-runtime-v1';
+const APP_BASE = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/recipes-index.json',
-  '/data/techniques.json',
-  '/manifest.json'
+  withBase('/'),
+  withBase('/index.html'),
+  withBase('/manifest.json'),
+  withBase('/recipes-index.json'),
+  withBase('/data/techniques.json')
 ];
 
 // Install event - precache assets
@@ -95,7 +94,7 @@ self.addEventListener('fetch', (event) => {
           .catch(() => {
             // If network fails and it's a navigation request, return cached index.html
             if (event.request.mode === 'navigate') {
-              return caches.match('/index.html');
+              return caches.match(withBase('/index.html'));
             }
           });
       })
@@ -112,6 +111,11 @@ self.addEventListener('sync', (event) => {
 function syncRecipes() {
   // Placeholder for future offline recipe sync functionality
   return Promise.resolve();
+}
+
+function withBase(path) {
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return APP_BASE ? `${APP_BASE}/${normalizedPath}` : `/${normalizedPath}`;
 }
 
 
