@@ -1,6 +1,7 @@
 export default {
   site: {
     title: 'Soustack',
+    pageTitle: null, // Custom page title (browser tab). If null, uses getSiteDisplayName()
     owner: null,
     tagline: 'Your recipes, organized.',
     logoUrl: null

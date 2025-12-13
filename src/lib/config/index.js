@@ -3,6 +3,7 @@ import userConfig from '../../../config.js';
 const defaultConfig = {
   site: {
     title: 'Soustack',
+    pageTitle: null,
     owner: null,
     tagline: 'Your recipes, organized.',
     logoUrl: null
@@ -47,6 +48,14 @@ export function getSiteDisplayName() {
 
 export function getSiteTagline() {
   return config.site.tagline?.trim() || '';
+}
+
+export function getPageTitle() {
+  const customTitle = config.site.pageTitle?.trim();
+  if (customTitle) {
+    return customTitle;
+  }
+  return getSiteDisplayName();
 }
 
 export function applyThemePreferences(doc = typeof document !== 'undefined' ? document : null) {

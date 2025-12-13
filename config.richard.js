@@ -1,8 +1,9 @@
 export default {
   site: {
-    title: "Soustack",
+    title: "Richard's Recipe Collection",
+    pageTitle: null, // Custom page title (browser tab). If null, uses getSiteDisplayName()
     owner: 'Richard',
-    tagline: 'Seasonal cooking, simplified.',
+    tagline: 'My Recipe Collection.',
     logoUrl: '/assets/richard-logo.svg'
   },
   features: {
