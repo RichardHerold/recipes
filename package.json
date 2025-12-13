@@ -1,5 +1,5 @@
 {
-  "name": "soustack",
+  "name": "recipes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:ghpages": "vite build --mode ghpages",
     "preview": "vite preview",
-    "preview:ghpages": "npm run build:ghpages && vite preview --base /soustack/",
+    "preview:ghpages": "npm run build:ghpages && vite preview --base /recipes/",
     "deploy:ghpages": "npm run build:ghpages && npx gh-pages -d dist"
   },
   "devDependencies": {
