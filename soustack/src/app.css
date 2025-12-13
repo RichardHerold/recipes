@@ -935,11 +935,17 @@ main {
 }
 
 .mise-total-time {
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .mise-remaining-time {
     color: var(--text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .mise-progress {

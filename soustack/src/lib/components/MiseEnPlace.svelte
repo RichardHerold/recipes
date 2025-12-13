@@ -57,6 +57,35 @@
     </div>
   </header>
 
+  {#if recipe?.equipment?.length}
+    <section class="mise-section mise-equipment">
+      <div class="mise-group">
+        <div class="mise-group-header">
+          <div>
+            <p class="mise-group-title">Gather Equipment</p>
+            <p class="mise-group-subtitle">Keep these tools within reach</p>
+          </div>
+          <span class="mise-group-count">
+            {recipe.equipment.length} item{recipe.equipment.length === 1 ? '' : 's'}
+          </span>
+        </div>
+        <ul class="mise-checklist">
+          {#each recipe.equipment as tool, index}
+            <li>
+              <label class="mise-check-row">
+                <input type="checkbox" class="mise-check" />
+                <span class="mise-check-label">{tool.name || tool.label || `Tool ${index + 1}`}</span>
+                {#if tool.label}
+                  <span class="mise-check-subtext">{tool.label}</span>
+                {/if}
+              </label>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    </section>
+  {/if}
+
   {#if groupedPrep.length}
     <section class="mise-section">
       <h4>Prep Tasks</h4>
@@ -91,35 +120,6 @@
     </section>
   {:else}
     <p class="empty-state">Add prep metadata to ingredients to unlock mise en place view.</p>
-  {/if}
-
-  {#if recipe?.equipment?.length}
-    <section class="mise-section mise-equipment">
-      <div class="mise-group">
-        <div class="mise-group-header">
-          <div>
-            <p class="mise-group-title">Gather Equipment</p>
-            <p class="mise-group-subtitle">Keep these tools within reach</p>
-          </div>
-          <span class="mise-group-count">
-            {recipe.equipment.length} item{recipe.equipment.length === 1 ? '' : 's'}
-          </span>
-        </div>
-        <ul class="mise-checklist">
-          {#each recipe.equipment as tool, index}
-            <li>
-              <label class="mise-check-row">
-                <input type="checkbox" class="mise-check" />
-                <span class="mise-check-label">{tool.name || tool.label || `Tool ${index + 1}`}</span>
-                {#if tool.label}
-                  <span class="mise-check-subtext">{tool.label}</span>
-                {/if}
-              </label>
-            </li>
-          {/each}
-        </ul>
-      </div>
-    </section>
   {/if}
 
   {#if techniqueDetails.length}
