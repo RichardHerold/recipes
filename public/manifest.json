@@ -1,7 +1,7 @@
 {
-  "name": "Richard's Recipe Collection",
-  "short_name": "Recipes",
-  "description": "A collection of delicious recipes",
+  "name": "Soustack",
+  "short_name": "Soustack",
+  "description": "A modern recipe collection and cooking assistant",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
