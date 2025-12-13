@@ -1,6 +1,6 @@
-# Recipes (Svelte + Vite)
+# Soustack (Svelte + Vite)
 
-A migrated version of the recipe collection now built with **Svelte + Vite**. The app keeps the original JSON recipe format, adds component-based UI, client-side state stores, ingredient scaling, mise-en-place mode, Google Tasks shopping-list export, and continues to work as a static Progressive Web App deployable to both Vercel and GitHub Pages.
+This repository now hosts the Soustack recipe collection built with **Svelte + Vite**. The app keeps the original JSON recipe format, adds component-based UI, client-side state stores, ingredient scaling, mise-en-place mode, Google Tasks shopping-list export, and continues to work as a static Progressive Web App deployable to both Vercel and GitHub Pages.
 
 ## Project Structure
 
@@ -38,10 +38,10 @@ The dev server hot-reloads Svelte components, fetches JSON from `public/`, and r
 | Command | Description |
 | --- | --- |
 | `npm run build` | Standard Vite build (base `/`) for Vercel or any static host |
-| `npm run build:ghpages` | Builds with `--mode ghpages`, setting `base` to `/recipes/` |
+| `npm run build:ghpages` | Builds with `--mode ghpages`, setting `base` to `/soustack/` |
 | `npm run deploy:ghpages` | Builds with the GitHub Pages base and publishes `dist/` via `gh-pages` |
 | `npm run preview` | Serves the production build locally |
-| `npm run preview:ghpages` | Builds+serves with the `/recipes/` base so you can spot-check Pages locally |
+| `npm run preview:ghpages` | Builds+serves with the `/soustack/` base so you can spot-check Pages locally |
 
 ### Vercel
 
@@ -51,7 +51,7 @@ Use the default build command (`npm run build`) and set the output directory to 
 
 1. Run `npm run deploy:ghpages` locally (requires `gh-pages` to have push access).
 2. Ensure the Pages project is configured to serve from the `gh-pages` branch.
-3. The custom `base` in `vite.config.js` automatically rewrites absolute asset URLs to `/recipes/...` during the `build:ghpages` command, so routing works under the repository subpath.
+3. The custom `base` in `vite.config.js` automatically rewrites absolute asset URLs to `/soustack/...` during the `build:ghpages` command, so routing works under the repository subpath.
 
 ## Google Tasks Integration
 
@@ -77,6 +77,6 @@ The client ID is safe to commit. The export button loads the Google Identity scr
 - `npm run dev` – verify filtering, scaling, and modal interactions locally.
 - `npm run build && npm run preview` – smoke-test the production bundle.
 - `npm run build:ghpages` – confirm the GitHub Pages build compiles.
-- `npm run preview:ghpages` – simulate the `/recipes/` base locally (runs `build:ghpages` under the hood).
+- `npm run preview:ghpages` – simulate the `/soustack/` base locally (runs `build:ghpages` under the hood).
 
 Feel free to iterate on the Svelte components or add new ones—state is centralized in the stores under `src/lib/stores`, so UI composition stays straightforward.
