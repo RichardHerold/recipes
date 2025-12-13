@@ -2,20 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="%VITE_BASE_URL%icon-192.png" />
-    <link rel="manifest" href="%VITE_BASE_URL%manifest.json" />
+    <link rel="icon" type="image/png" href="/icon-192.png" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <title>Soustack Recipes</title>
     <script>
       // Replace with your Google Tasks OAuth client ID (safe to expose)
       window.GOOGLE_TASKS_CLIENT_ID = window.GOOGLE_TASKS_CLIENT_ID || '';
-      // Make BASE_URL available globally for any runtime path needs
-      window.BASE_URL = '%VITE_BASE_URL%';
+      // Make BASE_URL available globally - detect from current path
+      window.BASE_URL = (function() {
+        const path = window.location.pathname;
+        if (path.startsWith('/soustack/')) return '/soustack/';
+        return '/';
+      })();
     </script>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="%VITE_BASE_URL%src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
