@@ -4,47 +4,50 @@
   import MiseEnPlace from './MiseEnPlace.svelte';
   import { scalingStore } from '../stores/scaling.js';
   import { formatDuration, formatQuantity } from '../utils/formatting.js';
+  import config from '../config/index.js';
 
   export let recipe;
 
+  const scalingEnabled = config.features.enableScaling !== false;
+
   let view = 'cook';
 
-  $: scaleState = $scalingStore?.[recipe?.name];
-  $: scaleFactor = scaleState?.scaleFactor ?? 1;
+  $: scaleState = scalingEnabled ? $scalingStore?.[recipe?.name] : null;
+  $: scaleFactor = scalingEnabled ? scaleState?.scaleFactor ?? 1 : 1;
   $: baseServings = scaleState?.baseServings ?? recipe?.servings?.amount ?? null;
   $: currentServings = scaleState?.currentServings ?? baseServings;
   $: unit = scaleState?.unit || recipe?.servings?.unit || 'servings';
   $: note = recipe?.servings?.note || scaleState?.note || '';
   $: isServingUnit = !unit ? true : /serving|portion/i.test(unit);
   $: servingsLabel = isServingUnit ? 'Serves' : 'Makes';
-  $: hasScaleWarnings = Array.isArray(recipe?.scaleWarnings) && recipe.scaleWarnings.length > 0 && scaleFactor !== 1;
+  $: hasScaleWarnings = scalingEnabled && Array.isArray(recipe?.scaleWarnings) && recipe.scaleWarnings.length > 0 && scaleFactor !== 1;
 
   function setView(next) {
     view = next;
   }
 
   function adjustServings(delta) {
-    if (!recipe?.name) return;
+    if (!scalingEnabled || !recipe?.name) return;
     scalingStore.adjustServings(recipe.name, delta);
   }
 
   function setServingsTo(value) {
-    if (!recipe?.name) return;
+    if (!scalingEnabled || !recipe?.name) return;
     scalingStore.setServings(recipe.name, value);
   }
 
   function resetServings() {
-    if (!recipe?.name) return;
+    if (!scalingEnabled || !recipe?.name) return;
     scalingStore.reset(recipe.name);
   }
 
   function halfServings() {
-    if (!baseServings) return;
+    if (!scalingEnabled || !baseServings) return;
     setServingsTo(Math.max(0.25, baseServings / 2));
   }
 
   function doubleServings() {
-    if (!baseServings) return;
+    if (!scalingEnabled || !baseServings) return;
     setServingsTo(baseServings * 2);
   }
 
@@ -68,7 +71,7 @@
 <div class="recipe-view-panels">
   <section class="recipe-view-panel" class:active={view === 'cook'}>
     <div class="cook-view-grid">
-      {#if baseServings}
+      {#if scalingEnabled && baseServings}
         <div class="servings-section full-width-block prevent-card-toggle">
           <div class="servings-stepper-row">
             <span class="servings-label">{servingsLabel}</span>
