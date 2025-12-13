@@ -1034,13 +1034,16 @@ main {
 
 .mise-group-title {
     font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .mise-group-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .mise-group-count {
@@ -1090,9 +1093,10 @@ main {
 .mise-section h4 {
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
+    font-weight: 400;
 }
 
 .mise-section {

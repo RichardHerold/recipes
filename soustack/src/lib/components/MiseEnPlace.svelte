@@ -59,7 +59,7 @@
 
   {#if groupedPrep.length}
     <section class="mise-section">
-      <h4>Mise Checklist</h4>
+      <h4>Prep Tasks</h4>
       {#each groupedPrep as group}
         <div class="mise-group">
           <div class="mise-group-header">
@@ -95,20 +95,30 @@
 
   {#if recipe?.equipment?.length}
     <section class="mise-section mise-equipment">
-      <h4>Equipment</h4>
-      <ul class="mise-checklist">
-        {#each recipe.equipment as tool, index}
-          <li>
-            <label class="mise-check-row">
-              <input type="checkbox" class="mise-check" />
-              <span class="mise-check-label">{tool.name || tool.label || `Tool ${index + 1}`}</span>
-              {#if tool.label}
-                <span class="mise-check-subtext">{tool.label}</span>
-              {/if}
-            </label>
-          </li>
-        {/each}
-      </ul>
+      <div class="mise-group">
+        <div class="mise-group-header">
+          <div>
+            <p class="mise-group-title">Gather Equipment</p>
+            <p class="mise-group-subtitle">Keep these tools within reach</p>
+          </div>
+          <span class="mise-group-count">
+            {recipe.equipment.length} item{recipe.equipment.length === 1 ? '' : 's'}
+          </span>
+        </div>
+        <ul class="mise-checklist">
+          {#each recipe.equipment as tool, index}
+            <li>
+              <label class="mise-check-row">
+                <input type="checkbox" class="mise-check" />
+                <span class="mise-check-label">{tool.name || tool.label || `Tool ${index + 1}`}</span>
+                {#if tool.label}
+                  <span class="mise-check-subtext">{tool.label}</span>
+                {/if}
+              </label>
+            </li>
+          {/each}
+        </ul>
+      </div>
     </section>
   {/if}
 
