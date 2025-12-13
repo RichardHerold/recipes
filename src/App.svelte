@@ -5,6 +5,7 @@
   import FilterTags from './lib/components/FilterTags.svelte';
   import RecipeCard from './lib/components/RecipeCard.svelte';
   import ShoppingListModal from './lib/components/ShoppingListModal.svelte';
+  import Footer from './lib/components/Footer.svelte';
   import { recipes, loading, error, loadRecipes } from './lib/stores/recipes.js';
   import {
     searchQuery,
@@ -178,3 +179,5 @@
     scaleState={$scalingStore}
   />
 {/if}
+
+<Footer />

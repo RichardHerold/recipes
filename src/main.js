@@ -1,10 +1,15 @@
 import { mount } from 'svelte';
 import './app.css';
 import App from './App.svelte';
+import { applyThemePreferences, getSiteDisplayName } from './lib/config/index.js';
 
-const app = mount(App, {
-  target: document.getElementById('app')
-});
+const target = typeof document !== 'undefined' ? document.getElementById('app') : null;
+const app = target ? mount(App, { target }) : null;
+
+if (typeof document !== 'undefined') {
+  applyThemePreferences(document);
+  document.title = getSiteDisplayName();
+}
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

@@ -45,6 +45,27 @@ npm run dev        # starts Vite on http://localhost:5173
 
 The dev server hot-reloads Svelte components, fetches JSON from `public/`, and runs entirely client-side.
 
+## Configuration
+
+Soustack now reads site- and deployment-specific settings from the root-level `config.js`. Edit this file to personalize a clone (title, owner name, feature toggles, etc.) without touching the core UI code. An example `config.richard.js` is included to show how a branded instance (e.g., “Richard's Recipe Collection”) can override the defaults—copy it or use it as inspiration for your own deployment.
+
+| Path | Description | Default |
+| --- | --- | --- |
+| `site.title` | Base application name used when no owner is set | `Soustack` |
+| `site.owner` | When set, header + document title become `"{owner}'s Recipe Collection"` | `null` |
+| `site.tagline` | Optional subtitle beneath the header | `Your recipes, organized.` |
+| `site.logoUrl` | Optional logo shown in the header | `null` |
+| `features.enableScaling` | Enables the servings stepper + ingredient scaling UI | `true` |
+| `features.enableSharing` | Shows the per-recipe “Share” action | `false` |
+| `features.enableImport` | Placeholder for future import flows | `true` |
+| `theme.primaryColor` | Overrides the accent color used throughout the UI | `null` |
+| `theme.fontFamily` | Custom font stack applied to the body text | `null` |
+| `data.storageKey` | Local storage key reserved for future persistence | `soustack-recipes` |
+| `branding.showAttribution` | Controls whether the footer shows “Made with Soustack” | `true` |
+| `branding.repoUrl` | Link target for the attribution footer | `https://github.com/yourusername/soustack` |
+
+Changes take effect immediately in dev. For deployments, update `config.js` before building so the correct branding ships with the bundle.
+
 ## Building & Deploying
 
 | Command | Description |
