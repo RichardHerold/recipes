@@ -8,18 +8,23 @@
     toggleRecipeSelection
   } from '../stores/ui.js';
   import { formatDuration } from '../utils/formatting.js';
+  import config from '../config/index.js';
 
   export let recipe;
   export let focusedSlug = '';
 
   const dispatch = createEventDispatcher();
+  const scalingEnabled = config.features.enableScaling !== false;
+  const sharingEnabled = config.features.enableSharing !== false;
 
   let expanded = false;
   let shareFeedback = '';
   let feedbackTimeout;
 
   onMount(() => {
-    scalingStore.initRecipe(recipe);
+    if (scalingEnabled) {
+      scalingStore.initRecipe(recipe);
+    }
     if (focusedSlug && recipe.slug === focusedSlug) {
       expanded = true;
     }
@@ -134,12 +139,14 @@
         </div>
       </div>
       <div class="recipe-header-controls">
-        <div class="recipe-actions">
-          <button type="button" class="recipe-action-btn" on:click|stopPropagation={shareRecipe}>
-            Share
-          </button>
-        </div>
-        {#if shareFeedback}
+        {#if sharingEnabled}
+          <div class="recipe-actions">
+            <button type="button" class="recipe-action-btn" on:click|stopPropagation={shareRecipe}>
+              Share
+            </button>
+          </div>
+        {/if}
+        {#if sharingEnabled && shareFeedback}
           <span class="export-hint">{shareFeedback}</span>
         {/if}
       </div>

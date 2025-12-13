@@ -51,6 +51,26 @@ header .container {
     align-items: center;
 }
 
+.site-header {
+    gap: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.site-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.site-logo {
+    height: 64px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+}
+
 header h1 {
     font-family: 'Sorts Mill Goudy', 'Garamond', 'Georgia', serif;
     font-size: 2.5rem;
@@ -58,6 +78,22 @@ header h1 {
     letter-spacing: 0.02em;
     margin: 0;
     color: var(--primary-color);
+}
+
+.site-heading .lead {
+    margin-top: 0;
+}
+
+@media (min-width: 640px) {
+    .site-header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .site-heading {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 nav {
@@ -1172,6 +1208,12 @@ footer p {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Admin Page Styles */
